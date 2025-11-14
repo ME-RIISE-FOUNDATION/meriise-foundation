@@ -328,59 +328,78 @@
             </a>
         </div>
     </div>  -->
-<div id="alert-box-container"
-    class="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center 
-           p-4 sm:p-6 z-[999] opacity-0 transition"
-    style="display:none">
+    <div id="alert-box-container"
+    class="fixed inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center z-[999] 
+           p-4 transition-opacity duration-500 opacity-0"
+    style="display: none;">
 
-    <div class="relative w-full max-w-2xl bg-white rounded-3xl shadow-xl border border-gray-200 
-                p-6 sm:p-10 flex flex-col sm:flex-row gap-6 sm:gap-10 items-center transform scale-95 transition">
+    <div
+        class="relative w-full max-w-lg p-8 text-center rounded-2xl 
+               bg-gradient-to-br from-slate-900/90 to-slate-800/80 
+               border border-slate-700/50 shadow-[0_0_60px_rgba(80,150,255,0.4)]
+               backdrop-blur-2xl overflow-hidden
+               transform scale-90 transition-all duration-500 ease-out">
+
+        <!-- Animated Ice Border -->
+        <div class="absolute inset-0 rounded-2xl pointer-events-none border border-slate-500/40">
+            <div class="absolute inset-0 rounded-2xl border-2 border-cyan-300/10 animate-pulse"></div>
+            <div class="absolute inset-0 rounded-2xl border border-blue-400/10 blur-xl"></div>
+        </div>
+
+        <!-- Blue Flame Aura -->
+        <div class="absolute -inset-10 bg-[radial-gradient(circle_at_center,rgba(80,140,255,0.25),transparent)] 
+                    animate-pulse"></div>
+
+        <!-- Background Sigil -->
+        <div class="absolute inset-0 opacity-[0.08] pointer-events-none 
+                    bg-[url('assets/got-sigil.png')] bg-center bg-contain bg-no-repeat">
+        </div>
 
         <!-- Close Button -->
         <button id="close-alert-btn"
-            class="absolute top-3 right-3 sm:top-4 sm:right-4 h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center
-                   text-gray-500 hover:text-gray-900 rounded-full hover:bg-gray-200 
-                   transition text-xl sm:text-2xl leading-none">
+            class="absolute -top-4 -right-4 bg-slate-900/70 backdrop-blur-md border border-slate-700 
+                   rounded-full h-10 w-10 flex items-center justify-center text-slate-200 
+                   hover:text-blue-300 hover:bg-slate-800 shadow-lg text-2xl font-bold">
             &times;
         </button>
 
-        <!-- Left Logo Section -->
-        <div class="w-full sm:w-1/3 flex justify-center">
+        <!-- Logo -->
+        <div class="relative flex justify-center mb-6">
             <img src="img/pragyathalogo.jpg"
-                class="h-32 w-32 sm:h-40 sm:w-40 object-contain rounded-xl shadow-xl" />
+                class="h-32 drop-shadow-[0_0_25px_rgba(120,180,255,0.75)] animate-[pulse_3s_infinite]"
+                alt="Pragyatha Logo">
         </div>
 
-        <!-- Right Content Section -->
-        <div class="w-full sm:w-2/3 text-center sm:text-left">
+        <!-- Title -->
+        <h3 class="text-4xl font-extrabold text-slate-100 tracking-wider mb-2 font-[Cinzel] drop-shadow-lg">
+            Pragyatha 2K25
+        </h3>
 
-            <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 sm:mb-3">
-                Pragyatha'25
-            </h3>
+        <!-- Subtitle -->
+        <p class="text-blue-300 uppercase text-[0.7rem] tracking-[0.35rem] mb-5 font-[Cinzel]">
+            The Realm Awaits
+        </p>
 
-            <p class="text-blue-600 text-xs uppercase tracking-widest mb-4 sm:mb-5 font-medium">
-            LET THE REALM RISE ONCE MORE
-            </p>
+        <!-- Description -->
+        <p class="text-slate-300 mb-8 text-sm leading-relaxed px-4 font-light">
+            Enter a realm forged in winter — where intellect meets battle spirit,  
+            creativity clashes with ambition, and champions rise from the frost.
+        </p>
 
-            <p class="text-gray-600 text-sm sm:text-[15px] leading-relaxed mb-2 sm:mb-2 px-2 sm:px-0">
-                An event born of frost and fire—where creativity becomes power, intellect becomes might, and every participant shapes their own legacy.
-            </p>
-                        <p class="text-gray-600 text-sm sm:text-[15px] leading-relaxed mb-6 sm:mb-8 px-2 sm:px-0">
-   <b>The realm awaits you</b>
-            </p>
-
-            <a href="https://pragyatha25.meriise.org"
-               target="_blank"
-               class="inline-block w-full sm:w-auto bg-gradient-to-r from-blue-600 to-cyan-500 text-white 
-                      font-semibold py-3 px-10 rounded-xl shadow-md hover:scale-105 
-                      transition-all">
-               Register Now
-            </a>
-
-        </div>
+        <!-- CTA Button -->
+        <a href="https://pragyatha25.meriise.org"
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-block bg-gradient-to-r from-blue-600 to-cyan-400 text-white font-semibold
+                   py-3 px-12 rounded-xl shadow-[0_0_35px_rgba(120,180,255,0.6)]
+                   transform transition-all duration-300 hover:scale-110
+                   hover:shadow-[0_0_50px_rgba(150,220,255,0.9)] uppercase tracking-wide
+                   border border-cyan-300/20">
+            Explore Events
+        </a>
 
     </div>
 </div>
-
 
 
     <!-- <div class="h-screen w-screen" id="opaqueScreen"></div>

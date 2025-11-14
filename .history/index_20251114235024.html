@@ -328,59 +328,58 @@
             </a>
         </div>
     </div>  -->
-<div id="alert-box-container"
+    <div id="alert-box-container"
     class="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center 
-           p-4 sm:p-6 z-[999] opacity-0 transition"
-    style="display:none">
+           z-[999] p-4 transition-opacity duration-300 opacity-0"
+    style="display: none;">
 
-    <div class="relative w-full max-w-2xl bg-white rounded-3xl shadow-xl border border-gray-200 
-                p-6 sm:p-10 flex flex-col sm:flex-row gap-6 sm:gap-10 items-center transform scale-95 transition">
+    <div
+        class="relative w-full max-w-md p-8 bg-white rounded-2xl shadow-xl
+               border border-gray-200 text-center transform scale-95 
+               transition-transform duration-300 ease-out">
 
         <!-- Close Button -->
         <button id="close-alert-btn"
-            class="absolute top-3 right-3 sm:top-4 sm:right-4 h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center
-                   text-gray-500 hover:text-gray-900 rounded-full hover:bg-gray-200 
-                   transition text-xl sm:text-2xl leading-none">
+            class="absolute top-3 right-3 h-8 w-8 flex items-center justify-center 
+                   text-gray-500 hover:text-black rounded-full hover:bg-gray-200 
+                   transition duration-200 text-xl">
             &times;
         </button>
 
-        <!-- Left Logo Section -->
-        <div class="w-full sm:w-1/3 flex justify-center">
+        <!-- Logo -->
+        <div class="flex justify-center mb-6">
             <img src="img/pragyathalogo.jpg"
-                class="h-32 w-32 sm:h-40 sm:w-40 object-contain rounded-xl shadow-xl" />
+                class="h-24 rounded-xl object-cover"
+                alt="Pragyatha Logo">
         </div>
 
-        <!-- Right Content Section -->
-        <div class="w-full sm:w-2/3 text-center sm:text-left">
+        <!-- Title -->
+        <h3 class="text-2xl font-semibold text-gray-900 mb-1">
+            Pragyatha 2K25
+        </h3>
 
-            <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 sm:mb-3">
-                Pragyatha'25
-            </h3>
+        <!-- Subtitle -->
+        <p class="text-gray-500 uppercase text-xs tracking-wide mb-5">
+            Events & Announcements
+        </p>
 
-            <p class="text-blue-600 text-xs uppercase tracking-widest mb-4 sm:mb-5 font-medium">
-            LET THE REALM RISE ONCE MORE
-            </p>
+        <!-- Description -->
+        <p class="text-gray-600 text-sm leading-relaxed mb-8">
+            Explore all events, competitions, and updates for the Pragyatha fest.  
+            Stay informed and get ready to participate!
+        </p>
 
-            <p class="text-gray-600 text-sm sm:text-[15px] leading-relaxed mb-2 sm:mb-2 px-2 sm:px-0">
-                An event born of frost and fire—where creativity becomes power, intellect becomes might, and every participant shapes their own legacy.
-            </p>
-                        <p class="text-gray-600 text-sm sm:text-[15px] leading-relaxed mb-6 sm:mb-8 px-2 sm:px-0">
-   <b>The realm awaits you</b>
-            </p>
-
-            <a href="https://pragyatha25.meriise.org"
-               target="_blank"
-               class="inline-block w-full sm:w-auto bg-gradient-to-r from-blue-600 to-cyan-500 text-white 
-                      font-semibold py-3 px-10 rounded-xl shadow-md hover:scale-105 
-                      transition-all">
-               Register Now
-            </a>
-
-        </div>
+        <!-- CTA Button -->
+        <a href="https://pragyatha25.meriise.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block bg-gray-900 text-white font-medium py-3 px-10 rounded-lg 
+                   transition duration-300 hover:bg-gray-700">
+            Explore Events
+        </a>
 
     </div>
 </div>
-
 
 
     <!-- <div class="h-screen w-screen" id="opaqueScreen"></div>
