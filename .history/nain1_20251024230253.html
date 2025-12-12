@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAIN 1.0 | ME-RIISE Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" href="assets/css/newcss.css" />
+<link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/NavbarCode/assets/css/styles.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    body {
+        font-family: "Poppins", serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    header {
+        box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.4);
+    }
+</style>
+
+<body>
+
+    <div class="snav-bar">
+        <header class="header">
+            <nav class="nav containerofNavbar">
+                <div class="nav__data">
+                    <a href="#" class="nav__logo">
+                        <img src="assets/MERIISE FOUNDATION logo 2.0.png" alt="" class="h-16">
+                    </a>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line nav__burger"></i>
+                        <i class="ri-close-line nav__close"></i>
+                    </div>
+                </div>
+
+                <!--=============== NAV MENU ===============-->
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li><a href="index.html" class="nav__link">Home</a></li>
+
+                        <li class="dropdown__item">
+                            <div class="nav__link">
+                                About ME-RIISE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                            </div>
+
+                            <ul class="dropdown__menu">
+                                <li>
+                                    <a href="aboutmeriise.html" class="dropdown__link">
+                                        <i class="ri-pie-chart-line"></i> ME-RIISE FOUNDATION
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="infrastructure.html" class="dropdown__link">
+                                        <i class="ri-pie-chart-line"></i> Infrastructure
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="ourAchivements.html" class="dropdown__link">
+                                        <i class="ri-arrow-up-down-line"></i> Achievements
+                                    </a>
+                                </li>
+
+
+                                <li class="dropdown__subitem">
+                                    <div class="dropdown__link">
+                                        <i class="ri-bar-chart-line"></i> Documents <i
+                                            class="ri-add-line dropdown__add"></i>
+                                    </div>
+
+                                    <ul class="dropdown__submenu">
+                                        <li>
+                                            <a href="Nisp.html" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i> MCE NISP POLICY
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="collab.html" class="dropdown__sublink">
+                                                <i class="ri-cash-line"></i> Collaborations
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="Certificates.html" class="dropdown__sublink">
+                                                <i class="ri-cash-line"></i> Certificates
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+
+
+                                <li class="dropdown__subitem">
+                                    <div class="dropdown__link">
+                                        <i class="ri-bar-chart-line"></i> Members of ME-RIISE <i
+                                            class="ri-add-line dropdown__add"></i>
+                                    </div>
+
+                                    <ul class="dropdown__submenu">
+                                        <li>
+                                            <a href="index.html#boardofdirectors" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i>Board of Directors
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="faculty.html" class="dropdown__sublink">
+                                                <i class="ri-cash-line"></i> Faculty
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="team.html" class="dropdown__sublink">
+                                                <i class="ri-refund-2-line"></i> Team ME-RIISE
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <!--=============== DROPDOWN SUBMENU ===============-->
+
+                            </ul>
+                        </li>
+
+                        <!--=============== DROPDOWN 1 ===============-->
+                        <li class="dropdown__item">
+                            <div class="nav__link">
+                                Wings of ME-RIISE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                            </div>
+
+                            <ul class="dropdown__menu">
+                                <li>
+                                    <a href="startups.html" class="dropdown__link">
+                                        <i class="ri-pie-chart-line"></i>Start Ups
+                                    </a>
+                                </li>
+
+
+
+                                <li>
+                                    <a href="iic.html" class="dropdown__link">
+                                        <i class="ri-pie-chart-line"></i>  MoE - IIC
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="nain.html" class="dropdown__link">
+                                        <i class="ri-arrow-up-down-line"></i> NAIN
+                                    </a>
+                                </li>
+
+
+
+                                <li>
+                                    <a href="uba.html" class="dropdown__link">
+                                        <i class="ri-arrow-up-down-line"></i> UBA
+                                    </a>
+                                </li>
+
+
+                                <!-- <li class="dropdown__subitem">
+                                    <div class="dropdown__link">
+                                        <i class="ri-bar-chart-line"></i> Documents <i
+                                            class="ri-add-line dropdown__add"></i>
+                                    </div>
+      
+                                    <ul class="dropdown__submenu">
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i> MCE NISP POLICY
+                                            </a>
+                                        </li>
+      
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-cash-line"></i> Collaborations
+                                            </a>
+                                        </li>
+      
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-refund-2-line"></i> Refunds
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li> -->
+
+                                <!--=============== DROPDOWN SUBMENU ===============-->
+                                <li class="dropdown__subitem">
+                                    <div class="dropdown__link">
+                                        <i class="ri-bar-chart-line"></i> Pragyatha <i
+                                            class="ri-add-line dropdown__add"></i>
+                                    </div>
+
+                                    <ul class="dropdown__submenu">
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i> Pragyatha24
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i> Pragyatha23
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i> Pragyatha22
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i> Pragyatha21
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li><a href="https://meriise-events.vercel.app/" class="nav__link">Events</a></li>
+                        <li><a href="#footer" class="nav__link">Contact Us</a></li>
+
+                        <!--=============== DROPDOWN 2 ===============-->
+
+
+                        <!-- <li><a href="#" class="nav__link">Contact Us</a></li> -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <div class="">
+        <p class="text-center text-6xl p-10">New Age Innovation Network 1.0 & 1.2</p>
+    </div>
+
+
+    <div class="container mx-auto">
+
+        <div class="structure bg-blue-300 p-10 m-6 rounded-2xl">
+            <div class="my-10">
+                <p class="text-5xl">
+                    <span>01.</span> National Pollution Control Day
+                </p>
+                <p class="text-3xl">7th December 2023</p>
+                <p>The event aimed to raise awareness among students about the significance of pollution control, with a
+                    specific focus on soliciting innovative ideas through a poster presentation competition.
+
+
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <!-- Image 1 -->
+                <div class="rounded overflow-hidden shadow-2xl">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="assets/NAIN/NAIN1.0/poll1 (1).png" alt="Image 1"
+                            class="w-full h-[60vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+                <!-- Image 2 -->
+                <div class="rounded overflow-hidden shadow-3xl">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="assets/NAIN/NAIN1.0/poll1 (2).png" alt="Image 2"
+                            class="w-full h-[60vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+
+                <div class="rounded overflow-hidden shadow-3xl">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="assets/NAIN/NAIN1.0/poll1 (3).png" alt="Image 2"
+                            class="w-full h-[60vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+
+                <div class="rounded overflow-hidden shadow-3xl">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="assets/NAIN/NAIN1.0/poll1 (4).png" alt="Image 2"
+                            class="w-full h-[60vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+
+
+
+
+        <br>
+        <hr>
+        <br>
+
+        <div class="structure bg-blue-300 p-10 m-6 rounded-2xl">
+            <div class="my-10">
+                <p class="text-5xl">
+                    <span>02.</span> Proto Expo
+                </p>
+                <p class="text-3xl">7th November 2023</p>
+                <p>"Proto-Expo," served as the grand culmination of the internship. This event was strategically
+                    scheduled to coincide with the celebration of National Entrepreneurship Day.
+                    Each team set up and displayed their prototypes, creating a dynamic exhibition space. School
+                    students, as well as a panel of jury members, were invited to witness the innovative solutions
+                    crafted by the interns.
+
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Image 1 -->
+                <div class="rounded overflow-hidden shadow-2xl">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="assets/NAIN/NAIN1.0/protoexpo1.jpg" alt="Image 1"
+                            class="w-full h-[60vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+                <!-- Image 2 -->
+                <div class="rounded overflow-hidden shadow-3xl">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="assets/NAIN/NAIN1.0/protoexpo2.jpg" alt="Image 2"
+                            class="w-full h-[60vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+
+
+
+
+        <br>
+        <hr>
+        <br>
+
+        <div class="structure bg-blue-300 p-10 m-6 rounded-2xl">
+            <div class="my-10">
+                <p class="text-5xl">
+                    <span>03.</span> AURA 2.0
+                    State Level Project Expo
+
+
+                </p>
+                <p class="text-3xl">19th June, 2023</p>
+                <p>Provided a platform for aspiring entrepreneurs to showcase their innovative projects and foster a
+                    spirit of entrepreneurship.
+
+
+
+                </p>
+            </div>
+            <div class="grid grid-cols-2">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 m-6">
+                    <!-- Image 1 -->
+                    <div class="rounded overflow-hidden shadow-2xl">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="assets/NAIN/NAIN1.0/aura4.png" alt="Image 1"
+                                class="w-full h-[60vh] object-cover rounded-2xl">
+                        </div>
+                    </div>
+                    <!-- Image 2 -->
+                    <div class="rounded overflow-hidden shadow-3xl">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="assets/NAIN/NAIN1.0/aura2.png" alt="Image 2"
+                                class="w-full h-[60vh] object-cover rounded-2xl">
+                        </div>
+                    </div>
+
+                    <div class="rounded overflow-hidden shadow-3xl">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="assets/NAIN/NAIN1.0/aura3.png" alt="Image 2"
+                                class="w-full h-[60vh] object-cover rounded-2xl">
+                        </div>
+                    </div>
+
+                    <div class="rounded overflow-hidden shadow-3xl">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="assets/NAIN/NAIN1.0/aura.png" alt="Image 2"
+                                class="w-full h-[60vh] object-cover rounded-2xl">
+                        </div>
+                    </div>
+                    <!-- Add more images as needed -->
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-1 gap-4 m-6">
+                    <!-- Image 1 -->
+                    <div class="rounded overflow-hidden shadow-2xl">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="assets/NAIN/NAIN1.0/Screenshot 2025-02-19 102626.png" alt="Image 1"
+                                class="w-full h-[60vh] object-cover rounded-2xl">
+                        </div>
+                    </div>
+                    <!-- Image 2 -->
+                    <div class="rounded overflow-hidden shadow-3xl">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="assets/NAIN/NAIN1.0/Screenshot 2025-02-19 102727.png" alt="Image 2"
+                                class="w-full h-[60vh] object-cover rounded-2xl">
+                        </div>
+                    </div>
+
+
+                    <!-- Add more images as needed -->
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+        <hr>
+        <br>
+
+        <div class="structure bg-blue-300 p-10 m-6 rounded-2xl">
+            <div class="my-10">
+                <p class="text-5xl">
+                    <span>04.</span> Navapravarthan
+
+                </p>
+                <p class="text-3xl">16th August, 2022</p>
+                <p>Expo of projects funded by NAIN
+
+
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Image 1 -->
+                <div class="rounded overflow-hidden shadow-2xl">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="assets/NAIN/NAIN1.0/nav.jpg" alt="Image 1"
+                            class="w-full h-[60vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+                <!-- Image 2 -->
+                <div class="rounded overflow-hidden shadow-3xl">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="assets/NAIN/NAIN1.0/nav3.jpg" alt="Image 2"
+                            class="w-full h-[60vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+
+                <div class="rounded overflow-hidden shadow-3xl">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="assets/NAIN/NAIN1.0/nav4.jpg" alt="Image 2"
+                            class="w-full h-[60vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+
+
+        <br>
+        <hr>
+        <br>
+
+        <div class="structure bg-blue-300 p-10 m-6 rounded-2xl">
+            <div class="my-10">
+                <p class="text-5xl">
+                    <span>05.</span>
+                    Har Ghar Thiranga
+
+                </p>
+                <p class="text-3xl">15th August, 2022</p>
+                <p>On the occasion of 75th year of Indian Independence celebration, singing, logo and drawing
+                    competitions were organised.
+                    Also, Har Ghar Thiranga was commemorated by all the departments of the institute
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Image 1 -->
+                <div class="rounded overflow-hidden shadow-lg">
+                    <div class="aspect-w-1 aspect-h-1 bg">
+                        <img src="assets/NAIN/NAIN1.0/har1.jpg" alt="Image 1"
+                            class=" h-[60vh] w-full object-cover rounded-2xl">
+                    </div>
+                </div>
+
+                <div class="rounded overflow-hidden shadow-lg">
+                    <div class="aspect-w-1 aspect-h-1">
+                        <img src="assets/NAIN/NAIN1.0/har2.jpg" alt="Image 1"
+                            class=" h-[60vh] w-full object-cover rounded-2xl">
+                    </div>
+                </div>
+
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div class="structure bg-blue-300 p-10 m-6 rounded-2xl">
+            <div class="my-10">
+                <p class="text-5xl">
+                    <span>06.</span>
+                    CAD Wizards
+
+                </p>
+                <p class="text-3xl">24th March 2022</p>
+                <p>Expressed their choice of career
+
+
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Image 1 -->
+                <div class="rounded overflow-hidden shadow-lg">
+                    <div class="aspect-w-1 aspect-h-1">
+                        <img src="assets/NAIN/NAIN1.0/har1.jpg" alt="Image 1"
+                            class=" h-[80vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+
+                <div class="rounded overflow-hidden shadow-lg">
+                    <div class="aspect-w-1 aspect-h-1">
+                        <img src="assets/NAIN/NAIN1.0/har2.jpg" alt="Image 1"
+                            class=" h-[80vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+
+
+        <div class="structure bg-blue-300 p-10 m-6 rounded-2xl">
+            <div class="my-10">
+                <p class="text-5xl">
+                    <span>07.</span> Panel Discussion on Design Thinking
+                </p>
+                <p class="text-3xl">24th August, 2021
+                </p>
+                <p>Expressed their views on design thinking
+
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Image 1 -->
+                <div class="rounded overflow-hidden">
+                    <div class="">
+                        <img src="assets/NAIN/NAIN1.0/panelDiscussino.jpg" alt="Image 1"
+                            class="h-[60vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+                <!-- Image 2 -->
+                <div class="rounded overflow-hidden shadow-3xl">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="assets/NAIN/NAIN1.0/p1.jpg" alt="Image 2"
+                            class="w-full h-[60vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+
+                <div class="rounded overflow-hidden shadow-3xl">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="assets/NAIN/NAIN1.0/p2.jpg" alt="Image 2"
+                            class="w-full h-[60vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+
+
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+
+
+
+
+        <br>
+        <hr>
+        <br>
+
+        <div class="structure bg-blue-300 p-10 m-6 rounded-2xl">
+            <div class="my-10">
+                <p class="text-5xl">
+                    <span>08.</span> Ideathon - 21
+                </p>
+                <p class="text-3xl">7th May 2019</p>
+                <p>Identify personal attributes that enable best use of entrepreneurial opportunities
+                    Students advanced their skills in utilizing design thinking and process tools to evaluate real-
+                    world problems and projects
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Image 1 -->
+                <div class="rounded overflow-hidden shadow-2xl">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="assets/NAIN/NAIN1.0/ideageneration1.jpg" alt="Image 1"
+                            class="w-full h-[60vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+                <!-- Image 2 -->
+                <div class="rounded overflow-hidden shadow-3xl">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="assets/NAIN/NAIN1.0/ideaGeneration2.jpg" alt="Image 2"
+                            class="w-full h-[60vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+
+
+
+
+        <br>
+        <hr>
+        <br>
+
+        <div class="md:grid grid-cols-3">
+            <div class="structure bg-blue-300 p-10 m-6 rounded-2xl">
+                <div class="my-10">
+                    <p class="text-5xl">
+                        <span>09.</span> Code IT
+                    </p>
+                    <p class="text-3xl">24th May 2020</p>
+                    <p>Provided a platform to solve real world problems online using different coding languages. </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+                    <!-- Image 1 -->
+                    <div class="container mx-auto p-4 flex justify-center items-center">
+                        <div class="rounded overflow-hidden shadow-2xl">
+                            <div class="aspect-w-16 aspect-h-9">
+                                <img src="assets/NAIN/NAIN1.0/codeit.jpg" alt="Image 1"
+                                    class="w-[50vw] h-[60vh] object-cover rounded-2xl">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Image 2 -->
+
+                    <!-- Add more images as needed -->
+                </div>
+            </div>
+
+
+
+            <div class="structure bg-blue-300 p-10 m-6 rounded-2xl">
+                <div class="my-10">
+                    <p class="text-5xl">
+                        <span>10.</span> Ideathon
+                    </p>
+                    <p class="text-3xl">14th May 2020</p>
+                    <p>Emphasized usage of technology to overcome the COVID crisis
+
+
+
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+                    <!-- Image 1 -->
+                    <div class="container mx-auto p-4 flex justify-center items-center">
+                        <div class="rounded overflow-hidden shadow-2xl">
+                            <div class="aspect-w-16 aspect-h-9">
+                                <img src="assets/NAIN/NAIN1.0/ideathon14th.jpg" alt="Image 1"
+                                    class="w-[50vw] h-[60vh] object-cover rounded-2xl">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Image 2 -->
+
+                    <!-- Add more images as needed -->
+                </div>
+            </div>
+
+
+
+            <div class="structure bg-blue-300 p-10 m-6 rounded-2xl">
+                <div class="my-10">
+                    <p class="text-5xl">
+                        <span>11.</span> Hackathon | COVID - 19
+                    </p>
+                    <p class="text-3xl">12th May 2020</p>
+                    <p>Provided a platform to innovate solution to combat COVID’19 crisis
+
+
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+                    <!-- Image 1 -->
+                    <div class="container mx-auto p-4 flex justify-center items-center">
+                        <div class="rounded overflow-hidden shadow-2xl">
+                            <div class="aspect-w-16 aspect-h-9">
+                                <img src="assets/NAIN/NAIN1.0/hackathon.jpg" alt="Image 1"
+                                    class="w-[50vw] h-[60vh] object-cover rounded-2xl">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Image 2 -->
+
+                    <!-- Add more images as needed -->
+                </div>
+            </div>
+
+
+            <br>
+            <hr>
+            <br>
+        </div>
+
+        <div class="structure bg-blue-300 p-10 m-6 rounded-2xl">
+            <div class="my-10">
+                <p class="text-5xl">
+                    <span>12.</span>Outreach Programme and lateral thinking
+                </p>
+                <p class="text-3xl">14th October, 2019</p>
+                <p>Built collaborative capability of budding engineers to drive results, making a difference.
+
+                </p>
+            </div>
+            <div class="grid grid-cols-1  gap-4">
+                <!-- Image 1 -->
+                <div class="rounded overflow-hidden shadow-2xl">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="assets/NAIN/NAIN1.0/ideathonnew.jpg" alt="Image 1"
+                            class="w-full h-[80vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+                
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+
+
+        <br>
+        <hr>
+        <br>
+
+
+
+
+        <div class="structure bg-blue-300 p-10 m-6 rounded-2xl">
+            <div class="my-10">
+                <p class="text-5xl">
+                    <span>13.</span> Ideathon - 19
+                </p>
+                <p class="text-3xl">12th October 2019</p>
+                <p>Built collaborative capability of budding engineers to drive results, making a difference.
+
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Image 1 -->
+                <div class="rounded overflow-hidden shadow-2xl">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="assets/NAIN/NAIN1.0//ideathon-19.jpg" alt="Image 1"
+                            class="w-full h-[60vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+                <!-- Image 2 -->
+                <div class="rounded overflow-hidden shadow-3xl">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="assets/NAIN/NAIN1.0/ideathon-192.jpg" alt="Image 2"
+                            class="w-full h-[60vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+
+
+        <br>
+        <hr>
+        <br>
+
+
+
+
+
+
+        <div class="structure bg-blue-300 p-10 m-6 rounded-2xl">
+            <div class="my-10">
+                <p class="text-5xl">
+                    <span>14.</span>
+                    Bootcamp
+
+                </p>
+                <p class="text-3xl">14th September 2019</p>
+                <p>Understood the basics of entrepreneurship from experienced trainers
+
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+                <!-- Image 1 -->
+                <div class="rounded overflow-hidden shadow-2xl flex justify-center items-center">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="assets/NAIN/NAIN1.0/bootcampOriginal.jpg" alt="Image 1"
+                            class="w-[50vw] h-[60vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+
+
+
+        <div class="structure bg-blue-300 p-10 m-6 rounded-2xl">
+            <div class="my-10">
+                <p class="text-5xl">
+                    <span>15.</span> Ideathon - 19
+                </p>
+                <p class="text-3xl">12th October 2019</p>
+                <p>Built collaborative capability of budding engineers to drive results, making a difference.
+
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Image 1 -->
+                <div class="rounded overflow-hidden shadow-2xl">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="assets/NAIN/NAIN1.0//ideathon-19.jpg" alt="Image 1"
+                            class="w-full h-[60vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+                <!-- Image 2 -->
+                <div class="rounded overflow-hidden shadow-3xl">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="assets/NAIN/NAIN1.0/ideathon-192.jpg" alt="Image 2"
+                            class="w-full h-[60vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+
+
+        <br>
+        <hr>
+        <br>
+
+
+        <div class="structure bg-blue-300 p-10 m-6 rounded-2xl">
+            <div class="my-10">
+                <p class="text-5xl">
+                    <span>16.</span> Idea Generation to Incubation
+                </p>
+                <p class="text-3xl">7th May 2019</p>
+                <p>Identify personal attributes that enable best use of entrepreneurial opportunities
+                    Students advanced their skills in utilizing design thinking and process tools to evaluate real-
+                    world problems and projects
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Image 1 -->
+                <div class="rounded overflow-hidden shadow-2xl">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="assets/NAIN/NAIN1.0/ideageneration1.jpg" alt="Image 1"
+                            class="w-full h-[60vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+                <!-- Image 2 -->
+                <div class="rounded overflow-hidden shadow-3xl">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="assets/NAIN/NAIN1.0/ideaGeneration2.jpg" alt="Image 2"
+                            class="w-full h-[60vh] object-cover rounded-2xl">
+                    </div>
+                </div>
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+    <footer id="footer" class="bg-black">
+        <div class="container1">
+            <ul class="icons">
+                <li>
+                    <a href="#" class="icon fa-twitter" style="color: rgb(51, 183, 235);text-decoration: none;"><span
+                            class="label">Twitter</span></a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/mce.startup.club" class="icon fa-facebook"
+                        style="color: rgb(43, 43, 247);text-decoration: none;"><span class="label">Facebook</span></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/me_riise/" class="icon fa-instagram"
+                        style="color: rgb(250, 43, 112);;text-decoration:none"><span class="label">Instagram</span></a>
+                </li>
+                <li>
+                    <a href="mailto:meriisehsn@gmail.com" class="icon fa-envelope"
+                        style="color: rgb(228, 54, 11);text-decoration:none"><span class="label">Email</span></a>
+                </li>
+
+                <li>
+                    <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A72704849&keywords=me-riise%20foundation&origin=RICH_QUERY_SUGGESTION&position=0&searchId=a2da3c5d-f488-492f-9f3b-da0bce4973ef&sid=w7m&spellCorrectionEnabled=false   "
+                        class="icon fa-linkedin" style="color: rgb(255, 255, 255);text-decoration:none"><span
+                            class="label">Linkedin</span></a>
+                </li>
+
+            </ul>
+
+        </div>
+        <div class="copyright">&copy; ME-RIISE FOUNDATION. All rights reserved.</div>
+        <div class="lg:grid grid-cols-3 cursor-pointer">
+            <div>
+                <p class="text-white text-left text-2xl font-bold m-10">Contact Us Through</p>
+                <p class="text-white text-left m-10"><a href="meriise.org">Dr Geetha Kiran A | CEO</a></p>
+                <!-- <p class="text-white text-left m-10">Dr Geetha Kiran A</p> -->
+                <p class="text-white text-left m-10"><a href="ceomeriise@mcehassan.ac.in">Email Us on :
+                        ceomeriise@mcehassan.ac.in</a></p>
+                <p class="text-white text-left m-10"><a href="https://www.instagram.com/me_riise/">Follow Us on
+                        Instagram</a></p>
+            </div>
+            <div>
+                <p class="text-white text-left text-2xl m-10 font-bold">Quick Links</p>
+                <p class="text-white text-left m-10"><a href="infrastructure.html">Our Infrastructure</a></p>
+                <p class="text-white text-left m-10"><a href="uba.html">UBA Visit</a></p>
+                <p class="text-white text-left m-10"><a href="startups.html">Start Ups</a></p>
+            </div>
+
+
+            <div>
+                <p class="text-white text-left text-2xl m-10 font-bold">Location:</p>
+
+                <p class="text-white text-left m-10">About ME-RIISE Foundation</p>
+                <!-- <p class="text-white text-left m-10">Address</p> -->
+                <p class="text-white text-left m-10"><span class="font-bold">Address : <br></span>24F3+69J, Rangoli
+                    Halla,
+                    Malnad College of Engineering , Hassan, Karnataka 573201</p>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+    </footer>
+    <script src="assets/NavbarCode/assets/js/main.js"></script>
+
+
+</body>
+
+</html>

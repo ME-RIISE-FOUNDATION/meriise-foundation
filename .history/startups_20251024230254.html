@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>ME-RIISE</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <!-- from the other one 
+			<link rel="stylesheet" href="assets/css/from/skel.css" />-->
+  <!--<link rel="stylesheet" href="assets/css/from/style.css" />-->
+  <!--<link rel="stylesheet" href="assets/css/from/style-xlarge.css" />-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- bootstrap 4 css -->
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" /> -->
+
+  <!-- fontawesome cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
+    integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- custom css -->
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" href="assets/css/newcss.css" />
+  <!-- Boxicons CSS -->
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/NavbarCode/assets/css/styles.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    a:link {
+      text-decoration: none;
+    }
+
+    body {
+      font-family: "Poppins", serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    .col-md-center {
+      position: absolute;
+      width: 800;
+      height: 600;
+      overflow: hidden;
+      left: auto;
+      right: auto;
+      z-index: 0;
+    }
+
+    .main {
+      text-align: center;
+    }
+
+    .marq {
+      padding-top: 30px;
+      padding-bottom: 10px;
+    }
+
+
+    .blink {
+      animation: blink 2s infinite;
+      color: blue;
+    }
+
+    .event-list {
+      padding-top: -50px;
+      width: 100%;
+    }
+
+    #list {
+      font-size: 15px;
+    }
+
+    #box2 {
+      z-index: 1;
+    }
+
+
+    @media only screen and (min-width: 200px) and (max-width: 480px) {
+      #board {
+        margin-left: 2px;
+      }
+    }
+
+    @media only screen and (min-width: 480px) and (max-width: 639px) {
+      #board {
+        margin-left: 2px;
+      }
+    }
+
+    @media only screen and (min-width: 980px) and (max-width: 1024px) {
+      #board {
+        margin-left: 2px;
+      }
+    }
+
+
+    @media only screen and (min-width: 1024px) and (max-width: 1180px) {
+      #list {
+        font-size: 10px;
+
+      }
+    }
+
+
+
+
+
+
+    @keyframes blink {
+      0% {
+        opacity: 5;
+      }
+
+      100% {
+        opacity: 2;
+        color: red;
+      }
+
+
+    }
+  </style>
+</head>
+
+<body data-gr-c-s-loaded="true" class="vsc-initialized" style="user-select: auto">
+  <div class="snav-bar" style="background-color: black">
+    <!-- <div class="logo">
+      <a href="index.html">
+        <img class="mr-logo mt-1" src="img/logo.png" />
+      </a>
+    </div>
+
+    <div class="nav-link">
+      <ul class="nvl">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="faculty.html">Faculty</a></li>
+        <li><a href="team.html">Student Members</a></li>
+        <li><a href="startups.html">Start-Ups</a></li>
+        <div class="dropdown" style="display: inline-block">
+          <button class="dropbtn" id="dropbtn" onclick="handleMoreBtn()">
+            More
+            <i class="fa fa-caret-down" style="color: rgb(65, 142, 243)"></i>
+          </button>
+
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="http://www.mcehassan.ac.in">Malnad College of Engineering</a>
+            <a href="events.html">Successful Events</a>
+            <a href="prag.html">PRAGYATHA - 19</a>
+           <a href="alumni.html">Alumni</a> 
+            <a href="documents.html">Documents</a>
+          </div>
+        </div>
+      </ul>
+    </div>
+
+    <div class="smenu-btn">
+      <button onclick="openNav()" style="background-color: black; outline: none">
+        <i class="fa fa-bars" style="color: rgb(65, 142, 243)" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+  <div id="myNav" class="overlay" style="margin-top: 70px">
+    <a href="javascript:void(0)" class="closebtn" style="font-size: 15px" onclick="closeNav()"><i
+        class="fa fa-times"></i></a>
+    <div class="overlay-content">
+      <a href="index.html">Home</a>
+      <a href="faculty.html">Faculty</a>
+      <a href="team.html">Student Members</a>
+      <a href="startups.html">Start-Ups</a>
+      <a href="http://www.mcehassan.ac.in">Malnad College of Engineering</a>
+      <a href="events.html">Successful Events</a>
+      <a href="prag.html">PRAGYATHA - 19</a>
+     <a href="alumni.html">Alumni</a> 
+      <a href="Nisp.html">NISP-policy</a>
+    </div>-->
+    <!-- <nav class="bg-black lg:flex lg:items-center lg:justify-between">
+      <div class="flex items-center justify-between">
+        <a href="index.html"><img src="images/meriiseNewLogo.png" alt="" class="h-20"></a>
+
+        <div>
+          <ion-icon name="menu" onclick="clickFunction(this)" class="text-4xl text-blue-400 block lg:hidden"></ion-icon>
+        </div>
+
+      </div> -->
+
+    <!-- <ion-icon name="menu" id="menu" onclick="clickFunction(this)"
+  class="text-4xl block lg:hidden h-24"></ion-icon> -->
+
+
+    <!-- <div class="hidden lg:block" id="elements">
+        <ul
+          class="text-blue-400 font-bold bg-black px-4 py-4 lg:flex lg:justify-between lg:items-center w-48 md:w-42 lg:w-full float-right md:float-right h-screen md:h-screen lg:h-auto z-50"
+          id="list">
+          <li class="mx-2"><a href="index.html">Home</a></li>
+          <li class="mx-2"><a href="aboutmeriise.html">About us</a></li>
+          <li class="mx-2"><a href="faculty.html">Faculty</a></li>
+          <li class="mx-2"><a href="team.html">Team MERIISE</a></li>
+          <li class="mx-2"><a href="iic.html">MoE</a></li>
+          <li class="mx-2"><a href="nain.html">NAIN</a></li>
+          <li class="mx-2"><a href="uba.html">UBA</a></li>
+          <li class="mx-2"><a href="infrastructure.html">Infrastructure</a></li>
+          <li class="mx-2"><a href="startups.html">Start ups</a></li>
+          <li class="mx-2"><a href="https://meriise-events.vercel.app/">Events</a></li>
+          <li class="mx-2"><a href="https://www.mcehassan.ac.in/">MCE</a></li>
+          <li class="mx-2"><a href="ourAchivements.html">Achievements</a></li>
+
+
+          <div class="flex ml-2">
+            <li class="relative" onclick="toggleFunction2(event)" id="click">
+              <a href="#" class="hover:text-blue-600">Documents</a>
+              <ion-icon name="caret-down-outline" class="px-1" id="icons2"></ion-icon>
+
+            </li>
+            <li class="absolute p-2 rounded-sm mt-8 hidden rounded-xl text-md w-[130px] bg-white text-blue-600"
+              id="box2" onclick="dropdown()">
+              <div><a href="Nisp.html">MCE NISP Policy</a></div>
+              <div><a href="collab.html">Collaboration</a></div>
+              <div><a href="documents.html">Documents</a></div>
+
+            </li>
+          </div> -->
+    <!-- <li class="mx-2"><a href="collab.html">Collaborations</a></li>
+              <li class="mx-2"><a href="Nisp.html">MCE NISP Policy</a></li> -->
+
+
+    <!-- <div class="flex ml-2">
+            <li class="relative" onclick="toggleFunction(event)" id="click">
+              <a href="#" class="hover:text-blue-600">Pragyatha</a>
+              <ion-icon name="caret-down-outline" class="px-1" id="icons"></ion-icon>
+
+            </li>
+            <li class="absolute p-2 rounded-sm mt-8 hidden rounded-xl text-md w-[130px] bg-white text-blue-600" id="box"
+              onclick="dropdown()">
+              <div><a href="pragyatha23.html">Pragyatha 23</a></div>
+              <div><a href="pragyatha22.html">Pragyatha 22</a></div>
+              <div><a href="Pragyatha.html">Pragyatha-21</a></div>
+              <div><a href="prag.html">Pragyatha 19</a></div>
+
+            </li>
+          </div>
+
+
+
+        </ul>
+      </div> -->
+    <!-- </nav> -->
+
+    <header class="header">
+      <nav class="nav containerofNavbar">
+        <div class="nav__data">
+          <a href="#" class="nav__logo">
+            <img src="assets/MERIISE FOUNDATION logo 2.0.png" alt="" class="h-16">
+          </a>
+
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__burger"></i>
+            <i class="ri-close-line nav__close"></i>
+          </div>
+        </div>
+
+        <!--=============== NAV MENU ===============-->
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link">Home</a></li>
+
+            <li class="dropdown__item">
+              <div class="nav__link">
+                About ME-RIISE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="aboutmeriise.html" class="dropdown__link">
+                    <i class="ri-pie-chart-line"></i> ME-RIISE FOUNDATION
+                  </a>
+                </li>
+
+
+                <li>
+                  <a href="infrastructure.html" class="dropdown__link">
+                    <i class="ri-pie-chart-line"></i> Infrastructure
+                  </a>
+                </li>
+
+
+                <li>
+                  <a href="ourAchivements.html" class="dropdown__link">
+                    <i class="ri-arrow-up-down-line"></i> Achievements
+                  </a>
+                </li>
+
+
+                <li class="dropdown__subitem">
+                  <div class="dropdown__link">
+                    <i class="ri-bar-chart-line"></i> Documents <i class="ri-add-line dropdown__add"></i>
+                  </div>
+
+                  <ul class="dropdown__submenu">
+                    <li>
+                      <a href="Nisp.html" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i> MCE NISP POLICY
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="collab.html" class="dropdown__sublink">
+                        <i class="ri-cash-line"></i> Collaborations
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="Certificates.html" class="dropdown__sublink">
+                        <i class="ri-cash-line"></i> Certificates
+                      </a>
+                    </li>
+
+
+                  </ul>
+                </li>
+
+
+                <li class="dropdown__subitem">
+                  <div class="dropdown__link">
+                    <i class="ri-bar-chart-line"></i> Members of ME-RIISE <i class="ri-add-line dropdown__add"></i>
+                  </div>
+
+                  <ul class="dropdown__submenu">
+                    <li>
+                      <a href="index.html#boardofDirectors" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i>Board of Directors
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="faculty.html" class="dropdown__sublink">
+                        <i class="ri-cash-line"></i> Faculty
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="team.html" class="dropdown__sublink">
+                        <i class="ri-refund-2-line"></i> Team ME-RIISE
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <!--=============== DROPDOWN SUBMENU ===============-->
+
+              </ul>
+            </li>
+
+            <!--=============== DROPDOWN 1 ===============-->
+            <li class="dropdown__item">
+              <div class="nav__link">
+                Wings of ME-RIISE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="startups.html" class="dropdown__link">
+                    <i class="ri-pie-chart-line"></i>Start Ups
+                  </a>
+                </li>
+
+
+
+                <li>
+                  <a href="iic.html" class="dropdown__link">
+                    <i class="ri-pie-chart-line"></i>  MoE - IIC
+                  </a>
+                </li>
+
+                <li>
+                  <a href="nain.html" class="dropdown__link">
+                    <i class="ri-arrow-up-down-line"></i> NAIN
+                  </a>
+                </li>
+
+
+
+                <li>
+                  <a href="uba.html" class="dropdown__link">
+                    <i class="ri-arrow-up-down-line"></i> UBA
+                  </a>
+                </li>
+
+
+                <!-- <li class="dropdown__subitem">
+                              <div class="dropdown__link">
+                                  <i class="ri-bar-chart-line"></i> Documents <i
+                                      class="ri-add-line dropdown__add"></i>
+                              </div>
+
+                              <ul class="dropdown__submenu">
+                                  <li>
+                                      <a href="#" class="dropdown__sublink">
+                                          <i class="ri-file-list-line"></i> MCE NISP POLICY
+                                      </a>
+                                  </li>
+
+                                  <li>
+                                      <a href="#" class="dropdown__sublink">
+                                          <i class="ri-cash-line"></i> Collaborations
+                                      </a>
+                                  </li>
+
+                                  <li>
+                                      <a href="#" class="dropdown__sublink">
+                                          <i class="ri-refund-2-line"></i> Refunds
+                                      </a>
+                                  </li>
+                              </ul>
+                          </li> -->
+
+                <!--=============== DROPDOWN SUBMENU ===============-->
+                <li class="dropdown__subitem">
+                  <div class="dropdown__link">
+                    <i class="ri-bar-chart-line"></i> Pragyatha <i class="ri-add-line dropdown__add"></i>
+                  </div>
+
+                  <ul class="dropdown__submenu">
+                    <li>
+                      <a href="https://pragyatha24.meriise.org/" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i> Pragyatha24
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="pragyatha23.html" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i> Pragyatha23
+                      </a>
+                    </li>
+                    <li>
+                      <a href="pragyatha22.html" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i> Pragyatha22
+                      </a>
+                    </li>
+                    <li>
+                      <a href="pragyatha19.html" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i> Pragyatha21
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li><a href="https://meriise-events.vercel.app/" class="nav__link">Events</a></li>
+            <li><a href="#footer" class="nav__link">Contact Us</a></li>
+
+            <!--=============== DROPDOWN 2 ===============-->
+
+
+            <!-- <li><a href="#" class="nav__link">Contact Us</a></li> -->
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+
+  </div>
+
+  <!--  
+
+  <section id="two" class="wrapper style2 mt-5">
+    <div class="inner pl-5">
+      <div class="row"> -->
+  <!--<center>-->
+
+  <!-- <div class="col-md-6"> -->
+  <!--<div class="box" style="max-width: 1200px;box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);">-->
+  <!-- <div class="box" style="
+                max-width: 400px;
+                box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+              ">
+            <div class="content">
+              <header class="align-center">
+                <h2><b>ME-RIISE FOUNDATION</b></h2>
+              </header>
+              <div style="border: solid grey" class="pl-1 pr-1 pb-4">
+                <br />
+                <center>
+                  <img src="img/meriise-found.png" alt="" class="img-fluid w-100 text-center" /><br />
+                </center>
+                <center>
+                  <a href="meriise-found.html"><button style="background-color: rgb(15, 177, 241)">
+                      <b class="text-dark">KNOW MORE</b>
+                    </button></a>
+                </center>
+                <br />
+                <br />
+              </div>
+            </div>
+            <br />
+          </div>
+        </div> -->
+  <!--</center>-->
+  <!--</div>-->
+  <!--<div class="row ">-->
+  <!-- <div class="col-md-6">
+          <div class="box" style="
+                max-width: 400px;
+                box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+              ">
+            <div class="content">
+              <header class="align-center">
+                <h2><b>TECH@10</b></h2>
+              </header>
+              <div style="border: solid grey" class="pl-1 pr-1 pb-4">
+                <br />
+                <center>
+                  <img src="img/s41.png" alt="" class="img-fluid w-100 text-center" /><br />
+                </center>
+                <center>
+                  <a href="techat10.html"><button style="background-color: rgb(15, 177, 241)">
+                      <b class="text-dark">KNOW MORE</b>
+                    </button></a>
+                </center>
+                <br />
+                <br />
+              </div>
+            </div>
+            <br />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="box" style="
+                max-width: 400px;
+                box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+              "> -->
+  <!-- <div class="content">
+            <header class="align-center">
+              <h2><b>DEVELOPERS COMMUNITY</b></h2>
+            </header>
+            <div style="border: solid grey" class="pl-1 pr-1 pb-4">
+              <br />
+              <center>
+                <img src="img/web.png" alt="" class="img-fluid w-100 text-center pl-2 pr-2 mt-4"
+                  style="height: 70px" /><br />
+              </center>
+              <center>
+                <a href="developers.html"><button style="
+                          background-color: rgb(241, 126, 213);
+                          margin-top: 50px;
+                        "> -->
+  <!-- <b class="text-dark">KNOW MORE</b>
+                  </button></a>
+              </center>
+              <br />
+              <br />
+            </div>
+          </div>
+          <br />
+        </div>
+      </div>
+    </div> -->
+  <!-- <div class="row">
+      <div class="col-md-6">
+        <div class="box" style="
+                max-width: 400px;
+                box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+              "> -->
+  <!-- <div class="content">
+            <header class="align-center">
+              <h2><b>TechWithKPG</b></h2>
+            </header> -->
+  <!--<div style="border: solid grey;" class="pl-1 pr-1">	-->
+  <!-- <div style="border: solid grey" class="pl-1 pr-1 pb-4">
+              <br />
+              <center>
+                <img src="img/kpglo.jpg" alt="" class="img-fluid w-100 text-center" /><br />
+              </center>
+              <center>
+                <a href="teckwithkpg.html"><button style="background-color: rgb(255, 0, 0)">
+                    <b class="text-dark">KNOW MORE</b>
+                  </button></a>
+              </center>
+              <br />
+              <br />
+            </div>
+            <br />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+
+      </div> -->
+
+  <!-- <div class="row"> -->
+  <!--<center>-->
+
+  <!-- <div class="col-md-6"> -->
+  <!--<div class="box" style="max-width: 1200px;box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);">-->
+  <!-- <div class="box" style="
+                max-width: 400px;
+                box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+              ">
+            <div class="content">
+              <header class="align-center">
+                <h2><b>Edutechsphere</b></h2>
+              </header>
+              <div style="border: solid grey" class="pl-1 pr-1 pb-4">
+                <br />
+                <center>
+                  <img src="img/meriise-found.png" alt="" class="img-fluid w-100 text-center" /><br />
+                </center>
+                <center>
+                  <a href="meriise-found.html"><button style="background-color: rgb(15, 177, 241)">
+                      <b class="text-dark">KNOW MORE</b>
+                    </button></a>
+                </center>
+                <br />
+                <br />
+              </div>
+            </div>
+            <br />
+          </div>
+        </div> -->
+  <!--</center>-->
+  <!--</div>-->
+  <!--<div class="row ">-->
+  <!-- <div class="col-md-6">
+          <div class="box" style="
+                max-width: 400px;
+                box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+              ">
+            <div class="content">
+              <header class="align-center">
+                <h2><b>Chathurpravarthan private limited</b></h2>
+              </header>
+              <div style="border: solid grey" class="pl-1 pr-1 pb-4">
+                <br />
+                <center>
+                  <img src="img/s41.png" alt="" class="img-fluid w-100 text-center" /><br />
+                </center>
+                <center>
+                  <a href="techat10.html"><button style="background-color: rgb(15, 177, 241)">
+                      <b class="text-dark">KNOW MORE</b>
+                    </button></a>
+                </center>
+                <br />
+                <br />
+              </div>
+            </div>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div> -->
+  <!--
+			<div class="row">
+					<div class="col-md-6">
+						<div class="box" style="max-width: 400px;box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);">
+						<div class="content">
+							<header class="align-center">
+								<h2 ><b>TechWithKPG</b></h2>
+								
+							</header>
+							<!--<div style="border: solid grey;" class="pl-1 pr-1">	
+							<div style="border: solid grey;" class="pl-1 pr-1 pb-4">
+							<br>		
+						   <center><img src="img/kpglo.jpg" alt="" class="img-fluid w-100 text-center"><br></center> 
+							<center><a href="teckwithkpg.html"><button  style="background-color: rgb(255, 0, 0);"><b class="text-dark">KNOW MORE</b></button></a></center>	
+								<br>	
+								<br>
+									
+									
+							</div>
+							<br>
+						</div>
+					</div>
+				   </div>
+
+			</div>-->
+  <!--	</div>-->
+  <!--</div>-->
+  <!-- </section> -->
+
+  <div class="bg-black pt-16 lg:pt-20 p-0">
+    <div class="text-white text-center text-[60px] md:text-[80px]">StartUps.</div>
+    <p class="m-6 lg:m-10 text-white text-sm lg:text-xl" style="text-align: justify;">At ME-RIISE Foundation,
+      we are committed to fostering innovation and delivering solutions
+      that drive progress. Our startup represents the spirit of creativity
+      and forward-thinking that defines our approach. With a focus on
+      cutting-edge technology and continuous growth, we aim to transform
+      industries and empower businesses. Join us on this exciting journey
+      as we create lasting impact and revolutionize the future. Together,
+      we can achieve
+      remarkable success and pave the way for tomorrow’s breakthroughs.</p>
+
+
+
+
+    <div class="p-2">
+      <div class="lg:grid grid-cols-2">
+        <div class="bg-gray-700 m-2 lg:m-10 rounded-2xl">
+          <p class="text-[40px] m-10 pt-10 lg:p-0 text-white">TECH @10</p>
+          <p class="text-white text-sm lg:text-xl m-8 lg:m-10 py-4 justify-content">
+
+            Tech@10 is an idea to provide technical knowledge to the budding technical students at a reasonable price
+            that is ten rupees per session. Hence the name Tech@10.
+
+            In our startup we teach students the technical skills life programming, android development, web
+            development. The main aim of our startup is to create awareness about the technical skills that they require
+            to get into corporate sector and also make it easy for them to get the knowledge as we provide at a very
+            reasonable cost.
+          </p>
+          <a href="techat10.html">
+            <div class="bg-white m-10 py-4 px-4 rounded-2xl cursor-pointer text-md text-center">Know More about Tech
+              @10
+            </div>
+          </a>
+          <br>
+        </div>
+
+
+
+
+        <div class="bg-gray-700 m-2 lg:m-10 rounded-2xl">
+          <p class="text-[40px] m-10 pt-10 lg:p-0 text-white ">TECH with KGP</p>
+          <p class="text-white text-sm lg:text-xl m-8 lg:m-10 py-4 justify-content">
+
+            The goal and vision of Techwithkpg is pretty simple but much effective. Having the goal of teaching ,
+            effective learning and problem solving which made us inspire and aspired us to drive our passion . App
+            development helped us to shape our career,
+            TechWithKPG has done a tremendous work in providing various Courses and Internships for students of Malnad
+            College of Engineering .
+          </p>
+          <a href="teckwithkpg.html">
+            <div class="bg-white m-10 py-4 px-4 rounded-2xl cursor-pointer text-md text-center">Know More about TECH
+              with KGP
+            </div>
+          </a>
+          <br>
+        </div>
+
+
+
+        <!-- KPG , meriise , awake , techkid ,  -->
+
+        <div class="bg-gray-700 m-2 lg:m-10 rounded-2xl">
+          <p class="text-[40px] m-10 pt-10 lg:p-0 text-white">Developers Community</p>
+          <p class="text-white text-md lg:text-xl m-8 lg:m-10 py-4 justify-content">
+            Started by Adarsh D and Manoj Kumar H R in the year 2020. Our motto of this community is to spread knowledge
+            and develop interests in the students to learn coding in the industry standard and contribute to the college
+            and society. We developed a web-based application for monitoring people under home quarantine during the
+            pandemic situation of covid-19.
+          </p>
+          <a href="developers.html">
+            <div class="bg-white m-10 py-4 px-4 rounded-2xl cursor-pointer text-md text-center">Know More about
+              Developers
+              Community
+            </div>
+          </a>
+          <br>
+        </div>
+
+        <!-- Chathurpravarthan Private Limited -->
+        <div class="bg-gray-700 m-2 lg:m-10 rounded-2xl">
+          <p class="text-[25px] lg:text-[35px] m-10 pt-10 lg:p-0 text-white">Chathurpravarthan Private Limited</p>
+          <p class="text-white text-md lg:text-xl m-8 lg:m-10 py-4 justify-content">
+            Chathur Pravarthan Private Limited, established in 2022, is a remarkable success story. It originated as a
+            start-up within the premises of Malnad College of Engineering, born out of the successful implementation of
+            the "Solar Panel Cleaning Robot" project.
+          </p>
+
+          <a href="https://pravarthan.in/">
+            <div class="bg-white m-10 py-4 px-4 rounded-2xl cursor-pointer text-md text-center">Know More about
+              Chathurpravarthan Private Limited
+            </div>
+          </a>
+          <br>
+        </div>
+
+        <div class="bg-gray-700 m-2 lg:m-10 rounded-2xl">
+          <p class="text-[35px] lg:text-[35px] m-10 pt-10 lg:p-0 text-white">Edutechsphere</p>
+          <p class="text-white text-sm lg:text-xl m-8 lg:m-10 py-4 justify-content">
+            Welcome to Edutechsphere, where technology meets education to create transformative learning experiences.
+            Our mission is to empower learners and educators with innovative tools and solutions that inspire growth and
+            unlock potential. At Edutechsphere, we believe in shaping the future of education through cutting-edge
+            technology and a passion for excellence. Join us in revolutionizing the way the world learns and grows.
+          </p>
+
+          <a href="EdutechSphere.html">
+            <div class="bg-white m-10 py-4 px-4 rounded-2xl cursor-pointer text-md text-center">Know More about
+              Edutechsphere
+            </div>
+          </a>
+          <br>
+        </div>
+
+
+
+
+      </div>
+
+      <!-- <div class="lg:grid grid-cols-3">
+        <div class="bg-gray-700 m-10 rounded-2xl">
+          <p class="text-[30px] lg:text-[40px] pt-10 lg:pt-0 m-10 text-white">Edutechsphere</p>
+          <p class="text-white text-md lg:text-xl m-10 py-4 justify-content">
+            Welcome to Edutechsphere, where technology meets education to create transformative learning experiences.
+            Our mission is to empower learners and educators with innovative tools and solutions that inspire growth and
+            unlock potential. At Edutechsphere, we believe in shaping the future of education through cutting-edge
+            technology and a passion for excellence. Join us in revolutionizing the way the world learns and grows.
+          </p>
+          <a href="assets/StartUps/Edutechshere.pdf">
+            <div class="bg-white m-8 px-10 rounded-2xl py-4 cursor-pointer text-lg text-center">Know More about
+              Edutechsphere
+            </div>
+          </a>
+
+          <br>
+
+
+        </div>
+
+      </div> -->
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer id="footer" class="bg-black">
+    <div class="container1">
+      <ul class="icons">
+        <li>
+          <a href="#" class="icon fa-twitter" style="color: rgb(51, 183, 235);text-decoration: none;"><span
+              class="label">Twitter</span></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mce.startup.club" class="icon fa-facebook"
+            style="color: rgb(43, 43, 247);text-decoration: none;"><span class="label">Facebook</span></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/me_riise/" class="icon fa-instagram"
+            style="color: rgb(250, 43, 112);;text-decoration:none"><span class="label">Instagram</span></a>
+        </li>
+        <li>
+          <a href="mailto:meriisehsn@gmail.com" class="icon fa-envelope"
+            style="color: rgb(228, 54, 11);text-decoration:none"><span class="label">Email</span></a>
+        </li>
+
+        <li>
+          <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A72704849&keywords=me-riise%20foundation&origin=RICH_QUERY_SUGGESTION&position=0&searchId=a2da3c5d-f488-492f-9f3b-da0bce4973ef&sid=w7m&spellCorrectionEnabled=false   "
+            class="icon fa-linkedin" style="color: rgb(255, 255, 255);text-decoration:none"><span
+              class="label">Linkedin</span></a>
+        </li>
+
+      </ul>
+
+    </div>
+    <div class="copyright">&copy; ME-RIISE FOUNDATION. All rights reserved.</div>
+    <div class="lg:grid grid-cols-3 cursor-pointer">
+      <div>
+        <p class="text-white text-left text-2xl font-bold m-10">Contact Us Through</p>
+        <p class="text-white text-left m-10"><a href="meriise.org">Dr Geetha Kiran A | CEO</a></p>
+        <!-- <p class="text-white text-left m-10">Dr Geetha Kiran A</p> -->
+        <p class="text-white text-left m-10"><a href="ceomeriise@mcehassan.ac.in">Email Us on :
+            ceomeriise@mcehassan.ac.in</a></p>
+        <p class="text-white text-left m-10"><a href="https://www.instagram.com/me_riise/">Follow Us on
+            Instagram</a></p>
+      </div>
+      <div>
+        <p class="text-white text-left text-2xl m-10 font-bold">Quick Links</p>
+        <p class="text-white text-left m-10"><a href="infrastructure.html">Our Infrastructure</a></p>
+        <p class="text-white text-left m-10"><a href="uba.html">UBA Visit</a></p>
+        <p class="text-white text-left m-10"><a href="startups.html">Start Ups</a></p>
+      </div>
+
+
+      <div>
+        <p class="text-white text-left text-2xl m-10 font-bold">Location:</p>
+
+        <p class="text-white text-left m-10">About ME-RIISE Foundation</p>
+        <!-- <p class="text-white text-left m-10">Address</p> -->
+        <p class="text-white text-left m-10"><span class="font-bold">Address : <br></span>24F3+69J, Rangoli
+          Halla,
+          Malnad College of Engineering , Hassan, Karnataka 573201</p>
+
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+  </footer>
+</body>
+
+<!-- Scripts -->
+<script src="assets/NavbarCode/assets/js/main.js"></script>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<!--<script src="assets/js/from/jquery.min.js"></script>
+				<script src="assets/js/from/skel.min.js"></script>
+				<script src="assets/js/from/skel-layers.min.js"></script>
+				<script src="assets/js/from/init.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+<!-- custom script -->
+<script src="js/script.js"></script>
+<script>
+
+
+
+  function clickFunction(e) {
+    let list = document.getElementById('elements')
+    list.classList.toggle('hidden')
+    let iconName = e.getAttribute('name');
+    e.setAttribute('name', iconName === 'menu' ? 'close' : 'menu');
+  }
+
+  document.addEventListener('click', function (event) {
+    if (!event.target.closest('#box, #box2, #icons, #icons2')) {
+      document.getElementById('box').classList.add('hidden');
+      document.getElementById('box2').classList.add('hidden');
+    }
+  });
+
+  function toggleFunction(event) {
+    event.stopPropagation(); // prevent the event from bubbling up to the document
+
+    const box = document.getElementById('box');
+    const box2 = document.getElementById('box2');
+
+    box.classList.toggle('hidden');
+    if (!box.classList.contains('hidden')) {
+      box2.classList.add('hidden');
+    }
+
+    const icons = document.getElementById('icons'); // Select the icon element
+    const iconName = icons.getAttribute('name');
+    icons.setAttribute('name', iconName === 'caret-down-outline' ? 'caret-up-outline' : 'caret-down-outline');
+  }
+
+  function toggleFunction2(event) {
+    event.stopPropagation(); // prevent the event from bubbling up to the document
+
+    const box2 = document.getElementById('box2');
+    const box = document.getElementById('box');
+    box2.classList.toggle('hidden');
+    if (!box2.classList.contains('hidden')) {
+      box.classList.add('hidden');
+    }
+
+    const icons2 = document.getElementById('icons2'); // Select the icon element
+    const iconName = icons2.getAttribute('name');
+    icons2.setAttribute('name', iconName === 'caret-down-outline' ? 'caret-up-outline' : 'caret-down-outline');
+  }
+
+
+</script>
+
+</html>
