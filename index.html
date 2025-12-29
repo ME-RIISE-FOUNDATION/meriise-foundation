@@ -329,7 +329,7 @@
         </div>
     </div>  -->
 
-<!-- <div id="alert-box-container"
+    <!-- <div id="alert-box-container"
     class="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center 
            p-4 sm:p-6 z-[999] opacity-0 transition"
     style="display:none">
@@ -636,7 +636,7 @@
                                         </div>
 
                                         <ul class="dropdown__submenu">
-                                                                                        <li>
+                                            <li>
                                                 <a href="https://pragyatha25.meriise.org/" class="dropdown__sublink">
                                                     <i class="ri-file-list-line"></i>Pragyatha25
                                                 </a>
@@ -711,10 +711,35 @@
                             </li>
 
                             <li><a href="https://meriise-events.vercel.app/" class="nav__link">Events</a></li>
-                           
-                            <li><a href="tbi.html" class="nav__link">TBI MCE</a></li>
 
-                             <li><a href="#footer" class="nav__link">Contact Us</a></li>
+                            <li class="dropdown__item">
+                                <div class="nav__link">
+                                    TBI MCE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                                </div>
+
+                                <ul class="dropdown__menu">
+                                    <li>
+                                        <a href="tbi.html" class="dropdown__link">
+                                            <i class="ri-pie-chart-line"></i> About TBI
+                                        </a>
+                                    </li>
+
+
+                                    <li>
+                                        <a href="openPosition.html" class="dropdown__link">
+                                            <i class="ri-pie-chart-line"></i> Open positions
+                                        </a>
+                                    </li>
+
+
+
+                                    <!--=============== DROPDOWN SUBMENU ===============-->
+
+                                </ul>
+                            </li>
+
+
+                            <li><a href="#footer" class="nav__link">Contact Us</a></li>
 
                             <!--=============== DROPDOWN 2 ===============-->
 
@@ -1115,11 +1140,11 @@
                 <div class="relative w-[100vw] overflow-hidden rounded-lg">
                     <div class="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
                     <div class="flex transition-transform duration-500 ease-in-out" id="slider">
-                         <div class="w-full flex-shrink-0">
+                        <div class="w-full flex-shrink-0">
                             <img src="assets/RollingSlider/rollingbanner.png" class="w-full h-[35vh] md:h-[90vh]"
                                 alt="Slide 1">
                         </div>
-                         <div class="w-full flex-shrink-0">
+                        <div class="w-full flex-shrink-0">
                             <img src="assets/RollingSlider/rollingbanner2.jpg" class="w-full h-[35vh] md:h-[90vh]"
                                 alt="Slide 2">
                         </div>
@@ -1135,7 +1160,7 @@
                             <img src="assets/RollingSlider/chathurpravthan.png" class="w-full h-[35vh] md:h-[90vh]"
                                 alt="Slide 5">
                         </div>
-                    
+
 
                     </div>
                 </div>
@@ -2856,35 +2881,35 @@
 
 
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
-        const alertContainer = document.getElementById('alert-box-container');
-        const alertBox = alertContainer.querySelector('div'); // The inner box
-        const closeBtn = document.getElementById('close-alert-btn');
+            document.addEventListener('DOMContentLoaded', function () {
+                const alertContainer = document.getElementById('alert-box-container');
+                const alertBox = alertContainer.querySelector('div'); // The inner box
+                const closeBtn = document.getElementById('close-alert-btn');
 
-        // Function to show the alert with animation
-        function showAlert() {
-            alertContainer.style.display = 'flex';
-            setTimeout(() => {
-                alertContainer.style.opacity = '1';
-                alertBox.style.transform = 'scale(1)';
-            }, 50); // Small delay to trigger transition
-        }
+                // Function to show the alert with animation
+                function showAlert() {
+                    alertContainer.style.display = 'flex';
+                    setTimeout(() => {
+                        alertContainer.style.opacity = '1';
+                        alertBox.style.transform = 'scale(1)';
+                    }, 50); // Small delay to trigger transition
+                }
 
-        // Function to hide the alert with animation
-        function hideAlert() {
-            alertBox.style.transform = 'scale(0.95)';
-            alertContainer.style.opacity = '0';
-            setTimeout(() => {
-                alertContainer.style.display = 'none';
-            }, 300); // Match transition duration
-        }
+                // Function to hide the alert with animation
+                function hideAlert() {
+                    alertBox.style.transform = 'scale(0.95)';
+                    alertContainer.style.opacity = '0';
+                    setTimeout(() => {
+                        alertContainer.style.display = 'none';
+                    }, 300); // Match transition duration
+                }
 
-        // Show the alert after a 2-second delay
-        setTimeout(showAlert, 500);
-         if (closeBtn) {
-            closeBtn.addEventListener('click', hideAlert);
-        }
-    });
+                // Show the alert after a 2-second delay
+                setTimeout(showAlert, 500);
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', hideAlert);
+                }
+            });
             // const menu = document.getElementById('menu12');
             // const navlinks = document.querySelector('.navlinks');
             // const clickEvent = document.getElementById('click');
@@ -3022,50 +3047,50 @@
             }, 1000);
 
 
-         
-    document.addEventListener('DOMContentLoaded', function() {
-        const alertContainer = document.getElementById('alert-box-container');
-        const alertBox = alertContainer.querySelector('div');
-        const closeBtn = document.getElementById('close-alert-btn');
 
-        // Check if user has already viewed the leaderboard
-        const hasViewedLeaderboard = localStorage.getItem('viewedLeaderboard');
+            document.addEventListener('DOMContentLoaded', function () {
+                const alertContainer = document.getElementById('alert-box-container');
+                const alertBox = alertContainer.querySelector('div');
+                const closeBtn = document.getElementById('close-alert-btn');
 
-        // Function to show the alert with animation
-        function showAlert() {
-            alertContainer.style.display = 'flex';
-            setTimeout(() => {
-                alertContainer.style.opacity = '1';
-                alertBox.style.transform = 'scale(1)';
-            }, 50);
-        }
+                // Check if user has already viewed the leaderboard
+                const hasViewedLeaderboard = localStorage.getItem('viewedLeaderboard');
 
-        // Function to hide the alert with animation
-        function hideAlert() {
-            alertBox.style.transform = 'scale(0.95)';
-            alertContainer.style.opacity = '0';
-            setTimeout(() => {
-                alertContainer.style.display = 'none';
-            }, 300);
-        }
+                // Function to show the alert with animation
+                function showAlert() {
+                    alertContainer.style.display = 'flex';
+                    setTimeout(() => {
+                        alertContainer.style.opacity = '1';
+                        alertBox.style.transform = 'scale(1)';
+                    }, 50);
+                }
 
-        // Only show alert if user hasn't viewed leaderboard
-        if (!hasViewedLeaderboard) {
-            setTimeout(showAlert, 500);
-        }
+                // Function to hide the alert with animation
+                function hideAlert() {
+                    alertBox.style.transform = 'scale(0.95)';
+                    alertContainer.style.opacity = '0';
+                    setTimeout(() => {
+                        alertContainer.style.display = 'none';
+                    }, 300);
+                }
 
-        if (closeBtn) {
-            closeBtn.addEventListener('click', hideAlert);
-        }
+                // Only show alert if user hasn't viewed leaderboard
+                if (!hasViewedLeaderboard) {
+                    setTimeout(showAlert, 500);
+                }
 
-        // Add click handler for leaderboard link
-        const leaderboardLink = alertBox.querySelector('a[href="Leaderboard.html"]');
-        if (leaderboardLink) {
-            leaderboardLink.addEventListener('click', function() {
-                localStorage.setItem('viewedLeaderboard', 'true');
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', hideAlert);
+                }
+
+                // Add click handler for leaderboard link
+                const leaderboardLink = alertBox.querySelector('a[href="Leaderboard.html"]');
+                if (leaderboardLink) {
+                    leaderboardLink.addEventListener('click', function () {
+                        localStorage.setItem('viewedLeaderboard', 'true');
+                    });
+                }
             });
-        }
-    });
 
 
 
