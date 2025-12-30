@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
-    <title>Open Positions - ME-RIISE Foundation</title>
+    <title>ME-RIISE Foundation</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- bootstrap 4 css -->
@@ -20,232 +21,992 @@
     <script defer src="assets/js/newjs.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="assets/sliderPart/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/sliderPart/css/style.css" />
+    <link rel="stylesheet" href="assets/slider2/style.css">
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/NavbarCode/assets/css/styles.css">
+    <link rel="stylesheet" href="SliderMain/slider.css">
+    <link rel="stylesheet" href="SliderMain/slider.js">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
-        body {
-            font-family: "Inria Sans", sans-serif;
-        }
 
-        .position-card {
-            background: white;
-            border: 1px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
-        }
 
-        .position-card:hover {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transform: translateY(-2px);
-        }
 
-        .position-title {
-            font-size: 24px;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 10px;
-        }
 
-        .position-meta {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-        }
-
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #666;
-            font-size: 14px;
-        }
-
-        .position-description {
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .apply-btn {
-            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
-            color: white;
-            padding: 10px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-
-        .apply-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 102, 204, 0.3);
-            text-decoration: none;
-            color: white;
-        }
-
-        .header-section {
-            /* background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%); */
-            color: white;
-            padding: 60px 20px;
+        .main {
             text-align: center;
-            margin-bottom: 40px;
         }
 
-        .header-section h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
+        .img1 {
+            transition: all ease-in-out .3s;
         }
 
-        .header-section p {
-            font-size: 18px;
-            opacity: 0.9;
+        a {
+            text-decoration: none;
+            color: blue;
         }
+
+
+        .img1:hover {
+            transform: scale(1.14);
+        }
+
+        .img2 {
+            transition: all ease-in-out .3s;
+        }
+
+        .img2:hover {
+            transform: scale(1.08);
+        }
+
+        .marq {
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+
+
+        .blink {
+            animation: blink 2s infinite;
+            color: blue;
+        }
+
+        .event-list {
+            padding-top: -50px;
+            width: 100%;
+        }
+
+        #list {
+            font-size: 15px;
+        }
+
+        #box2 {
+            z-index: 1;
+        }
+
+
+
+        .card {
+            /* font-family: "Inria Sans", sans-serif; */
+            /* font-weight: 700; */
+            font-style: normal;
+            /* z-index: 40; */
+            pointer-events: all;
+            filter: none;
+            /* Add this line */
+            /* position: sticky; */
+        }
+
+
+
+        .symbol {
+            background-color: white;
+            height: 20vh;
+            border-radius: 0px 22px 22px 0px;
+            /* box-shadow: 3px 3px 3px 9px rgba(0, 0, 0, 0.5); */
+        }
+
+        .image img {
+            /* background-color: red; */
+            height: 20vh;
+
+        }
+
+        .image {
+            padding-top: 20px;
+            padding-left: 100px;
+        }
+
+        /* .wrongBtn {
+            margin: 9px;
+        } */
+        /* .logoimg {
+            height: 90px;
+            /* background-color: green; */
+        /* }  */
+
+
+        @media only screen and (max-width: 800px) {
+            .symbol {
+                border-radius: 22px 22px 0px 0px;
+            }
+
+            .image img {
+                /* background-color: red; */
+                height: 10vh;
+
+            }
+
+            .image {
+                padding-left: 60px;
+                padding-top: 1px;
+            }
+
+
+            .wrong {
+                text-align: right;
+            }
+
+
+
+
+        }
+
+        @media only screen and (max-width: 400px) {
+            .pragtext {
+                font-size: 10px;
+                /* background-color: red; */
+            }
+
+            .image img {
+                /* background-color: red; */
+                height: 10vh;
+
+            }
+
+            .image {
+                padding-left: 50px;
+            }
+
+            .wrong {
+                text-align: right;
+            }
+
+
+
+
+        }
+
+
+        @media only screen and (min-width: 200px) and (max-width: 480px) {
+            #board {
+                margin-left: 2px;
+            }
+
+            .visit1 {
+                height: 3vh;
+                width: 25vw;
+                margin-left: 3rem;
+                padding-top: 4px;
+                margin-top: 3px;
+
+            }
+        }
+
+
+        @media only screen and (min-width: 480px) and (max-width: 639px) {
+            #board {
+                margin-left: 2px;
+            }
+        }
+
+        @media only screen and (min-width: 980px) and (max-width: 1024px) {
+            #board {
+                margin-left: 2px;
+            }
+
+            .visit {
+                margin-right: 5rem;
+            }
+        }
+
+
+        @media only screen and (min-width: 1024px) and (max-width: 1180px) {
+            #list {
+                font-size: 10px;
+
+            }
+        }
+
+
+
+
+
+
+        @keyframes blink {
+            0% {
+                opacity: 5;
+            }
+
+            100% {
+                opacity: 2;
+                color: red;
+            }
+
+
+        }
+
+        #opaqueScreen {
+            opacity: .4;
+            z-index: 30;
+            position: absolute;
+            /* background-color:white; */
+            /* backdrop-filter: blur(700px); */
+        }
+
+        /* .blurring{
+             filter: blur(5px); 
+        } */
+
+        .countdown {
+            /* white-space: 3px; */
+            margin-left: 50px;
+            width: 300px;
+            word-spacing: 10px;
+
+        }
+
+        .time-unit {
+            padding-left: 15px;
+
+        }
+
+        /* .visit{
+            border:2px solid white;
+            text-align: center;
+            color:white;
+            font-family:"Inria Sans", sans-serif;
+            border-radius:15px;
+            padding:8px 30px 8px 30px;
+            text-decoration: none;
+            margin:3em 0 0 8rem; 
+
+
+
+        }*/
+        /* .visit:hover {background-color: transparent;
+        text-decoration: none;}
+
+        @media only screen and (max-width: 667px) {
+            .visit{
+            margin:0px;
+            padding:0px;
+            margin-right: 5px;
+                    
+            }
+        } 
+        @media only screen and (min-width: 400px) and (max-width: 950px) {
+            .visit {
+            margin-top:1rem;
+            }
+        }
+        @media only screen and (min-width: 770px) and (max-width: 1236px) {
+            .visit {
+            margin-top:0px;
+            margin-left:5rem;
+            }
+        } */
     </style>
 </head>
 
-<body>
-    <!-- Navbar from index.html -->
-    <div class="snav-bar">
-        <header class="header">
-            <nav class="nav containerofNavbar">
-                <div class="nav__data">
-                </div>
-                <div class="nav__menu" id="nav-menu">
+
+<body style="position: relative;">
+        <div class="snav-bar">
+            <header class="header">
+                <nav class="nav containerofNavbar">
+                    <div class="nav__data">
+                        <a href="index.html" class="nav__logo">
+                            <img src="assets/MERIISE FOUNDATION logo 2.0.png" alt="ME-RIISE Foundation Logo" class="h-12 md:h-16">
+                        </a>
+
+                        <div class="nav__toggle" id="nav-toggle">
+                            <i class="ri-menu-line nav__burger"></i>
+                            <i class="ri-close-line nav__close"></i>
+                        </div>
+                    </div>
+
+                    <!--=============== NAV MENU ===============-->
+                    <div class="nav__menu" id="nav-menu">
+                        <ul class="nav__list">
+                            <li><a href="index.html" class="nav__link">Home</a></li>
+
+                            <li class="dropdown__item">
+                                <div class="nav__link">
+                                    About ME-RIISE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                                </div>
+
+                                <ul class="dropdown__menu">
+                                    <li>
+                                        <a href="aboutmeriise.html" class="dropdown__link">
+                                            <i class="ri-pie-chart-line"></i> ME-RIISE FOUNDATION
+                                        </a>
+                                    </li>
+
+
+                                    <li>
+                                        <a href="infrastructure.html" class="dropdown__link">
+                                            <i class="ri-pie-chart-line"></i> Infrastructure
+                                        </a>
+                                    </li>
+
+
+                                    <li>
+                                        <a href="ourAchivements.html" class="dropdown__link">
+                                            <i class="ri-arrow-up-down-line"></i> Achievements
+                                        </a>
+                                    </li>
+
+
+                                    <li class="dropdown__subitem">
+                                        <div class="dropdown__link">
+                                            <i class="ri-bar-chart-line"></i> Documents <i
+                                                class="ri-add-line dropdown__add"></i>
+                                        </div>
+
+                                        <ul class="dropdown__submenu">
+                                            <li>
+                                                <a href="Nisp.html" class="dropdown__sublink">
+                                                    <i class="ri-file-list-line"></i> MCE NISP POLICY
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="collab.html" class="dropdown__sublink">
+                                                    <i class="ri-cash-line"></i> Collaborations
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="Certificates.html" class="dropdown__sublink">
+                                                    <i class="ri-cash-line"></i> Certificates
+                                                </a>
+                                            </li>
+
+
+                                        </ul>
+                                    </li>
+
+
+                                    <li class="dropdown__subitem">
+                                        <div class="dropdown__link">
+                                            <i class="ri-bar-chart-line"></i> Members of ME-RIISE <i
+                                                class="ri-add-line dropdown__add"></i>
+                                        </div>
+
+                                        <ul class="dropdown__submenu">
+                                            <li>
+                                                <a href="#boardofdirectors" class="dropdown__sublink">
+                                                    <i class="ri-file-list-line"></i>Board of Directors
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="faculty.html" class="dropdown__sublink">
+                                                    <i class="ri-cash-line"></i> Faculty
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="team.html" class="dropdown__sublink">
+                                                    <i class="ri-refund-2-line"></i> Team ME-RIISE
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <!--=============== DROPDOWN SUBMENU ===============-->
+
+                                </ul>
+                            </li>
+
+                            <!--=============== DROPDOWN 1 ===============-->
+                            <li class="dropdown__item">
+                                <div class="nav__link">
+                                    Wings of ME-RIISE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                                </div>
+
+                                <ul class="dropdown__menu">
+                                    <li>
+                                        <a href="startups.html" class="dropdown__link">
+                                            <i class="ri-pie-chart-line"></i>Start Ups
+                                        </a>
+                                    </li>
+
+
+
+                                    <li>
+                                        <a href="iic.html" class="dropdown__link">
+                                            <i class="ri-pie-chart-line"></i> MoE - IIC
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="nain.html" class="dropdown__link">
+                                            <i class="ri-arrow-up-down-line"></i> NAIN
+                                        </a>
+                                    </li>
+
+
+
+                                    <li>
+                                        <a href="uba.html" class="dropdown__link">
+                                            <i class="ri-arrow-up-down-line"></i> UBA
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="rgep.html" class="dropdown__link">
+                                            <i class="ri-arrow-up-down-line"></i> RGEP
+                                        </a>
+                                    </li>
+
+                                    <li class="dropdown__subitem">
+                                        <div class="dropdown__link">
+                                            <i class="ri-bar-chart-line"></i> Pragyatha <i
+                                                class="ri-add-line dropdown__add"></i>
+                                        </div>
+
+                                        <ul class="dropdown__submenu">
+                                            <li>
+                                                <a href="https://pragyatha25.meriise.org/" class="dropdown__sublink">
+                                                    <i class="ri-file-list-line"></i>Pragyatha25
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://pragyatha24.meriise.org/" class="dropdown__sublink">
+                                                    <i class="ri-file-list-line"></i>Pragyatha24
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="pragyatha23.html" class="dropdown__sublink">
+                                                    <i class="ri-cash-line"></i>Pragyatha23
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="pragyatha22.html" class="dropdown__sublink">
+                                                    <i class="ri-cash-line"></i> Pragyatha22
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="Pragyatha21.html" class="dropdown__sublink">
+                                                    <i class="ri-cash-line"></i> Pragyatha21
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="pragyatha19.html" class="dropdown__sublink">
+                                                    <i class="ri-cash-line"></i> Pragyatha19
+                                                </a>
+                                            </li>
+
+
+                                        </ul>
+                                    </li>
+
+
+                                    <!--=============== DROPDOWN SUBMENU ===============-->
+                                    <!-- <li>
+                                    <a href="pragyathaintro.html" class="dropdown__link">
+                                        <i class="ri-arrow-up-down-line"></i> Pragyatha
+                                    </a>
+                                </li> -->
+                                </ul>
+                            </li>
+
+                            <li><a href="https://meriise-events.vercel.app/" class="nav__link">Events</a></li>
+
+                            <li class="dropdown__item">
+                                <div class="nav__link">
+                                    TBI MCE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                                </div>
+
+                                <ul class="dropdown__menu">
+                                    <li>
+                                        <a href="tbi.html" class="dropdown__link">
+                                            <i class="ri-pie-chart-line"></i> About TBI
+                                        </a>
+                                    </li>
+
+
+                                    <li>
+                                        <a href="openPosition.html" class="dropdown__link">
+                                            <i class="ri-pie-chart-line"></i> Open positions
+                                        </a>
+                                    </li>
+
+
+
+                                    <!--=============== DROPDOWN SUBMENU ===============-->
+
+                                </ul>
+                            </li>
+
+
+                            <li><a href="#footer" class="nav__link">Contact Us</a></li>
+
+                            <!--=============== DROPDOWN 2 ===============-->
+
+
+                            <!-- <li><a href="#" class="nav__link">Contact Us</a></li> -->
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <!--logo-->
+
+            <!-- Navbar -->
+            <!-- <div class=" w-full bg-black h-[12vh] flex items-center justify-between z-50">
+            <a href="http://www.meriise.org/" class="cursor-pointer">
+                <img src="images/meriise-logo new.png" alt="Logo" class="h-[7.5rem] mx-3 flex">
+            </a>
+            <div class="space-y-2 mx-4 mt-4 lg:hidden" onclick="openNavigation()">
+                <span class="block h-0.5 w-8" style="background-color: #01adfc;"></span>
+                <span class="block h-0.5 w-8" style="background-color: #01adfc;"></span>
+                <span class="block h-0.5 w-8" style="background-color: #01adfc;"></span>
+            </div>
+        </div> -->
+
+
+            <!-- Navigation Menu -->
+            <!-- <div class="hidden fixed top-[12vh] right-0 lg:block z-50 " id="nav">
+            <ul class="sm:px-10 min-[320px]:px-10 bg-black h-[100vh] w-[60vw] flex flex-col justify-start text-md font-bold lg:bg-transparent lg:flex-row lg:items-center lg:h-[12vh] lg:justify-evenly lg:w-[90vw] lg:mt-1 overflow-y-hidden"
+                style="color: #01adfc;">
+                <li><a href="index.html" class="cursor-pointer">Home</a></li>
+                <li><a href="aboutmeriise.html" class="cursor-pointer">About Us</a></li>
+                <li><a href="faculty.html" class="cursor-pointer">Faculty</a></li>
+                <li><a href="team.html" class="cursor-pointer">Student Members</a></li>
+                <li><a href="iic.html" class="cursor-pointer">MHRD-IIC</a></li>
+                <li><a href="nain.html" class="cursor-pointer">Nain</a></li>
+                <li><a href="uba.html" class="cursor-pointer">UBA</a></li>
+                <li><a href="infrastructure.html" class="cursor-pointer">Infrastructure</a></li>
+                <li><a href="startups.html" class="cursor-pointer">Startup</a></li>
+                <li><a href="collab.html" class="cursor-pointer">Collaborations</a></li>
+                <li><a href="Nisp.html" class="cursor-pointer">MCE-NISP Policy</a></li>
+                <li><a href="documents.html" class="cursor-pointer">Docs</a></li>
+
+                <li>
+                    <button class="min-[320px]:px-0 cursor-pointer rounded-xl px-2" id="pragyatha-btn"
+                        style="color: inherit;">Pragyatha</button>
+                    <ul class="sm:w-[10vw] hidden bg-white text-blue w-[15vw] p-4 flex flex-col justify-start text-md font-bold absolute right-0 mt-2 rounded-xl min-[320px]:mx-[30px] min-[320px]:w-[50vw]"
+                        id="pragyatha-dropdown">
+                        <li><a href="pragyatha23.html" class="cursor-pointer">Pragyatha-23</a></li>
+                        <li><a href="Pragyatha.html" class="cursor-pointer">Pragyatha-21</a></li>
+                        <li><a href="prag.html" class="cursor-pointer">Pragyatha-19</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div> -->
+
+
+            <!-- </div> -->
+
+            <!-- <header class="bg-black text-blue-400">
+            <nav class="flex justify-between items-center w-[95vw] mx-auto text-sm font-bold h-20 sm:h-24">
+              3 div's are there -->
+            <!-- 1st div's are for logo -->
+            <!-- <div class="px-4 md:px-16">
+                    <img src="images/meriise-logo new.png" alt="" class="w-42 h-24 ml-1 md:ml-10">
+                </div> -->
+
+
+            <!-- Another div's is for lists -->
+            <!-- <div class="navlinks flex justify-between duration-500 md:static absolute md:min-h-fit min-h-[80vh] 
+                     top-[-800px] md:w-[70vw] left-[155px] w-[90%] bg-black flex items-center">
+                    <ul class="flex md:flex-row flex-col md:items-center md:gap-[8vw] lg:gap-[2vw] gap-6 px-4 mr-10">
+
+                        <li>
+                            <a href="index.html" class="hover:text-blue-600">Home</a>
+                        </li>
+                        <li>
+                            <a href="aboutmeriise.html" class="hover:text-blue-600">AboutUs</a>
+                        </li>
+                        <li>
+                            <a href="faculty.html" class="hover:text-blue-600">Faculty</a>
+                        </li>
+                        <li>
+                            <a href="team.html" class="hover:text-blue-600">Team-MERIISE</a>
+                        </li>
+                        <li>
+                            <a href="iic.html" class="hover:text-blue-600">MHRD-IIC</a>
+                        </li>
+                        <li>
+                            <a href="nain.html" class="hover:text-blue-600">Nain</a>
+                        </li>
+                        <li>
+                            <a href="uba.html" class="hover:text-blue-600">UBA</a>
+                        </li>
+                        <li>
+                            <a href="infrastructure.html" class="hover:text-blue-600">Infrastructure</a>
+                        </li>
+                        <li>
+                            <a href="startups.html" class="hover:text-blue-600">StartUp</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.mcehassan.ac.in/" class="hover:text-blue-600">MCE</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-blue-600">Achievements</a>
+                        </li> -->
+
+            <!-- <li>
+                            <a href="startups.html" class="hover:text-blue-600">Collaborations</a>
+                        </li>
+
+                        <li>
+                            <a href="startups.html" class="hover:text-blue-600">Documents</a>
+                        </li>  -->
+
+            <!-- <li>
+                            <a href="startups.html" class="hover:text-blue-600">MCE-NISP Policy</a>
+                        </li> -->
+
+
+            <!-- <li>
+                            <a href="https://meriise-events.vercel.app/" class="hover:text-blue-600">Events</a>
+                        </li>
+                        <div class="flex">
+                            <li class="relative" onclick="toggleFunction()" id="click">
+                                <a href="#" class="hover:text-blue-600">Pragyatha</a>
+                                <ion-icon name="caret-down-outline" class="px-4" id="icons"></ion-icon>
+
+                            </li>
+                            <li class="absolute bg-black text-white p-4 rounded-sm mt-8 hidden rounded-xl text-md w-[160px]"
+                                id="box" onclick="dropdown()">
+                                <div>Pragyatha 23</div>
+                                <div>Pragyatha 21</div>
+                                <div>Pragyatha 19</div>
+
+                            </li>
+                        </div>
+                    </ul>
+                </div> -->
+
+            <!-- Another div's is for button -->
+            <!-- <div class="flex items-center gap-8">
+                    <ion-icon name="menu-outline" id="menu" onclick="clickFunction(this)">Hello</ion-icon>
+                </div> -->
+
+            <!-- <div class="flex gap-4 mx-4">
+                    <ion-icon name="menu" class="text-4xl lg:hidden" id="menu12"
+                        onclick="clickFunction(this)"></ion-icon>
                 </div>
             </nav>
-        </header>
-    </div>
+        </header> -->
 
-    <!-- Header Section -->
-    <div class="header-section">
-        <h1>Open Positions</h1>
-        
-    </div>
 
-    <!-- Main Content -->
-    <div class="max-w-4xl mx-auto px-4 py-12">
-        <!-- Position 1 -->
-        <div class="position-card">
-            <h2 class="position-title">Research Associate</h2>
-            <div class="position-meta">
-                <div class="meta-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Hassan, Karnataka</span>
+
+            <!-- <nav class="bg-white lg:flex lg:items-center lg:justify-center h-16 sticky">
+            <div class="flex items-center justify-center">
+
+                <div>
+                    <ion-icon name="menu" onclick="clickFunction(this)"
+                        class="text-4xl text-blue-400 block lg:hidden"></ion-icon>
                 </div>
-                <div class="meta-item">
-                    <i class="fas fa-briefcase"></i>
-                    <span>Full-time</span>
-                </div>
-                <div class="meta-item">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Graduate</span>
+
+            </div> -->
+
+            <!-- <ion-icon name="menu" id="menu" onclick="clickFunction(this)"
+        class="text-4xl block lg:hidden h-24"></ion-icon> -->
+
+
+            <!-- <div class="hidden lg:block" id="elements">
+                <ul class="text-blue-400 font-bold bg-black px-4 py-2 lg:flex lg:justify-between lg:items-center w-48 md:w-42 lg:w-full float-right md:float-right h-screen md:h-screen lg:h-auto z-50"
+                    id="list">
+                    <li class="mx-2"><a href="index.html">Home</a></li>
+                    <li class="a1 mx-2"><a href="aboutmeriise.html">About us</a></li>
+                    <li class="a1 mx-2"><a href="#">Wings</a></li>
+                    <li class="a1 mx-2"><a href="#">Events</a></li>
+                    <li class="a1 mx-2"><a href="#">Contact us</a></li>
+                    
+                    
+                    
+                    <!-- <li class="a1 mx-2"><a href="faculty.html">Faculty</a></li>
+                    <li class="a1 mx-2"><a href="team.html">Team ME-RIISE</a></li>
+                    <li class="mx-2"><a href="iic.html">MoE</a></li>
+                    <li class="mx-2"><a href="nain.html">NAIN</a></li>
+                    <li class="mx-2"><a href="uba.html">UBA</a></li>
+                    <li class="mx-2"><a href="infrastructure.html">Infrastructure</a></li>
+                    <li class="mx-2"><a href="startups.html">Start ups</a></li>
+                    <li class="mx-2"><a href="https://meriise-events.vercel.app/">Events</a></li>
+                    <li class="mx-2"><a href="https://www.mcehassan.ac.in/">MCE</a></li>
+                    <li class="mx-2"><a href="ourAchivements.html">Achievements</a></li> 
+                    
+
+                    <div class="flex ml-2">
+                        <li class="relative" onclick="toggleFunction2(event)" id="click">
+                            <a href="#" class="hover:text-blue-600">Documents</a>
+                            <ion-icon name="caret-down-outline" class="px-1" id="icons2"></ion-icon>
+
+                        </li>
+                        <li class="absolute p-2 rounded-sm mt-8 hidden rounded-xl text-md w-[130px] bg-white text-blue-600"
+                            id="box2" onclick="dropdown()">
+                            <div><a href="Nisp.html">MCE NISP Policy</a></div>
+                            <div><a href="collab.html">Collaboration</a></div>
+                            <div><a href="documents.html">Documents</a></div>
+
+                        </li>
+                    </div>
+                    <!-- <li class="mx-2"><a href="collab.html">Collaborations</a></li>
+                    <li class="mx-2"><a href="Nisp.html">MCE NISP Policy</a></li> 
+
+
+                    <div class="flex ml-2">
+                        <li class="relative" onclick="toggleFunction(event)" id="click">
+                            <a href="#" class="hover:text-blue-600">Pragyatha</a>
+                            <ion-icon name="caret-down-outline" class="px-1" id="icons"></ion-icon>
+
+                        </li>
+                        <li class="absolute p-2 rounded-sm mt-8 hidden rounded-xl text-md w-[130px] bg-white text-blue-600"
+                            id="box" onclick="dropdown()">
+                            <div><a href="http://meriise.org/pragyatha24.html">Pragyatha 24</a></div>
+                            <div><a href="pragyatha23.html">Pragyatha 23</a></div>
+                            <div><a href="pragyatha22.html">Pragyatha 22</a></div>
+                            <div><a href="Pragyatha.html">Pragyatha 21</a></div>
+                            <div><a href="prag.html">Pragyatha 19</a></div>
+                            
+
+                        </li>
+                    </div>
+
+
+
+                </ul>
+            </div>
+        </nav>
+    </div> -->
+
+
+
+
+
+
+            <!-- <div class="hidden lg:block sticky bg-white" id="elements">
+                <ul class="text-black bg-white px-4 py-2 lg:flex lg:justify-between lg:items-center w-48 md:w-42 lg:w-full float-right md:float-right h-screen md:h-screen lg:h-auto z-50"
+                    id="list">
+                    <li class="mx-2"><a href="index.html">Home</a></li>
+
+
+                    <div class="flex ml-2">
+                        <li class="relative" onclick="toggleFunction(event)" id="click">
+                            <a href="#" class="hover:text-blue-600">AboutUs</a>
+                            <ion-icon name="caret-down-outline" class="px-1" id="icons2"></ion-icon>
+
+                        </li>
+                        <li class="absolute p-2 rounded-sm mt-8 hidden rounded-xl text-md w-[180px] bg-white text-blue-600"
+                            id="box" onclick="dropdown()">
+                            <div class="a1 mx-2"><a href="aboutmeriise.html">About ME-RIISE</a></div>
+                            <div class="al mx-2"><a href="">Board of Directors</a></div>
+                            <div class=" mx-2"><a href="infrastructure.html">Infrastructure</a></div>
+                            <div class="a1 mx-2"><a href="team.html">Team ME-RIISE</a></div>
+                            <div class="a1 mx-2"><a href="ourAchivements.html">Achievements</a></div>
+                            <div class="a1 mx-2 "><a href="documents.html">Documents</a></div>
+
+                        </li>
+                    </div>
+                    <li class="a1 mx-2"><a href="aboutmeriise.html">About us</a></li>
+                    <div class="flex ml-2">
+                        <li class="relative" onclick="toggleFunction2(event)" id="click">
+                            <a href="#" class="hover:text-blue-600">Wings of ME-RIISE</a>
+                            <ion-icon name="caret-down-outline" class="px-1" id="icons2"></ion-icon>
+
+                        </li>
+                        <li class="absolute p-2 rounded-sm mt-8 hidden rounded-xl text-md w-[150px] bg-white text-blue-600"
+                            id="box2" onclick="dropdown()">
+                            <div class="a1 mx-2"><a href="startups.html">Start Ups</a></div>
+                            <div class=" mx-2"><a href="infrastructure.html">Pragyatha</a></div>
+                            <div class="a1 mx-2"><a href="iic.html">MoE</a></div>
+                            <div class="a1 mx-2"><a href="nain.html">NAIN</a></div>
+                            <div class="a1 mx-2 "><a href="uba.html">UBA</a></div>
+
+                        </li>
+                    </div>
+                    <li class="a1 mx-2"><a href="https://meriise-events.vercel.app/">Events</a></li>
+                    <li class="a1 mx-2"><a href="#">Contact us</a></li> -->
+
+
+
+            <!-- <li class="a1 mx-2"><a href="faculty.html">Faculty</a></li>
+            <li class="a1 mx-2"><a href="team.html">Team ME-RIISE</a></li>
+            <li class="mx-2"><a href="iic.html">MoE</a></li>
+            <li class="mx-2"><a href="nain.html">NAIN</a></li>
+            <li class="mx-2"><a href="uba.html">UBA</a></li>
+            <li class="mx-2"><a href="infrastructure.html">Infrastructure</a></li>
+            <li class="mx-2"><a href="startups.html">Start ups</a></li>
+            <li class="mx-2"><a href="https://meriise-events.vercel.app/">Events</a></li>
+            <li class="mx-2"><a href="https://www.mcehassan.ac.in/">MCE</a></li>
+            <li class="mx-2"><a href="ourAchivements.html">Achievements</a></li> -->
+
+
+            <!-- <div class="flex ml-2">
+                <li class="relative" onclick="toggleFunction2(event)" id="click">
+                    <a href="#" class="hover:text-blue-600">Documents</a>
+                    <ion-icon name="caret-down-outline" class="px-1" id="icons2"></ion-icon>
+
+                </li>
+                <li class="absolute p-2 rounded-sm mt-8 hidden rounded-xl text-md w-[130px] bg-white text-blue-600"
+                    id="box2" onclick="dropdown()">
+                    <div><a href="Nisp.html">MCE NISP Policy</a></div>
+                    <div><a href="collab.html">Collaboration</a></div>
+                    <div><a href="documents.html">Documents</a></div>
+
+                </li>
+            </div> -->
+            <!-- <li class="mx-2"><a href="collab.html">Collaborations</a></li>
+            <li class="mx-2"><a href="Nisp.html">MCE NISP Policy</a></li> -->
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="flex ml-2">
+                <li class="relative" onclick="toggleFunction(event)" id="click">
+                    <a href="#" class="hover:text-blue-600">Wings</a>
+                    <ion-icon name="caret-down-outline" class="px-1" id="icons"></ion-icon>
+
+                </li>
+                <li class="absolute p-2 rounded-sm mt-8 hidden rounded-xl text-md w-[130px] bg-white text-blue-600"
+                    id="box" onclick="dropdown()">
+                    <li class="mx-2"><a href="startups.html">Start ups</a></li>
+                    <li>><a href="http://meriise.org/pragyatha24.html">Pragyatha</a></div></li>
+                    <li class="mx-2"><a href="iic.html">MoE</a></li>
+                    <li class="mx-2"><a href="nain.html">NAIN</a></li>
+                    <li class="mx-2"><a href="uba.html">UBA</a></li>
+
+                </li>
+            </div> -->
+
+
+
+
+
+
+            <!-- <div class="flex ml-2">
+                <li class="relative" onclick="toggleFunction(event)" id="click">
+                    <a href="#" class="hover:text-blue-600">Pragyatha</a>
+                    <ion-icon name="caret-down-outline" class="px-1" id="icons"></ion-icon>
+
+                </li>
+                <li class="absolute p-2 rounded-sm mt-8 hidden rounded-xl text-md w-[130px] bg-white text-blue-600"
+                    id="box" onclick="dropdown()">
+                    <div><a href="http://meriise.org/pragyatha24.html">Pragyatha 24</a></div>
+                    <div><a href="pragyatha23.html">Pragyatha 23</a></div>
+                    <div><a href="pragyatha22.html">Pragyatha 22</a></div>
+                    <div><a href="Pragyatha.html">Pragyatha 21</a></div>
+                    <div><a href="prag.html">Pragyatha 19</a></div>
+                    
+
+                </li>
+            </div> -->
+
+
+
+            <!-- </ul>
+            </div> -->
+            <!-- </nav> -->
+
+
+        </div>
+
+        </div>
+
+        <!-- TBI Open Positions Content -->
+        <div class="bg-gray-200 min-h-screen py-12 px-4">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <!-- Banner Image -->
+                    <div class="w-full md:w-1/2">
+                        <img src="assets/TBI/Wearehiring.jpeg" alt="TBI Open Positions Banner" class="w-3/4 h-auto rounded-lg shadow-lg mx-auto">
+                    </div>
+
+                    <!-- Content Section -->
+                    <div class="w-full md:w-1/2 text-center md:text-left">
+                        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Open Positions at TBI MCE</h1>
+                        <p class="text-lg text-gray-600 mb-8">
+                            Join our team and drive innovation in technology and entrepreneurship at Technology Business Incubator, Malnad College of Engineering.
+                        </p>
+                        <a href="assets/TBI/Hiring Notice.docx" download class="inline-flex items-center bg-blue-500 text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-600 transition duration-300">
+                            <i class="fas fa-download mr-2"></i>
+                            Download Open Positions Document
+                        </a>
+                    </div>
                 </div>
             </div>
-            <p class="position-description">
-                We are looking for a motivated Research Associate to support our innovation projects. 
-                You will work on cutting-edge research initiatives and contribute to our entrepreneurship programs.
-            </p>
-            <a href="mailto:careers@meriise.org?subject=Research Associate Position" class="apply-btn">
-                Apply Now
-            </a>
         </div>
 
-        <!-- Position 2 -->
-        <div class="position-card">
-            <h2 class="position-title">Startup Mentorship Coordinator</h2>
-            <div class="position-meta">
-                <div class="meta-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Hassan, Karnataka</span>
-                </div>
-                <div class="meta-item">
-                    <i class="fas fa-briefcase"></i>
-                    <span>Full-time</span>
-                </div>
-                <div class="meta-item">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Bachelor's + 2 years experience</span>
-                </div>
-            </div>
-            <p class="position-description">
-                Help nurture and guide startups through their growth journey. You will coordinate mentorship programs, 
-                manage incubation activities, and support entrepreneurs in achieving their goals.
-            </p>
-            <a href="mailto:careers@meriise.org?subject=Startup Mentorship Coordinator Position" class="apply-btn">
-                Apply Now
-            </a>
-        </div>
+        <script src="assets/NavbarCode/assets/js/main.js"></script>
 
-        <!-- Position 3 -->
-        <div class="position-card">
-            <h2 class="position-title">Event Manager</h2>
-            <div class="position-meta">
-                <div class="meta-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Hassan, Karnataka</span>
-                </div>
-                <div class="meta-item">
-                    <i class="fas fa-briefcase"></i>
-                    <span>Full-time</span>
-                </div>
-                <div class="meta-item">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Bachelor's + 1 year experience</span>
-                </div>
-            </div>
-            <p class="position-description">
-                Organize and manage events like Pragyatha, Shark Tank, and Tech Talks. You will coordinate with stakeholders, 
-                handle logistics, and ensure successful execution of all foundation events.
-            </p>
-            <a href="mailto:careers@meriise.org?subject=Event Manager Position" class="apply-btn">
-                Apply Now
-            </a>
-        </div>
+        <script src="assets/NavbarCode/assets/js/main.js"></script>
 
-        <!-- Position 4 -->
-        <div class="position-card">
-            <h2 class="position-title">Business Development Executive</h2>
-            <div class="position-meta">
-                <div class="meta-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Hassan, Karnataka</span>
-                </div>
-                <div class="meta-item">
-                    <i class="fas fa-briefcase"></i>
-                    <span>Full-time</span>
-                </div>
-                <div class="meta-item">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Bachelor's + 1 year experience</span>
-                </div>
-            </div>
-            <p class="position-description">
-                Build and maintain relationships with partners, investors, and collaborators. You will identify new opportunities, 
-                negotiate partnerships, and contribute to the foundation's growth and expansion.
-            </p>
-            <a href="mailto:careers@meriise.org?subject=Business Development Executive Position" class="apply-btn">
-                Apply Now
-            </a>
-        </div>
-    </div>
 
-    <!-- Footer -->
-    <footer id="footer" class="bg-black text-white mt-20">
-        <div class="container py-12">
-            <div class="copyright text-center">&copy; ME-RIISE FOUNDATION. All rights reserved.</div>
-        </div>
-    </footer>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/NavbarCode/assets/js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const alertContainer = document.getElementById('alert-box-container');
+                const alertBox = alertContainer.querySelector('div');
+                const closeBtn = document.getElementById('close-alert-btn');
+
+                // Check if user has already viewed the leaderboard
+                const hasViewedLeaderboard = localStorage.getItem('viewedLeaderboard');
+
+                // Function to show the alert with animation
+                function showAlert() {
+                    alertContainer.style.display = 'flex';
+                    setTimeout(() => {
+                        alertContainer.style.opacity = '1';
+                        alertBox.style.transform = 'scale(1)';
+                    }, 50);
+                }
+
+                // Function to hide the alert with animation
+                function hideAlert() {
+                    alertBox.style.transform = 'scale(0.95)';
+                    alertContainer.style.opacity = '0';
+                    setTimeout(() => {
+                        alertContainer.style.display = 'none';
+                    }, 300);
+                }
+
+                // Only show alert if user hasn't viewed leaderboard
+                if (!hasViewedLeaderboard) {
+                    setTimeout(showAlert, 500);
+                }
+
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', hideAlert);
+                }
+
+                // Add click handler for leaderboard link
+                const leaderboardLink = alertBox.querySelector('a[href="Leaderboard.html"]');
+                if (leaderboardLink) {
+                    leaderboardLink.addEventListener('click', function () {
+                        localStorage.setItem('viewedLeaderboard', 'true');
+                    });
+                }
+            });
+
+
+
+
+
+        </script>
+
+
+
+
+        <!--<script src="assets/js/from/jquery.min.js"></script>
+            <script src="assets/js/from/skel.min.js"></script>
+            <script src="assets/js/from/skel-layers.min.js"></script>
+            <script src="assets/js/from/init.js"></script>-->
+
+
+
 </body>
 
 </html>
