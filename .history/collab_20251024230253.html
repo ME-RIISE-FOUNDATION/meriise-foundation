@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+
+
+
+<html>
+
+<head>
+	<title>ME-RIISE</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!-- from the other one 
+			<link rel="stylesheet" href="assets/css/from/skel.css" />-->
+	<!--<link rel="stylesheet" href="assets/css/from/style.css" />-->
+	<!--<link rel="stylesheet" href="assets/css/from/style-xlarge.css" />-->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" href="assets/css/newcss.css" />
+
+	<!-- bootstrap 4 css -->
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+
+	<!-- fontawesome cdn -->
+
+	<link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
+		integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
+		crossorigin="anonymous"></script>
+
+	<script src="https://cdn.tailwindcss.com"></script>
+
+
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="assets/NavbarCode/assets/css/styles.css">
+
+	<link rel="stylesheet" href="assets/css/newcss.css">
+
+</head>
+<style>
+	a:visited {
+		text-decoration: none;
+	}
+
+	.head {
+		box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.4);
+	}
+
+	.main {
+		text-align: center;
+	}
+
+	.marq {
+		padding-top: 30px;
+		padding-bottom: 10px;
+	}
+
+
+	.blink {
+		animation: blink 2s infinite;
+		color: blue;
+	}
+
+	.event-list {
+		padding-top: -50px;
+		width: 100%;
+	}
+
+	#list {
+		font-size: 15px;
+	}
+
+	#box2 {
+		z-index: 1;
+	}
+
+
+	@media only screen and (min-width: 200px) and (max-width: 480px) {
+		#board {
+			margin-left: 2px;
+		}
+	}
+
+	@media only screen and (min-width: 480px) and (max-width: 639px) {
+		#board {
+			margin-left: 2px;
+		}
+	}
+
+	@media only screen and (min-width: 980px) and (max-width: 1024px) {
+		#board {
+			margin-left: 2px;
+		}
+	}
+
+
+	@media only screen and (min-width: 1024px) and (max-width: 1180px) {
+		#list {
+			font-size: 10px;
+
+		}
+	}
+
+
+
+
+
+
+	@keyframes blink {
+		0% {
+			opacity: 5;
+		}
+
+		100% {
+			opacity: 2;
+			color: red;
+		}
+
+
+	}
+</style>
+
+<body data-gr-c-s-loaded="true" class="vsc-initialized" style="user-select: auto">
+
+
+	<div class="snav-bar" style="background-color: black;">
+		<!-- <div class="logo">
+			<a href="index.html">
+				<img class="mr-logo mt-1 " src="img/logo.png" />
+			</a>
+		</div>
+
+		<div class="nav-link">
+			<ul class="nvl">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="faculty.html">Faculty</a></li>
+				<li><a href="team.html">Student Members</a></li>
+				<li><a href="startups.html">Start-Ups</a></li>
+
+				<div class="dropdown" style="display: inline-block;">
+					<button class="dropbtn" id="dropbtn" onclick="handleMoreBtn()">
+						More
+						<i class="fa fa-caret-down" style="color: rgb(65, 142, 243);"></i>
+					</button>
+
+					<div class="dropdown-content" id="dropdown-content">
+						<a href="http://www.mcehassan.ac.in">Malnad College of Engineering</a>
+						<a href="events.html">Successful Events</a>
+						<a href="prag.html">PRAGYATHA - 19</a>
+					 <a href="alumni.html">Alumni</a> 
+						<a href="Nisp.html">NISP-policy</a>
+
+					</div>
+				</div>
+			</ul>
+		</div>
+
+		<div class="smenu-btn ">
+			<button onclick="openNav()" style="background-color: black;outline: none;">
+				<i class="fa fa-bars " style="color: rgb(65, 142, 243);" aria-hidden="true"></i>
+			</button>
+		</div>
+	</div>
+	<div id="myNav" class="overlay" style="margin-top: 70px;">
+		<a href="javascript:void(0)" class="closebtn" style="font-size: 15px;" onclick="closeNav()"><i
+				class="fa fa-times"></i></a>
+		<div class="overlay-content">
+			<a href="index.html">Home</a>
+			<a href="faculty.html">Faculty</a>
+			<a href="team.html">Student Members</a>
+			<a href="startups.html">Start-Ups</a>
+			<a href="http://www.mcehassan.ac.in">Malnad College of Engineering</a>
+			<a href="events.html">Successful Events</a>
+			<a href="prag.html">PRAGYATHA - 19</a>
+			 <a href="alumni.html">Alumni</a>
+			<a href="Nisp.html">NISP-policy</a>
+		</div>  -->
+
+
+
+
+		<header class="header head">
+			<nav class="nav containerofNavbar">
+				<div class="nav__data">
+					<a href="#" class="nav__logo">
+						<img src="assets/MERIISE FOUNDATION logo 2.0.png" alt="" class="h-16">
+					</a>
+
+					<div class="nav__toggle" id="nav-toggle">
+						<i class="ri-menu-line nav__burger"></i>
+						<i class="ri-close-line nav__close"></i>
+					</div>
+				</div>
+
+				<!--=============== NAV MENU ===============-->
+				<div class="nav__menu" id="nav-menu">
+					<ul class="nav__list">
+						<li><a href="index.html" class="nav__link">Home</a></li>
+
+						<li class="dropdown__item">
+							<div class="nav__link">
+								About ME-RIISE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+							</div>
+
+							<ul class="dropdown__menu">
+								<li>
+									<a href="aboutmeriise.html" class="dropdown__link">
+										<i class="ri-pie-chart-line"></i> ME-RIISE FOUNDATION
+									</a>
+								</li>
+
+
+								<li>
+									<a href="infrastructure.html" class="dropdown__link">
+										<i class="ri-pie-chart-line"></i> Infrastructure
+									</a>
+								</li>
+
+
+								<li>
+									<a href="ourAchivements.html" class="dropdown__link">
+										<i class="ri-arrow-up-down-line"></i> Achievements
+									</a>
+								</li>
+
+
+								<li class="dropdown__subitem">
+									<div class="dropdown__link">
+										<i class="ri-bar-chart-line"></i> Documents <i
+											class="ri-add-line dropdown__add"></i>
+									</div>
+
+									<ul class="dropdown__submenu">
+										<li>
+											<a href="Nisp.html" class="dropdown__sublink">
+												<i class="ri-file-list-line"></i> MCE NISP POLICY
+											</a>
+										</li>
+
+										<li>
+											<a href="collab.html" class="dropdown__sublink">
+												<i class="ri-cash-line"></i> Collaborations
+											</a>
+										</li>
+
+										<li>
+											<a href="Certificates.html" class="dropdown__sublink">
+												<i class="ri-cash-line"></i> Certificates
+											</a>
+										</li>
+
+
+									</ul>
+								</li>
+
+
+								<li class="dropdown__subitem">
+									<div class="dropdown__link">
+										<i class="ri-bar-chart-line"></i> Members of ME-RIISE <i
+											class="ri-add-line dropdown__add"></i>
+									</div>
+
+									<ul class="dropdown__submenu">
+										<li>
+											<a href="index.html#boardofDirectors" class="dropdown__sublink">
+												<i class="ri-file-list-line"></i>Board of Directors
+											</a>
+										</li>
+
+										<li>
+											<a href="faculty.html" class="dropdown__sublink">
+												<i class="ri-cash-line"></i> Faculty
+											</a>
+										</li>
+
+										<li>
+											<a href="team.html" class="dropdown__sublink">
+												<i class="ri-refund-2-line"></i> Team ME-RIISE
+											</a>
+										</li>
+									</ul>
+								</li>
+
+								<!--=============== DROPDOWN SUBMENU ===============-->
+
+							</ul>
+						</li>
+
+						<!--=============== DROPDOWN 1 ===============-->
+						<li class="dropdown__item">
+							<div class="nav__link">
+								Wings of ME-RIISE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+							</div>
+
+							<ul class="dropdown__menu">
+								<li>
+									<a href="startups.html" class="dropdown__link">
+										<i class="ri-pie-chart-line"></i>Start Ups
+									</a>
+								</li>
+
+
+
+								<li>
+									<a href="iic.html" class="dropdown__link">
+										<i class="ri-pie-chart-line"></i> MoE - IIC
+									</a>
+								</li>
+
+								<li>
+									<a href="nain.html" class="dropdown__link">
+										<i class="ri-arrow-up-down-line"></i> NAIN
+									</a>
+								</li>
+
+
+
+								<li>
+									<a href="uba.html" class="dropdown__link">
+										<i class="ri-arrow-up-down-line"></i> UBA
+									</a>
+								</li>
+
+
+								<!-- <li class="dropdown__subitem">
+									<div class="dropdown__link">
+										<i class="ri-bar-chart-line"></i> Documents <i
+											class="ri-add-line dropdown__add"></i>
+									</div>
+	  
+									<ul class="dropdown__submenu">
+										<li>
+											<a href="#" class="dropdown__sublink">
+												<i class="ri-file-list-line"></i> MCE NISP POLICY
+											</a>
+										</li>
+	  
+										<li>
+											<a href="#" class="dropdown__sublink">
+												<i class="ri-cash-line"></i> Collaborations
+											</a>
+										</li>
+	  
+										<li>
+											<a href="#" class="dropdown__sublink">
+												<i class="ri-refund-2-line"></i> Refunds
+											</a>
+										</li>
+									</ul>
+								</li> -->
+
+								<!--=============== DROPDOWN SUBMENU ===============-->
+								<li class="dropdown__subitem">
+									<div class="dropdown__link">
+										<i class="ri-bar-chart-line"></i> Pragyatha <i
+											class="ri-add-line dropdown__add"></i>
+									</div>
+
+									<ul class="dropdown__submenu">
+										<li>
+											<a href="#" class="dropdown__sublink">
+												<i class="ri-file-list-line"></i> Pragyatha24
+											</a>
+										</li>
+
+										<li>
+											<a href="#" class="dropdown__sublink">
+												<i class="ri-file-list-line"></i> Pragyatha23
+											</a>
+										</li>
+										<li>
+											<a href="#" class="dropdown__sublink">
+												<i class="ri-file-list-line"></i> Pragyatha22
+											</a>
+										</li>
+										<li>
+											<a href="#" class="dropdown__sublink">
+												<i class="ri-file-list-line"></i> Pragyatha21
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+
+						<li><a href="https://meriise-events.vercel.app/" class="nav__link">Events</a></li>
+						<li><a href="#footer" class="nav__link">Contact Us</a></li>
+
+						<!--=============== DROPDOWN 2 ===============-->
+
+
+						<!-- <li><a href="#" class="nav__link">Contact Us</a></li> -->
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+
+	</div>
+
+
+
+
+	<!-- One -->
+	<section id="One" class="wrapper style3">
+		<div class="inner">
+			<header class="align-center mt-5">
+				<h2 class="text-4xl">Collaborations</h2>
+				<p>Achivements & Milestones</p>
+			</header>
+		</div>
+	</section>
+
+
+	<div>
+		<p class="text-center text-5xl m-10">MoUs signed</p>
+		<div class="lg:grid grid-cols-5 gap-10 m-10">
+			<div class="text-center">
+			  <img src="assets/collaborations/Final_Intuicent_Innovations_Logo.png" alt="" class="w-full h-40 object-contain rounded-xl">
+			  <p class="text-xl text-gray-500">Intuicent Innovations</p>
+			</div>
+			<div class="text-center">
+			  <img src="assets/collaborations/SM.png" alt="" class="w-full h-40 object-contain rounded-xl">
+			  <p class="text-xl text-gray-500">SuprMentr</p>
+			</div>
+			<div class="text-center">
+			  <img src="assets/collaborations/BA.jpg" alt="" class="w-full h-40 object-contain rounded-xl">
+			  <p class="text-xl text-gray-500">Bharati Associates</p>
+			</div>
+			<div class="text-center">
+			  <img src="assets/collaborations/Hassan.jpg" alt="" class="w-full h-40 object-contain rounded-xl">
+			  <p class="text-xl text-gray-500">Hassan District Small Scale Industries Association</p>
+			</div>
+			<div class="text-center">
+			  <img src="assets/collaborations/IKP-Eden-Logo.png" alt="" class="w-full h-40 object-contain rounded-xl">
+			  <p class="text-xl text-gray-500">IKP-EDEN</p>
+			</div>
+			<div class="text-center">
+			  <img src="assets/collaborations/teragon.png" alt="" class="w-full h-40 object-contain rounded-xl">
+			  <p class="text-xl text-gray-500 my-6">Teragon Edtech Private Ltd</p>
+			</div>
+			<div class="text-center">
+			  <img src="assets/collaborations/avkchassan.jpg" alt="" class="w-full h-40 object-contain rounded-xl">
+			  <p class="text-xl text-gray-500 my-6">AVKC, Hassan</p>
+			</div>
+			<div class="text-center">
+			  <img src="assets/collaborations/sap.png" alt="" class="w-full h-40 object-contain rounded-xl">
+			  <p class="text-xl text-gray-500 my-6">SAP India Private Limited</p>
+			</div>
+			<div class="text-center">
+			  <img src="assets/collaborations/sahdri.jpg" alt="" class="w-full h-40 object-contain rounded-xl">
+			  <p class="text-xl text-gray-500 my-6">Sahydri Edu Dreamers</p>
+			</div>
+			<div class="text-center">
+			  <img src="assets/collaborations/step.png" alt="" class="w-full h-40 object-contain rounded-xl">
+			  <p class="text-xl text-gray-500 my-6">STEP Electronics Private Limited</p>
+			</div>
+			<div class="text-center">
+			  <img src="assets/collaborations/tequedlabsb.png" alt="" class="w-full h-40 object-contain rounded-xl">
+			  <p class="text-xl text-gray-500 my-6">TEQUED Labs Private limited</p>
+			</div>
+			<div class="text-center">
+			  <img src="assets/collaborations/S.jpg" alt="" class="w-full h-40 object-contain rounded-xl">
+			  <p class="text-xl text-gray-500 my-6">Study Interact</p>
+			</div>
+			<div class="text-center">
+			  <img src="assets/collaborations/aiedgeinnovationspvtltd.jpg" alt="" class="w-full h-40 object-contain rounded-xl">
+			  <p class="text-xl text-gray-500 my-6">AI Edge Innovations Private Limited</p>
+			</div>
+			<div class="text-center">
+				<img src="assets/collaborations/TM.jpg" alt="" class="w-full h-40 object-contain rounded-xl">
+			  <p class="text-xl text-gray-500 my-6">Tech Machinery</p>
+			</div>
+			<div class="text-center">
+			  <img src="assets/collaborations/Atal.png" alt="" class="w-full h-40 object-contain rounded-xl">
+			  <p class="text-xl text-gray-500 my-6">Atal Incubation Center-JITF(CIIRC)</p>
+			</div>
+			<div class="text-center">
+			  <img src="assets/collaborations/TN.png" alt="" class="w-full h-40 object-contain rounded-xl">
+			  <p class="text-xl text-gray-500 my-6">Techie nest</p>
+			</div>
+			<div class="text-center">
+			  <img src="assets/collaborations/kassia.avif" alt="" class="w-full h-40 object-contain rounded-xl">
+			  <p class="text-xl text-gray-500 my-6">KASSIA</p>
+			</div>
+			<div class="text-center">
+			  <img src="assets/collaborations/ictacademy.png" alt="" class="w-full h-40 object-contain rounded-xl">
+			  <p class="text-xl text-gray-500 my-6">ICT Academy</p>
+			</div>
+		  </div>
+	</div>
+
+	<!-- Two -->
+	<section id="two" class="wrapper style2">
+		<div class="inner p-1">
+			<div class="box ">
+				<div class="content ">
+					<!--Content-->
+
+					<header class="align-center" style="margin-bottom: -20px;">
+						<h2 class="text-2xl"><b>MHRD-IIC</b></h2>
+					</header>
+
+
+					<div class="flex justify-center m-8">
+						<a href="#"><img src="images/iic-collab.jpg" alt=""
+								class="h-[20vh]  md:h-[40vh] text-center" /></a>
+					</div>
+
+
+					<p style="padding-left: 30px;padding-right: 10px">Ministry of Education (MoE), Govt. of India has
+						established ‘ MoE’s Innovation Cell (MIC)’ to systematically foster the culture of innovation
+						amongst all Higher Education Institutions(HEIs). The primary mandate of MIC is to encourage,
+						inspire, and nurture young students by supporting them to work with new ideas and transform them
+						int prototypes while they are informative years. MIC has envisioned encouraging the creation of
+						‘Institution’s Innovation Council (IICs)’ across selected HEIs. A network of these IICs will be
+						established to promote innovation in the Institution through multitudinous modes leading to an
+						innovation promotion eco-system in the campuses. In collaboration with ME-RIISE (Malnad Enclave
+						for Research, Innovation, Incubation, Start-ups, and Entrepreneurship ) Institution Innovation
+						Cell has been established in the college with the vision of fostering innovation and support
+						students to enrich their spirit of entrepreneurship.</p>
+
+					<div class="p-8">
+						<a href="index.html">Know More</a>
+					</div>
+
+				</div>
+				<br>
+				<hr>
+				<div class="content ">
+					<!--Content-->
+
+					<header class="align-center" style="margin-bottom: -20px;">
+						<h2 class="text-2xl"><b>NAIN</b></h2>
+					</header>
+					<!-- <div class="gallery">
+						<div class="img-wrap">
+							<div class="image fit">
+								<a href="#"><img src="images/nain-collab.jpg" alt="" /></a>
+							</div>
+						</div>
+					</div> -->
+
+
+					<div class="flex justify-center m-8">
+						<a href="#"><img src="images/nain-collab.jpg" alt=""
+								class="h-[20vh]  md:h-[40vh] text-center" /></a>
+					</div>
+
+
+					<p style="padding-left: 30px;padding-right: 10px">ME-RIISE is associated with New Age Innovation
+						Network and is working towards bringing up incubation centers that will encourage students,
+						researchers, scholars, and alumni to share their ideas, nurture, and bring out technical
+						solutions to problems that are local-centric.
+						Entrepreneurship development and mentoring are one of the ten initiatives of KIG 2020 for
+						creating new opportunities and jobs. One of the tasks under this head is to build ‘ KARNATAKA
+						NEW AGE INNOVATION NETWORK.’ The main objective of the NAIN Scheme is to encourage students,
+						research scholars, and alumni to share their ideas to solve the chosen problems which are
+						local-centric and to validate, refine, and nurture the ideas. Incubation Center shall provide an
+						eco-system to convert the ideas in proof of concept and upgrade them to a level of commercial
+						value. After successful incubation, encourage and lead the teams towards setting up a business
+						enterprise</p>
+
+					<div class="p-8">
+						<a href="index.html">Know More</a>
+					</div>
+
+				</div>
+				<br>
+				<hr>
+				<div class="content ">
+					<!--Content-->
+
+					<header class="align-center" style="margin-bottom: -20px;">
+						<h2 class="text-2xl"><b>UBA</b></h2>
+					</header>
+					<!-- <div class="gallery">
+						<div class="img-wrap">
+							<div class="image fit">
+								<a href="#"><img src="images/uba-collab.jpg" alt="" /></a>
+							</div>
+						</div>
+					</div> -->
+
+					<div class="flex justify-center m-8">
+						<a href="#"><img src="images/uba-collab.jpg" alt=""
+								class="h-[20vh]  md:h-[40vh] text-center" /></a>
+					</div>
+
+
+					<p style="padding-left: 30px;padding-right: 10px">The conceptualization of Unnat Bharat Abhiyan
+						started with the initiative of a group of dedicated faculty members of the Indian Institute of
+						Technology (IIT) Delhi working for a long in the area of rural development and appropriate
+						technology. The concept was nurtured through wide consultation with the representatives of a
+						number of technical institutions, Rural Technology Action Group (RuTAG) coordinators, voluntary
+						organizations, and government agencies, actively involved in rural development work, during a
+						National workshop held at IIT Delhi in September 2014.
+						In Collaboration with ME-RIISE, UBA has adopted 5 villages and works on improvement and
+						awareness.</p>
+
+					<div class="p-8">
+						<a href="index.html">Know More</a>
+					</div>
+
+				</div>
+				<br>
+
+
+
+			</div>
+		</div>
+
+	</section>
+
+
+
+
+	<!-- Footer -->
+
+
+
+	<footer id="footer">
+		<div class="container1">
+			<ul class="icons">
+				<li>
+					<a href="#" class="icon fa-twitter" style="color: rgb(51, 183, 235);text-decoration: none;"><span
+							class="label">Twitter</span></a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com/mce.startup.club" class="icon fa-facebook"
+						style="color: rgb(43, 43, 247);text-decoration: none;"><span class="label">Facebook</span></a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/me_riise/" class="icon fa-instagram"
+						style="color: rgb(250, 43, 112);;text-decoration:none"><span class="label">Instagram</span></a>
+				</li>
+				<li>
+					<a href="mailto:meriisehsn@gmail.com" class="icon fa-envelope"
+						style="color: rgb(228, 54, 11);text-decoration:none"><span class="label">Email</span></a>
+				</li>
+
+				<li>
+					<a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A72704849&keywords=me-riise%20foundation&origin=RICH_QUERY_SUGGESTION&position=0&searchId=a2da3c5d-f488-492f-9f3b-da0bce4973ef&sid=w7m&spellCorrectionEnabled=false   "
+						class="icon fa-linkedin" style="color: rgb(255, 255, 255);text-decoration:none"><span
+							class="label">Linkedin</span></a>
+				</li>
+
+			</ul>
+
+		</div>
+		<div class="copyright">&copy; ME-RIISE FOUNDATION. All rights reserved.</div>
+		<div class="lg:grid grid-cols-3 cursor-pointer">
+			<div>
+				<p class="text-white text-left text-2xl font-bold m-10">Contact Us Through</p>
+				<p class="text-white text-left m-10"><a href="meriise.org">Dr Geetha Kiran A | CEO</a></p>
+				<!-- <p class="text-white text-left m-10">Dr Geetha Kiran A</p> -->
+				<p class="text-white text-left m-10"><a href="ceomeriise@mcehassan.ac.in">Email Us on :
+						ceomeriise@mcehassan.ac.in</a></p>
+				<p class="text-white text-left m-10"><a href="https://www.instagram.com/me_riise/">Follow Us on
+						Instagram</a></p>
+			</div>
+			<div>
+				<p class="text-white text-left text-2xl m-10 font-bold">Quick Links</p>
+				<p class="text-white text-left m-10"><a href="infrastructure.html">Our Infrastructure</a></p>
+				<p class="text-white text-left m-10"><a href="uba.html">UBA Visit</a></p>
+				<p class="text-white text-left m-10"><a href="startups.html">Start Ups</a></p>
+			</div>
+
+
+			<div>
+				<p class="text-white text-left text-2xl m-10 font-bold">Location:</p>
+
+				<p class="text-white text-left m-10">About ME-RIISE Foundation</p>
+				<!-- <p class="text-white text-left m-10">Address</p> -->
+				<p class="text-white text-left m-10"><span class="font-bold">Address : <br></span>24F3+69J, Rangoli
+					Halla,
+					Malnad College of Engineering , Hassan, Karnataka 573201</p>
+
+			</div>
+
+
+		</div>
+
+
+
+
+
+
+	</footer>
+
+
+
+</body>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/NavbarCode/assets/js/main.js"></script>
+
+<!--<script src="assets/js/from/jquery.min.js"></script>
+				<script src="assets/js/from/skel.min.js"></script>
+				<script src="assets/js/from/skel-layers.min.js"></script>
+				<script src="assets/js/from/init.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+	integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+	crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+	crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+	integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+	crossorigin="anonymous"></script>
+
+<!-- custom script -->
+<script src="js/script.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+
+
+
+	function clickFunction(e) {
+		let list = document.getElementById('elements')
+		list.classList.toggle('hidden')
+		let iconName = e.getAttribute('name');
+		e.setAttribute('name', iconName === 'menu' ? 'close' : 'menu');
+	}
+
+	function toggleFunction() {
+		const box = document.getElementById('box');
+		box.classList.toggle('hidden');
+		const icons = document.getElementById('icons'); // Select the icon element
+		const iconName = icons.getAttribute('name');
+		icons.setAttribute('name', iconName === 'caret-down-outline' ? 'caret-up-outline' : 'caret-down-outline');
+	}
+
+
+	function toggleFunction2() {
+		const box = document.getElementById('box2');
+		box2.classList.toggle('hidden');
+		const icons2 = document.getElementById('icons2'); // Select the icon element
+		const iconName = icons2.getAttribute('name');
+		icons2.setAttribute('name', iconName === 'caret-down-outline' ? 'caret-up-outline' : 'caret-down-outline');
+	}
+
+
+
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,3058 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>ME-RIISE Foundation</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- bootstrap 4 css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- fontawesome cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
+        integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
+        crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="/images/meriise-favicon.jpg" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/newcss.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="assets/js/newjs.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="assets/sliderPart/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/sliderPart/css/style.css" />
+    <link rel="stylesheet" href="assets/slider2/style.css">
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/NavbarCode/assets/css/styles.css">
+    <link rel="stylesheet" href="SliderMain/slider.css">
+    <link rel="stylesheet" href="SliderMain/slider.js">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+
+
+
+        .main {
+            text-align: center;
+        }
+
+        .img1 {
+            transition: all ease-in-out .3s;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+
+
+        .img1:hover {
+            transform: scale(1.14);
+        }
+
+        .img2 {
+            transition: all ease-in-out .3s;
+        }
+
+        .img2:hover {
+            transform: scale(1.08);
+        }
+
+        .marq {
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+
+
+        .blink {
+            animation: blink 2s infinite;
+            color: blue;
+        }
+
+        .event-list {
+            padding-top: -50px;
+            width: 100%;
+        }
+
+        #list {
+            font-size: 15px;
+        }
+
+        #box2 {
+            z-index: 1;
+        }
+
+
+
+        .card {
+            /* font-family: "Inria Sans", sans-serif; */
+            /* font-weight: 700; */
+            font-style: normal;
+            /* z-index: 40; */
+            pointer-events: all;
+            filter: none;
+            /* Add this line */
+            /* position: sticky; */
+        }
+
+
+
+        .symbol {
+            background-color: white;
+            height: 20vh;
+            border-radius: 0px 22px 22px 0px;
+            /* box-shadow: 3px 3px 3px 9px rgba(0, 0, 0, 0.5); */
+        }
+
+        .image img {
+            /* background-color: red; */
+            height: 20vh;
+
+        }
+
+        .image {
+            padding-top: 20px;
+            padding-left: 100px;
+        }
+
+        /* .wrongBtn {
+            margin: 9px;
+        } */
+        /* .logoimg {
+            height: 90px;
+            /* background-color: green; */
+        /* }  */
+
+
+        @media only screen and (max-width: 800px) {
+            .symbol {
+                border-radius: 22px 22px 0px 0px;
+            }
+
+            .image img {
+                /* background-color: red; */
+                height: 10vh;
+
+            }
+
+            .image {
+                padding-left: 60px;
+                padding-top: 1px;
+            }
+
+
+            .wrong {
+                text-align: right;
+            }
+
+
+
+
+        }
+
+        @media only screen and (max-width: 400px) {
+            .pragtext {
+                font-size: 10px;
+                /* background-color: red; */
+            }
+
+            .image img {
+                /* background-color: red; */
+                height: 10vh;
+
+            }
+
+            .image {
+                padding-left: 50px;
+            }
+
+            .wrong {
+                text-align: right;
+            }
+
+
+
+
+        }
+
+
+        @media only screen and (min-width: 200px) and (max-width: 480px) {
+            #board {
+                margin-left: 2px;
+            }
+
+            .visit1 {
+                height: 3vh;
+                width: 25vw;
+                margin-left: 3rem;
+                padding-top: 4px;
+                margin-top: 3px;
+
+            }
+        }
+
+
+        @media only screen and (min-width: 480px) and (max-width: 639px) {
+            #board {
+                margin-left: 2px;
+            }
+        }
+
+        @media only screen and (min-width: 980px) and (max-width: 1024px) {
+            #board {
+                margin-left: 2px;
+            }
+
+            .visit {
+                margin-right: 5rem;
+            }
+        }
+
+
+        @media only screen and (min-width: 1024px) and (max-width: 1180px) {
+            #list {
+                font-size: 10px;
+
+            }
+        }
+
+
+
+
+
+
+        @keyframes blink {
+            0% {
+                opacity: 5;
+            }
+
+            100% {
+                opacity: 2;
+                color: red;
+            }
+
+
+        }
+
+        #opaqueScreen {
+            opacity: .4;
+            z-index: 30;
+            position: absolute;
+            /* background-color:white; */
+            /* backdrop-filter: blur(700px); */
+        }
+
+        /* .blurring{
+             filter: blur(5px); 
+        } */
+
+        .countdown {
+            /* white-space: 3px; */
+            margin-left: 50px;
+            width: 300px;
+            word-spacing: 10px;
+
+        }
+
+        .time-unit {
+            padding-left: 15px;
+
+        }
+
+        /* .visit{
+            border:2px solid white;
+            text-align: center;
+            color:white;
+            font-family:"Inria Sans", sans-serif;
+            border-radius:15px;
+            padding:8px 30px 8px 30px;
+            text-decoration: none;
+            margin:3em 0 0 8rem; 
+
+
+
+        }*/
+        /* .visit:hover {background-color: transparent;
+        text-decoration: none;}
+
+        @media only screen and (max-width: 667px) {
+            .visit{
+            margin:0px;
+            padding:0px;
+            margin-right: 5px;
+                    
+            }
+        } 
+        @media only screen and (min-width: 400px) and (max-width: 950px) {
+            .visit {
+            margin-top:1rem;
+            }
+        }
+        @media only screen and (min-width: 770px) and (max-width: 1236px) {
+            .visit {
+            margin-top:0px;
+            margin-left:5rem;
+            }
+        } */
+    </style>
+</head>
+
+
+<body style="position: relative;">
+    <!-- <div id="alert-box-container"
+        class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-[999] p-4 transition-opacity duration-300 opacity-0"
+        style="display: none;">
+        <div
+            class="relative bg-white w-full max-w-md rounded-2xl shadow-2xl p-6 text-center transform scale-95 transition-transform duration-300">
+            <button id="close-alert-btn"
+                class="absolute -top-2 -right-2 bg-white rounded-full h-8 w-8 flex items-center justify-center text-gray-600 hover:text-red-500 hover:bg-gray-100 text-2xl font-bold shadow-md">&times;</button>
+
+            <div class="flex justify-center mb-4">
+                <img src="assets/MERIISE FOUNDATION logo 2.0.png" class="h-32" alt="Event Logo" class="h-24">
+            </div>
+
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Vision Hunt</h3>
+            <p class="text-gray-600 mb-6 text-sm ">An Online quiz developed by ME-RIISE Foundation where the questions will be based on Business, entrepreneurial questions and tech news.</p>
+            <a href="Leaderboard.html" 
+                class="inline-block bg-blue-500 text-white font-bold py-3 px-8 rounded-lg hover:from-blue-600 hover:to-purple-700 transition duration-300 shadow-lg transform hover:scale-105">
+                 View Leaderboard
+            </a>
+        </div>
+    </div>  -->
+    <div id="alert-box-container"
+    class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-[999] p-4 transition-opacity duration-300 opacity-0"
+    style="display: none;">
+
+    <div
+        class="relative bg-gradient-to-b from-slate-900 to-slate-800 w-full max-w-md rounded-2xl shadow-xl p-6 text-center transform scale-95 transition-transform duration-300 border border-slate-600/60">
+
+        <!-- Close Button -->
+        <button id="close-alert-btn"
+            class="absolute -top-3 -right-3 bg-slate-900 border border-slate-700 rounded-full h-9 w-9 flex items-center justify-center text-slate-300 hover:text-blue-400 hover:bg-slate-800 text-2xl font-bold shadow-md">
+            &times;
+        </button>
+
+        <!-- Logo -->
+        <div class="flex justify-center mb-5">
+            <img src="assets/pragyatha-got-logo.png"
+                class="h-28 drop-shadow-[0_0_12px_rgba(80,150,255,0.6)]"
+                alt="Pragyatha Cool GOT Logo">
+        </div>
+
+        <!-- Title -->
+        <h3 class="text-3xl font-extrabold text-slate-100 tracking-wide mb-2 font-[Cinzel]">
+            Pragyatha 2K25
+        </h3>
+
+        <!-- Subtitle -->
+        <p class="text-blue-300 uppercase text-xs tracking-widest mb-4 font-[Cinzel]">
+            Winter Meets Wisdom
+        </p>
+
+        <!-- Description -->
+        <p class="text-slate-300 mb-6 text-sm font-light leading-relaxed">
+            Step into a realm of intellect, creativity, and cool-toned elegance.  
+            Pragyatha 2K25 brings events crafted with skill, precision, and a touch of the North.
+        </p>
+
+        <!-- CTA Button -->
+        <a href="events.html"
+            class="inline-block bg-gradient-to-r from-blue-500 to-cyan-400 text-white font-semibold py-3 px-10 rounded-lg transition duration-300 shadow-lg transform hover:scale-105 hover:shadow-[0_0_20px_rgba(120,200,255,0.8)] uppercase tracking-wide">
+            Explore Events
+        </a>
+    </div>
+</div>
+
+    <!-- <div class="h-screen w-screen" id="opaqueScreen"></div>
+    <div class="card relative" style="position: sticky; top: -10px;">
+
+        <div
+            class="data absolute top-[350px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-l from-pink-900 to-pink-500 shadow-md shadow-black rounded-3xl w-[50vw] h-[40vh]">
+            <div class="submain md:grid grid-cols-2 h-[50vh]">
+                <div class="symbol h-[20vh] md:h-[40vh] order-2">
+                    <div class="wrong text-right text-2xl text-blue-700 m-0 md:m-4">
+                        <button class="wrongBtn text-purple-700 ml-20 p-4">X</button>
+                    </div>
+                    <div class="image">
+                        <img src="pragyatha.webp" alt="">
+                    </div>
+                </div>
+                <div class="Pragyatha h-32 order-1 mt-[40px] md:mt-24">
+                    <h2 class="pragtext text-3xl md:text-6xl lg-6xl text-center text-white">Pragyatha'24</h2>
+                                       
+                    <div class="visit1">
+                    <button class="visit"><a href="http://meriise.org/pragyatha24.html">VISIT NOW</a></button>
+                    </div>
+                  
+
+
+
+
+                      sm:p-0,mx-30px,justify-center
+                      <button class="visit flex justify-center border-2 border-white rounded-full py-2 px-5 uppercase text-xl font-bold tracking-wider text-white hover:bg-transparent mx-[6vw] lg:my-[6vh] md:mt-[3rem] sm:my-[0vh] mx-30px">
+                        Visit Now
+                    </button> 
+                    <h2 class="text-4xl md:text-6xl lg-6xl text-center">2k24</h2>
+                
+                     <div class="countdown h-10px text-xl opacity-0.9 text-white flex space-x-10">
+                        <div id="timer justify-between" class="p-4 bg-black text-center text-[10px] md:text-[15px] w-[50vw]">
+                            <span class="time-unit" id="days">00</span> 
+                            <span class="time-unit" id="hours">00</span> 
+                            <span class="time-unit" id="minutes">00</span> 
+                            <span class="time-unit" id="seconds">00</span><br> 
+                            <span class="namings justify-between pl-3vw" >Days Hrs Mins Secs</span>
+                            <button class="visit border-none bg-white text-black px-12">Visit Now</button>
+                        </div>
+                    </div> 
+                    
+                </div>
+
+
+            </div>
+        </div>
+    </div>-->
+
+    <div class="blurring">
+        <div class="ssheader c-hero flex align-center justify-between">
+            <img src="assets/MERIISE FOUNDATION logo 2.0.png" alt="" class="h-[5vh] md:h-[10vh] mt-2 lg:mt-0">
+            <h2 class="h-txt pt-4">
+                <p class="text-[10px] md:text-lg lg:text-xl"> MALNAD ENCLAVE FOR RESEARCH, INNOVATION, INCUBATION,
+                    STARTUPS
+                    AND
+                    ENTREPRENEURSHIP</p>
+                <p class="text-center text-[7px] md:text-lg lg:text-xl mb-2 lg:mb-0">Malnad College of
+                    Engineering,Hassan
+                </p>
+
+            </h2>
+            <img src="assets/malnad_college_of_engineering_logo (1).jpg" alt="" class="h-12 md:h-28">
+
+        </div>
+
+        <!-- <div class="logos flex h-10 md:h-16 gap-10 justify-center bg-white lg:ml-2 lg:ml-28">
+
+        <div class="flex justify-between gap-2 lg:gap-6">
+            <img src="assets/moe.png" alt="">
+            <img src="assets//AICTE.png" alt="">
+            <img src="assets//IIC-logo-removebg-preview.png">
+            <img src="assets//images (11).png" alt="">
+            <img src="assets//UBA.png" alt="">
+        </div>
+ 
+    </div> -->
+
+
+        <div class="px-0px lg:px-[300px] mx-auto">
+            <div class="grid grid-cols-5 md:grid-cols-5 gap-2">
+                <div class="flex justify-center items-center">
+                    <img src="assets/moe.png" alt="" class="w-24 md:w-32 md:h-32 object-contain">
+                </div>
+                <div class="flex justify-center items-center">
+                    <img src="assets/AICTE.png" alt="" class="w-24 md:w-32 md:h-32 object-contain">
+                </div>
+                <div class="flex justify-center items-center">
+                    <img src="assets/IIC-logo-removebg-preview.png" alt="" class="w-24 md:w-32 md:h-32 object-contain">
+                </div>
+                <div class="flex justify-center items-center">
+                    <img src="assets/images (11).png" alt="" class="w-24 md:w-32 md:h-32 object-contain">
+                </div>
+                <div class="flex justify-center items-center">
+                    <img src="assets/UBA.png" alt="" class="w-24 md:w-32 md:h-32 object-contain">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="snav-bar">
+            <header class="header">
+                <nav class="nav containerofNavbar">
+                    <div class="nav__data">
+                        <!-- <a href="#" class="nav__logo"> -->
+                        <!-- <i class="ri-planet-line"></i> Logo -->
+                        <!-- Logo -->
+                        <!-- </a> -->
+
+                        <div class="nav__toggle" id="nav-toggle">
+                            <i class="ri-menu-line nav__burger"></i>
+                            <i class="ri-close-line nav__close"></i>
+                        </div>
+                    </div>
+
+                    <!--=============== NAV MENU ===============-->
+                    <div class="nav__menu" id="nav-menu">
+                        <ul class="nav__list">
+                            <li><a href="index.html" class="nav__link">Home</a></li>
+
+                            <li class="dropdown__item">
+                                <div class="nav__link">
+                                    About ME-RIISE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                                </div>
+
+                                <ul class="dropdown__menu">
+                                    <li>
+                                        <a href="aboutmeriise.html" class="dropdown__link">
+                                            <i class="ri-pie-chart-line"></i> ME-RIISE FOUNDATION
+                                        </a>
+                                    </li>
+
+
+                                    <li>
+                                        <a href="infrastructure.html" class="dropdown__link">
+                                            <i class="ri-pie-chart-line"></i> Infrastructure
+                                        </a>
+                                    </li>
+
+
+                                    <li>
+                                        <a href="ourAchivements.html" class="dropdown__link">
+                                            <i class="ri-arrow-up-down-line"></i> Achievements
+                                        </a>
+                                    </li>
+
+
+                                    <li class="dropdown__subitem">
+                                        <div class="dropdown__link">
+                                            <i class="ri-bar-chart-line"></i> Documents <i
+                                                class="ri-add-line dropdown__add"></i>
+                                        </div>
+
+                                        <ul class="dropdown__submenu">
+                                            <li>
+                                                <a href="Nisp.html" class="dropdown__sublink">
+                                                    <i class="ri-file-list-line"></i> MCE NISP POLICY
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="collab.html" class="dropdown__sublink">
+                                                    <i class="ri-cash-line"></i> Collaborations
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="Certificates.html" class="dropdown__sublink">
+                                                    <i class="ri-cash-line"></i> Certificates
+                                                </a>
+                                            </li>
+
+
+                                        </ul>
+                                    </li>
+
+
+                                    <li class="dropdown__subitem">
+                                        <div class="dropdown__link">
+                                            <i class="ri-bar-chart-line"></i> Members of ME-RIISE <i
+                                                class="ri-add-line dropdown__add"></i>
+                                        </div>
+
+                                        <ul class="dropdown__submenu">
+                                            <li>
+                                                <a href="#boardofdirectors" class="dropdown__sublink">
+                                                    <i class="ri-file-list-line"></i>Board of Directors
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="faculty.html" class="dropdown__sublink">
+                                                    <i class="ri-cash-line"></i> Faculty
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="team.html" class="dropdown__sublink">
+                                                    <i class="ri-refund-2-line"></i> Team ME-RIISE
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <!--=============== DROPDOWN SUBMENU ===============-->
+
+                                </ul>
+                            </li>
+
+                            <!--=============== DROPDOWN 1 ===============-->
+                            <li class="dropdown__item">
+                                <div class="nav__link">
+                                    Wings of ME-RIISE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                                </div>
+
+                                <ul class="dropdown__menu">
+                                    <li>
+                                        <a href="startups.html" class="dropdown__link">
+                                            <i class="ri-pie-chart-line"></i>Start Ups
+                                        </a>
+                                    </li>
+
+
+
+                                    <li>
+                                        <a href="iic.html" class="dropdown__link">
+                                            <i class="ri-pie-chart-line"></i> MoE - IIC
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="nain.html" class="dropdown__link">
+                                            <i class="ri-arrow-up-down-line"></i> NAIN
+                                        </a>
+                                    </li>
+
+
+
+                                    <li>
+                                        <a href="uba.html" class="dropdown__link">
+                                            <i class="ri-arrow-up-down-line"></i> UBA
+                                        </a>
+                                    </li>
+
+                                    <li class="dropdown__subitem">
+                                        <div class="dropdown__link">
+                                            <i class="ri-bar-chart-line"></i> Pragyatha <i
+                                                class="ri-add-line dropdown__add"></i>
+                                        </div>
+
+                                        <ul class="dropdown__submenu">
+                                            <li>
+                                                <a href="https://pragyatha24.meriise.org/" class="dropdown__sublink">
+                                                    <i class="ri-file-list-line"></i>Pragyatha24
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="pragyatha23.html" class="dropdown__sublink">
+                                                    <i class="ri-cash-line"></i>Pragyatha23
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="pragyatha22.html" class="dropdown__sublink">
+                                                    <i class="ri-cash-line"></i> Pragyatha22
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="Pragyatha21.html" class="dropdown__sublink">
+                                                    <i class="ri-cash-line"></i> Pragyatha21
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="pragyatha19.html" class="dropdown__sublink">
+                                                    <i class="ri-cash-line"></i> Pragyatha19
+                                                </a>
+                                            </li>
+
+
+                                        </ul>
+                                    </li>
+
+
+                                    <!-- <li class="dropdown__subitem">
+                                    <div class="dropdown__link">
+                                        <i class="ri-bar-chart-line"></i> Documents <i
+                                            class="ri-add-line dropdown__add"></i>
+                                    </div>
+
+                                    <ul class="dropdown__submenu">
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i> MCE NISP POLICY
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-cash-line"></i> Collaborations
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-refund-2-line"></i> Refunds
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li> -->
+
+                                    <!--=============== DROPDOWN SUBMENU ===============-->
+                                    <!-- <li>
+                                    <a href="pragyathaintro.html" class="dropdown__link">
+                                        <i class="ri-arrow-up-down-line"></i> Pragyatha
+                                    </a>
+                                </li> -->
+                                </ul>
+                            </li>
+
+                            <li><a href="https://meriise-events.vercel.app/" class="nav__link">Events</a></li>
+                            <li><a href="#footer" class="nav__link">Contact Us</a></li>
+
+                            <!--=============== DROPDOWN 2 ===============-->
+
+
+                            <!-- <li><a href="#" class="nav__link">Contact Us</a></li> -->
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <!--logo-->
+
+            <!-- Navbar -->
+            <!-- <div class=" w-full bg-black h-[12vh] flex items-center justify-between z-50">
+            <a href="http://www.meriise.org/" class="cursor-pointer">
+                <img src="images/meriise-logo new.png" alt="Logo" class="h-[7.5rem] mx-3 flex">
+            </a>
+            <div class="space-y-2 mx-4 mt-4 lg:hidden" onclick="openNavigation()">
+                <span class="block h-0.5 w-8" style="background-color: #01adfc;"></span>
+                <span class="block h-0.5 w-8" style="background-color: #01adfc;"></span>
+                <span class="block h-0.5 w-8" style="background-color: #01adfc;"></span>
+            </div>
+        </div> -->
+
+
+            <!-- Navigation Menu -->
+            <!-- <div class="hidden fixed top-[12vh] right-0 lg:block z-50 " id="nav">
+            <ul class="sm:px-10 min-[320px]:px-10 bg-black h-[100vh] w-[60vw] flex flex-col justify-start text-md font-bold lg:bg-transparent lg:flex-row lg:items-center lg:h-[12vh] lg:justify-evenly lg:w-[90vw] lg:mt-1 overflow-y-hidden"
+                style="color: #01adfc;">
+                <li><a href="index.html" class="cursor-pointer">Home</a></li>
+                <li><a href="aboutmeriise.html" class="cursor-pointer">About Us</a></li>
+                <li><a href="faculty.html" class="cursor-pointer">Faculty</a></li>
+                <li><a href="team.html" class="cursor-pointer">Student Members</a></li>
+                <li><a href="iic.html" class="cursor-pointer">MHRD-IIC</a></li>
+                <li><a href="nain.html" class="cursor-pointer">Nain</a></li>
+                <li><a href="uba.html" class="cursor-pointer">UBA</a></li>
+                <li><a href="infrastructure.html" class="cursor-pointer">Infrastructure</a></li>
+                <li><a href="startups.html" class="cursor-pointer">Startup</a></li>
+                <li><a href="collab.html" class="cursor-pointer">Collaborations</a></li>
+                <li><a href="Nisp.html" class="cursor-pointer">MCE-NISP Policy</a></li>
+                <li><a href="documents.html" class="cursor-pointer">Docs</a></li>
+
+                <li>
+                    <button class="min-[320px]:px-0 cursor-pointer rounded-xl px-2" id="pragyatha-btn"
+                        style="color: inherit;">Pragyatha</button>
+                    <ul class="sm:w-[10vw] hidden bg-white text-blue w-[15vw] p-4 flex flex-col justify-start text-md font-bold absolute right-0 mt-2 rounded-xl min-[320px]:mx-[30px] min-[320px]:w-[50vw]"
+                        id="pragyatha-dropdown">
+                        <li><a href="pragyatha23.html" class="cursor-pointer">Pragyatha-23</a></li>
+                        <li><a href="Pragyatha.html" class="cursor-pointer">Pragyatha-21</a></li>
+                        <li><a href="prag.html" class="cursor-pointer">Pragyatha-19</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div> -->
+
+
+            <!-- </div> -->
+
+            <!-- <header class="bg-black text-blue-400">
+            <nav class="flex justify-between items-center w-[95vw] mx-auto text-sm font-bold h-20 sm:h-24">
+              3 div's are there -->
+            <!-- 1st div's are for logo -->
+            <!-- <div class="px-4 md:px-16">
+                    <img src="images/meriise-logo new.png" alt="" class="w-42 h-24 ml-1 md:ml-10">
+                </div> -->
+
+
+            <!-- Another div's is for lists -->
+            <!-- <div class="navlinks flex justify-between duration-500 md:static absolute md:min-h-fit min-h-[80vh] 
+                     top-[-800px] md:w-[70vw] left-[155px] w-[90%] bg-black flex items-center">
+                    <ul class="flex md:flex-row flex-col md:items-center md:gap-[8vw] lg:gap-[2vw] gap-6 px-4 mr-10">
+
+                        <li>
+                            <a href="index.html" class="hover:text-blue-600">Home</a>
+                        </li>
+                        <li>
+                            <a href="aboutmeriise.html" class="hover:text-blue-600">AboutUs</a>
+                        </li>
+                        <li>
+                            <a href="faculty.html" class="hover:text-blue-600">Faculty</a>
+                        </li>
+                        <li>
+                            <a href="team.html" class="hover:text-blue-600">Team-MERIISE</a>
+                        </li>
+                        <li>
+                            <a href="iic.html" class="hover:text-blue-600">MHRD-IIC</a>
+                        </li>
+                        <li>
+                            <a href="nain.html" class="hover:text-blue-600">Nain</a>
+                        </li>
+                        <li>
+                            <a href="uba.html" class="hover:text-blue-600">UBA</a>
+                        </li>
+                        <li>
+                            <a href="infrastructure.html" class="hover:text-blue-600">Infrastructure</a>
+                        </li>
+                        <li>
+                            <a href="startups.html" class="hover:text-blue-600">StartUp</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.mcehassan.ac.in/" class="hover:text-blue-600">MCE</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-blue-600">Achievements</a>
+                        </li> -->
+
+            <!-- <li>
+                            <a href="startups.html" class="hover:text-blue-600">Collaborations</a>
+                        </li>
+
+                        <li>
+                            <a href="startups.html" class="hover:text-blue-600">Documents</a>
+                        </li>  -->
+
+            <!-- <li>
+                            <a href="startups.html" class="hover:text-blue-600">MCE-NISP Policy</a>
+                        </li> -->
+
+
+            <!-- <li>
+                            <a href="https://meriise-events.vercel.app/" class="hover:text-blue-600">Events</a>
+                        </li>
+                        <div class="flex">
+                            <li class="relative" onclick="toggleFunction()" id="click">
+                                <a href="#" class="hover:text-blue-600">Pragyatha</a>
+                                <ion-icon name="caret-down-outline" class="px-4" id="icons"></ion-icon>
+
+                            </li>
+                            <li class="absolute bg-black text-white p-4 rounded-sm mt-8 hidden rounded-xl text-md w-[160px]"
+                                id="box" onclick="dropdown()">
+                                <div>Pragyatha 23</div>
+                                <div>Pragyatha 21</div>
+                                <div>Pragyatha 19</div>
+
+                            </li>
+                        </div>
+                    </ul>
+                </div> -->
+
+            <!-- Another div's is for button -->
+            <!-- <div class="flex items-center gap-8">
+                    <ion-icon name="menu-outline" id="menu" onclick="clickFunction(this)">Hello</ion-icon>
+                </div> -->
+
+            <!-- <div class="flex gap-4 mx-4">
+                    <ion-icon name="menu" class="text-4xl lg:hidden" id="menu12"
+                        onclick="clickFunction(this)"></ion-icon>
+                </div>
+            </nav>
+        </header> -->
+
+
+
+            <!-- <nav class="bg-white lg:flex lg:items-center lg:justify-center h-16 sticky">
+            <div class="flex items-center justify-center">
+
+                <div>
+                    <ion-icon name="menu" onclick="clickFunction(this)"
+                        class="text-4xl text-blue-400 block lg:hidden"></ion-icon>
+                </div>
+
+            </div> -->
+
+            <!-- <ion-icon name="menu" id="menu" onclick="clickFunction(this)"
+        class="text-4xl block lg:hidden h-24"></ion-icon> -->
+
+
+            <!-- <div class="hidden lg:block" id="elements">
+                <ul class="text-blue-400 font-bold bg-black px-4 py-2 lg:flex lg:justify-between lg:items-center w-48 md:w-42 lg:w-full float-right md:float-right h-screen md:h-screen lg:h-auto z-50"
+                    id="list">
+                    <li class="mx-2"><a href="index.html">Home</a></li>
+                    <li class="a1 mx-2"><a href="aboutmeriise.html">About us</a></li>
+                    <li class="a1 mx-2"><a href="#">Wings</a></li>
+                    <li class="a1 mx-2"><a href="#">Events</a></li>
+                    <li class="a1 mx-2"><a href="#">Contact us</a></li>
+                    
+                    
+                    
+                    <!-- <li class="a1 mx-2"><a href="faculty.html">Faculty</a></li>
+                    <li class="a1 mx-2"><a href="team.html">Team ME-RIISE</a></li>
+                    <li class="mx-2"><a href="iic.html">MoE</a></li>
+                    <li class="mx-2"><a href="nain.html">NAIN</a></li>
+                    <li class="mx-2"><a href="uba.html">UBA</a></li>
+                    <li class="mx-2"><a href="infrastructure.html">Infrastructure</a></li>
+                    <li class="mx-2"><a href="startups.html">Start ups</a></li>
+                    <li class="mx-2"><a href="https://meriise-events.vercel.app/">Events</a></li>
+                    <li class="mx-2"><a href="https://www.mcehassan.ac.in/">MCE</a></li>
+                    <li class="mx-2"><a href="ourAchivements.html">Achievements</a></li> 
+                    
+
+                    <div class="flex ml-2">
+                        <li class="relative" onclick="toggleFunction2(event)" id="click">
+                            <a href="#" class="hover:text-blue-600">Documents</a>
+                            <ion-icon name="caret-down-outline" class="px-1" id="icons2"></ion-icon>
+
+                        </li>
+                        <li class="absolute p-2 rounded-sm mt-8 hidden rounded-xl text-md w-[130px] bg-white text-blue-600"
+                            id="box2" onclick="dropdown()">
+                            <div><a href="Nisp.html">MCE NISP Policy</a></div>
+                            <div><a href="collab.html">Collaboration</a></div>
+                            <div><a href="documents.html">Documents</a></div>
+
+                        </li>
+                    </div>
+                    <!-- <li class="mx-2"><a href="collab.html">Collaborations</a></li>
+                    <li class="mx-2"><a href="Nisp.html">MCE NISP Policy</a></li> 
+
+
+                    <div class="flex ml-2">
+                        <li class="relative" onclick="toggleFunction(event)" id="click">
+                            <a href="#" class="hover:text-blue-600">Pragyatha</a>
+                            <ion-icon name="caret-down-outline" class="px-1" id="icons"></ion-icon>
+
+                        </li>
+                        <li class="absolute p-2 rounded-sm mt-8 hidden rounded-xl text-md w-[130px] bg-white text-blue-600"
+                            id="box" onclick="dropdown()">
+                            <div><a href="http://meriise.org/pragyatha24.html">Pragyatha 24</a></div>
+                            <div><a href="pragyatha23.html">Pragyatha 23</a></div>
+                            <div><a href="pragyatha22.html">Pragyatha 22</a></div>
+                            <div><a href="Pragyatha.html">Pragyatha 21</a></div>
+                            <div><a href="prag.html">Pragyatha 19</a></div>
+                            
+
+                        </li>
+                    </div>
+
+
+
+                </ul>
+            </div>
+        </nav>
+    </div> -->
+
+
+
+
+
+
+            <!-- <div class="hidden lg:block sticky bg-white" id="elements">
+                <ul class="text-black bg-white px-4 py-2 lg:flex lg:justify-between lg:items-center w-48 md:w-42 lg:w-full float-right md:float-right h-screen md:h-screen lg:h-auto z-50"
+                    id="list">
+                    <li class="mx-2"><a href="index.html">Home</a></li>
+
+
+                    <div class="flex ml-2">
+                        <li class="relative" onclick="toggleFunction(event)" id="click">
+                            <a href="#" class="hover:text-blue-600">AboutUs</a>
+                            <ion-icon name="caret-down-outline" class="px-1" id="icons2"></ion-icon>
+
+                        </li>
+                        <li class="absolute p-2 rounded-sm mt-8 hidden rounded-xl text-md w-[180px] bg-white text-blue-600"
+                            id="box" onclick="dropdown()">
+                            <div class="a1 mx-2"><a href="aboutmeriise.html">About ME-RIISE</a></div>
+                            <div class="al mx-2"><a href="">Board of Directors</a></div>
+                            <div class=" mx-2"><a href="infrastructure.html">Infrastructure</a></div>
+                            <div class="a1 mx-2"><a href="team.html">Team ME-RIISE</a></div>
+                            <div class="a1 mx-2"><a href="ourAchivements.html">Achievements</a></div>
+                            <div class="a1 mx-2 "><a href="documents.html">Documents</a></div>
+
+                        </li>
+                    </div>
+                    <li class="a1 mx-2"><a href="aboutmeriise.html">About us</a></li>
+                    <div class="flex ml-2">
+                        <li class="relative" onclick="toggleFunction2(event)" id="click">
+                            <a href="#" class="hover:text-blue-600">Wings of ME-RIISE</a>
+                            <ion-icon name="caret-down-outline" class="px-1" id="icons2"></ion-icon>
+
+                        </li>
+                        <li class="absolute p-2 rounded-sm mt-8 hidden rounded-xl text-md w-[150px] bg-white text-blue-600"
+                            id="box2" onclick="dropdown()">
+                            <div class="a1 mx-2"><a href="startups.html">Start Ups</a></div>
+                            <div class=" mx-2"><a href="infrastructure.html">Pragyatha</a></div>
+                            <div class="a1 mx-2"><a href="iic.html">MoE</a></div>
+                            <div class="a1 mx-2"><a href="nain.html">NAIN</a></div>
+                            <div class="a1 mx-2 "><a href="uba.html">UBA</a></div>
+
+                        </li>
+                    </div>
+                    <li class="a1 mx-2"><a href="https://meriise-events.vercel.app/">Events</a></li>
+                    <li class="a1 mx-2"><a href="#">Contact us</a></li> -->
+
+
+
+            <!-- <li class="a1 mx-2"><a href="faculty.html">Faculty</a></li>
+            <li class="a1 mx-2"><a href="team.html">Team ME-RIISE</a></li>
+            <li class="mx-2"><a href="iic.html">MoE</a></li>
+            <li class="mx-2"><a href="nain.html">NAIN</a></li>
+            <li class="mx-2"><a href="uba.html">UBA</a></li>
+            <li class="mx-2"><a href="infrastructure.html">Infrastructure</a></li>
+            <li class="mx-2"><a href="startups.html">Start ups</a></li>
+            <li class="mx-2"><a href="https://meriise-events.vercel.app/">Events</a></li>
+            <li class="mx-2"><a href="https://www.mcehassan.ac.in/">MCE</a></li>
+            <li class="mx-2"><a href="ourAchivements.html">Achievements</a></li> -->
+
+
+            <!-- <div class="flex ml-2">
+                <li class="relative" onclick="toggleFunction2(event)" id="click">
+                    <a href="#" class="hover:text-blue-600">Documents</a>
+                    <ion-icon name="caret-down-outline" class="px-1" id="icons2"></ion-icon>
+
+                </li>
+                <li class="absolute p-2 rounded-sm mt-8 hidden rounded-xl text-md w-[130px] bg-white text-blue-600"
+                    id="box2" onclick="dropdown()">
+                    <div><a href="Nisp.html">MCE NISP Policy</a></div>
+                    <div><a href="collab.html">Collaboration</a></div>
+                    <div><a href="documents.html">Documents</a></div>
+
+                </li>
+            </div> -->
+            <!-- <li class="mx-2"><a href="collab.html">Collaborations</a></li>
+            <li class="mx-2"><a href="Nisp.html">MCE NISP Policy</a></li> -->
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="flex ml-2">
+                <li class="relative" onclick="toggleFunction(event)" id="click">
+                    <a href="#" class="hover:text-blue-600">Wings</a>
+                    <ion-icon name="caret-down-outline" class="px-1" id="icons"></ion-icon>
+
+                </li>
+                <li class="absolute p-2 rounded-sm mt-8 hidden rounded-xl text-md w-[130px] bg-white text-blue-600"
+                    id="box" onclick="dropdown()">
+                    <li class="mx-2"><a href="startups.html">Start ups</a></li>
+                    <li>><a href="http://meriise.org/pragyatha24.html">Pragyatha</a></div></li>
+                    <li class="mx-2"><a href="iic.html">MoE</a></li>
+                    <li class="mx-2"><a href="nain.html">NAIN</a></li>
+                    <li class="mx-2"><a href="uba.html">UBA</a></li>
+
+                </li>
+            </div> -->
+
+
+
+
+
+
+            <!-- <div class="flex ml-2">
+                <li class="relative" onclick="toggleFunction(event)" id="click">
+                    <a href="#" class="hover:text-blue-600">Pragyatha</a>
+                    <ion-icon name="caret-down-outline" class="px-1" id="icons"></ion-icon>
+
+                </li>
+                <li class="absolute p-2 rounded-sm mt-8 hidden rounded-xl text-md w-[130px] bg-white text-blue-600"
+                    id="box" onclick="dropdown()">
+                    <div><a href="http://meriise.org/pragyatha24.html">Pragyatha 24</a></div>
+                    <div><a href="pragyatha23.html">Pragyatha 23</a></div>
+                    <div><a href="pragyatha22.html">Pragyatha 22</a></div>
+                    <div><a href="Pragyatha.html">Pragyatha 21</a></div>
+                    <div><a href="prag.html">Pragyatha 19</a></div>
+                    
+
+                </li>
+            </div> -->
+
+
+
+            <!-- </ul>
+            </div> -->
+            <!-- </nav> -->
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Pragyatha coming soon Card -->
+
+
+
+        <!--  ml-[80px]  h-32 mt-[30px] ml-[80px] md:h-48 text-center-->
+        <!-- button : wrong text-right text-2xl text-blue-700 m-0 md:m-4 -->
+        <div>
+
+            <div class="flex items-center justify-center h-[50%]">
+                <div class="relative w-[100vw] overflow-hidden rounded-lg">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
+                    <div class="flex transition-transform duration-500 ease-in-out" id="slider">
+                        <div class="w-full flex-shrink-0">
+                            <img src="assets/RollingSlider/chathur2.png" class="w-full h-[35vh] md:h-[90vh]"
+                                alt="Slide 4">
+                        </div>
+
+                        <div class="w-full flex-shrink-0">
+                            <img src="assets/RollingSlider/pmp.png" class="w-full h-[35vh] md:h-[90vh]" alt="Slide 2">
+                        </div>
+                        <div class="w-full flex-shrink-0">
+                            <img src="assets/RollingSlider/chathurpravthan.png" class="w-full h-[35vh] md:h-[90vh]"
+                                alt="Slide 3">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <section class="banner full"> -->
+
+
+        <!-- <article>
+
+            <img src="images/iic.jpg" alt="" />
+            <div class="inner">
+                <header></header>
+            </div>
+        </article> -->
+
+
+
+        <!-- <article>
+
+            <img src="images/nain.jpg" alt="" />
+            <div class="inner">
+                <header></header>
+            </div>
+        </article> -->
+
+
+        <!-- 
+
+        <article>
+
+            <img src="images/uba.jpg" alt="" />
+            <div class="inner">
+                <header></header>
+            </div>
+        </article> -->
+
+
+
+
+
+
+
+        <!-- 
+        <article>
+
+            <img src="images/Banner.jpg" alt="" />
+            <div class="inner">
+                <header></header>
+            </div>
+        </article> -->
+
+        <!-- 
+        <article>
+
+            <img src="images/mce_gate.jpg" alt="" />
+            <div class="inner">
+                <header></header>
+            </div>
+        </article> -->
+
+
+
+
+
+        <!-- <article class="h-full">
+
+            <img src="assets/RollingSlider/rgepnew.png" alt="" class="h-[50%]" />
+
+        </article> -->
+        <!-- <article>
+
+            <img src="assets/Chathurprarvathan/chathurpravthan.png" alt="" />
+            <div class="inner">
+                <header></header>
+            </div>
+        </article> -->
+
+        <!-- <article>
+
+            <img src="assets/RollingSlider/pmp.png" alt="" />
+            <div class="inner">
+                <header></header>
+            </div>
+        </article>
+
+
+
+
+
+
+
+
+        <article>
+
+            <img src="assets/RollingSlider/chathurpravthan.png" alt="" />
+            <div class="inner">
+                <header></header>
+            </div>
+        </article> -->
+
+
+
+
+        <!-- <article>
+
+            <img src="images/g8.jpg" alt="" />
+            <div class="inner">
+                <header></header>
+            </div>
+        </article> -->
+
+
+
+        <!-- <article>
+
+            <img src="images/bootcamp1.jpg" alt="" />
+            <div class="inner">
+                <header>
+                    <h2>
+                        <a href="http://www.mcehassan.ac.in">ME-RIISE </a>
+                    </h2>
+                    <p>
+                        <b><a href="http://www.mcehassan.ac.in">Malnad Enclave for Research, Innovatiton,
+                                Startups and Entrepreneurship</a></b>
+                    </p>
+                </header>
+            </div>
+        </article>
+        <article>
+            <img src="images/ideagentoincubation.jpg" alt="" />
+            <div class="inner">
+                <header>
+                    <h2><a href="http://www.mcehassan.ac.in"></a></h2>
+                    <p>
+                        <b><a href="http://www.mcehassan.ac.in"></a></b>
+                    </p>
+                </header>
+            </div>
+        </article>
+
+        <article>
+            <img src="images/slide07.jpg" alt="" />
+            <div class="inner">
+                <header>
+                    <h2><a href="http://www.mcehassan.ac.in"> MCE </a></h2>
+                    <p>
+                        <b><a href="http://www.mcehassan.ac.in">
+                                Malnad college of engineering</a></b>
+                    </p>
+                </header>
+            </div>
+        </article> -->
+
+        <!-- </section> -->
+
+        <!-- <div class="h-[70vh] bg-black">
+        Hello
+    </div> -->
+
+
+
+        <!-- <header class="majo"></header> -->
+
+        <!-- <section id="one" class="wrapper style2">
+        <div class="inner">
+
+
+
+            <section class="specia">
+                <h1 class="sub-head" style="text-align: center"> -->
+        <!--India Startup Day - 1st October-->
+        <!-- </h1>
+
+                <ul class="action"> -->
+        <!-- <div class="main">
+                            
+                               
+                                
+                            <a href="pragyatha22.html" class="button alt" style="width:100% ; height:25%; background-color:#12EECA; ">
+                                          <b><font color="black" size="7px">Pragyatha 22 Portal <u><blink class="blink"><font size="7px"> Click Here..! </font> </blink></u></font></b></a>
+                                         </center>
+                             -->
+
+        <!--
+                               <marquee class="marq"
+                                             bgcolor=#51E1ED
+                                             direction="left"
+                                             loop="10">
+                                       <a href="http://www.meriise.org/wc.html" class="button alt" style="background-color:#51E1ED;">
+                                           <b><font color="black" size="5px" weight="bold">Weekly Challenge  <u><blink class="blink">Click Here..! </blink></u></font></b></a>
+                                </marquee>
+                               -->
+        <!-- <div class="event-list" style="text-align: center;"> -->
+
+
+        <!-- <ul><li><a href="http://www.meriise.org/wc.html" style="background-color:white"><b><font color="black" size="5px" weight="bold">Weekly Challenge  <u><blink class="blink">Click Here..! </blink></u></font></b></a></li>
+                        
+                        <li><a href="http://www.meriise.org/robo.html" style="background-color:white">
+                                           <b><font color="black" size="5px" weight="bold">RoboTechX - Soccer Bots Challenge <u><blink class="blink">Know More..!</blink></u></font></b></a></li></ul>
+                         
+                        <li><a href="http://meriise.org/teamUpcoming.html" style="background-color:white">
+                                           <b><font color="black" size="5px" weight="bold">Upcoming Events (23/08/2023 - 25/08/2023)<u><blink class="blink">Know More..!</blink></u></font></b></a></li></ul> -->
+        <!-- </div> -->
+        <!--<marquee behavior="scroll" direction="left" width="200%" height="60%" scrollamount="10"><a href="pragyatha22.html" class="button alt" style="width:50%; background-color:purple;"><b><font color="white" size="5px"><u>Click here..! &nbsp &nbsp &nbsp Pragyatha 22 Portal</u></font></b></a></marquee>-->
+        <!-- <p style="text-align-last:center; text-size:50px">   -->
+
+        <!--<a href="pragyatha22.html" class="button alt" style="width:40%; background-color:#1c68d0;"><b><font color="white" size="5px">Pragyatha 22 Portal</font></b></a>
+                              <a href="https://forms.gle/VTsPGP3u8UjFowRM6" class="button alt" style="width:50%; background-color:#83E9EE; font-weight: bold;">FEEDBACK FORM</a> 
+                            </p>
+                        </ul>
+                        <br/><br/> 
+                      
+                        <a href="pragyatha22.html" class="image fit"><center><img id="mcp" src="img/Pragyatha22/finalposter.jpeg" Width="50px" height="100px" alt="" /></center> </a>
+                   
+                        <ul class="action">
+                            <p style="text-align-last: center; text-size:50px">
+                              <a href="pragyatha22.html" class="button alt" style="width:40%; background-color:#1c68d0;"><b><font color="white" size="5px">Pragyatha 22 Portal</font></b></a>
+                              <!<a href="https://forms.gle/VTsPGP3u8UjFowRM6" class="button alt" style="width:50%; background-color:#83E9EE; font-weight: bold;">FEEDBACK FORM</a> 
+                            </p>
+                        </ul>
+                      -->
+        <!-- </section>
+        </div>
+    </section> -->
+
+
+
+        <!-- <br> -->
+
+        <!-- One -->
+
+
+        <!-- <section id="two" class="wrapper style3">
+        <div class="inner">
+            <header class="align-center">
+                <h1 style="font-size: 28px">Board of Directors</h1>
+            </header>
+        </div>
+    </section> -->
+
+        <!-- </div> -->
+
+        <!-- board of directors -->
+
+        <!-- <div class="px-6 py-">
+        <h2 class="text-2xl md:text-4xl text-center py-4 md:py-8 md:my-8">Board of Directors <p class="text-blue-400">ME-RIISE
+                Foundation</p>
+        </h2>
+        <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-10 my-4 lg:my-12">
+            
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="images/bod/ah.jpeg" alt="Sri. Ashok Haranahalli" class="w-full h-48 lg:h-[50vh] object-cover">
+                <div class="p-3">
+                    <h3 class="text3-md lg:text-lg  font-semibold">Sri. Ashok Haranahalli</h3>
+                    <p class="text-sm text-gray-600">Chairman,</p>
+                    <p class="text-sm text-gray-600">ME-RIISE FOUNDATION</p>
+                </div>
+            </div>
+            
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="images/bod/gk.jpeg" alt="Dr. A. Geetha Kiran" class="w-full h-48 lg:h-[50vh] object-cover">
+                <div class="p-3">
+                    <h3 class="text-md lg:text-lg font-semibold">Dr. A. Geetha Kiran</h3>
+                    <p class="text-sm text-gray-600">CEO,</p>
+                    <p class="text-sm text-gray-600">ME-RIISE FOUNDATION</p>
+                </div>
+            </div>
+         
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="images/bod/sri .jpg" alt="Sri. S G Sridhar" class="w-full h-48 lg:h-[50vh] object-cover">
+                <div class="p-3">
+                    <h3 class="text-md lg:text-lg font-semibold">Sri. S G Sridhar</h3>
+                    <p class="text-sm text-gray-600">Director,</p>
+                    <p class="text-sm text-gray-600">ME-RIISE FOUNDATION</p>
+                </div>
+            </div>
+        
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="images/bod/ar.png" alt="Sri. Ananth Ravi" class="w-full h-48 lg:h-[50vh] object-cover">
+                <div class="p-3">
+                    <h3 class="text-md lg:text-lg font-semibold">Sri. Ananth Ravi</h3>
+                    <p class="text-sm text-gray-600">Director,</p>
+                    <p class="text-sm text-gray-600">ME-RIISE FOUNDATION</p>
+                </div>
+            </div>
+ 
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="images/bod/pradeep.jpeg" alt="Sri. Ananth Ravi" class="w-full h-48 lg:h-[50vh] object-cover">
+                <div class="p-3">
+                    <h3 class="text-md lg:text-lg font-semibold">Dr. S Pradeep</h3>
+                    <p class="text-sm text-gray-600">Director,</p>
+                    <p class="text-sm text-gray-600">ME-RIISE FOUNDATION</p>
+                </div>
+            </div>
+
+        
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="images/bod/kss.jpeg" alt="Sri. Ananth Ravi" class="w-full h-48 lg:h-[50vh] object-cover">
+                <div class="p-3">
+                    <h3 class="text-md lg:text-lg font-semibold">Mr. Krishnaswamy Subbarao</h3>
+                    <p class="text-sm text-gray-600">Advisor,</p>
+                    <p class="text-sm text-gray-600">ME-RIISE FOUNDATION</p>
+
+                </div>
+            </div>
+
+           
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="images/bod/kiran.jpeg" alt="Sri. Ananth Ravi" class="w-full h-48 lg:h-[50vh] object-cover">
+                <div class="p-3">
+                    <h3 class="text-md lg:text-lg font-semibold">Mr. Kiran H A</h3>
+                    <p class="text-sm text-gray-600">Advisor,</p>
+                    <p class="text-sm text-gray-600">ME-RIISE FOUNDATION</p>
+                </div>
+            </div>
+
+          
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="images/bod/profile_1-311645.jpg" alt="Sri. Ananth Ravi"
+                    class="w-full h-48 lg:h-[50vh] object-cover">
+                <div class="p-3">
+                    <h3 class="text-md lg:text-lg font-semibold">Dr. A J Krishnaiah</h3>
+                    <p class="text-sm text-gray-600">Principal,MCE Hassan</p>
+                    <p class="text-sm text-gray-600">Advisor,</p>
+                    <p class="text-sm text-gray-600">ME-RIISE FOUNDATION</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+        <div id="boardofdirectors">
+
+            <h1 class="text-[20px] md:text-[80px] text-center my-4">Board of Directors | ME-RIISE Foundation</h1>
+            <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin: 2rem 0;">
+                <img src="assets/bodnew.jpg" alt="" style="max-width: 100%; height: auto;">
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto my-8">
+                <!-- Member 1 -->
+                <div class="flex flex-col items-center bg-white rounded-xl shadow-md p-6">
+                    <img src="images/bod/kss.jpeg" alt="Mr. Krishnaswamy Subbarao"
+                        class="w-32 h-32 rounded-full object-cover border-4 border-blue-200 mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 text-center">Mr. Krishnaswamy Subbarao</h3>
+                    <p class="text-sm text-gray-500 text-center mt-1">Advisor</p>
+                    <p class="text-sm text-gray-500 text-center">ME-RIISE Foundation</p>
+                </div>
+                <!-- Member 2 -->
+                <div class="flex flex-col items-center bg-white rounded-xl shadow-md p-6">
+                    <img src="images/bod/kiran.jpeg" alt="Mr. Kiran H A"
+                        class="w-32 h-32 rounded-full object-cover border-4 border-blue-200 mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 text-center">Mr. Kiran H A</h3>
+                    <p class="text-sm text-gray-500 text-center">Advisor</p>
+                    <p class="text-sm text-gray-500 text-center">ME-RIISE Foundation</p>
+
+                </div>
+                <!-- Member 3 -->
+                <div class="flex flex-col items-center bg-white rounded-xl shadow-md p-6">
+                    <img src="images/bod/profile_1-311645.jpg" alt="Dr. A J Krishnaiah"
+                        class="w-32 h-32 rounded-full object-cover border-4 border-blue-200 mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 text-center">Dr. A J Krishnaiah</h3>
+                    <p class="text-sm text-gray-500 text-center mt-1">Principal, MCE Hassan<br>Advisor, ME-RIISE
+                        FOUNDATION
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+        <!-- <div class="row  pb-3 text-center pt-2 " style="border-bottom: 1px solid grey;">
+                        <div class="col-md-6 text-center">
+                            <img src="images/bod/ah.jpeg" alt="explore" class="img-fluid  w-50"
+                                style="border: 1px solid black;">
+                        </div> -->
+        <!-- <div class="col-md-6 pt-2 ">
+                            <h2 style="margin-left: 10px;">Sri. Ashok Haranahalli</h2>
+                            <p style="margin-left: -20px;font-size: 13px;"></p>
+                            <h4>Chairman, ME-RIISE FOUNDATION</h4>
+                            <h4></h4>
+                            <p style="margin-left: -10px;">
+                            </p>
+
+                        </div> -->
+        <!-- </div> -->
+
+        <!-- <div class="row  pb-3 text-center pt-2 " style="border-bottom: 1px solid grey;">
+                        <div class="col-md-6 text-center">
+                            <img src="images/bod/gk.jpeg" alt="explore" class="img-fluid   w-50"
+                                style="border: 1px solid black;">
+                        </div>
+                        <div class="col-md-6 pt-2 ">
+                            <h2 style="margin-left: 10px;">Dr.A.Geetha Kiran</h2>
+                            <p style="margin-left: -20px;font-size: 13px;"></p>
+                            <h4>CEO, ME-RIISE FOUNDATION </h4>
+                            <h4></h4>
+                            <p style="margin-left: -10px;">
+                            </p>
+
+                        </div>
+
+
+                    </div> -->
+        <!-- <div class="row  pb-3 text-center pt-2 " style="border-bottom: 1px solid grey;">
+                        <div class="col-md-6 text-center">
+                            <img src="images/bod/sri .jpg" alt="explore" class="img-fluid   w-50"
+                                style="border: 1px solid black;">
+                        </div>
+                        <div class="col-md-6 pt-2 ">
+                            <h2 style="margin-left: 10px;">Sri. S G Sridhar</h2>
+                            <p style="margin-left: -20px;font-size: 13px;"></p>
+                            <h4>Director, ME-RIISE FOUNDATION</h4>
+                            <h4></h4>
+                            <p style="margin-left: -10px;">
+                            </p>
+
+                        </div>
+
+                    </div> -->
+        <!-- 
+                    <div class="row  pb-3 text-center pt-2 " style="border-bottom: 1px solid grey;">
+                        <div class="col-md-6 text-center">
+                            <img src="images/bod/ar.png" alt="explore" class="img-fluid   w-50"
+                                style="border: 1px solid black;">
+                        </div>
+                        <div class="col-md-6 pt-2 ">
+                            <h2 style="margin-left: 10px;">Sri. Ananth Ravi</h2>
+                            <p style="margin-left: -20px;font-size: 13px;"></p>
+                            <h4>Director, ME-RIISE FOUNDATION </h4>
+                            <h4></h4>
+                            <p style="margin-left: -10px;">
+                            </p>
+
+                        </div>
+
+                    </div> -->
+
+
+        <!-- 
+                    <div class="row  pb-3 text-center pt-2 " style="border-bottom: 1px solid grey;">
+                        <div class="col-md-6 text-center">
+                            <img src="https://www.mcehassan.ac.in/assets/departments/ME/faculty/profile_96-011459.jpg"
+                                alt="explore" class="img-fluid   w-50" style="border: 1px solid black;">
+                        </div>
+                        <div class="col-md-6 pt-2 ">
+                            <h2 style="margin-left: 10px;">Dr. S Pradeep</h2>
+                            <p style="margin-left: -20px;font-size: 13px;"></p>
+                            <h4>Director, ME-RIISE FOUNDATION</h4>
+                            <h4></h4>
+                            <p style="margin-left: -10px;">
+                            </p>
+
+                        </div>
+
+                    </div> -->
+
+        <!-- <div class="row  pb-3 text-center pt-2 " style="border-bottom: 1px solid grey;">
+                        <div class="col-md-6 text-center">
+                            <img src="images/bod/kss.jpeg" alt="explore" class="img-fluid   w-50"
+                                style="border: 1px solid black;">
+                        </div>
+                        <div class="col-md-6 pt-2 ">
+                            <h2 style="margin-left: 10px;">Mr. Krishnaswamy Subbarao</h2>
+                            <p style="margin-left: -20px;font-size: 13px;"></p>
+                            <h4>Advisor, ME-RIISE FOUNDATION</h4>
+                            <h4></h4>
+                            <p style="margin-left: -10px;">
+                            </p>
+
+                        </div>
+
+                    </div> -->
+
+        <!-- <div class="row  pb-3 text-center pt-2 " style="border-bottom: 1px solid grey;">
+                        <div class="col-md-6 text-center">
+                            <img src="images/bod/shridhar.jpeg" alt="explore" class="img-fluid   w-50"
+                                style="border: 1px solid black;">
+                        </div>
+                        <div class="col-md-6 pt-2 ">
+                            <h2 style="margin-left: 10px;">Mr. Kiran H A</h2>
+                            <p style="margin-left: -20px;font-size: 13px;"></p>
+                            <h4>Advisor, ME-RIISE FOUNDATION</h4>
+                            <h4></h4>
+                            <p style="margin-left: -10px;">
+                            </p>
+
+                        </div>
+
+                    </div> -->
+
+        <!-- <div class="row  pb-3 text-center pt-2 " style="border-bottom: 1px solid grey;">
+                        <div class="col-md-6 text-center">
+                            <img src="https://www.mcehassan.ac.in/assets/departments/CV/faculty/profile_1-311645.jpg"
+                                alt="explore" class="img-fluid   w-50" style="border: 1px solid black;">
+                        </div>
+                        <div class="col-md-6 pt-2 ">
+                            <h2 style="margin-left: 10px;">DR. A J Krishnaiah </h2>
+                            <p style="margin-left: -20px;font-size: 13px;"></p>
+                            <h4>Principal, MCE</h4>
+                            <h4></h4>
+                            <p style="margin-left: -10px;">
+                            </p>
+
+                        </div>
+
+                    </div> -->
+
+        <!--
+                        <div class="row  pb-3 text-center pt-2 " style="border-bottom: 1px solid grey;">
+                            <div class="col-md-6 text-center">
+                                <img src="assets/Achalnew.jpg" alt="explore" class="img-fluid   w-50"  style="border: 1px solid black;">
+                            </div>
+                            <div class="col-md-6 pt-2 ">
+                                <h2 style="margin-left: 10px;">Achal. J</h2>
+                                <p style="margin-left: -1px;font-size: 13px;">4th Year CSE</p>
+                                <h4>President & Treasurer</h4>
+                                <h4>ME-RIISE</h4>
+                               <p style="margin-left: -10px;">Phone number - 91106 15254
+                                </p>
+                            
+                             </div>  
+                        
+                        </div>-->
+
+
+
+        <!-- Two -->
+        <!-- <section id="two" class="wrapper style3">
+        <div class="inner">
+            <header class="align-center">
+                <h1 style="color: white; font-size: 28px">
+                    MALNAD COLLEGE OF ENGINEERING
+                </h1>
+                <p class="sub-p">Hassan, Karnataka</p>
+            </header>
+        </div>
+    </section> -->
+
+
+
+        <!-- <section id="two" class="wrappe style2">
+        <center>
+            <div class="carrd" style="width: 90%; border: 0">
+                <div class="containerr">
+                    <p style="padding-left: 10px; padding-right: 10px">
+                        Ever wondered if an institution can be so diverse
+                        with varied thinking, ideas, culture and turn out to
+                        induce as one? That is MCE to you. MCE has set a
+                        benchmark as one of the most premiere institutes in
+                        the country.Giving responsible and technically sound
+                        engineers to the nation. </p>
+                    <p style="padding-left: 10px; padding-right: 10px">
+                        It’s not only an institute
+                        but a hub of technical associates whose aim is to
+                        excel in this pertained field. The seed of MCE was
+                        first sowed in the year 1960 by the then chief
+                        minister Mr. B. D. Jatti, under the second five year
+                        plan of the Government of India. It was a joint
+                        venture between, the Government of India, Government
+                        Of Karnataka and the Malnad Technical Education
+                        Society.Today MCE has grown in a huge fashion, with
+                        a strong base. MCE is one of the oldest Government
+                        Aided engineering colleges. It was affiliated to
+                        University of Mysore, Visveswaraya Technological
+                        University and now from the year 2007, it stands
+                        high and proud as an Autonomous institute.The
+                        college has got ISTE award as one of the best
+                        engineering colleges in the country.It has also got
+                        funding from world bank under TEQIP III. The
+                        institute is built on a campus of about 42 acres in
+                        one of the prime location.MCE is dedicated to give
+                        quality education to budding engineers with modern
+                        infrastructure like library, labs, and research
+                        centers.It also imparts life, fitness skills to
+                        protrude students to top heights. The college
+                        offered UG courses in mechanical, electrical and
+                        civil programs initially but now offers 9 UG and 6
+                        PG programs. Even after 59 years, the motto “NAHI
+                        JNANENA SADRUSHAM” In Sanskrit meaning “NOTHING IS
+                        EQUAL TO KNOWLEDGE” remains achieved.
+                    </p>
+                </div>
+            </div>
+        </center>
+        <header class="majo">
+            <br /><br /><br />
+            <center>
+                <h2></h2>
+        </header>
+    </section> -->
+
+        <!-- <section id="two" class="wrapper style3">
+    <div class="inner">
+        <header class="align-center">
+            <h1 style="font-size: 28px">COLLABORATIONS</h1>
+            <p style="color: white">
+                A glimpse of key collaborations and activities conducted
+                by ME-RIISE are:
+            </p>
+        </header>
+    </div>
+</section> -->
+        <!-- 
+<section id="two" class="wrappe style2">
+    <center>
+        <div class="carrd" style="width: 90%; border: 0">
+            <div class="sub-head">
+                MHRD Institution Innovation Council
+            </div>
+
+            <div class="containerr">
+                <p style="padding-left: 10px; padding-right: 10px">
+                    Ministry of Education (MoE), Govt. of India has
+                    established ‘ MoE’s Innovation Cell (MIC)’ to
+                    systematically foster the culture of innovation
+                    amongst all Higher Education Institutions(HEIs). The
+                    primary mandate of MIC is to encourage, inspire, and
+                    nurture young students by supporting them to work
+                    with new ideas and transform them int prototypes
+                    while they are informative years. MIC has envisioned
+                    encouraging the creation of ‘Institution’s
+                    Innovation Council (IICs)’ across selected HEIs. A
+                    network of these IICs will be established to promote
+                    innovation in the Institution through multitudinous
+                    modes leading to an innovation promotion eco-system
+                    in the campuses. In collaboration with ME-RIISE
+                    (Malnad Enclave for Research, Innovation,
+                    Incubation, Start-ups, and Entrepreneurship )
+                    Institution Innovation Cell has been established in
+                    the college with the vision of fostering innovation
+                    and support students to enrich their spirit of
+                    entrepreneurship.
+                </p>
+            </div> -->
+        <!-- <div class="gallery">
+                    <div class="img-wrap">
+                        <div class="image fit">
+                            <a href="#"><img src="images/c1.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                </div> -->
+        <!-- </div>
+    </center>
+</section> -->
+
+
+
+        <!-- 
+
+<section id="two" class="wrappe style2">
+    <center>
+        <div class="carrd" style="width: 90%; border: 0">
+            <div class="sub-head">Collaboration with ICT Academy</div>
+
+            <div class="containerr">
+                <p style="padding-left: 10px; padding-right: 10px">
+                    ME-RIISE has association with ICT Academy which has
+                    led to the establishment of Centre of Excellence
+                    powered by Autodesk and Fusion 360. Workshops
+                    conducted: Fusion 360, Revit Architecture and
+                    Salesforce Developer 402 Awards: <br />
+                    • State Cloud Championship Award and best under
+                    institution for extensive participation in Cloud
+                    literacy month 2018 <br />
+                    • Coordinator of ME-RIISE was awarded with best
+                    cloud champion award under coordinator category in
+                    cloud literacy month 2018 <br />
+                    • ICT Academy Partner’s In Growth Awarded for
+                    outstanding partnership and active participation in
+                    initiatives of ICT Academy <br />
+                </p>
+            </div> -->
+        <!-- <div class="gallery">
+                    <div class="img-wrap">
+                        <div class="image fit">
+                            <a href="#"><img src="images/c2.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="img-wrap">
+                        <div class="image fit">
+                            <a href="#"><img src="images/c3.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="img-wrap">
+                        <div class="image fit">
+                            <a href="#"><img src="images/c4.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                </div> -->
+        <!-- </div>
+    </center>
+</section> -->
+        <!-- 
+<section id="two" class="wrappe style2">
+    <center>
+        <div class="carrd" style="width: 90%; border: 0">
+            <div class="sub-head">Unnat Bharat Abhiyan</div> -->
+        <!-- <div class="gallery"> -->
+        <!-- <div class="img-wrap"> -->
+        <!-- <div class="image fit">
+                            <a href="#"><img src="images/unnat bharat.jfif" alt="" height:25% /></a>
+                        </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+
+        <!-- <div class="containerr">
+                <p style="padding-left: 10px; padding-right: 10px">
+                    ME-RIISE, has also found a cause in bringing
+                    transformational change in rural development under
+                    Unnat Bharath Abhiyan. Five villages around Hassan
+                    have been adopted and activities are being conducted
+                    to move towards holistic development of the
+                    villages.
+                </p>
+            </div> -->
+        <!-- <div class="gallery">
+                    <div class="img-wrap">
+                        <div class="image fit">
+                            <a href="#"><img src="images/UBA.png" alt="" /></a>
+                        </div>
+                    </div>
+
+                    <div class="img-wrap">
+                        <div class="image fit">
+                            <a href="#"><img style="max-width: 400px; height: 300px" src="images/c7.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                </div> -->
+        <!-- </div>
+    </center>
+</section> -->
+
+
+
+
+
+
+
+
+        <!-- 
+<section id="two" class="wrappe style2">
+    <center>
+        <div class="carrd" style="width: 90%; border: 0">
+            <div class="sub-head">
+                New Age Innovation Network (NAIN)
+            </div> -->
+
+
+        <!-- <div class="gallery">
+                    <div class="img-wrap">
+                        <div class="image fit">
+                            <a href="#"><img src="images/new age1.jpg" alt="" height:25% /></a>
+                        </div>
+                    </div>
+                </div> -->
+        <!-- 
+            <div class="containerr">
+                <p style="padding-left: 10px; padding-right: 10px">
+                    ME-RIISE is associated with New Age Innovation
+                    Network and is working towards bringing up
+                    incubation centers that will encourage students,
+                    researchers, scholars, and alumni to share their
+                    ideas, nurture, and bring out technical solutions to
+                    problems that are local-centric. <br />
+                    Entrepreneurship development and mentoring are one
+                    of the ten initiatives of KIG 2020 for creating new
+                    opportunities and jobs. One of the tasks under this
+                    head is to build ‘ KARNATAKA NEW AGE INNOVATION
+                    NETWORK.’ The main objective of the NAIN Scheme is
+                    to encourage students, research scholars, and alumni
+                    to share their ideas to solve the chosen problems
+                    which are local-centric and to validate, refine, and
+                    nurture the ideas. Incubation Center shall provide
+                    an eco-system to convert the ideas in proof of
+                    concept and upgrade them to a level of commercial
+                    value. After successful incubation, encourage and
+                    lead the teams towards setting up a business
+                    enterprise
+                </p>
+            </div>
+        </div>
+    </center>
+</section> -->
+
+
+
+
+
+
+
+
+        <!-- 
+
+
+<section id="two" class="wrappe style2">
+    <center>
+        <div class="carrd" style="width: 90%; border: 0">
+            <div class="sub-head">MoU with Atal Incubation Centre</div> -->
+
+
+        <!-- <div class="gallery">
+                    <div class="img-wrap">
+                        <div class="image fit">
+                            <a href="#"><img src="images/mou.jfif" alt="" height:25% /></a>
+                        </div>
+                    </div>
+                </div> -->
+
+        <!-- <div class="containerr">
+                <p style="padding-left: 10px; padding-right: 10px">
+                    ME-RIISE has a MoU with Atal Incubation Centre,
+                    Jyothi Institute of Technology, Bangalore. This
+                    association has provided a platform for
+                    collaborative research between two different
+                    institutes and various other activities.
+                </p>
+            </div> -->
+        <!-- <div class="gallery">
+                    <div class="img-wrap">
+                        <div class="image fit">
+                            <a href="#"><img src="images/c8.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                </div> -->
+        <!-- </div>
+    </center>
+</section> -->
+
+
+        <!-- 
+
+
+<section id="two" class="wrappe style2">
+    <center>
+        <div class="carrd" style="width: 90%; border: 0">
+            <div class="sub-head">Memorandum of Understanding With</div>
+
+            <div class="containerr">
+                <p style="padding-left: 10px; padding-right: 10px">
+                    • KASSIA (KARNATAKA SMALL SCALE INDUSTRIES
+                    ASSOCIATION) <br />
+
+                    • ICT ACADEMY <br />
+
+                    • AIC-JIC (ATAL INCUBATION CENTRE-JYOTHY INSTITUTE
+                    OF TECHNOLOGY)
+                </p>
+            </div>
+        </div>
+    </center>
+</section> -->
+
+
+
+
+
+
+
+
+        <!-- 
+
+
+<section id="two" class="wrappe style2">
+    <center>
+        <div class="carrd" style="width: 90%; border: 0">
+            <div class="sub-head">
+                Innovation & Centralized Research Laboratory
+            </div>
+
+            <div class="containerr">
+                <p style="padding-left: 10px; padding-right: 10px">
+                    Innovation lab of ME-RIISE fosters innovative
+                    activities and supports students to enrich their
+                    spirit of entrepreneurship. The innovation lab
+                    comprises IoT facilities for developing innovative
+                    projects and high-performance computing facilities
+                    for carrying out research. The Innovation Lab has
+                    facilitated the following activities and has led to
+                    establishment of two Startup Ventures.
+                </p>
+            </div>
+        </div>
+    </center>
+</section> -->
+
+
+
+
+
+        <!-- 
+
+    <section class="containering items-center">
+        <div class="testimonial mySwiper">
+            <div class="testi-content swiper-wrapper">
+                <div class="slide swiper-slide rounded-full">
+                    <img src="images/bod/ah.jpeg" alt="" class="image" />
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                        saepe provident dolorem a quaerat quo error facere nihil deleniti
+                        eligendi ipsum adipisci, fugit, architecto amet asperiores
+                        doloremque deserunt eum nemo.
+                    </p>
+
+                    <i class="bx bxs-quote-alt-left quote-icon"></i>
+
+                    <div class="details">
+                        <span class="name">Sri. Ashok Haranahalli</span>
+                      
+                        <span class="job">Chairman - ME-RIISE FOUNDATION</span>
+                    </div>
+                </div>
+
+
+
+                <div class="slide swiper-slide">
+                    <img src="images/bod/gk.jpeg" alt="" class="image" />
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                        saepe provident dolorem a quaerat quo error facere nihil deleniti
+                        eligendi ipsum adipisci, fugit, architecto amet asperiores
+                        doloremque deserunt eum nemo.
+                    </p>
+
+                    <i class="bx bxs-quote-alt-left quote-icon"></i>
+
+                    <div class="details">
+                        <span class="name">Dr. A. Geetha Kiran</span>
+                      
+                        <span class="job">CEO - ME-RIISE FOUNDATION</span>
+                    </div>
+                </div>
+
+
+ 
+
+
+                <div class="slide swiper-slide">
+                    <img src="images/bod/ar.png" alt="" class="image" />
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                        saepe provident dolorem a quaerat quo error facere nihil deleniti
+                        eligendi ipsum adipisci, fugit, architecto amet asperiores
+                        doloremque deserunt eum nemo.
+                    </p>
+
+                    <i class="bx bxs-quote-alt-left quote-icon"></i>
+
+                    <div class="details">
+                        <span class="name">Sri. Ananth Ravi</span>
+                        <span class="job">Director - ME-RIISE FOUNDATION</span>
+                    </div>
+                </div>
+
+
+                <div class="slide swiper-slide">
+                    <img src="images/bod/pradeep.jpeg" alt="" class="image" />
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                        saepe provident dolorem a quaerat quo error facere nihil deleniti
+                        eligendi ipsum adipisci, fugit, architecto amet asperiores
+                        doloremque deserunt eum nemo.
+                    </p>
+
+                    <i class="bx bxs-quote-alt-left quote-icon"></i>
+
+                    <div class="details">
+                        <span class="name">Dr. S Pradeep</span>
+                        <span class="job">Director - ME-RIISE FOUNDATION</span>
+                    </div>
+                </div>
+
+
+                <div class="slide swiper-slide">
+                    <img src="images/bod/sri .jpg" alt="" class="image" />
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                        saepe provident dolorem a quaerat quo error facere nihil deleniti
+                        eligendi ipsum adipisci, fugit, architecto amet asperiores
+                        doloremque deserunt eum nemo.
+                    </p>
+
+                    <i class="bx bxs-quote-alt-left quote-icon"></i>
+
+                    <div class="details">
+                        <span class="name">Sri. S G Sridhar</span>
+                        <span class="job">Director - ME-RIISE FOUNDATION</span>
+                    </div>
+                </div>
+
+
+                <div class="slide swiper-slide">
+                    <img src="images/bod/kss.jpeg" alt="" class="image" />
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                        saepe provident dolorem a quaerat quo error facere nihil deleniti
+                        eligendi ipsum adipisci, fugit, architecto amet asperiores
+                        doloremque deserunt eum nemo.
+                    </p>
+
+                    <i class="bx bxs-quote-alt-left quote-icon"></i>
+
+                    <div class="details">
+                        <span class="name">Mr. Krishnaswamy Subbarao</span>
+                        <span class="job">Advisor - ME-RIISE FOUNDATION</span>
+                    </div>
+                </div>
+
+
+                <div class="slide swiper-slide">
+                    <img src="images/bod/kiran.jpeg" alt="" class="image" />
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                        saepe provident dolorem a quaerat quo error facere nihil deleniti
+                        eligendi ipsum adipisci, fugit, architecto amet asperiores
+                        doloremque deserunt eum nemo.
+                    </p>
+
+                    <i class="bx bxs-quote-alt-left quote-icon"></i>
+
+                    <div class="details">
+                        <span class="name">Mr. Kiran H A</span>
+                        <span class="job">Advisor - ME-RIISE FOUNDATION</span>
+                    </div>
+                </div>
+
+                <div class="slide swiper-slide">
+                    <img src="images/bod/profile_1-311645.jpg" alt="" class="image" />
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                        saepe provident dolorem a quaerat quo error facere nihil deleniti
+                        eligendi ipsum adipisci, fugit, architecto amet asperiores
+                        doloremque deserunt eum nemo.
+                    </p>
+
+                    <i class="bx bxs-quote-alt-left quote-icon"></i>
+
+                    <div class="details">
+                        <span class="name">Dr. A J Krishnaiah</span>
+                        <span class="job">Principal - MCE Hassan</span>
+                        <span class="job">Advisor - ME-RIISE FOUNDATION</span>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+            <div class="swiper-button-next nav-btn"></div>
+            <div class="swiper-button-prev nav-btn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+        <br>
+        <div class="mx-8 text-black text-4xl md:text-6xl lg:text-[100px] text-center my-4">Pragyatha <span
+                class="font-bold">2024</span>
+        </div>
+
+
+
+        <div class="px-4 lg:px-12 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-10">
+            <div class="card rounded-2xl img2">
+                <img src="assets/Scanned_20241201-1709-07.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-xl md:text-3xl">Cyber Security and Ethical Hacking</h5>
+                    <p class="card-text5">This event offers a deep dive into cybersecurity, covering career
+                        opportunities,
+                        ethical
+                        hacking....</p>
+                    <br>
+                    <!-- <a href="https://drive.google.com/file/d/1EG93yoJtMXsMBlw_xZpc83F28z0kxf8Y/view?usp=drive_link"
+                    class="btn btn-primary">Know more</a> -->
+                </div>
+            </div>
+
+
+            <div class="card rounded-2xl img2">
+                <img src="assets/Pragyatha24/20241201_123802.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-xl md:text-3xl">Git and GitHub Workshop</h5>
+                    <p class="card-text">The Git and GitHub Workshop was successfully conducted on the 30th of November
+                        and
+                        the
+                        1st of December 2024 as a part of Pragyatha-24.....</p>
+                    <br>
+                    <!-- <a href="https://drive.google.com/file/d/1addexxfuYhhPJ5xXy8XkuSEqLgVHNqny/view?usp=drive_link"
+                    class="btn btn-primary">Know more</a> -->
+                </div>
+            </div>
+
+
+
+            <div class="card rounded-2xl img2">
+                <img src="assets/20241130_154800.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-xl md:text-3xl">Entrorphosis</h5>
+                    <p class="card-text text-md">Entrorphosis was a successful event that nurtured entrepreneurial
+                        thinking
+                        and problem-solving skills among participants. The combination of pitching...</p>
+                    <br>
+                    <!-- <a href="https://docs.google.com/document/d/1ESGro4I5WKLG2Cdls7TRICZeK8rLBR4n/edit?usp=drive_link&ouid=111753578177582926606&rtpof=true&sd=true"
+                    class="btn btn-primary">Know more</a> -->
+                </div>
+            </div>
+
+
+            <div class="card rounded-2xl img2">
+                <img src="assets/Pragyatha24/winner2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-xl md:text-3xl">Crackathon</h5>
+                    <p class="card-text">Crackathon is a dynamic two-day event where teams of two collaborate to solve a
+                        given
+                        problem statement and showcase their projects to resource persons. Each team.......</p>
+                    <br>
+                    <!-- <a href="https://drive.google.com/drive/u/0/folders/1Q-tudD2hf8I20QRI7N39ZDmsSDNltzfHk"
+                    class="btn btn-primary">Know more</a> -->
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- <div class="sildehead" style="text-align: center">
+            <h1 class="sub-head">Feedbacks</h1>
+        </div>
+
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <q
+                    >Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia3
+                    deserunt mollit anim id est laborum.</q
+                >
+                <p class="author">- Person Name1</p>
+            </div>
+
+            <div class="mySlides">
+                <q
+                    >Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamc Excepteur sint occaecat cupidatat non proident, sunt
+                    in culpa qui officia deserunt mollit anim id est laborum.</q
+                >
+                <p class="author">- Person2</p>
+            </div>
+
+            <div class="mySlides">
+                <q
+                    >Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labxcepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.</q
+                >
+                <p class="author">- Person3</p>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div> -->
+
+        <!-- Footer -->
+        <br>
+        <hr>
+        <br>
+        <div class="my-6 lg:my-20">
+
+            <div class="text-2xl md:text-6xl mx-4 text-black">Shark Tank 3.0</div>
+            <div class="text-sm md:text-xl mx-4 my-2">
+                Shark Tank 3.0, organized by ME-RIISE Foundation, was a remarkable
+                event that provided a dynamic platform for entrepreneurs to showcase
+                their innovative business ideas to potential investors.
+                The event, held on 14th December 2024 at Anantya Palace Grounds,
+                successfully facilitated funding, mentorship, and networking opportunities.
+
+
+            </div>
+            <div class="lg:grid grid-cols-2 m-4 gap-10">
+                <div class="mt-2 mb-4">
+                    <img src="assets/SnehadaKadalu/Sharktank/SK23.jpeg" alt="" class="rounded-md lg:rounded-3xl img2">
+                </div>
+
+                <div class="grid grid-cols-2 gap-6 lg:gap-10">
+                    <img src="assets/SnehadaKadalu/Sharktank/SK19.jpeg" alt="" class="rounded-md lg:rounded-3xl img1">
+                    <img src="assets/SnehadaKadalu/Sharktank/SK20.jpeg" alt="" class="rounded-md lg:rounded-3xl img1">
+                    <img src="assets/SnehadaKadalu/Sharktank/SK21.jpeg" alt="" class="rounded-md lg:rounded-3xl img1">
+                    <img src="assets/SnehadaKadalu/Sharktank/SK22.jpeg" alt="" class="rounded-md lg:rounded-3xl img1">
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div class="mx-0">
+            <div>
+                <div class="text-2xl md:text-6xl mx-4 text-black lg:my-4">Trade Show 2.0</div>
+                <div class="text-sm md:text-xl mx-4 my-2">
+                    The Trade Show held on 14th December 2024 at Anantya Palace Grounds, Bangalore, organized by
+                    ME-RIISE
+                    Foundation,
+                    successfully provided a platform for businesses to increase brand visibility, generate leads, and
+                    network with industry professionals.
+
+                    The event highlighted a diverse range of innovative products and services from various sectors,
+                    including construction, education, technology, real estate, and more.
+
+
+                </div>
+                <!-- <img src="assets/SnehadaKadalu/IMG-20241214-WA0216.jpg" alt=""> -->
+            </div>
+
+            <div class="text-center lg:p-2 m-4">
+                <div class="grid grid-cols-3 lg:grid-cols-6  gap-2 lg:gap-8 text-center">
+                    <img src="assets/SnehadaKadalu/Tradeshow/SK5 (1).jpg" alt=""
+                        class="m-0 lg:m-8 lg:h-[50vh] rounded-xl">
+                    <img src="assets/SnehadaKadalu/Tradeshow/SK6 (1).jpg" alt=""
+                        class="m-0 lg:m-8 lg:h-[50vh] rounded-xl">
+                    <img src="assets/SnehadaKadalu/Tradeshow/SK7 (1).jpg" alt=""
+                        class="m-0 lg:m-8 lg:h-[50vh] rounded-xl">
+                    <img src="assets/SnehadaKadalu/Tradeshow/SK8 (1).jpg" alt=""
+                        class="m-0 lg:m-8 lg:h-[50vh] rounded-xl">
+                    <img src="assets/SnehadaKadalu/Tradeshow/SK9 (1).jpg" alt=""
+                        class="m-0 lg:m-8 lg:h-[50vh] rounded-xl">
+                    <img src="assets/SnehadaKadalu/Tradeshow/SK4 (1).jpg" alt=""
+                        class="m-0 lg:m-8 lg:h-[50vh] rounded-xl">
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+
+        <div>
+            <div class="my-4">
+                <p class="text-2xl md:text-6xl text-black mx-4">Tech Talk 1.0</p>
+                <div class="text-sm md:text-xl mx-4 lg:mx-2 my-2">
+                    The Tech Talk on 14th December 2024, organized by the ME-RIISE Foundation at Anantya Palace Grounds,
+                    Bangalore, was a resounding success. It served as a powerful platform for fostering
+                    knowledge-sharing
+                    and innovation, with speakers addressing pivotal topics in emerging technologies.
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+                <img src="assets/SnehadaKadalu/TechTalk/TK1 (3).jpg" alt="" class="m-2 rounded-xl">
+                <img src="assets/SnehadaKadalu/TechTalk/TK1 (1).jpg" alt="" class="m-2 rounded-xl">
+            </div>
+        </div>
+
+
+
+        <!-- <div class="mx-12 bg-blue-500 rounded-xl text-white text-center p-4 text-md lg:text-xl">Know more about Snehada Kadalu
+    </div> -->
+
+
+        <div class="bg-black my-12 pb-10">
+            <p class="text-[32px] lg:text-[80px] p-10 text-white">Objects</p>
+
+            <div class="lg:grid grid-cols-2">
+                <div class="p-4 lg:p-10 order-1">
+                    <img src="assets/ME-RIISE Portfolio/ME-RIISEBuilding.png" alt="" class="rounded-2xl">
+                </div>
+                <div class="px-10 order-2">
+                    <br>
+                    <li class="text-sm md:text-2xl text-white">
+                        Application of technology to promote arts, commerce, science, sports, education, research,
+                        social
+                        welfare, religion, charity, protection of environment.
+
+                    </li>
+                    <li class="text-sm md:text-2xl text-white mt-2">
+                        Providing the young graduates adequate management and technical training that will enable them
+                        to
+                        be creative and innovative in promoting business opportunities.
+                    </li>
+
+                    <li class="text-sm md:text-2xl text-white mt-2">
+                        To create job and employment opportunities for the region of our nation.
+
+                    </li>
+
+                    <li class="text-sm md:text-2xl text-white mt-2">
+                        To incubate the spirit of perseverance in the youths.
+
+                    </li>
+
+                    <a href="aboutmeriise.html">
+                        <div class="my-10 bg-blue-500 text-white py-4 text-center rounded-2xl buttons">
+                            Know more about ME-RIISE Foundation
+                        </div>
+                    </a>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+        <div class="p-2 md:p-10 lg:p-20">
+            <p class="text-2xl md:text-6xl lg:my-4 mx-10">Initiatives taken by <span class="text-blue-500">ME-RIISE
+                    FOUNDATION</span></p>
+            <p class="text-sm lg:text-lg mx-10 my-2">ME-RIISE Foundation fosters
+                innovation and entrepreneurship through skill development programs,
+                startup incubation, and mentorship initiatives. It supports research
+                and development projects, enabling students and professionals
+                to bring their ideas to life. The foundation collaborates
+                with industries and academic institutions to bridge the gap
+                between education and real-world challenges. Through workshops,
+                hackathons, and funding opportunities, ME-RIISE empowers individuals
+                to excel in their entrepreneurial journey. Its mission is to
+                create a
+                sustainable ecosystem for innovation and growth.</p>
+
+        </div>
+
+
+        <div class="container swiper">
+            <div class="card-wrapper">
+                <!-- Card slides container -->
+                <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                        <a href="startups.html" class="card-link">
+                            <img src="img/s14.jpg" alt="Card Image" class="card-image">
+                            <p class="badge badge-designer text-lg">Start Ups</p>
+                            <h2 class="card-title text-sm">Empowering innovation with cutting-edge solutions for a
+                                brighter
+                                future.</h2>
+                            <div class="buttonClass">
+                                <div class="bg-blue-500 text-white p-2 w-32 text-center">Know more</div>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="uba.html" class="card-link">
+                            <img src="img/plastic2.jpg" alt="Card Image" class="card-image">
+                            <p class="badge badge-developer text-lg">UBA Visit</p>
+                            <h2 class="card-title">Discover the impactful collaboration with UBA, driving growth and
+                                innovation together.</h2>
+                            <!-- <button class="bg-blue-400 rounded-2xl h-12"><p class="text-sm">Know more</p></button> -->
+                            <div class="buttonClass">
+                                <div class="bg-blue-500 text-white p-2 w-32 text-center">Know more</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="https://pragyatha24.meriise.org/" class="card-link">
+                            <img src="assets/Pragyatha24/adspize.jpg" alt="Card Image" class="card-image">
+                            <p class="badge badge-marketer text-lg">Pragyatha</p>
+                            <h2 class="card-title">Unlocking potential through Pragyatha’s transformative strategies for
+                                success.</h2>
+                            <div class="buttonClass">
+                                <div class="bg-blue-500 text-white p-2 w-32 text-center">Know more</div>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="iic.html" class="card-link">
+                            <img src="assets/moe.png" alt="Card Image" class="card-image">
+                            <p class="badge badge-gamer text-lg">Ministry of Education</p>
+                            <h2 class="card-title">Partnering with MOE to shape the future of education and excellence.
+                            </h2>
+                            <div class="buttonClass">
+                                <div class="bg-blue-500 text-white p-2 w-32 text-center">Know more</div>
+                            </div>
+
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- Navigation Buttons -->
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
+            </div>
+        </div>
+
+
+
+        <!-- 
+<div class="slideshow-container w-[80vw] rounded-2xl">
+
+ 
+    <div class="mySlides fade">
+
+        <img src="images/ind.jpg" style="width:100%">
+
+    </div>
+
+    <div class="mySlides fade">
+
+        <img src="images/ev2.jpg" style="width:100%">
+
+    </div>
+
+    <div class="mySlides fade">
+
+        <img src="images/ev3.jpg" style="width:100%">
+
+    </div>
+
+    <div class="mySlides fade">
+
+        <img src="images/ev4.jpg" style="width:100%">
+
+    </div>
+
+    <div class="mySlides fade">
+
+        <img src="images/g9.jpg" style="width:100%">
+
+    </div>
+
+
+
+
+   Next and previous buttons  
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div> -->
+
+
+        <!-- The dots/circles
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+
+<br> <br> <br> -->
+
+
+
+        <!-- <div class="h-1 my-10 bg-black"></div> -->
+
+        <!-- <div class="bg-black text-white p-10 lg:mt-32 px-10">
+        <div class="text-[30px] md:text-[60px] lg:m-4">New Age Innovation Network <span class="font-bold">[NAIN]</span>
+        </div>
+        <div class="py-4 my-4">
+            <p class="text-white text-md lg:mx-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia beatae
+                eaque
+                veniam.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum veniam laboriosam ad.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias reiciendis velit qui?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium asperiores inventore alias?
+            </p>
+        </div>
+
+
+        <div>
+            <div class="lg:grid grid-cols-2 bg-gray-800 rounded-[25px] py-10">
+                <div class="text-[100px] font-bold text-center text-blue-500">01.</div>
+                <div class="text-[20px] text-center m-4">
+                    <span class="text-[20px] lg:text-[30px]">Project Title</span>
+                    <br>
+                    <p class="text-[15px] text-white">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Dolorum dicta reiciendis, quo vitae voluptatibus id nobis unde? Odio dolore odit enim
+                        exercitationem
+                        doloribus.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+        <br>
+
+        <div>
+            <div class="lg:grid grid-cols-2 bg-gray-800 rounded-[25px] py-10">
+                <div class="text-[100px] font-bold text-center text-blue-500">02.</div>
+                <div class="text-[20px] text-center m-4">
+                    <span class="text-[20px] lg:text-[30px]">Project Title</span>
+                    <br>
+                    <p class="text-[15px] text-white">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Dolorum dicta reiciendis, quo vitae voluptatibus id nobis unde? Odio dolore odit enim
+                        exercitationem
+                        doloribus.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div>
+            <div class="lg:grid grid-cols-2 bg-gray-800 rounded-[25px] py-10">
+                <div class="text-[100px] font-bold text-center text-blue-500">03.</div>
+                <div class="text-[20px] text-center m-4">
+                    <span class="text-[20px] lg:text-[30px]">Project Title</span>
+                    <br>
+                    <p class="text-[15px] text-white">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Dolorum dicta reiciendis, quo vitae voluptatibus id nobis unde? Odio dolore odit enim
+                        exercitationem
+                        doloribus.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="text-center p-4 flex items-center justify-center">
+
+            <div
+                class="text-center text-white bg-blue-500 lg:w-[20%] p-4 rounded-3xl text-sm lg:text-lg cursor-pointer">
+                Know more
+                About NAIN</div>
+        </div>
+
+
+    </div> -->
+
+
+
+
+
+
+        <footer id="footer">
+            <div class="container1">
+                <ul class="icons">
+                    <li>
+                        <a href="#" class="icon fa-twitter"
+                            style="color: rgb(51, 183, 235);text-decoration: none;"><span
+                                class="label">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/mce.startup.club" class="icon fa-facebook"
+                            style="color: rgb(43, 43, 247);text-decoration: none;"><span
+                                class="label">Facebook</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/me_riise/" class="icon fa-instagram"
+                            style="color: rgb(250, 43, 112);;text-decoration:none"><span
+                                class="label">Instagram</span></a>
+                    </li>
+                    <li>
+                        <a href="mailto:meriisehsn@gmail.com" class="icon fa-envelope"
+                            style="color: rgb(228, 54, 11);text-decoration:none"><span class="label">Email</span></a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A72704849&keywords=me-riise%20foundation&origin=RICH_QUERY_SUGGESTION&position=0&searchId=a2da3c5d-f488-492f-9f3b-da0bce4973ef&sid=w7m&spellCorrectionEnabled=false   "
+                            class="icon fa-linkedin" style="color: rgb(255, 255, 255);text-decoration:none"><span
+                                class="label">Linkedin</span></a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="copyright">&copy; ME-RIISE FOUNDATION. All rights reserved.</div>
+            <div class="lg:grid grid-cols-3 cursor-pointer">
+                <div>
+                    <p class="text-white text-left text-2xl font-bold m-10">Contact Us Through</p>
+                    <p class="text-white text-left m-10"><a href="meriise.org">Dr Geetha Kiran A | CEO</a></p>
+                    <!-- <p class="text-white text-left m-10">Dr Geetha Kiran A</p> -->
+                    <p class="text-white text-left m-10"><a href="ceomeriise@mcehassan.ac.in">Email Us on :
+                            ceomeriise@mcehassan.ac.in</a></p>
+                    <p class="text-white text-left m-10"><a href="https://www.instagram.com/me_riise/">Follow Us on
+                            Instagram</a></p>
+                </div>
+                <div>
+                    <p class="text-white text-left text-2xl m-10 font-bold">Quick Links</p>
+                    <p class="text-white text-left m-10"><a href="infrastructure.html">Our Infrastructure</a></p>
+                    <p class="text-white text-left m-10"><a href="uba.html">UBA Visit</a></p>
+                    <p class="text-white text-left m-10"><a href="startups.html">Start Ups</a></p>
+                </div>
+
+
+                <div>
+                    <p class="text-white text-left text-2xl m-10 font-bold">Location:</p>
+
+                    <p class="text-white text-left m-10">About ME-RIISE Foundation</p>
+                    <!-- <p class="text-white text-left m-10">Address</p> -->
+                    <p class="text-white text-left m-10"><span class="font-bold">Address : <br></span>24F3+69J, Rangoli
+                        Halla,
+                        Malnad College of Engineering , Hassan, Karnataka 573201</p>
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+        </footer>
+        <!-- Scripts -->
+        <script>
+            let currentIndex = 0;
+            const slides = document.querySelectorAll('#slider > div');
+            const totalSlides = slides.length;
+            const slider = document.getElementById('slider');
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            setInterval(nextSlide, 5000);
+        </script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <!-- <div class="h-[100vh]"></div> -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+            integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+            crossorigin="anonymous"></script>
+        <!-- Swiper JS -->
+        <script src="assets/sliderPart/js/swiper-bundle.min.js"></script>
+
+        <!-- JavaScript -->
+        <script src="assets/sliderPart/js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="assets/slider2/script.js"></script>
+        <script src="assets/NavbarCode/assets/js/main.js"></script>
+
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+        const alertContainer = document.getElementById('alert-box-container');
+        const alertBox = alertContainer.querySelector('div'); // The inner box
+        const closeBtn = document.getElementById('close-alert-btn');
+
+        // Function to show the alert with animation
+        function showAlert() {
+            alertContainer.style.display = 'flex';
+            setTimeout(() => {
+                alertContainer.style.opacity = '1';
+                alertBox.style.transform = 'scale(1)';
+            }, 50); // Small delay to trigger transition
+        }
+
+        // Function to hide the alert with animation
+        function hideAlert() {
+            alertBox.style.transform = 'scale(0.95)';
+            alertContainer.style.opacity = '0';
+            setTimeout(() => {
+                alertContainer.style.display = 'none';
+            }, 300); // Match transition duration
+        }
+
+        // Show the alert after a 2-second delay
+        setTimeout(showAlert, 500);
+         if (closeBtn) {
+            closeBtn.addEventListener('click', hideAlert);
+        }
+    });
+            // const menu = document.getElementById('menu12');
+            // const navlinks = document.querySelector('.navlinks');
+            // const clickEvent = document.getElementById('click');
+
+            // function clickFunction(e) {
+            //     e.name = e.name === 'menu' ? 'close' : 'menu';
+            //     navlinks.classList.toggle('top-[12%]')
+            // }
+            // function toggleFunction() {
+
+            //     box.classList.toggle('hidden');
+            //     if (box.classList.contains('hidden')) {
+            //         icons.setAttribute('name', 'caret-down-outline');
+            //     } else {
+            //         icons.setAttribute('name', 'caret-up-outline');
+            //     }
+            // }
+
+            // function clickFunction(e) {
+            //     let list = document.getElementById('elements')
+            //     list.classList.toggle('hidden')
+            //     let iconName = e.getAttribute('name');
+            //     e.setAttribute('name', iconName === 'menu' ? 'close' : 'menu');
+            // }
+
+            // document.addEventListener('click', function (event) {
+            //     if (!event.target.closest('#box, #box2, #icons, #icons2')) {
+            //         document.getElementById('box').classList.add('hidden');
+            //         document.getElementById('box2').classList.add('hidden');
+            //     }
+            // });
+
+            function toggleFunction(event) {
+                event.stopPropagation(); // prevent the event from bubbling up to the document
+
+                const box = document.getElementById('box');
+                const box2 = document.getElementById('box2');
+
+                box.classList.toggle('hidden');
+                if (!box.classList.contains('hidden')) {
+                    box2.classList.add('hidden');
+                }
+
+                const icons = document.getElementById('icons'); // Select the icon element
+                const iconName = icons.getAttribute('name');
+                icons.setAttribute('name', iconName === 'caret-down-outline' ? 'caret-up-outline' : 'caret-down-outline');
+            }
+
+            function toggleFunction2(event) {
+                event.stopPropagation(); // prevent the event from bubbling up to the document
+
+                const box2 = document.getElementById('box2');
+                const box = document.getElementById('box');
+                box2.classList.toggle('hidden');
+                if (!box2.classList.contains('hidden')) {
+                    box.classList.add('hidden');
+                }
+
+                const icons2 = document.getElementById('icons2'); // Select the icon element
+                const iconName = icons2.getAttribute('name');
+                icons2.setAttribute('name', iconName === 'caret-down-outline' ? 'caret-up-outline' : 'caret-down-outline');
+            }
+
+
+            function toggleFunction3(event) {
+                event.stopPropagation(); // prevent the event from bubbling up to the document
+                // const box3 = document.getElementById('box3');
+                const box2 = document.getElementById('box2');
+                const box = document.getElementById('box');
+                box2.classList.toggle('hidden');
+                if (!box.classList.contains('hidden')) {
+                    box2.classList.add('hidden');
+                }
+
+                const icons2 = document.getElementById('icons2'); // Select the icon element
+                const iconName = icons2.getAttribute('name');
+                icons2.setAttribute('name', iconName === 'caret-down-outline' ? 'caret-up-outline' : 'caret-down-outline');
+            }
+
+            // const wrongBtn = document.querySelector('.wrongBtn');
+            // const submain = document.querySelector('.data');
+            // const card = document.querySelector('.card');
+            // const main2 = document.getElementById('opaqueScreen')
+            // const blurring = document.querySelector('.blurring');
+            // // console.log(main2)
+            // let myInterval;
+            // submain.style.display = 'none';
+            // myInterval = setInterval(() => {
+            //     submain.style.display = 'block';
+            // }, 1000);
+            // wrongBtn.addEventListener('click', function () {
+            //     submain.style.display = 'none';
+            //     card.style.display = 'none'
+            //     document.body.style.overflowY = 'auto';
+            //     clearInterval(myInterval);
+            //     document.body.style.pointerEvents = 'all';
+            //     main2.style.display = 'none';
+            //     blurring.style.filter = 'none'
+
+            // })
+
+            // anchor.addEventListener('click', function (event) {
+            //     console.log("heloo");
+            //     event.preventDefault();
+            // });
+
+            //timer function
+            var targetDate = new Date("2024-12-31 23:59:59").getTime();
+
+            // Update the countdown every 1 second
+            var countdownInterval = setInterval(function () {
+                // Get the current date and time
+                var currentDate = new Date().getTime();
+
+                // Find the difference between the target date and the current date
+                var timeLeft = targetDate - currentDate;
+
+                // Calculate the time units (days, hours, minutes, seconds)
+                var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                // Display the result in the HTML elements
+                document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+                document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+                document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+                document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+
+                // If the countdown is finished, display a message
+                if (timeLeft < 0) {
+                    clearInterval(countdownInterval);
+                    document.getElementById("timer").innerHTML = "TIME'S UP!";
+                }
+            }, 1000);
+
+
+         
+    document.addEventListener('DOMContentLoaded', function() {
+        const alertContainer = document.getElementById('alert-box-container');
+        const alertBox = alertContainer.querySelector('div');
+        const closeBtn = document.getElementById('close-alert-btn');
+
+        // Check if user has already viewed the leaderboard
+        const hasViewedLeaderboard = localStorage.getItem('viewedLeaderboard');
+
+        // Function to show the alert with animation
+        function showAlert() {
+            alertContainer.style.display = 'flex';
+            setTimeout(() => {
+                alertContainer.style.opacity = '1';
+                alertBox.style.transform = 'scale(1)';
+            }, 50);
+        }
+
+        // Function to hide the alert with animation
+        function hideAlert() {
+            alertBox.style.transform = 'scale(0.95)';
+            alertContainer.style.opacity = '0';
+            setTimeout(() => {
+                alertContainer.style.display = 'none';
+            }, 300);
+        }
+
+        // Only show alert if user hasn't viewed leaderboard
+        if (!hasViewedLeaderboard) {
+            setTimeout(showAlert, 500);
+        }
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', hideAlert);
+        }
+
+        // Add click handler for leaderboard link
+        const leaderboardLink = alertBox.querySelector('a[href="Leaderboard.html"]');
+        if (leaderboardLink) {
+            leaderboardLink.addEventListener('click', function() {
+                localStorage.setItem('viewedLeaderboard', 'true');
+            });
+        }
+    });
+
+
+
+
+
+        </script>
+
+
+
+
+        <!--<script src="assets/js/from/jquery.min.js"></script>
+			<script src="assets/js/from/skel.min.js"></script>
+			<script src="assets/js/from/skel-layers.min.js"></script>
+			<script src="assets/js/from/init.js"></script>-->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,2235 @@
+<!DOCTYPE html>
+
+
+
+<html>
+
+<head>
+	<title>ME-RIISE</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!-- from the other one 
+			<link rel="stylesheet" href="assets/css/from/skel.css" />-->
+	<!--<link rel="stylesheet" href="assets/css/from/style.css" />-->
+	<!--<link rel="stylesheet" href="assets/css/from/style-xlarge.css" />-->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+
+	<!-- bootstrap 4 css -->
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+
+	<!-- fontawesome cdn -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
+		integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
+		crossorigin="anonymous"></script> -->
+
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="assets/css/newcss.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+	<link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/NavbarCode/assets/css/styles.css">
+</head>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+	a:link {
+		text-decoration: none;
+	}
+
+	header {
+		box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.4);
+	}
+
+	body {
+		font-family: "Poppins", serif;
+		font-weight: 300;
+		font-style: normal;
+	}
+
+
+
+
+	.main {
+		text-align: center;
+	}
+
+	.marq {
+		padding-top: 30px;
+		padding-bottom: 10px;
+	}
+
+
+	.blink {
+		animation: blink 2s infinite;
+		color: blue;
+	}
+
+	.event-list {
+		padding-top: -50px;
+		width: 100%;
+	}
+
+	#list {
+		font-size: 15px;
+	}
+
+	#box2 {
+		z-index: 1;
+	}
+
+	.card {
+		background-color: white;
+		border-radius: 8px;
+		width: 340px;
+
+	}
+
+	.card .profile-details {
+		display: flex;
+		align-items: center;
+		column-gap: 12px;
+		padding: 15px;
+	}
+
+	.container {
+		width: 100%;
+		max-width: 1120px;
+		background-color: grey;
+		border-radius: 8px;
+	}
+
+	.slider {
+		min-height: 100vh;
+		/* min-width: 50vw; */
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: bisque;
+	}
+
+	.d-block {
+		object-fit: cover;
+		height: 60vh;
+		/* border-radius: 50%; */
+	}
+
+	.timeline-item {
+		position: relative;
+		background-color: black;
+		height: 90vh;
+		margin: 20px;
+		margin-left: 55px;
+		width: 8px;
+		border-radius: 20px;
+	}
+
+	.dots {
+		position: absolute;
+		height: 30px;
+		border-radius: 50%;
+		width: 30px;
+		top: 32%;
+		background-color: black;
+		left: -10px;
+	}
+
+	.dots1 {
+		position: absolute;
+		height: 30px;
+		border-radius: 50%;
+		width: 30px;
+		top: 62%;
+		background-color: black;
+		left: -10px;
+	}
+
+	.date {
+		background-color: white;
+		padding: 10px;
+		position: absolute;
+		left: 40px;
+		width: 30vw;
+		/* width: 40%; */
+		/* font-weight: 600; */
+	}
+
+
+	.dots2 {
+		position: absolute;
+		height: 30px;
+		border-radius: 50%;
+		width: 30px;
+		top: 92%;
+		background-color: black;
+		left: -10px;
+	}
+
+	.dots3 {
+		position: absolute;
+		height: 30px;
+		border-radius: 50%;
+		width: 30px;
+		/* top: 122%; */
+		background-color: black;
+		left: -10px;
+	}
+
+	.gridsystem {
+		display: grid;
+		grid-template-columns: 40% 60%;
+	}
+
+
+	body {
+		font-family: "Rubik", sans-serif;
+
+	}
+
+	.box {
+		border-radius: 5%;
+		/* box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.5); */
+	}
+
+	.subbox {
+		border-radius: 5% 5% 0% 0%;
+	}
+
+	.numbers {
+		position: relative;
+		height: 10vh;
+		padding-top: 10px;
+		/* border-radius: 20; */
+	}
+
+
+	@media only screen and (min-width: 200px) and (max-width: 480px) {
+		#board {
+			margin-left: 2px;
+		}
+	}
+
+	@media only screen and (min-width: 480px) and (max-width: 639px) {
+		#board {
+			margin-left: 2px;
+		}
+	}
+
+	@media only screen and (min-width: 980px) and (max-width: 1024px) {
+		#board {
+			margin-left: 2px;
+		}
+	}
+
+
+	@media only screen and (min-width: 1024px) and (max-width: 1180px) {
+		#list {
+			font-size: 10px;
+
+		}
+	}
+
+
+
+
+
+
+	@keyframes blink {
+		0% {
+			opacity: 5;
+		}
+
+		100% {
+			opacity: 2;
+			color: red;
+		}
+
+
+	}
+</style>
+
+<body data-gr-c-s-loaded="true" class="vsc-initialized" style="user-select: auto">
+
+
+	<div class="snav-bar" style="background-color: black;">
+		<!-- <div class="logo">
+				<a href="index.html">
+				  <img class="mr-logo mt-1 " src="img/logo.png" />
+				</a>
+			  </div>
+			
+			  <div class="nav-link">
+				<ul class="nvl">
+				  <li><a href="index.html">Home</a></li>
+				  <li><a href="faculty.html">Faculty</a></li>
+				  <li><a href="team.html">Student Members</a></li>
+				  <li><a href="startups.html">Start-Ups</a></li>
+			
+				  <div class="dropdown" style="display: inline-block;">
+					<button
+					  class="dropbtn"   
+					  id="dropbtn"
+					  onclick="handleMoreBtn()"
+					  
+					>
+				More
+					  <i class="fa fa-caret-down" style="color: rgb(65, 142, 243);" ></i>
+					</button>
+			
+					<div class="dropdown-content" id="dropdown-content">
+					  <a href="http://www.mcehassan.ac.in">Malnad College of Engineering</a
+					  >
+					  <a href="events.html">Successful Events</a>
+					  <a href="prag.html">PRAGYATHA - 19</a>
+					 <a href="alumni.html">Alumni</a> 
+					  <a href="Nisp.html">NISP-policy</a>
+			
+					</div>
+				  </div>
+				</ul>
+			  </div>
+			
+			  <div class="smenu-btn ">
+				<button onclick="openNav()" style="background-color: black;outline: none;">
+				  <i class="fa fa-bars " style="color: rgb(65, 142, 243);" aria-hidden="true"></i>
+				</button>
+			  </div>
+			</div>
+			<div id="myNav" class="overlay" style="margin-top: 70px;">
+			  <a href="javascript:void(0)" class="closebtn" style="font-size: 15px;" onclick="closeNav()"
+				><i class="fa fa-times"></i
+			  ></a>
+			  <div class="overlay-content" >
+				<a href="index.html" >Home</a>
+				<a href="faculty.html" >Faculty</a>
+				<a href="team.html" >Student Members</a>
+				<a href="startups.html">Start-Ups</a>
+				<a href="http://www.mcehassan.ac.in">Malnad College of Engineering</a
+				>
+				<a href="events.html" >Successful Events</a>
+				<a href="prag.html">PRAGYATHA - 19</a>
+				<a href="alumni.html">Alumni</a>
+				<a href="Nisp.html"
+				>NISP-policy</a>
+			  </div> -->
+		<!-- 
+		<nav class="bg-black lg:flex lg:items-center lg:justify-between">
+			<div class="flex items-center justify-between">
+				<a href="index.html"><img src="images/meriiseNewLogo.png" alt="" class="h-20"></a>
+
+				<div>
+					<ion-icon name="menu" onclick="clickFunction(this)"
+						class="text-4xl text-blue-400 block lg:hidden"></ion-icon>
+				</div>
+
+			</div> -->
+
+		<!-- <ion-icon name="menu" id="menu" onclick="clickFunction(this)"
+			class="text-4xl block lg:hidden h-24"></ion-icon> -->
+
+
+		<!-- <div class="hidden lg:block" id="elements">
+				<ul class="text-blue-400 font-bold bg-black px-4 py-4 lg:flex lg:justify-between lg:items-center w-48 md:w-42 lg:w-full float-right md:float-right h-screen md:h-screen lg:h-auto z-50"
+					id="list">
+					<li class="mx-2"><a href="index.html">Home</a></li>
+					<li class="mx-2"><a href="aboutmeriise.html">About us</a></li>
+					<li class="mx-2"><a href="faculty.html">Faculty</a></li>
+					<li class="mx-2"><a href="team.html">Team MERIISE</a></li>
+					<li class="mx-2"><a href="iic.html">MoE</a></li>
+					<li class="mx-2"><a href="nain.html">NAIN</a></li>
+					<li class="mx-2"><a href="uba.html">UBA</a></li>
+					<li class="mx-2"><a href="infrastructure.html">Infrastructure</a></li>
+					<li class="mx-2"><a href="startups.html">Start ups</a></li>
+					<li class="mx-2"><a href="https://meriise-events.vercel.app/">Events</a></li>
+					<li class="mx-2"><a href="https://www.mcehassan.ac.in/">MCE</a></li>
+					<li class="mx-2"><a href="ourAchivements.html">Achievements</a></li>
+
+
+					<div class="flex ml-2">
+						<li class="relative" onclick="toggleFunction2(event)" id="click">
+							<a href="#" class="hover:text-blue-600">Documents</a>
+							<ion-icon name="caret-down-outline" class="px-1" id="icons2"></ion-icon>
+
+						</li>
+						<li class="absolute p-2 rounded-sm mt-8 hidden rounded-xl text-md w-[130px] bg-white text-blue-600"
+							id="box2" onclick="dropdown()">
+							<div><a href="Nisp.html">MCE NISP Policy</a></div>
+							<div><a href="collab.html">Collaboration</a></div>
+							<div><a href="documents.html">Documents</a></div>
+
+						</li>
+					</div> -->
+		<!-- <li class="mx-2"><a href="collab.html">Collaborations</a></li>
+						<li class="mx-2"><a href="Nisp.html">MCE NISP Policy</a></li> -->
+
+
+		<!-- <div class="flex ml-2">
+						<li class="relative" onclick="toggleFunction(event)" id="click">
+							<a href="#" class="hover:text-blue-600">Pragyatha</a>
+							<ion-icon name="caret-down-outline" class="px-1" id="icons"></ion-icon>
+
+						</li>
+						<li class="absolute p-2 rounded-sm mt-8 hidden rounded-xl text-md w-[130px] bg-white text-blue-600"
+							id="box" onclick="dropdown()">
+							<div><a href="pragyatha23.html">Pragyatha 23</a></div>
+							<div><a href="pragyatha22.html">Pragyatha 22</a></div>
+							<div><a href="Pragyatha.html">Pragyatha 21</a></div>
+							<div><a href="prag.html">Pragyatha 19</a></div>
+
+						</li>
+					</div>
+
+
+
+				</ul>
+			</div>
+		</nav>
+ -->
+		<header class="header">
+			<nav class="nav containerofNavbar">
+				<div class="nav__data">
+					<a href="#" class="nav__logo">
+						<img src="assets/MERIISE FOUNDATION logo 2.0.png" alt="" class="h-16">
+					</a>
+
+					<div class="nav__toggle" id="nav-toggle">
+						<i class="ri-menu-line nav__burger"></i>
+						<i class="ri-close-line nav__close"></i>
+					</div>
+				</div>
+
+				<!--=============== NAV MENU ===============-->
+				<div class="nav__menu" id="nav-menu">
+					<ul class="nav__list">
+						<li><a href="index.html" class="nav__link">Home</a></li>
+
+						<li class="dropdown__item">
+							<div class="nav__link">
+								About ME-RIISE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+							</div>
+
+							<ul class="dropdown__menu">
+								<li>
+									<a href="aboutmeriise.html" class="dropdown__link">
+										<i class="ri-pie-chart-line"></i> ME-RIISE FOUNDATION
+									</a>
+								</li>
+
+
+								<li>
+									<a href="infrastructure.html" class="dropdown__link">
+										<i class="ri-pie-chart-line"></i> Infrastructure
+									</a>
+								</li>
+
+
+								<li>
+									<a href="ourAchivements.html" class="dropdown__link">
+										<i class="ri-arrow-up-down-line"></i> Achievements
+									</a>
+								</li>
+
+
+								<li class="dropdown__subitem">
+									<div class="dropdown__link">
+										<i class="ri-bar-chart-line"></i> Documents <i
+											class="ri-add-line dropdown__add"></i>
+									</div>
+
+									<ul class="dropdown__submenu">
+										<li>
+											<a href="Nisp.html" class="dropdown__sublink">
+												<i class="ri-file-list-line"></i> MCE NISP POLICY
+											</a>
+										</li>
+
+										<li>
+											<a href="collab.html" class="dropdown__sublink">
+												<i class="ri-cash-line"></i> Collaborations
+											</a>
+										</li>
+
+										<li>
+											<a href="Certificates.html" class="dropdown__sublink">
+												<i class="ri-cash-line"></i> Certificates
+											</a>
+										</li>
+
+
+									</ul>
+								</li>
+
+
+								<li class="dropdown__subitem">
+									<div class="dropdown__link">
+										<i class="ri-bar-chart-line"></i> Members of ME-RIISE <i
+											class="ri-add-line dropdown__add"></i>
+									</div>
+
+									<ul class="dropdown__submenu">
+										<li>
+											<a href="#" class="dropdown__sublink">
+												<i class="ri-file-list-line"></i>Board of Directors
+											</a>
+										</li>
+
+										<li>
+											<a href="faculty.html" class="dropdown__sublink">
+												<i class="ri-cash-line"></i> Faculty
+											</a>
+										</li>
+
+										<li>
+											<a href="team.html" class="dropdown__sublink">
+												<i class="ri-refund-2-line"></i> Team ME-RIISE
+											</a>
+										</li>
+									</ul>
+								</li>
+
+								<!--=============== DROPDOWN SUBMENU ===============-->
+
+							</ul>
+						</li>
+
+						<!--=============== DROPDOWN 1 ===============-->
+						<li class="dropdown__item">
+							<div class="nav__link">
+								Wings of ME-RIISE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+							</div>
+
+							<ul class="dropdown__menu">
+								<li>
+									<a href="startups.html" class="dropdown__link">
+										<i class="ri-pie-chart-line"></i>Start Ups
+									</a>
+								</li>
+
+
+
+								<li>
+									<a href="iic.html" class="dropdown__link">
+										<i class="ri-pie-chart-line"></i> MoE
+									</a>
+								</li>
+
+								<li>
+									<a href="nain.html" class="dropdown__link">
+										<i class="ri-arrow-up-down-line"></i> NAIN
+									</a>
+								</li>
+
+
+
+								<li>
+									<a href="uba.html" class="dropdown__link">
+										<i class="ri-arrow-up-down-line"></i> UBA
+									</a>
+								</li>
+
+
+								<!-- <li class="dropdown__subitem">
+							<div class="dropdown__link">
+								<i class="ri-bar-chart-line"></i> Documents <i
+									class="ri-add-line dropdown__add"></i>
+							</div>
+
+							<ul class="dropdown__submenu">
+								<li>
+									<a href="#" class="dropdown__sublink">
+										<i class="ri-file-list-line"></i> MCE NISP POLICY
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="dropdown__sublink">
+										<i class="ri-cash-line"></i> Collaborations
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="dropdown__sublink">
+										<i class="ri-refund-2-line"></i> Refunds
+									</a>
+								</li>
+							</ul>
+						</li> -->
+
+								<!--=============== DROPDOWN SUBMENU ===============-->
+								<li class="dropdown__subitem">
+									<div class="dropdown__link">
+										<i class="ri-bar-chart-line"></i> Pragyatha <i
+											class="ri-add-line dropdown__add"></i>
+									</div>
+
+									<ul class="dropdown__submenu">
+										<li>
+											<a href="#" class="dropdown__sublink">
+												<i class="ri-file-list-line"></i> Pragyatha24
+											</a>
+										</li>
+
+										<li>
+											<a href="#" class="dropdown__sublink">
+												<i class="ri-file-list-line"></i> Pragyatha23
+											</a>
+										</li>
+										<li>
+											<a href="#" class="dropdown__sublink">
+												<i class="ri-file-list-line"></i> Pragyatha22
+											</a>
+										</li>
+										<li>
+											<a href="#" class="dropdown__sublink">
+												<i class="ri-file-list-line"></i> Pragyatha21
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+
+						<li><a href="https://meriise-events.vercel.app/" class="nav__link">Events</a></li>
+						<li><a href="#" class="nav__link">Contact Us</a></li>
+
+						<!--=============== DROPDOWN 2 ===============-->
+
+
+						<!-- <li><a href="#" class="nav__link">Contact Us</a></li> -->
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+
+
+	</div>
+
+
+
+
+	<!-- One -->
+	<!-- <section id="One" class="wrapper style3">
+		<div class="inner">
+			<header class="align-center mt-5">
+				<h2 class="text-4xl">UBA</h2>
+				<p>Unnat Bharat Abhiyan</p>
+			</header>
+		</div>
+	</section> -->
+
+
+	<!-- Two -->
+	<div>
+		<p class="text-6xl text-center p-10">Unnat Bharat Abhiyan - UBA</p>
+
+
+	</div>
+
+
+
+
+	<section id="two" class="wrapper style2">
+		<div class="inner p-1">
+			<div class="box ">
+				<div class="content ">
+					<!--Content-->
+
+					<header class="align-center" style="margin-bottom: -20px;">
+						<h2 class="text-4xl"><b>Unnat Bharat Abhiyan</b></h2>
+					</header>
+					<div class="gallery">
+						<div class="img-wrap">
+							<div class="image fit">
+								<a href="#"><img src="images/uba.jpg" alt="" /></a>
+							</div>
+						</div>
+					</div>
+
+
+
+					<!--<div class="gallery">
+											<div class="img-wrap">
+												<div class="image fit">
+													<a href="#"
+														><img src="images/rating-iic.jpg" alt=""
+													/></a>
+												</div>
+											</div>
+										</div>
+
+										<div class="gallery">
+											<div class="img-wrap">
+												<div class="image fit">
+													<a href="#"
+														><img src="images/ariia.jpg" alt=""
+													/></a>
+												</div>
+											</div>
+										</div> -->
+
+
+				</div>
+				<br>
+
+
+
+			</div>
+		</div>
+
+		<div class="content ">
+			<!--Content-->
+			<div style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);" class="pb-2 mb-5 text-3xl">
+				<div class="container">
+
+					<header class="align-center" style="margin-bottom: -20px;">
+						<h2><b>Activities</b></h2>
+						<br>
+					</header>
+
+				</div>
+			</div>
+		</div>
+
+		<!--Event 1-->
+		<header class="align-center" style="margin-bottom: -20px;">
+			<h2 class="text-2xl"><b>Village Survey</b></h2>
+			<br>
+			<br>
+		</header>
+
+		<div style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);" class="pb-2 mb-5">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-12 align-center">
+						<centre>
+							<img src="img/ubae1.png" alt="" class="img-fluid  mt-3 pb-1 mx-auto">
+						</centre>
+
+					</div>
+
+				</div>
+			</div>
+			<br>
+
+			<p style="padding-left: 30px;padding-right: 10px">The first part of the activity was the “Village survey”
+				which was conducted on 10-12-2018. The purpose of the visit was to visit the adopted villages and get to
+				know about the government schemes handled, status of the government school and basic information of the
+				village.</p>
+
+			<br>
+			<div class="documents">
+				<div class="doc">
+					<a target="_blank" href="documents/uba_docs/Village_survey/Schedule – 10-12-2018.pdf">Schedule
+						(PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Village_survey/Village survey _Anuguvalli– 10-12-2018.pdf">Village
+						survey at Anuguvalli Village (PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Village_survey/Village survey _Dudda – 10-12-2018.pdf">Village survey
+						at Dudda Village (PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Village_survey/Village survey _Gopanahalli – 10-12-2018.pdf">Village
+						survey at Gopanahalli Village (PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Village_survey/Village survey _Heragu – 10-12-2018.pdf">Village survey
+						at Heragu Village (PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Village_survey/Village survey _Lingaransahalli– 10-12-2018.pdf">Village
+						survey at Lingaransahalli Village (PDF)</a>
+				</div>
+			</div>
+
+			<h4 style="padding-left: 30px; padding-right: 10px"><b>Date:</b> 10-12-2018</h4>
+
+		</div>
+		<br />
+
+
+		<!--Event 2-->
+
+		<header class="align-center" style="margin-bottom: -20px;">
+			<h2 class="text-3xl"><b>Household survey</b></h2>
+		</header>
+
+		<br>
+		<br>
+		<div style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);" class="pb-2 mb-5">
+			<div class="container">
+				<div class="row ">
+
+					<div class="col-md-6 align-center">
+						<img src="img/house_sur1.jpg" alt="" class="img-fluid  mt-3 pb-1">
+					</div>
+					<div class="col-md-6 ">
+						<img src="img/house_sur2.jpg" alt="" class="img-fluid mt-3 pb-1">
+					</div>
+
+				</div>
+			</div>
+			<br>
+
+			<p style="padding-left: 30px;padding-right: 10px">The household survey was conducted by a team of students
+				and faculty members along with Dr. Geetha Kiran A (Coordinator, UBA) from Malnad College of Engineering,
+				as part of the Unnat Bharat Abhiyan program. The objective of the survey was to identify the key areas
+				of concern and opportunities for development and to recommend strategies for addressing them. </p>
+
+
+			<div class="documents">
+				<div class="doc">
+					<a target="_blank" href="documents/uba_docs/Household_survey/schedules/Schedule_Dudda.pdf">Schedule
+						Dudda (PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Household_survey/docs/Household survey Dudda-25-03-2019.pdf">Household
+						survey - Dudda (PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank" href="documents/uba_docs/Household_survey/schedules/Schedule_Heragu.pdf">Schedule
+						Heragu (PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Household_survey/docs/Household survey- Heragu.pdf">Household survey -
+						Heragu (PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Household_survey/schedules/Schedule_Gopanahalli.pdf">Schedule
+						Gopanahalli (PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Household_survey/docs/Household survey-Gopanahalli.pdf">Household
+						survey - Gopanahalli (PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Household_survey/schedules/Schedule_Anuguvalli.pdf">Schedule Anuguvalli
+						(PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Household_survey/docs/Household survey-Anuguvalli.pdf">Household survey
+						- Anuguvalli (PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Household_survey/schedules/Schedule_Lingarasanahalli.pdf">Schedule
+						Lingaransahalli (PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Household_survey/docs/Household survey- Lingarasanahalli.pdf">Household
+						survey - Lingaransahalli (PDF)</a>
+				</div>
+			</div>
+
+			<h4 style="padding-left: 30px; padding-right: 10px"><b>Date:</b> 25-03-2019</h4>
+
+		</div>
+		<br />
+
+
+		<!--Event 3-->
+
+		<header class="align-center" style="margin-bottom: -20px;">
+			<h2 class="text-3xl"><b>One day Science Expo</b></h2>
+		</header>
+		<br>
+		<br>
+
+		<div style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);" class="pb-2 mb-5">
+			<div class="container">
+				<div class="row ">
+
+					<div class="col-md-6 align-center">
+						<img src="images/sci_expo1.jpg" alt="" class="img-fluid  mt-3 pb-1">
+					</div>
+					<div class="col-md-6 ">
+						<img src="images/sci_expo2.jpg" alt="" class="img-fluid mt-3 pb-1">
+					</div>
+
+				</div>
+			</div>
+
+			<br>
+			<br>
+
+			<p style="padding-left: 30px;padding-right: 10px">One day “Science Expo” was conducted for the primary and
+				higher primary school students of Heragu Village on 11-07-2019.
+				A team of 10 students along with two faculty members Dr. Geetha Kiran A (UBA coordinator) and Mrs.
+				Mohana Lakshmi J. (Assistant Professor, Department of EEE) started around 9.30 am and reached Janatha
+				Primary School, Heragu at 10 am.
+				The school students welcomed the team with great enthusiasm. After discussing with the school Head
+				mistress, the students were split into two groups. The student team of UBA conducted the experiments in
+				two streams viz. Physics and chemistry to the two groups of students.
+			</p>
+
+
+			<div class="documents">
+				<div class="doc">
+					<a target="_blank" href="documents/uba_docs/Science_expo/One day Science Expo.pdf">One day Science
+						Expo Report (PDF)</a>
+				</div>
+
+
+			</div>
+
+			<h4 style="padding-left: 30px; padding-right: 10px"><b>Date:</b> 11-07-2019</h4>
+
+		</div>
+		<br />
+
+		<!--Event 4-->
+
+		<header class="align-center" style="margin-bottom: -20px;">
+			<h2 class="text-3xl"><b>Planting Tree Samplings </b></h2>
+		</header>
+		<br>
+		<br>
+
+		<div style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);" class="pb-2 mb-5">
+			<div class="container">
+				<div class="row ">
+
+					<div class="col-md-6 align-center">
+						<img src="img/plant1.jpg" alt="" class="img-fluid  mt-3 pb-1">
+					</div>
+					<div class="col-md-6 ">
+						<img src="img/plant2.jpg" alt="" class="img-fluid mt-3 pb-1">
+					</div>
+
+				</div>
+			</div>
+			<br>
+			<br>
+			<p style="padding-left: 30px;padding-right: 10px">As a move towards green society, one day activity on
+				“Planting Tree Samplings” was planned and executed.
+				The activity was carried out as a part of Induction Programme involving around 900 students inducted
+				during the academic year 2019-2020 on 01/08/2019.
+				The students were divided into 5 batches with each batch accompanied by 3 faculty members. The overall
+				execution was carried out by Dr. A. Geetha Kiran A, UBA Coordinator. </p>
+
+
+			<div class="documents">
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Planting/Planting Tree Samplings - Dudda – 01-08-2019.pdf">Planting
+						Tree Samplings - Dudda (PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Planting/Planting Tree Samplings - Heragu – 01-08-2019.pdf">Planting
+						Tree Samplings - Heragu (PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Planting/Planting Tree Samplings - Gopanahalli – 01-08-2019.pdf">Planting
+						Tree Samplings - Gopanahalli (PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Planting/Planting Tree Samplings - Anuguvalli– 01-08-2019.pdf">Planting
+						Tree Samplings - Anuguvalli (PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Planting/Planting Tree Samplings - Lingarasanahalli– 01-08-2019.pdf">Planting
+						Tree Samplings - Lingarasahalli (PDF)</a>
+				</div>
+
+			</div>
+
+			<h4 style="padding-left: 30px; padding-right: 10px"><b>Date:</b> 01-08-2019</h4>
+
+		</div>
+		<br />
+
+		<!--Plastic Free Campaign-->
+
+		<header class="align-center" style="margin-bottom: -20px;">
+			<h2 class="text-3xl"><b>Plastic Free Campaign </b></h2>
+		</header>
+		<br>
+		<br>
+
+		<div style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);" class="pb-2 mb-5">
+			<div class="container">
+				<div class="row text-align">
+
+					<div class="col-md-6 align-center">
+						<img src="img/plastic1.jpg" alt="" class="img-fluid  mt-3 pb-1 mx-auto">
+					</div>
+					<div class="col-md-6 ">
+						<img src="img/plastic2.jpg" alt="" class="img-fluid mt-3 pb-1 mx-auto">
+					</div>
+
+				</div>
+			</div>
+			<br>
+			<br>
+			<p style="padding-left: 30px;padding-right: 10px">As a move towards a low-polluting, sustainable society,
+				recycling, reusing and proper management of plastics has become a crucial issue that needs focus. Taking
+				the motive of UBA into account, “Plastic Free Campaign” was organized by our institution on 30-09-2019,
+				in the adopted villages Gopanahalli and Heragu.
+				About 100 students from various streams of engineering volunteered along with 3 faculty members namely
+				Dr. A. Geetha Kiran (UBA Coordinator). Mr. H. S. Chandrashekar (Assistant Professor, Dept. of IS &
+				Engineering) and Mrs. Mohana Lakshmi J. (Assistant Professor, Department of EEE).
+				Mr. H. S. Chandrashekar took the lead and executed in the activity by providing requisite guidelines to
+				the students. As a part of this campaign, Cloth bags were distributed to every house in the village.
+			</p>
+
+
+			<div class="documents">
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Plastic_free/Plastic Free Campaign -Schedule.pdf">Plastic Free Campaign
+						- Schedule (PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Plastic_free/Plastic Free Campaign - 30-09-2019 - Gopanahalli.pdf">Plastic
+						Free Campaign - Gopanahalli (PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank" href="documents/uba_docs/Plastic_free/Plastic Free Campaign - Heragu.pdf">Plastic
+						Free Campaign - Heragu (PDF)</a>
+				</div>
+
+
+			</div>
+
+			<h4 style="padding-left: 30px; padding-right: 10px"><b>Date:</b> 30-09-2019</h4>
+
+		</div>
+		<br />
+
+
+
+		<!--Rural awareness programme Plant Pathology and microbes in bio enrichment practical and awareness session-->
+
+		<header class="align-center" style="margin-bottom: -20px;">
+			<h2 class="text-3xl"><b>Rural awareness programme Plant Pathology and microbes in bio enrichment practical
+					and awareness
+					session </b></h2>
+		</header>
+		<br>
+		<br>
+
+		<div style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);" class="pb-2 mb-5">
+			<div class="container">
+				<div class="row ">
+
+					<div class="col-md-6 align-center">
+						<img src="img/rural1.jpg" alt="" class="img-fluid  mt-3 pb-1">
+					</div>
+					<div class="col-md-6 ">
+						<img src="img/rural2.jpg" alt="" class="img-fluid mt-3 pb-1">
+					</div>
+
+				</div>
+			</div>
+			<br>
+			<br>
+
+			<p style="padding-left: 30px;padding-right: 10px">One day “Rural awareness programme” was organised and
+				conducted in Association with Global Association for Scientific Young Mind (GASYM) on 6th Feb., 2021.
+				The programme focussed on inducing interest in agriculture and train them to understand the technology
+				in growing food.</p>
+
+
+			<div class="documents">
+				<div class="doc">
+					<a target="_blank" href="documents/uba_docs/Rural/Rural awareness programme.pdf">Rural awareness
+						programme - Report (PDF)</a>
+				</div>
+
+
+			</div>
+
+			<h4 style="padding-left: 30px; padding-right: 10px"><b>Date:</b> 06-02-2021</h4>
+
+		</div>
+		<br />
+
+
+		<!--Bird Watching-->
+
+		<header class="align-center" style="margin-bottom: -20px;">
+			<h2 class="text-3xl"><b>Bird Watching</b></h2>
+		</header>
+		<br>
+		<br>
+
+		<div style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);" class="pb-2 mb-5">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-12 align-center mx-auto">
+						<img src="img/bird.jpg" alt="" class="img-fluid  mt-3 pb-1">
+					</div>
+
+
+				</div>
+			</div>
+			<br>
+			<br>
+
+			<p style="padding-left: 30px;padding-right: 10px">Bird watching, also known as birding, is the activity of
+				observing birds in their natural habitats. It is a popular hobby among people of all ages and
+				backgrounds, and is enjoyed by millions of people around the world. Bird watching is a great way to
+				connect with nature and appreciate the beauty and diversity of bird species. </p>
+
+
+			<div class="documents">
+				<div class="doc">
+					<a target="_blank" href="documents/uba_docs/Bird_watch/Bird Watching.pdf">Bird Watching - Report
+						(PDF)</a>
+				</div>
+
+
+			</div>
+
+			<h4 style="padding-left: 30px; padding-right: 10px"><b>Date:</b> 06-02-2021</h4>
+
+		</div>
+		<br />
+
+		<!--Soil Health Analysis and Management of Plant Nutrition-->
+
+		<header class="align-center" style="margin-bottom: -20px;">
+			<h2 class="text-3xl"><b>Soil Health Analysis and Management of Plant Nutrition</b></h2>
+		</header>
+		<br>
+		<br>
+		<div style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);" class="pb-2 mb-5">
+			<div class="container">
+				<div class="row ">
+
+					<div class="col-md-12 align-center">
+						<img src="img/soil.jpg" alt="" class="img-fluid  mt-3 pb-1 mx-auto">
+					</div>
+
+				</div>
+			</div>
+
+			<br>
+			<br>
+			<p style="padding-left: 30px;padding-right: 10px">One day training Programme on “Soil Health Analysis and
+				Management of Plant Nutrition” was conducted in collaboration with Global Association for Scientific
+				Young Mind (GASYM) on 08/03/2021. This programme aimed to train the students on Soil Health Analysis and
+				Management of Plants Nutrition to improve economic stability in farmers and maintain good health of
+				agriculture ecosystem. The training programme provided an overview of the importance of soil health
+				analysis and how it can help in improving crop yield and quality. </p>
+
+
+			<div class="documents">
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Soil_health/Soil Health Analysis and Management of Plant Nutrition.pdf">Soil
+						Health Analysis and Management of Plant Nutrition (PDF)</a>
+				</div>
+
+
+			</div>
+
+			<h4 style="padding-left: 30px; padding-right: 10px"><b>Date:</b> 08-03-2021</h4>
+
+		</div>
+		<br />
+
+
+		<!--VIRTUAL SCHOOL-->
+
+		<header class="align-center" style="margin-bottom: -20px;">
+			<h2 class="text-3xl"><b>VIRTUAL SCHOOL</b></h2>
+		</header>
+		<br>
+		<br>
+		<div style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);" class="pb-2 mb-5">
+			<div class="container">
+				<div class="row ">
+
+					<div class="col-md-12 align-center">
+						<img src="img/virt_sc.jpg" alt="" class="img-fluid  mt-3 pb-1 mx-auto">
+					</div>
+
+				</div>
+			</div>
+			<br>
+			<br>
+
+			<p style="padding-left: 30px;padding-right: 10px">In the wake of revolutionizing teaching learning skills in
+				the rural vicinity, UBA cell of Malnad College of Engineering conducted its flagship event “VIRTUAL
+				SCHOOL” for its adopted Village. UBA student volunteers, ME-RIISE team and college faculty members were
+				present. Students and teachers of government school played the main role of audience in the inaugural
+				function. Honorable DC Sri R Girish, IAS, and SP honorable Sri Srinivas Gowda R, IPS guided the UBA team
+				and promised to provide all the support required to make the event successful. Honorable chairman of
+				MTES ® Sri Ashok Haranahalli congratulated the UBA team for its success and promised for any sort of
+				help & support required further in this movement towards development of all the adopted villages by the
+				college. </p>
+
+
+			<div class="documents">
+				<div class="doc">
+					<a target="_blank" href="documents/uba_docs/Virtual_sc/Report - VIRTUAL SCHOOL - Heragu.pdf">VIRTUAL
+						SCHOOL - Heragu (PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Virtual_sc/Report - VIRTUAL SCHOOL -Gopanahalli.pdf">VIRTUAL SCHOOL -
+						Gopanahalli (PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Virtual_sc/Report - VIRTUAL SCHOOL - Dudda School.pdf">VIRTUAL SCHOOL -
+						Dudda (PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Virtual_sc/Report - VIRTUAL SCHOOL -Lingarasanahalli.pdf">VIRTUAL
+						SCHOOL - Lingarasahalli (PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank"
+						href="documents/uba_docs/Virtual_sc/Report - VIRTUAL SCHOOL -Anuguvalli.pdf">VIRTUAL SCHOOL -
+						Anuguvalli (PDF)</a>
+				</div>
+
+
+			</div>
+
+			<h4 style="padding-left: 30px; padding-right: 10px"><b>Duration:</b> 03-06-2021 - 11-07-2021</h4>
+
+		</div>
+		<br />
+
+
+		<!------------------------------------------------------------------Imparting Basics of Computers-------------------------------------------------------------------------->
+
+		<header class="align-center" style="margin-bottom: -20px;">
+			<h2 class="text-3xl"><b>Imparting Basics of Computers</b></h2>
+		</header>
+		<br>
+		<br>
+
+		<div style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);" class="pb-2 mb-5">
+			<div class="container">
+				<div class="row ">
+
+					<div class="col-md-6 align-center">
+						<img src="img/comp2.jpg" alt="" class="img-fluid  mt-3 pb-1">
+					</div>
+					<div class="col-md-6 align-center">
+						<img src="img/computer1.jpg" alt="" class="img-fluid  mt-3 pb-1">
+					</div>
+
+				</div>
+			</div>
+			<br>
+			<br>
+
+			<p style="padding-left: 30px;padding-right: 10px">One day “Imparting Basics of Computers” was conducted for
+				the primary and higher primary school students of Gopanahalli and Heragu Village on 16-06-2022.
+				Dr. Geetha Kiran A, Coordinator, UBA and her team organized an event to impart the basics of computers
+				to the students of primary and higher primary under Unnat Bharat Abhiyan. The objective of the event was
+				to provide the students with an opportunity to learn about computers and its applications, which would
+				enhance their digital literacy and enable them to leverage technology for their academic and personal
+				development.</p>
+
+
+			<div class="documents">
+				<div class="doc">
+					<a target="_blank" href="documents/uba_docs/Imparting Basics of Computers-Heragu.pdf">Imparting
+						Basics of Computers - Heragu (PDF)</a>
+				</div>
+
+				<div class="doc">
+					<a target="_blank" href="documents/uba_docs/Imparting Basics of Computers-Gopanahalli.pdf">Imparting
+						Basics of Computers - Gopanahalli (PDF)</a>
+				</div>
+
+
+			</div>
+
+			<h4 style="padding-left: 30px; padding-right: 10px"><b>Date: </b>16-06-2022</h4>
+
+		</div>
+		<br />
+
+
+
+		<!-- ---------------------------------------------------------------------------------UBA:2024 : Dudda----------------------------------------------------------------- -->
+		<header class="align-center" style="margin-bottom: -20px;">
+			<h2 class="text-3xl"><b>UBA 2024 : Moola Dudda</b></h2>
+		</header>
+
+		<div style="box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);" class="pb-2 mb-5">
+			<div class="container">
+				<div>
+					<div class="items-center">
+						<img src="img/uba1.jpg" alt="" class="img-fluid  mt-3 pb-1"
+							style="transform: scale(.75); object-cover:fit;">
+					</div>
+
+
+				</div>
+			</div>
+
+			<p style="padding-left: 30px;padding-right: 10px">The UBA visit to Moola Dudda on February 15-16, 2024,
+				was a highly impactful event focused on rural development and community engagement.
+				The visit included a design thinking workshop for children, a village survey to understand local issues,
+				and prototype presentations. The children actively participated and enjoyed the sessions,
+				which also provided valuable information to farmers. The outcomes of the visit included community
+				empowerment,
+				improved infrastructure, technology adoption, increased awareness, academic collaboration,
+				and the demonstration of best practices. Overall, the visit was informative and enjoyable for everyone
+				involved.</p>
+
+
+			<div class="documents">
+				<div class="doc">
+					<a target="_blank" href="documents/uba_docs/events23/UBA visit , Dudda.pdf">
+						UBA : Moola Dudda 2024</a>
+				</div>
+
+
+
+
+			</div>
+
+			<h4 style="padding-left: 30px; padding-right: 10px"><b>Date: </b>15/02/2024 & 16/02/2024:</h4>
+
+		</div>
+		<br />
+
+
+
+	</section>
+
+
+	<div class="row clearfix">
+
+        <!-------------------------------------------------------------------------4th years--------------------------------------------------------------->
+
+        <!-- <div class="container-fluid std">
+            <div class="line"></div>
+            <div>
+              <h6>4th Year Student Members</h6>
+            </div>
+            <div class="line"></div>
+          </div> -->
+
+        <!-- team block1 -->
+
+        <div class="lg:grid grid-cols-3">
+          <div class="team-block col-sm-12 col-lg-4 col-md-6">
+            <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+              <div class="image">
+                <a href="#"></a>
+                <img src="assets/Fahadnew.jpg" class="image" style="background-size: contain" />
+              </div>
+              <div class="lower-content">
+                <h3>
+                  <a href="#">Mohammed Fahad Khan</a>
+                </h3>
+                <div class="designation">Executive Lead</div>
+                <div class="branch">Mechanical Engg.</div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+          <div class="team-block col-sm-12 col-lg-4 col-md-6">
+            <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+              <div class="image">
+                <a href="#"></a>
+                <img src="assets/Anagha B S.jpg" class="image" />
+              </div>
+              <div class="lower-content">
+                <h3>
+                  <a href="#">Anagha B S</a>
+                </h3>
+                <div class="designation">Executive & H R Lead</div>
+                <div class="branch">Computer Science Engg.</div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <div class="team-block col-sm-12 col-lg-4 col-md-6">
+            <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+              <div class="image">
+                <a href="#"></a>
+                <img src="assets/PratheekaGanapathinew.png" class="image" />
+              </div>
+              <div class="lower-content">
+                <h3>
+                  <a href="#">P Pratheeka Ganapathi</a>
+                </h3>
+                <div class="designation">Executive & Digital Lead</div>
+                <div class="designation">Startup & Research Lead</div>
+                <div class="branch">Information Science Engg.</div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="team-block col-sm-12 col-lg-4 col-md-6">
+            <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+              <div class="image">
+                <a href="#"></a>
+                <img src="assets/Chaithanyanew.jpg" class="image" />
+              </div>
+              <div class="lower-content">
+                <h3>
+                  <a href="#">Chaithanya S L</a>
+                </h3>
+                <div class="designation">Executive & Finance Lead</div>
+                <div class="branch">Electronics & Electrical Engg.</div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="team-block col-sm-12 col-lg-4 col-md-6">
+            <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+              <div class="image">
+                <a href="#"></a>
+                <img src="assets/Darshan shetty.jpeg" class="image" />
+              </div>
+              <div class="lower-content">
+                <h3>
+                  <a href="#">Darshan Shetty</a>
+                </h3>
+                <div class="designation">Planning Lead</div>
+                <div class="designation">Marketing & UBA Lead</div>
+                <div class="branch">Electronics and Instrumentation Engg.</div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="team-block col-sm-12 col-lg-4 col-md-6">
+            <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+              <div class="image">
+                <a href="#"></a>
+                <img src="assets/Hemanth S.jpg" class="image" />
+              </div>
+              <div class="lower-content">
+                <h3>
+                  <a href="#">Hemanth S</a>
+                </h3>
+                <div class="designation">Planning, Digital & Design Lead</div>
+                <div class="designation">Startup & Research Lead</div>
+                <div class="branch">Electronics and Instrumentation Engg.</div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- team block2 -->
+
+
+          <div class="team-block col-sm-12 col-lg-4 col-md-6">
+            <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+              <div class="image">
+                <a href="#"></a>
+                <img src="assets/Arjun H.jpg" class="image" />
+              </div>
+              <div class="lower-content">
+                <h3>
+                  <a href="#">Arjun H</a>
+                </h3>
+                <div class="designation">Budget and Creative Lead</div>
+                <div class="designation">Marketing & UBA Lead</div>
+                <div class="branch">Civil Engg.</div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="team-block col-sm-12 col-lg-4 col-md-6">
+            <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+              <div class="image">
+                <a href="#"></a>
+                <img src="assets/Tejaswini A S.jpg" class="image" />
+              </div>
+              <div class="lower-content">
+                <h3>
+                  <a href="#">Tejaswini A S</a>
+                </h3>
+                <div class="designation">Budget and Creative Lead</div>
+                <div class="branch">Information Science Engg.</div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="team-block col-sm-12 col-lg-4 col-md-6">
+            <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+              <div class="image">
+                <a href="#"></a>
+                <img src="assets/Harshininew.jpg" class="image" />
+              </div>
+              <div class="lower-content">
+                <h3>
+                  <a href="#">Harshini N D</a>
+                </h3>
+                <div class="designation">Editorial Lead</div>
+                <div class="branch">Computer Science Engg.</div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="team-block col-sm-12 col-lg-4 col-md-6">
+            <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+              <div class="image">
+                <a href="#"></a>
+                <img src="assets/Rumaan Sharief N.JPG" class="image" />
+              </div>
+              <div class="lower-content">
+                <h3>
+                  <a href="#">Rumaan Sharief N</a>
+                </h3>
+                <div class="designation">Editorial Lead</div>
+                <div class="designation">Startup & Research Lead</div>
+
+                <div class="branch">Civil Engg.</div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="team-block col-sm-12 col-lg-4 col-md-6">
+            <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+              <div class="image">
+                <a href="#"></a>
+                <img src="assets/SinchanaMGnew.jpg" class="image" />
+              </div>
+              <div class="lower-content">
+                <h3>
+                  <a href="#">Sinchana M G</a>
+                </h3>
+                <div class="designation">Editorial Lead</div>
+                <div class="designation">Social Media & Broadcast Lead</div>
+                <div class="branch">Electronics & Communication Engg.</div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="team-block col-sm-12 col-lg-4 col-md-6 bg-cover">
+            <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+              <div class="image">
+                <a href="#"></a>
+                <img src="./assets/Pratheek Gowda.jpg" class="image" />
+              </div>
+              <div class="lower-content">
+                <h3>
+                  <a href="#">H G Pratheek Gowda</a>
+                </h3>
+                <div class="designation">Technical Lead</div>
+                <div class="branch">Computer Science Engg.</div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <div class="team-block col-sm-12 col-lg-4 col-md-6">
+            <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+              <div class="image">
+                <a href="#"></a>
+                <img src="assets/ThejaswiniMDnew.jpg" class="image" />
+              </div>
+              <div class="lower-content">
+                <h3>
+                  <a href="#">Thejaswini M D</a>
+                </h3>
+                <div class="designation">Technical Lead</div>
+                <div class="branch">Computer Science Engg.</div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <div class="team-block col-sm-12 col-lg-4 col-md-6">
+            <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+              <div class="image">
+                <a href="#"></a>
+                <img src="assets/Prajwalnew.jpg" class="image" />
+              </div>
+              <div class="lower-content">
+                <h3>
+                  <a href="#">Prajwal Kumbar H M</a>
+                </h3>
+                <div class="designation">Digital Lead</div>
+                <div class="branch">Electronics & Communication Engg.</div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+          <!-- team block3 -->
+
+          <div class="team-block col-sm-12 col-lg-4 col-md-6">
+            <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+              <div class="image">
+                <a href="#"></a>
+                <img src="assets/Ayeshanew.jpg" class="image" />
+              </div>
+              <div class="lower-content">
+                <h3>
+                  <a href="#">Ayesha Zameer</a>
+                </h3>
+                <div class="designation">Database Lead</div>
+                <div class="branch">Electrical and Electronics Engg</div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+        <div class="container-fluid std">
+          <br>
+          <br>
+          <br>
+          <!-- <div class="line"></div> -->
+          <div>
+            <!--<h6>1111Final year student members</h6>-->
+
+
+            <br>
+            <br>
+            
+            <hr>
+            <br>
+            <!-- ------------------------------------------------------------------------------3rd Years Members ---------------------------------------------------------------------------------- -->
+            <h6 class="m-10">3rd Year Student Members</h6>
+          </div>
+          <!-- <div class="line"></div> -->
+        </div>
+        <div class="row clearfix">
+
+
+          <div class="lg:grid grid-cols-3">
+
+
+            <div class="team-block col-sm-12 col-lg-4 col-md-6">
+              <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+                <div class="image">
+                  <a href="#"></a>
+                  <img src="assets/adi.JPG" class="image" />
+                </div>
+                <div class="lower-content">
+                  <h3>
+                    <a href="#">Aditya M</a>
+                  </h3>
+                  <div class="designation">Digital and Design Sub Lead</div>
+                  <div class="branch">Information Science Engg.</div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+            <div class="team-block col-sm-12 col-lg-4 col-md-6">
+              <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+                <div class="image">
+                  <a href="#"></a>
+                  <img src="assets/amith.jpg" class="image" />
+                </div>
+                <div class="lower-content">
+                  <h3>
+                    <a href="#">Amith Subodh</a>
+                  </h3>
+                  <div class="designation">Digital and Design Sub Lead</div>
+                  <div class="designation">External Sub Lead </div>
+                  <div class="branch">Computer Science Engg.</div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+            <div class="team-block col-sm-12 col-lg-4 col-md-6">
+              <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+                <div class="image">
+                  <a href="#"></a>
+                  <img src="assets/aviksha.jpg" class="image" />
+                </div>
+                <div class="lower-content">
+                  <h3>
+                    <a href="#">Aviksha Kavya Gowda</a>
+                  </h3>
+                  <div class="designation">Editoral Sub Lead</div>
+                  <div class="branch">Information Science Engg.</div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+            <div class="team-block col-sm-12 col-lg-4 col-md-6">
+              <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+                <div class="image">
+                  <a href="#"></a>
+                  <img src="assets/chinmayee.jpg" class="image" />
+                </div>
+                <div class="lower-content">
+                  <h3>
+                    <a href="#">Chinmayee Chougale</a>
+                  </h3>
+                  <div class="designation">Creative Sub Lead</div>
+                  <div class="branch">Information Science Engg.</div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+            <div class="team-block col-sm-12 col-lg-4 col-md-6">
+              <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+                <div class="image">
+                  <a href="#"></a>
+                  <img src="assets/kushi.jpg" class="image" />
+                </div>
+                <div class="lower-content">
+                  <h3>
+                    <a href="#">Kushi Gurumurthy</a>
+                  </h3>
+                  <div class="designation">Database Sub Lead</div>
+                  <div class="branch">Electronics and Communication Engg.</div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <div class="team-block col-sm-12 col-lg-4 col-md-6">
+              <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+                <div class="image">
+                  <a href="#"></a>
+                  <img src="assets/nithin.jpg" class="image" />
+                </div>
+                <div class="lower-content">
+                  <h3>
+                    <a href="#">Nithin Gowda M T</a>
+                  </h3>
+                  <div class="designation">Digital and Design Sub Lead</div>
+                  <div class="branch">
+                    Computer Science and Business Systems Engg.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="team-block col-sm-12 col-lg-4 col-md-6">
+              <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+                <div class="image">
+                  <a href="#"></a>
+                  <img src="assets/pragna.jpg" class="image" />
+                </div>
+                <div class="lower-content">
+                  <h3>
+                    <a href="#">Pragna C P</a>
+                  </h3>
+                  <div class="designation">Social Media Handling &</div>
+                  <div class="designation">UBA Sub Lead</div>
+                  <div class="branch">Computer Science Engg.</div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="team-block col-sm-12 col-lg-4 col-md-6">
+            <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+              <div class="image">
+                <a href="#"></a>
+                <img src="assets/rifa.jpg" class="image" />
+              </div>
+              <div class="lower-content">
+                <h3>
+                  <a href="#">Rifa Mariyam</a>
+                </h3>
+                <div class="designation">Editorial Sub Lead</div>
+                <div class="branch">Electronics & Electrical Engg.</div>
+              </div>
+            </div>
+          </div> -->
+
+
+
+
+
+
+
+            <div class="team-block col-sm-12 col-lg-4 col-md-6">
+              <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+                <div class="image">
+                  <a href="#"></a>
+                  <img src="assets/shravani.jpg" class="image" />
+                </div>
+                <div class="lower-content">
+                  <h3>
+                    <a href="#">Shravani G</a>
+                  </h3>
+                  <div class="designation">HR Sub Lead</div>
+                  <div class="designation">Creative Sub Lead</div>
+                  <div class="branch">Computer Science Engg.</div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="team-block col-sm-12 col-lg-4 col-md-6">
+              <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+                <div class="image">
+                  <a href="#"></a>
+                  <img src="assets/tejas.jpg" class="image" />
+                </div>
+                <div class="lower-content">
+                  <h3>
+                    <a href="#">Tejas Yogesh</a>
+                  </h3>
+                  <div class="designation">Technical Sub Leading</div>
+                  <div class="branch">Computer Science Engg.</div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <div class="team-block col-sm-12 col-lg-4 col-md-6">
+              <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+                <div class="image">
+                  <a href="#"></a>
+                  <img src="assets/veerandra.jpg" class="image" />
+                </div>
+                <div class="lower-content">
+                  <h3>
+                    <a href="#">Veerendra G Adoor</a>
+                  </h3>
+                  <div class="designation">Technical Sub Lead</div>
+                  <div class="branch">Computer Science Engg.</div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <div class="team-block col-sm-12 col-lg-4 col-md-6">
+              <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">
+                <div class="image">
+                  <a href="#"></a>
+                  <img src="assets/yallappa.jpg" class="image" />
+                </div>
+                <div class="lower-content">
+                  <h3>
+                    <a href="#">Yallappagouda Patil</a>
+                  </h3>
+                  <div class="designation">Database Sub Lead</div>
+                  <div class="branch">Information Science Engg.</div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+
+
+
+          <!-- team block16 -->
+          <!-- <div class="team-block col-sm-12 col-lg-4 col-md-6">
+            <div
+              class="inner-box wow fadeInLeft"
+              data-wow-delay="0ms"
+              data-wow-duration="150ms"
+            >
+              <div class="image">
+                <a href="#"></a>
+                <img src="assets/Vishwas R Kashyap.JPG" class="image" />
+              </div>
+              <div class="lower-content">
+                <h3>
+                  <a href="#">Vishwas R Kashyap</a>
+                </h3>
+                <div class="designation">Digital Sub Head</div>
+                <div class="branch">CSE</div>
+              </div>
+            </div>
+          </div> -->
+          <!-- team block17
+           <div class="team-block  col-sm-12 col-lg-4 col-md-6  ">
+               <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">                     
+                    <div class="image">
+                         <a href="#"></a>
+                         <img src="assets/.jpg">
+                   </div> 
+                   <div class="lower-content">
+                       <h3>
+                           <a href="#"></a>
+                       </h3>
+                       <div class="designation">Sub Head</div>
+                       <div class="branch"> CSE</div>
+                  </div>  
+             </div>   
+        </div> -->
+          <!-- team block13
+<div class="team-block  col-sm-12 col-lg-4 col-md-6  ">
+     <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">                     
+          <div class="image">
+               <a href="#"></a>
+               <img src="assets/Sudarshan M G.jpeg">
+         </div> 
+         <div class="lower-content">
+             <h3>
+                 <a href="#">Sudarshan M G</a>
+             </h3>
+             <div class="designation">Technical sub head</div>
+             <div class="branch">ISE</div>
+        </div>  
+   </div>   
+</div> -->
+          <!-- team block14-->
+          <!-- <div class="team-block  col-sm-12 col-lg-4 col-md-6  ">
+     <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">                     
+          <div class="image">
+               <a href="#"></a>
+               <img src="assets/Anagha Dixith N.jpg">
+         </div> 
+         <div class="lower-content">
+             <h3>
+                 <a href="#">Anagha Dixith N</a>
+             </h3>
+             <div class="designation">Technical Sub Head</div>
+             <div class="branch">CSE</div>
+        </div>  
+   </div>   
+</div>  -->
+          <!-- team block15-->
+          <!-- <div class="team-block  col-sm-12 col-lg-4 col-md-6  ">
+     <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">                     
+          <div class="image">
+               <a href="#"></a>
+               <img src="assets/Sowmya N C.jpg">
+         </div> 
+         <div class="lower-content">
+             <h3>
+                 <a href="#">Sowmya N C</a>
+             </h3>
+             <div class="designation">Assistant UBA Coordinator</div>
+             <div class="branch">EEE</div>
+        </div>  
+   </div>   
+</div>  -->
+
+          <!-- 
+<div class="team-block  col-sm-12 col-lg-4 col-md-6  ">
+     <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="150ms">                     
+          <div class="image">
+               <a href="#"></a>
+               <img src="assets/Vikas Bhat.jpg">
+         </div> 
+         <div class="lower-content">
+             <h3>
+                 <a href="#">Vikas Bhat</a>
+             </h3>
+             <div class="designation">Database sub head</div>
+             <div class="branch">ME</div>
+        </div>  
+   </div>   
+</div>  -->
+        </div>
+      </div>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="container">
+			<ul class="icons">
+				<li>
+					<a href="#" class="icon fa-twitter" style="color: rgb(51, 183, 235);text-decoration: none;"><span
+							class="label">Twitter</span></a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com/mce.startup.club" class="icon fa-facebook"
+						style="color: rgb(43, 43, 247);text-decoration: none;"><span class="label">Facebook</span></a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/me_riise/" class="icon fa-instagram"
+						style="color: rgb(250, 43, 112);;text-decoration:none"><span class="label">Instagram</span></a>
+				</li>
+				<li>
+					<a href="mailto:meriisehsn@gmail.com" class="icon fa-envelope"
+						style="color: rgb(228, 54, 11);text-decoration:none"><span class="label">Email</span></a>
+				</li>
+
+				<li>
+					<a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A72704849&keywords=me-riise%20foundation&origin=RICH_QUERY_SUGGESTION&position=0&searchId=a2da3c5d-f488-492f-9f3b-da0bce4973ef&sid=w7m&spellCorrectionEnabled=false   "
+						class="icon fa-linkedin" style="color: rgb(255, 255, 255);text-decoration:none"><span
+							class="label">Linkedin</span></a>
+				</li>
+
+			</ul>
+		</div>
+		<div class="copyright">&copy; ME-RIISE FOUNDATION. All rights reserved</div>
+	</footer>
+
+
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+	integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+	crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+	integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+	crossorigin="anonymous"></script>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<!--<script src="assets/js/from/jquery.min.js"></script>
+				<script src="assets/js/from/skel.min.js"></script>
+				<script src="assets/js/from/skel-layers.min.js"></script>
+				<script src="assets/js/from/init.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+	integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+	crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+	crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+	integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+	crossorigin="anonymous"></script>
+
+<!-- custom script -->
+<script src="js/script.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+	crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+	crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+	integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+	crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+	integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+	crossorigin="anonymous"></script>
+<script>
+	const myCarouselElement = document.querySelector('#myCarousel')
+
+	const carousel = new bootstrap.Carousel(myCarouselElement, {
+		interval: 2000,
+		touch: false
+	})
+</script>
+<script>
+
+
+	function clickFunction(e) {
+		let list = document.getElementById('elements')
+		list.classList.toggle('hidden')
+		let iconName = e.getAttribute('name');
+		e.setAttribute('name', iconName === 'menu' ? 'close' : 'menu');
+	}
+
+	document.addEventListener('click', function (event) {
+		if (!event.target.closest('#box, #box2, #icons, #icons2')) {
+			document.getElementById('box').classList.add('hidden');
+			document.getElementById('box2').classList.add('hidden');
+		}
+	});
+
+	function toggleFunction(event) {
+		event.stopPropagation(); // prevent the event from bubbling up to the document
+
+		const box = document.getElementById('box');
+		const box2 = document.getElementById('box2');
+
+		box.classList.toggle('hidden');
+		if (!box.classList.contains('hidden')) {
+			box2.classList.add('hidden');
+		}
+
+		const icons = document.getElementById('icons'); // Select the icon element
+		const iconName = icons.getAttribute('name');
+		icons.setAttribute('name', iconName === 'caret-down-outline' ? 'caret-up-outline' : 'caret-down-outline');
+	}
+
+	function toggleFunction2(event) {
+		event.stopPropagation(); // prevent the event from bubbling up to the document
+
+		const box2 = document.getElementById('box2');
+		const box = document.getElementById('box');
+		box2.classList.toggle('hidden');
+		if (!box2.classList.contains('hidden')) {
+			box.classList.add('hidden');
+		}
+
+		const icons2 = document.getElementById('icons2'); // Select the icon element
+		const iconName = icons2.getAttribute('name');
+		icons2.setAttribute('name', iconName === 'caret-down-outline' ? 'caret-up-outline' : 'caret-down-outline');
+	}
+
+
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAIN 2.0 | ME-RIISE FOUNDATION</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <link rel="stylesheet" href="assets/NavbarCode/assets/css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="assets/css/newcss.css" />
+
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        body {
+            font-family: "Poppins", serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        header {
+            box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+
+    <body">
+
+        <div class="snav-bar" style="background-color: black">
+            <!-- <nav class="bg-black lg:flex lg:items-center lg:justify-between">
+          <div class="flex items-center justify-between">
+            <a href="index.html"><img src="images/meriiseNewLogo.png" alt="" class="h-20"></a>
+    
+            <div>
+              <ion-icon name="menu" onclick="clickFunction(this)" class="text-4xl text-blue-400 block lg:hidden"></ion-icon>
+            </div>
+    
+          </div> -->
+
+            <!-- <ion-icon name="menu" id="menu" onclick="clickFunction(this)"
+      class="text-4xl block lg:hidden h-24"></ion-icon> -->
+
+
+            <!-- <div class="hidden lg:block" id="elements">
+            <ul
+              class="text-blue-400 font-bold bg-black px-4 py-4 lg:flex lg:justify-between lg:items-center w-48 md:w-42 lg:w-full float-right md:float-right h-screen md:h-screen lg:h-auto z-50"
+              id="list">
+              <li class="mx-2"><a href="index.html">Home</a></li>
+              <li class="mx-2"><a href="aboutmeriise.html">About us</a></li>
+              <li class="mx-2"><a href="faculty.html">Faculty</a></li>
+              <li class="mx-2"><a href="team.html">Team MERIISE</a></li>
+              <li class="mx-2"><a href="iic.html">MoE</a></li>
+              <li class="mx-2"><a href="nain.html">NAIN</a></li>
+              <li class="mx-2"><a href="uba.html">UBA</a></li>
+              <li class="mx-2"><a href="infrastructure.html">Infrastructure</a></li>
+              <li class="mx-2"><a href="startups.html">Start ups</a></li>
+              <li class="mx-2"><a href="https://meriise-events.vercel.app/">Events</a></li>
+              <li class="mx-2"><a href="https://www.mcehassan.ac.in/">MCE</a></li>
+              <li class="mx-2"><a href="ourAchievements.html">Achievements</a></li>
+    
+    
+              <div class="flex ml-2">
+                <li class="relative" onclick="toggleFunction2(event)" id="click">
+                  <a href="#" class="hover:text-blue-600">Documents</a>
+                  <ion-icon name="caret-down-outline" class="px-1" id="icons2"></ion-icon>
+    
+                </li>
+                <li class="absolute p-2 rounded-sm mt-8 hidden rounded-xl text-md w-[130px] bg-white text-blue-600"
+                  id="box2" onclick="dropdown()">
+                  <div><a href="Nisp.html">MCE NISP Policy</a></div>
+                  <div><a href="collab.html">Collaboration</a></div>
+                  <div><a href="documents.html">Documents</a></div>
+    
+                </li>
+              </div> -->
+            <!-- <li class="mx-2"><a href="collab.html">Collaborations</a></li>
+                  <li class="mx-2"><a href="Nisp.html">MCE NISP Policy</a></li> -->
+
+
+            <!-- <div class="flex ml-2">
+                <li class="relative" onclick="toggleFunction(event)" id="click">
+                  <a href="#" class="hover:text-blue-600">Pragyatha</a>
+                  <ion-icon name="caret-down-outline" class="px-1" id="icons"></ion-icon>
+    
+                </li>
+                <li class="absolute p-2 rounded-sm mt-8 hidden rounded-xl text-md w-[130px] bg-white text-blue-600" id="box"
+                  onclick="dropdown()">
+                  <div><a href="pragyatha23.html">Pragyatha 23</a></div>
+                  <div><a href="pragyatha22.html">Pragyatha 22</a></div>
+                  <div><a href="Pragyatha.html">Pragyatha 21</a></div>
+                  <div><a href="prag.html">Pragyatha 19</a></div>
+    
+                </li>
+              </div>
+    
+    
+    
+            </ul>
+          </div>
+        </nav> -->
+            <header class="header">
+                <nav class="nav containerofNavbar">
+                    <div class="nav__data">
+                        <a href="#" class="nav__logo">
+                            <img src="assets/MERIISE FOUNDATION logo 2.0.png" alt="" class="h-16">
+                        </a>
+
+                        <div class="nav__toggle" id="nav-toggle">
+                            <i class="ri-menu-line nav__burger"></i>
+                            <i class="ri-close-line nav__close"></i>
+                        </div>
+                    </div>
+
+                    <!--=============== NAV MENU ===============-->
+                    <div class="nav__menu" id="nav-menu">
+                        <ul class="nav__list">
+                            <li><a href="index.html" class="nav__link">Home</a></li>
+
+                            <li class="dropdown__item">
+                                <div class="nav__link">
+                                    About ME-RIISE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                                </div>
+
+                                <ul class="dropdown__menu">
+                                    <li>
+                                        <a href="aboutmeriise.html" class="dropdown__link">
+                                            <i class="ri-pie-chart-line"></i> ME-RIISE FOUNDATION
+                                        </a>
+                                    </li>
+
+
+                                    <li>
+                                        <a href="infrastructure.html" class="dropdown__link">
+                                            <i class="ri-pie-chart-line"></i> Infrastructure
+                                        </a>
+                                    </li>
+
+
+                                    <li>
+                                        <a href="ourAchivements.html" class="dropdown__link">
+                                            <i class="ri-arrow-up-down-line"></i> Achievements
+                                        </a>
+                                    </li>
+
+
+                                    <li class="dropdown__subitem">
+                                        <div class="dropdown__link">
+                                            <i class="ri-bar-chart-line"></i> Documents <i
+                                                class="ri-add-line dropdown__add"></i>
+                                        </div>
+
+                                        <ul class="dropdown__submenu">
+                                            <li>
+                                                <a href="Nisp.html" class="dropdown__sublink">
+                                                    <i class="ri-file-list-line"></i> MCE NISP POLICY
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="collab.html" class="dropdown__sublink">
+                                                    <i class="ri-cash-line"></i> Collaborations
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="Certificates.html" class="dropdown__sublink">
+                                                    <i class="ri-cash-line"></i> Certificates
+                                                </a>
+                                            </li>
+
+
+                                        </ul>
+                                    </li>
+
+
+                                    <li class="dropdown__subitem">
+                                        <div class="dropdown__link">
+                                            <i class="ri-bar-chart-line"></i> Members of ME-RIISE <i
+                                                class="ri-add-line dropdown__add"></i>
+                                        </div>
+
+                                        <ul class="dropdown__submenu">
+                                            <li>
+                                                <a href="index.html#boardofdirectorss" class="dropdown__sublink">
+                                                    <i class="ri-file-list-line"></i>Board of Directors
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="faculty.html" class="dropdown__sublink">
+                                                    <i class="ri-cash-line"></i> Faculty
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="team.html" class="dropdown__sublink">
+                                                    <i class="ri-refund-2-line"></i> Team ME-RIISE
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <!--=============== DROPDOWN SUBMENU ===============-->
+
+                                </ul>
+                            </li>
+
+                            <!--=============== DROPDOWN 1 ===============-->
+                            <li class="dropdown__item">
+                                <div class="nav__link">
+                                    Wings of ME-RIISE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                                </div>
+
+                                <ul class="dropdown__menu">
+                                    <li>
+                                        <a href="startups.html" class="dropdown__link">
+                                            <i class="ri-pie-chart-line"></i>Start Ups
+                                        </a>
+                                    </li>
+
+
+
+                                    <li>
+                                        <a href="iic.html" class="dropdown__link">
+                                            <i class="ri-pie-chart-line"></i>  MoE - IIC
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="nain.html" class="dropdown__link">
+                                            <i class="ri-arrow-up-down-line"></i> NAIN
+                                        </a>
+                                    </li>
+
+
+
+                                    <li>
+                                        <a href="uba.html" class="dropdown__link">
+                                            <i class="ri-arrow-up-down-line"></i> UBA
+                                        </a>
+                                    </li>
+
+
+                                    <!-- <li class="dropdown__subitem">
+                                  <div class="dropdown__link">
+                                      <i class="ri-bar-chart-line"></i> Documents <i
+                                          class="ri-add-line dropdown__add"></i>
+                                  </div>
+    
+                                  <ul class="dropdown__submenu">
+                                      <li>
+                                          <a href="#" class="dropdown__sublink">
+                                              <i class="ri-file-list-line"></i> MCE NISP POLICY
+                                          </a>
+                                      </li>
+    
+                                      <li>
+                                          <a href="#" class="dropdown__sublink">
+                                              <i class="ri-cash-line"></i> Collaborations
+                                          </a>
+                                      </li>
+    
+                                      <li>
+                                          <a href="#"   class="dropdown__sublink">
+                                              <i class="ri-refund-2-line"></i> Refunds
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </li> -->
+
+                                    <!--=============== DROPDOWN SUBMENU ===============-->
+                                    <li class="dropdown__subitem">
+                                        <div class="dropdown__link">
+                                            <i class="ri-bar-chart-line"></i> Pragyatha <i
+                                                class="ri-add-line dropdown__add"></i>
+                                        </div>
+
+                                        <ul class="dropdown__submenu">
+                                            <li>
+                                                <a href="https://pragyatha25.meriise.org/" class="dropdown__sublink">
+                                                    <i class="ri-file-list-line"></i>Pragyatha25
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__sublink">
+                                                    <i class="ri-file-list-line"></i> Pragyatha24
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#" class="dropdown__sublink">
+                                                    <i class="ri-file-list-line"></i> Pragyatha23
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__sublink">
+                                                    <i class="ri-file-list-line"></i> Pragyatha22
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__sublink">
+                                                    <i class="ri-file-list-line"></i> Pragyatha21
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li><a href="https://meriise-events.vercel.app/" class="nav__link">Events</a></li>
+                            <li><a href="#footer" class="nav__link">Contact Us</a></li>
+
+                            <!--=============== DROPDOWN 2 ===============-->
+
+
+                            <!-- <li><a href="#" class="nav__link">Contact Us</a></li> -->
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+
+
+        </div>
+
+
+
+        <div class="bg-blue-300">
+
+            <div class="p-10">
+                <p class="text-4xl lg:text-6xl text-center">New Age Innovation Network 2.0</p>
+            </div>
+            <div class="lg:p-10">
+
+ <!-- ------------------------------------Innovator to Entrepreneur: A Startup Readiness Session------------------ -->
+                <div style="text-align: justify;" class="text-sm m-6 rounded-2xl p-10 lg:p-10 bg-white">
+                    <div class="grid grid-cols-4 sm:grid-cols-4 lg:flex h-auto lg:h-[50vh] justify-around items-center overflow-hidden">
+                        <div class="h-auto lg:h-full w-full lg:w-1/2 flex justify-center p-2">
+                            <img class="h-auto lg:h-full w-full object-cover rounded-md lg:rounded-2xl" src="assets/NAIN/innovator1.jpg"
+                                alt="Innovator to Entrepreneur">
+                        </div>
+                        <div class="h-auto lg:h-full w-full lg:w-1/2 flex justify-center p-2">
+                            <img class="h-auto lg:h-full w-full object-cover rounded-md lg:rounded-2xl" src="assets/NAIN/innovator2.jpg"
+                                alt="Innovator to Entrepreneur">
+                        </div>
+                        <div class="h-auto lg:h-full w-full lg:w-1/2 flex justify-center p-2">
+                            <img class="h-auto lg:h-full w-full object-cover rounded-md lg:rounded-2xl" src="assets/NAIN/innovator3.jpg"
+                                alt="Innovator to Entrepreneur">
+                        </div>
+                        <div class="h-auto lg:h-full w-full lg:w-1/2 flex justify-center p-2">
+                            <img class="h-auto lg:h-full w-full object-cover rounded-md lg:rounded-2xl" src="assets/NAIN/innovator4.jpg"
+                                alt="Innovator to Entrepreneur">
+                        </div>
+                         <div class="h-auto lg:h-full w-full lg:w-1/2 flex justify-center p-2">
+                            <img class="h-auto lg:h-full w-full object-cover rounded-md lg:rounded-2xl" src="assets/NAIN/innovaor5.jpg"
+                                alt="Innovator to Entrepreneur">
+                        </div>
+                    </div>
+                    
+                    <br>
+                    <br>
+
+
+                     
+                    <div class="text-3xl ">
+                        <p>Innovator to Entrepreneur: A Startup Readiness Session</p>
+
+                    </div>
+                    <p class="text-xl">On 27th May 2025</p>
+                    <p>  ME-RIISE FOUNDATION successfully hosted – “Innovator to Entrepreneur: A Startup Readiness Session” 
+                    today at Malnad College of Engineering, Hassan, supported by NAIN 2.0 (New Age Innovation Network) and the
+                    Department of Electronics, IT, BT and S&T, Government of Karnataka.We were honored to have Sri. Ananth Ravi 
+                    and Mr. Chetan Shirnali with us for this impactful session, which focused on Raising Capital and Managing 
+                    Finance for innovators and aspiring entrepreneurs.Malnad College of Engineering proudly serves as the 
+                    Program Monitoring Partner (PMP) under the Rajiv Gandhi Entrepreneurship Program (RGEP). Four innovators 
+                    are actively working with us under this program, and they had the valuable opportunity to be mentored by 
+                    today’s experts.As part of the event, research internship certificates were also awarded to students who
+                    successfully completed their 15-week research internship.A big thank you to our speakers, innovators, and 
+                    participants for making the session highly engaging and insightful.</p>
+
+
+                </div>
+
+<!-- ------------------------------------Routing Hackathon with PCB------------------ -->
+                 <div style="text-align: justify;" class="text-sm m-6 rounded-2xl p-10 lg:p-10 bg-white">
+                    <div class="grid grid-cols-3 sm:grid-cols-3 lg:flex h-auto lg:h-[50vh] justify-around items-center overflow-hidden">
+                        <div class="h-auto lg:h-full w-full lg:w-1/2 flex justify-center p-2">
+                            <img class="h-auto lg:h-full w-full object-cover rounded-md lg:rounded-2xl" src="assets/NAIN/PCB.jpeg"
+                                alt="Expenditure & Clarification Meeting">
+                        </div>
+                        <div class="h-auto lg:h-full w-full lg:w-1/2 flex justify-center p-2">
+                            <img class="h-auto lg:h-full w-full object-cover rounded-md lg:rounded-2xl" src="assets/NAIN/PCB2.jpeg"
+                                alt="Expenditure & Clarification Meeting">
+                        </div>
+                         <div class="h-auto lg:h-full w-full lg:w-1/2 flex justify-center p-2">
+                            <img class="h-auto lg:h-full w-full object-cover rounded-md lg:rounded-2xl" src="assets/NAIN/PCB3.jpeg"
+                                alt="Expenditure & Clarification Meeting">
+                        </div>
+                    </div>
+                    
+                    <br>
+                    <br>
+                     
+                    <div class="text-3xl ">
+                         <p>Routing Hackathon with PCB </p>
+
+                    </div>
+                    <p class="text-xl">15th to 17th May, 2025</p>
+                    <p>  The ME-RIISE FOUNDATION, in collaboration with the Department of Electrical and Electronics 
+                        Engineering, Malnad College of Engineering, successfully organized a 3-day event titled “Routing 
+                        Hackathon with PCB” from 15th May 2025, under the New Age Innovation Network 2.0 (NAIN 2.0) 
+                        initiative.The hackathon provided a dynamic platform for students to engage in practical learning
+                        through PCB design and routing. Participants had the opportunity to apply their technical skills,
+                         develop innovative solutions, and gain hands-on experience in solving real-world engineering 
+                         challenges. The event also encouraged collaboration, creativity, and critical thinking—key 
+                         qualities for future innovators.The event was graced by esteemed dignitaries from MTES(R) and 
+                         MCE, who appreciated the initiative and motivated students to pursue innovation with purpose.</p>
+
+
+                </div>
+
+                <br>
+<!-- ------------------------------------WORKSHOP AT IIITB------------------ -->
+                <div style="text-align: justify;" class="text-sm m-6 rounded-2xl p-10 lg:p-10 bg-white">
+                    <div class="grid grid-cols-3 sm:grid-cols-3 lg:flex h-auto lg:h-[50vh] justify-around items-center overflow-hidden">
+                        <div class="h-auto lg:h-full w-full lg:w-1/2 flex justify-center p-2">
+                            <img class="h-auto lg:h-full w-full object-cover rounded-md lg:rounded-2xl" src="assets/NAIN/IIITB1.jpeg"
+                                alt="Expenditure & Clarification Meeting">
+                        </div>
+                        <div class="h-auto lg:h-full w-full lg:w-1/2 flex justify-center p-2">
+                            <img class="h-auto lg:h-full w-full object-cover rounded-md lg:rounded-2xl" src="assets/NAIN/IIITB2.jpeg"
+                                alt="Expenditure & Clarification Meeting">
+                        </div>
+                         <div class="h-auto lg:h-full w-full lg:w-1/2 flex justify-center p-2">
+                            <img class="h-auto lg:h-full w-full object-cover rounded-md lg:rounded-2xl" src="assets/NAIN/IIITB3.jpeg"
+                                alt="Expenditure & Clarification Meeting">
+                        </div>
+                    </div>
+                    
+                    <br>
+                    <br>
+                     
+                    <div class="text-3xl ">
+                         <p>Workshop on Patent Proficiency for Academic Innovators </p>
+
+                    </div>
+                    <p class="text-xl">9th May, 2025</p>
+                    <p>  A one-day workshop titled "Patent Proficiency for Academic Innovators" was organized at IIIT 
+                        Bangalore on 9th May, 2025 under the NAIN 2.0 programme. The inaugural session was graced by
+                         Mr. Nithin Chakki, KAS, Dr. Lakshmi Jagannathan, CEO, Innovation Centre, IIITB and the Director
+                          of IIITB. The session was led by Mr. Prakash Balekundri, an expert in intellectual property 
+                          and innovation strategy. The workshop aimed to enhance the understanding of patent filing 
+                          processes. Dr. Geetha Kiran A, College Coordinator, NAIN 2.0  along with Dr. Nanditha B R, 
+                          Dr. Madhu P, Dr. Mohana Lakshmi J, and Dr. Santhosh Kumar K B, participated in the workshop. 
+                          The hands-on sessions provided valuable insights into patent drafting, filing procedures, and 
+                          strategic approaches to intellectual property management. Interactive discussions and 
+                          practical exercises facilitated a deeper understanding of the complexities involved in patent 
+                          processes. The workshop concluded with a session on best practices for identifying patentable 
+                          projects and the importance of protecting innovative ideas in academia.</p>
+
+
+                </div>
+
+                <br>
+                <!-- ------------------------------------Concept to customer------------------ -->
+                <div style="text-align: justify;" class="text-sm m-6 rounded-2xl p-10 lg:p-10 bg-white">
+                    <div class="grid grid-cols-4 sm:grid-cols-4 lg:flex h-auto lg:h-[50vh] justify-around items-center overflow-hidden">
+                        <div class="h-auto lg:h-full w-full lg:w-1/2 flex justify-center p-2">
+                            <img class="h-auto lg:h-full w-full object-cover rounded-md lg:rounded-2xl" src="assets/NAIN/Concept to customer 1.jpeg"
+                                alt="Expenditure & Clarification Meeting">
+                        </div>
+                        <div class="h-auto lg:h-full w-full lg:w-1/2 flex justify-center p-2">
+                            <img class="h-auto lg:h-full w-full object-cover rounded-md lg:rounded-2xl" src="assets/NAIN/Concept to customer 2.jpeg"
+                                alt="Expenditure & Clarification Meeting">
+                        </div>
+                        <div class="h-auto lg:h-full w-full lg:w-1/2 flex justify-center p-2">
+                            <img class="h-auto lg:h-full w-full object-cover rounded-md lg:rounded-2xl" src="assets/NAIN/Concept to customer 3.jpeg"
+                                alt="Expenditure & Clarification Meeting">
+                        </div>
+                        <div class="h-auto lg:h-full w-full lg:w-1/2 flex justify-center p-2">
+                            <img class="h-auto lg:h-full w-full object-cover rounded-md lg:rounded-2xl" src="assets/NAIN/Concept to customer 4.jpeg"
+                                alt="Expenditure & Clarification Meeting">
+                        </div>
+                    </div>
+                    
+                    <br>
+                    <br>
+
+
+                     
+                    <div class="text-3xl ">
+                        <p>Workshop on Concept to Customer</p>
+
+                    </div>
+                    <p class="text-xl">On 28th March 2025</p>
+                    <p>  IIIT Bangalore conducted a workshop titled "Concept to Customer: Essential Startup Roadmap" 
+                        under the NAIN 2.0 initiative at Malnad College of Engineering (MCE), Hassan. Around 60 students
+                         participated, gaining insights into entrepreneurship, innovation, and startup development.
+                         The event began with a welcome by Dr. Geetha Kiran A, NAIN 2.0 Coordinator, followed by inaugural
+                         remarks from Dr. A. J. Krishnaiah, Principal, MCE, who highlighted the importance of startups. 
+                         Mr. D. B. Hemanth Kumar praised ME-RIISE FOUNDATION for fostering innovation.
+                        Dr. Lakshmi Jagannathan, CEO of IIITB Innovation Centre, shared key strategies on building 
+                        entrepreneurial mindset and the value of prototyping. Students created and presented business 
+                        models, receiving mentorship from the IIITB team. Selected NAIN 2.0 project teams also received 
+                        guidance on developing their Proof of Concepts (PoCs).The session was coordinated by Mr. Manu 
+                        Gowda and concluded with remarks by Dr. Siddharth Nayak, who emphasized the importance of 
+                        hands-on entrepreneurial training.</p>
+
+
+                </div>
+
+                <br>
+
+                <!-- ------------------------------------National Start Up Day------------------ -->
+                <div style="text-align: justify;" class="text-sm m-6 rounded-2xl p-10 lg:p-10 bg-white">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:flex h-auto lg:h-[50vh] justify-around items-center overflow-hidden">
+                        <div class="h-auto lg:h-full w-full lg:w-1/2 flex justify-center p-2">
+                            <img class="h-auto lg:h-full w-full object-cover rounded-md lg:rounded-2xl" src="assets/NAIN/ai.jpg"
+                                alt="Expenditure & Clarification Meeting">
+                        </div>
+                        <div class="h-auto lg:h-full w-full lg:w-1/2 flex justify-center p-2">
+                            <img class="h-auto lg:h-full w-full object-cover rounded-md lg:rounded-2xl" src="assets/NAIN/ai2.jpeg"
+                                alt="Expenditure & Clarification Meeting">
+                        </div>
+                    </div>
+                    
+                    <br>
+                    <br>
+
+
+                     
+                    <div class="text-3xl ">
+                        <p>Workshop on Visual AI Technology</p>
+
+                    </div>
+                    <p class="text-xl">4th March 2025</p>
+                    <p> Workshop on ‘Visual AI Technology’ was organized for Computer Science and allied branch students
+                        today at our institute in association with XenReality Technologies, Bengaluru.
+
+                        Zeba Khan, CEO of XenReality Technologies and Rishab Shivkumar, Head of Product at XenReality
+                        Technologies were the resource persons for this workshop.
+
+                        Vision AI technology can be used to analyze CCTV videos captured in retail stores and identify
+                        which products customers are most interested in buying, said Zeba Khan.
+
+                        She explained that, artificial intelligence is not just about chatbots like Chat GPT, but also
+                        includes other fields including Vision AI. Vision AI technology involves the process of
+                        analyzing, understanding and responding to visual data.</p>
+
+
+                </div>
+
+                <br>
+                
+
+
+
+                <!-- ------------------------------------National Start Up Day------------------ -->
+                <div style="text-align: justify;" class="text-sm m-6 rounded-2xl p-10 bg-white">
+                    <div class="bg-gray-200 h-[40vh] lg:h-[50vh] flex justify-center">
+                        <img src="assets/NAIN/startup1.jpg" alt="National Startup day">
+                    </div>
+                    <br>
+                    <br>
+                    <div class="text-3xl ">
+                        <p>National Startup day</p>
+
+                    </div>
+                    <p class="text-xl">17th January 2025</p>
+                    <p> Participants gained a
+                        clear understanding of the role of start-ups
+                        and entrepreneurship in driving innovation and economic growth.
+                        The event inspired participants to explore entreneurship as a career path, encouraging them to
+                        develop and implement innovative business solutions</p>
+
+
+                </div>
+
+
+                <!-- -----------------------------------Expenturdite------------------ -->
+                <br>
+                <!-- <div style="text-align: justify;" class="text-sm m-6 rounded-2xl p-10 bg-white">
+                    <div class="bg-gray-200 h-[40vh] lg:h-[50vh] flex justify-around">
+                        <img class="sm:m-5" src="assets/NAIN/expend1.jpg" alt="Expenditure & clarification meeting">
+                        <img class="sm:m-5" src="assets/NAIN/expend2.jpg" alt="Expenditure & clarification meeting">
+                    </div>
+                    <br>
+                    <br>
+                    <div class="text-3xl ">
+                        <p>Expenditure & clarification meeting</p>
+
+                    </div>
+                    <p class="text-xl">9th of January 2025</p>
+                    <p> Discussion on the utilization of OPEX grants
+                        Discussion on Utilization Certificate Preparation 
+                    </p>
+
+
+                </div> -->
+
+                <div style="text-align: justify;" class="text-sm m-6 rounded-2xl p-10 bg-white">
+                    <!-- Large Screens: Static Images -->
+                    <div class="hidden lg:flex bg-gray-200 h-[50vh] justify-around items-center overflow-hidden">
+                        <img class="object-contain h-full max-w-[45%]" src="assets/NAIN/expend1.jpg"
+                            alt="Expenditure & Clarification Meeting">
+                        <img class="object-contain h-full max-w-[45%]" src="assets/NAIN/expend2.jpg"
+                            alt="Expenditure & Clarification Meeting">
+                    </div>
+
+                    <!-- Small & Medium Screens: Image Slider -->
+                    <div class="lg:hidden relative w-full bg-gray-200 h-[40vh] sm:h-[50vh] overflow-hidden">
+                        <div id="slider"
+                            class="absolute top-0 left-0 w-full h-full flex transition-transform duration-700 ease-in-out">
+                            <div class="w-full h-full flex-shrink-0">
+                                <img class="w-full h-full object-cover" src="assets/NAIN/expend1.jpg"
+                                    alt="Expenditure & Clarification Meeting">
+                            </div>
+                            <div class="w-full h-full flex-shrink-0">
+                                <img class="w-full h-full object-cover" src="assets/NAIN/expend2.jpg"
+                                    alt="Expenditure & Clarification Meeting">
+                            </div>
+                        </div>
+                    </div>
+
+                    <br><br>
+                    <div class="text-3xl">
+                        <p>Expenditure & Clarification Meeting</p>
+                    </div>
+                    <p class="text-xl">9th of January 2025</p>
+                    <p>Discussion on the utilization of OPEX grants and Utilization Certificate Preparation.</p>
+                </div>
+
+                <script>
+                    // JavaScript for automatic image slider (works for small & medium screens)
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const slider = document.getElementById("slider");
+
+                        if (slider) {
+                            let index = 0;
+                            const totalSlides = slider.children.length;
+
+                            function moveSlider() {
+                                index = (index + 1) % totalSlides;
+                                slider.style.transform = `translateX(-${index * 100}%)`;
+                            }
+
+                            setInterval(moveSlider, 3000); // Change every 3 seconds
+                        }
+                    });
+                </script>
+
+
+
+
+
+
+                <!-- -----------------------------------Smorphy Challenge------------------ -->
+                <br>
+                <!-- <div style="text-align: justify;" class="text-sm m-6 rounded-2xl p-10 bg-white">
+                    <div class="bg-gray-200 h-[40vh] lg:h-[50vh] flex justify-around">
+                        <img class="sm:m-5" src="assets/NAIN/smorphi1.png" alt="Smorphi Imaginary">
+                        <img class="sm:m-5" src="assets/NAIN/smorphi2.png" alt="Smorphi Imaginary">
+                    </div>
+                    <br>
+                    <br>
+                    <div class="text-3xl ">
+                        <p>Smorphi Imaginary</p>
+
+                    </div>
+                    <p class="text-xl">On 9th January 2025
+                    </p>
+                    <p> MCE is hosted an innovation robotics challenge, Smorphi imaginary. This event aims to provide
+                        students with hands-on experienced in advanced robotics.
+                        <br>
+                        <b> Revanth Kumar G D</b> is the winner of the event.
+
+                    </p>
+
+
+                </div> -->
+
+                <div style="text-align: justify;" class="text-sm m-6 rounded-2xl p-10 bg-white">
+                    <!-- Large Screens: Static Images -->
+                    <div class="hidden lg:flex bg-gray-200 h-[50vh] justify-around items-center overflow-hidden">
+                        <img class="object-contain h-full max-w-[45%]" src="assets/NAIN/smorphi1.png"
+                            alt="Smorphi Imaginary">
+                        <img class="object-contain h-full max-w-[45%]" src="assets/NAIN/smorphi2.png"
+                            alt="Smorphi Imaginary">
+                    </div>
+
+                    <!-- Small & Medium Screens: Image Slider -->
+                    <div class="lg:hidden relative w-full bg-gray-200 h-[40vh] sm:h-[50vh] overflow-hidden">
+                        <div id="slider"
+                            class="absolute top-0 left-0 w-full h-full flex transition-transform duration-700 ease-in-out">
+                            <div class="w-full h-full flex-shrink-0">
+                                <img class="w-full h-full object-cover" src="assets/NAIN/smorphi1.png"
+                                    alt="Smorphi Imaginary">
+                            </div>
+                            <div class="w-full h-full flex-shrink-0">
+                                <img class="w-full h-full object-cover" src="assets/NAIN/smorphi2.png"
+                                    alt="Smorphi Imaginary">
+                            </div>
+                        </div>
+                    </div>
+
+                    <br><br>
+                    <div class="text-3xl">
+                        <p>Smorphi Imaginary</p>
+                    </div>
+                    <p class="text-xl">On 9th January 2025</p>
+                    <p>MCE hosted an innovation robotics challenge, Smorphi Imaginary. This event aims to provide
+                        students with hands-on experience in advanced robotics.</p>
+                    <br>
+                    <p><b>Revanth Kumar G D</b> is the winner of the event.</p>
+                </div>
+
+                <script>
+                    // JavaScript for automatic image slider (works for small & medium screens)
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const slider = document.getElementById("slider");
+
+                        if (slider) {
+                            let index = 0;
+                            const totalSlides = slider.children.length;
+
+                            function moveSlider() {
+                                index = (index + 1) % totalSlides;
+                                slider.style.transform = `translateX(-${index * 100}%)`;
+                            }
+
+                            setInterval(moveSlider, 3000); // Change every 3 seconds
+                        }
+                    });
+                </script>
+
+
+
+
+
+
+
+                <!-- -----------------------------------TiE Global Summit------------------ -->
+                <br>
+                <div style="text-align: justify;" class="text-sm m-6 rounded-2xl p-10 bg-white">
+                    <div class="bg-gray-200 h-[40vh] lg:h-[50vh] flex justify-center">
+                        <img src="assets/NAIN/global1.jpg" alt="TiE Global Summit">
+                    </div>
+                    <br>
+                    <br>
+                    <div class="text-3xl ">
+                        <p>TiE Global Summit</p>
+
+                    </div>
+                    <p class="text-xl">9 to 12 December
+                    </p>
+                    <p>The TIE Global Summit has announced its partnership with MCE as the Satellite Host College, with
+                        virtual sessions planned specifically for students. This initiative aims to extend the summit’s
+                        reach to the next generation of entrepreneurs. It highlights TIE’s ongoing commitment to
+                        nurturing a global entrepreneurial community, blending ancient wisdom with innovative business
+                        practices to empower future leaders.
+
+
+                    </p>
+
+
+                </div>
+
+
+
+
+                <!-- -----------------------------------Shortlisted Projects------------------ -->
+                <!-- <br>
+                <div style="text-align: justify;" class="text-sm m-6 rounded-2xl p-10 bg-white ">
+                    <div class="bg-gray-200 h-[40vh] lg:h-[50vh] flex flex-wrap justify-between">
+                        <img class="sm:m-5" src="assets/NAIN/eval1.jpg" alt="Shortlisted projects">
+                        <img  class="sm:m-5"src="assets/NAIN/eval3.jpg" alt="Shortlisted projects">
+                        <img  class="sm:m-5" src="assets/NAIN/eval2.jpg" alt="Shortlisted projects">
+                        <img  class="sm:m-5" src="assets/NAIN/eval4.jpg" alt="Shortlisted projects">
+                    </div>
+                    <br>
+                    <br>
+                    <div class="text-3xl ">
+                        <p>Evaluation of Shortlisted projects under NAIN 2.0 by PMU</p>
+
+                    </div>
+                    <p class="text-xl">On 7th November 2024
+
+                    </p>
+                    <p>Event conducted with 15 shortlisted team </p>
+
+
+                </div> -->
+
+                <br>
+                <div style="text-align: justify;" class="text-sm m-6 rounded-2xl p-10 bg-white">
+                    <!-- Large Screens: Static Images -->
+                    <div class="hidden lg:flex bg-gray-200 h-[40vh] lg:h-[50vh] flex-wrap justify-between">
+                        <img src="assets/NAIN/eval1.jpg" alt="Shortlisted projects">
+                        <img src="assets/NAIN/eval3.jpg" alt="Shortlisted projects">
+                        <img src="assets/NAIN/eval2.jpg" alt="Shortlisted projects">
+                        <img src="assets/NAIN/eval4.jpg" alt="Shortlisted projects">
+                    </div>
+
+                    <!-- Small & Medium Screens: Image Slider -->
+                    <div class="lg:hidden relative w-full bg-gray-200 h-[40vh] sm:h-[50vh] overflow-hidden">
+                        <div id="slider"
+                            class="absolute top-0 left-0 w-full h-full flex transition-transform duration-500 ease-in-out">
+                            <div class="w-full h-full flex-shrink-0">
+                                <img class="w-full h-full object-cover" src="assets/NAIN/eval1.jpg"
+                                    alt="Shortlisted projects">
+                            </div>
+                            <div class="w-full h-full flex-shrink-0">
+                                <img class="w-full h-full object-cover" src="assets/NAIN/eval3.jpg"
+                                    alt="Shortlisted projects">
+                            </div>
+                            <div class="w-full h-full flex-shrink-0">
+                                <img class="w-full h-full object-cover" src="assets/NAIN/eval2.jpg"
+                                    alt="Shortlisted projects">
+                            </div>
+                            <div class="w-full h-full flex-shrink-0">
+                                <img class="w-full h-full object-cover" src="assets/NAIN/eval4.jpg"
+                                    alt="Shortlisted projects">
+                            </div>
+                        </div>
+                    </div>
+
+                    <br><br>
+                    <div class="text-3xl">
+                        <p>Evaluation of Shortlisted projects under NAIN 2.0 by PMU</p>
+                    </div>
+                    <p class="text-xl">On 7th November 2024</p>
+                    <p>Event conducted with 15 shortlisted teams.</p>
+                </div>
+
+                <script>
+                    // JavaScript for automatic image slider
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const slider = document.getElementById("slider");
+                        let index = 0;
+                        const totalSlides = slider.children.length;
+
+                        setInterval(() => {
+                            index = (index + 1) % totalSlides;
+                            slider.style.transform = `translateX(-${index * 100}%)`;
+                        }, 3000); // Change every 3 seconds
+                    });
+                </script>
+
+
+
+                <!------------------- Innovate & Elevate – NAIN 2.0 Student Project Evaluation at NHI --------------------------->
+                <br>
+                <div style="text-align: justify;" class="text-sm m-6 rounded-2xl p-10 bg-white">
+                    <div class="bg-gray-200 h-[40vh] lg:h-[50vh] flex justify-center">
+                        <img src="assets/NAIN/innovate1.jpg" alt="Student Project Evaluation">
+                    </div>
+                    <br>
+                    <br>
+                    <div class="text-3xl ">
+                        <p>Innovate & Elevate – NAIN 2.0 Student Project Evaluation at NHI</p>
+
+                    </div>
+                    <p class="text-xl">3rd October, 2024
+
+                    </p>
+                    <p>The event was organized under the New Age Innovation Network 2.0 (NAIN 2.0), a flagship
+                        initiative by the Department of Electronics, IT, BT, Science & Technology, Government of
+                        Karnataka. A total of 26 student innovations were evaluated by a distinguished jury panel
+                        comprising experts from both industry and academia. As part of the NAIN 2.0 scheme, up to Rs. 5
+                        lakh in funding will be provided for the top 10 promising projects, offering support to help
+                        bring these innovations to life.
+                    </p>
+
+
+                </div>
+
+                <!------------------- Innovate & Elevate – NAIN 2.0 Student Project Evaluation at NHI --------------------------->
+                <br>
+                <!-- <div style="text-align: justify;" class="text-sm m-6 rounded-2xl p-10 bg-white">
+                    <div class="bg-gray-200 h-[40vh] lg:h-[50vh]  flex justify-around ">
+                        <img class="sm:m-5" src="assets/NAIN/meet1.jpg" alt="First Meeting of IIC">
+                        <img class="sm:m-5"  src="assets/NAIN/meet2.jpg" alt="First Meeting of IIC">
+                    </div>
+                    <br>
+                    <br>
+                    <div class="text-3xl ">
+                        <p>Meeting of the First Institution Level Innovation Council</p>
+
+                    </div>
+                    <p class="text-xl">On 30th of September 2024
+
+
+                    </p>
+                    <p>The event was organized under the New Age Innovation Network 2.0 (NAIN 2.0), a flagship
+                        initiative by the Department of Electronics, IT, BT, Science & Technology, Government of
+                        Karnataka. A total of 26 student innovations were evaluated by a distinguished jury panel
+                        comprising experts from both industry and academia. As part of the NAIN 2.0 scheme, up to Rs. 5
+                        lakh in funding will be provided for the top 10 promising projects, offering support to help
+                        bring these innovations to life.
+                    </p>
+
+
+                </div>  -->
+            </div>
+
+            <script>
+                // JavaScript for automatic image slider (only for small & medium screens)
+                document.addEventListener("DOMContentLoaded", function () {
+                    if (window.innerWidth < 1024) { // Only runs on small & medium screens
+                        const slider = document.getElementById("slider");
+                        let index = 0;
+                        const totalSlides = slider.children.length;
+
+                        function moveSlider() {
+                            index = (index + 1) % totalSlides;
+                            slider.style.transform = `translateX(-${index * 100}%)`;
+                        }
+
+                        setInterval(moveSlider, 3000); // Change every 3 seconds
+                    }
+                });
+            </script>
+
+
+
+
+
+
+        </div>
+        </div>
+
+        <footer id="footer" class="bg-black">
+            <div class="container1">
+                <ul class="icons">
+                    <li>
+                        <a href="#" class="icon fa-twitter"
+                            style="color: rgb(51, 183, 235);text-decoration: none;"><span
+                                class="label">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/mce.startup.club" class="icon fa-facebook"
+                            style="color: rgb(43, 43, 247);text-decoration: none;"><span
+                                class="label">Facebook</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/me_riise/" class="icon fa-instagram"
+                            style="color: rgb(250, 43, 112);;text-decoration:none"><span
+                                class="label">Instagram</span></a>
+                    </li>
+                    <li>
+                        <a href="mailto:meriisehsn@gmail.com" class="icon fa-envelope"
+                            style="color: rgb(228, 54, 11);text-decoration:none"><span class="label">Email</span></a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A72704849&keywords=me-riise%20foundation&origin=RICH_QUERY_SUGGESTION&position=0&searchId=a2da3c5d-f488-492f-9f3b-da0bce4973ef&sid=w7m&spellCorrectionEnabled=false   "
+                            class="icon fa-linkedin" style="color: rgb(255, 255, 255);text-decoration:none"><span
+                                class="label">Linkedin</span></a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="copyright">&copy; ME-RIISE FOUNDATION. All rights reserved.</div>
+            <div class="lg:grid grid-cols-3 cursor-pointer">
+                <div>
+                    <p class="text-white text-left text-2xl font-bold m-10">Contact Us Through</p>
+                    <p class="text-white text-left m-10"><a href="meriise.org">Dr Geetha Kiran A | CEO</a></p>
+                    <!-- <p class="text-white text-left m-10">Dr Geetha Kiran A</p> -->
+                    <p class="text-white text-left m-10"><a href="ceomeriise@mcehassan.ac.in">Email Us on :
+                            ceomeriise@mcehassan.ac.in</a></p>
+                    <p class="text-white text-left m-10"><a href="https://www.instagram.com/me_riise/">Follow Us on
+                            Instagram</a></p>
+                </div>
+                <div>
+                    <p class="text-white text-left text-2xl m-10 font-bold">Quick Links</p>
+                    <p class="text-white text-left m-10"><a href="infrastructure.html">Our Infrastructure</a></p>
+                    <p class="text-white text-left m-10"><a href="uba.html">UBA Visit</a></p>
+                    <p class="text-white text-left m-10"><a href="startups.html">Start Ups</a></p>
+                </div>
+
+
+                <div>
+                    <p class="text-white text-left text-2xl m-10 font-bold">Location:</p>
+
+                    <p class="text-white text-left m-10">About ME-RIISE Foundation</p>
+                    <!-- <p class="text-white text-left m-10">Address</p> -->
+                    <p class="text-white text-left m-10"><span class="font-bold">Address : <br></span>24F3+69J, Rangoli
+                        Halla,
+                        Malnad College of Engineering , Hassan, Karnataka 573201</p>
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+        </footer>
+
+
+        <script src="assets/NavbarCode/assets/js/main.js"></script>
+
+        </body>
+
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="assets/NavbarCode/assets/css/styles.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+<link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    /* 
+    .vision:hover {
+      background: linear-gradient(to right, rgb(129, 216, 228), rgb(154, 70, 223));
+    } */
+
+    body {
+        font-family: "Poppins", serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    .image-container {
+        display: flex;
+    }
+
+    .image-container img {
+        width: 400px;
+        /* Set your desired width */
+        height: 400px;
+        /* Set your desired height */
+        object-fit: cover;
+        /* Ensures that the images are not distorted */
+    }
+
+    .imp {
+        color: rgb(20, 141, 255);
+    }
+
+    .imp1 {
+        color: rgb(20, 141, 255);
+        font-size: 30px;
+
+    }
+
+    .bordering {
+        margin: 40px;
+        padding: 20px;
+        border-radius: 20px;
+        border: 5px solid rgb(39, 146, 247);
+    }
+
+    .snav-bar {
+        box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.4);
+        position: sticky;
+        top: 0;
+        width: 100%;
+        background: white;
+        /* Ensure the background is not transparent */
+        z-index: 1000;
+        /* Make sure it's above other elements */
+    }
+</style>
+
+<body>
+
+    <div class="snav-bar">
+        <header class="header">
+            <nav class="nav containerofNavbar">
+                <div class="nav__data">
+                    <a href="#" class="nav__logo">
+                        <img src="assets/MERIISE FOUNDATION logo 2.0.png" alt="" class="h-16">
+                    </a>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line nav__burger"></i>
+                        <i class="ri-close-line nav__close"></i>
+                    </div>
+                </div>
+
+                <!--=============== NAV MENU ===============-->
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li><a href="index.html" class="nav__link">Home</a></li>
+
+                        <li class="dropdown__item">
+                            <div class="nav__link">
+                                About ME-RIISE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                            </div>
+
+                            <ul class="dropdown__menu">
+                                <li>
+                                    <a href="aboutmeriise.html" class="dropdown__link">
+                                        <i class="ri-pie-chart-line"></i> ME-RIISE FOUNDATION
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="infrastructure.html" class="dropdown__link">
+                                        <i class="ri-pie-chart-line"></i> Infrastructure
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="ourAchivements.html" class="dropdown__link">
+                                        <i class="ri-arrow-up-down-line"></i> Achievements
+                                    </a>
+                                </li>
+
+
+                                <li class="dropdown__subitem">
+                                    <div class="dropdown__link">
+                                        <i class="ri-bar-chart-line"></i> Documents <i
+                                            class="ri-add-line dropdown__add"></i>
+                                    </div>
+
+                                    <ul class="dropdown__submenu">
+                                        <li>
+                                            <a href="Nisp.html" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i> MCE NISP POLICY
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="collab.html" class="dropdown__sublink">
+                                                <i class="ri-cash-line"></i> Collaborations
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="Certificates.html" class="dropdown__sublink">
+                                                <i class="ri-cash-line"></i> Certificates
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+
+
+                                <li class="dropdown__subitem">
+                                    <div class="dropdown__link">
+                                        <i class="ri-bar-chart-line"></i> Members of ME-RIISE <i
+                                            class="ri-add-line dropdown__add"></i>
+                                    </div>
+
+                                    <ul class="dropdown__submenu">
+                                        <li>
+                                            <a href="index.html#boardofdirectors" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i>Board of Directors
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="faculty.html" class="dropdown__sublink">
+                                                <i class="ri-cash-line"></i> Faculty
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="team.html" class="dropdown__sublink">
+                                                <i class="ri-refund-2-line"></i> Team ME-RIISE
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <!--=============== DROPDOWN SUBMENU ===============-->
+
+                            </ul>
+                        </li>
+
+                        <!--=============== DROPDOWN 1 ===============-->
+                        <li class="dropdown__item">
+                            <div class="nav__link">
+                                Wings of ME-RIISE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                            </div>
+
+                            <ul class="dropdown__menu">
+                                <li>
+                                    <a href="startups.html" class="dropdown__link">
+                                        <i class="ri-pie-chart-line"></i>Start Ups
+                                    </a>
+                                </li>
+
+
+
+                                <li>
+                                    <a href="iic.html" class="dropdown__link">
+                                        <i class="ri-pie-chart-line"></i>  MoE - IIC
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="nain.html" class="dropdown__link">
+                                        <i class="ri-arrow-up-down-line"></i> NAIN
+                                    </a>
+                                </li>
+
+
+
+                                <li>
+                                    <a href="uba.html" class="dropdown__link">
+                                        <i class="ri-arrow-up-down-line"></i> UBA
+                                    </a>
+                                </li>
+
+
+                                <!-- <li class="dropdown__subitem">
+                                    <div class="dropdown__link">
+                                        <i class="ri-bar-chart-line"></i> Documents <i
+                                            class="ri-add-line dropdown__add"></i>
+                                    </div>
+      
+                                    <ul class="dropdown__submenu">
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i> MCE NISP POLICY
+                                            </a>
+                                        </li>
+      
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-cash-line"></i> Collaborations
+                                            </a>
+                                        </li>
+      
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-refund-2-line"></i> Refunds
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li> -->
+
+                                <!--=============== DROPDOWN SUBMENU ===============-->
+                                <li class="dropdown__subitem">
+                                    <div class="dropdown__link">
+                                        <i class="ri-bar-chart-line"></i> Pragyatha <i
+                                            class="ri-add-line dropdown__add"></i>
+                                    </div>
+
+                                    <ul class="dropdown__submenu">
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i> Pragyatha24
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i> Pragyatha23
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i> Pragyatha22
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__sublink">
+                                                <i class="ri-file-list-line"></i> Pragyatha21
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li><a href="https://meriise-events.vercel.app/" class="nav__link">Events</a></li>
+                        <li><a href="#footer" class="nav__link">Contact Us</a></li>
+
+                        <!--=============== DROPDOWN 2 ===============-->
+
+
+                        <!-- <li><a href="#" class="nav__link">Contact Us</a></li> -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <div class="p-1 lg:p-4 bg-blue-100">
+        <div class="p-10">
+            <p class="text-4xl lg:text-6xl text-center">EduTechsphere</p>
+        </div>
+        <div class="container mx-auto p-4">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <h2 class="text-3xl font-bold mb-4">Founder</h2>
+                <!-- <p class="text-xl mb-2">EduTechSphere</p> -->
+                <p class="text-xl mb-4">Mohammed Fahad Khan</p>
+                <p class="text-lg font-semibold">Executive Lead ME-RIISE FOUNDATION (2024-2025)</p>
+                <p class="text-lg italic my-4">MOTTO - "We Teach to Learn, Share to Grow."</p>
+
+                <p class="mb-6">"EduTechSphere was founded with the goal of developing essential skills among
+                    individuals, fostering a culture of continuous learning, and promoting the sharing of knowledge to
+                    empower growth and innovation."</p>
+
+
+                <div class="flex items-center justify-center">
+                    <img src="assets/EdutechSphere/FahadEdutechSphere.jfif" alt="Centered Image"
+                        class="max-w-full h-[45vh] rounded-2xl">
+                </div>
+
+                <div class="text-left mt-6 border-2 p-4 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-2">Vision:</h3>
+                    <p class="mb-4">"To lead the way in skill development through technology-driven education,
+                        empowering individuals and institutions with hands-on learning that drives innovation and
+                        practical expertise."</p>
+
+                    <h3 class="text-2xl font-bold mb-2">Mission:</h3>
+                    <p>"At EduTechSphere, we are committed to continuous learning, skill development, and knowledge
+                        sharing. Our mission is to help individuals and organizations enhance their technical
+                        capabilities through immersive, hands-on sessions and real-world applications."</p>
+                </div>
+
+                <br>
+
+                <div class="text-left mt-8 p-4 rounded-2xl">
+
+                    <div class="container p-4">
+                        <div class="md:grid grid-cols-2 gap-6 lg:gap-4">
+                            <div class="flex justify-center items-center lg:p-6">
+                                <img src="assets/EdutechSphere/WhatsApp Image 2025-02-12 at 10.46.43 AM.jpeg"
+                                    alt="Image 1" class="w-full h-auto object-cover rounded-2xl m-6">
+                            </div>
+
+                            <div class="flex justify-center items-center lg:p-6r">
+                                <img src="assets/EdutechSphere/6.jpeg" alt="Image 2"
+                                    class="w-full h-auto object-cover rounded-2xl m-6">
+                            </div>
+
+                            <div class="flex justify-center items-center lg:p-6">
+                                <img src="assets/EdutechSphere/WhatsApp Image 2025-02-12 at 10.46.50 AM.jpeg"
+                                    alt="Image 3" class="w-full h-auto object-cover rounded-2xl m-6">
+                            </div>
+
+                            <div class="flex justify-center items-center lg:p-6">
+                                <img src="assets/EdutechSphere/WhatsApp Image 2025-02-12 at 10.46.51 AM.jpeg"
+                                    alt="Image 4" class="w-full h-auto object-cover rounded-2xl m-6">
+                            </div>
+                            <br>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="grid grid-cols-2">
+            <div class="h-[50vh] bg-gray-400 m-10 rounded-2xl"></div>
+            <div class="h-[50vh] bg-gray-400 m-10 rounded-2xl"></div>
+        </div> -->
+        </div>
+        <!-- <div class="h-[100vh] bg-pink-500"></div> -->
+
+</body>
+
+</html>

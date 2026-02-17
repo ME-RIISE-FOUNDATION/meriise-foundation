@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+
+
+
+<html>
+
+<head>
+  <title>ME-RIISE</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <!-- from the other one 
+			<link rel="stylesheet" href="assets/css/from/skel.css" />-->
+  <!--<link rel="stylesheet" href="assets/css/from/style.css" />-->
+  <!--<link rel="stylesheet" href="assets/css/from/style-xlarge.css" />-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+  <!-- bootstrap 4 css -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!-- fontawesome cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
+    integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
+    crossorigin="anonymous"></script>
+
+  <!-- custom css -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="assets/css/newcss.css">
+
+  <link rel="stylesheet" href="assets/NavbarCode/assets/css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    /* 
+    .vision:hover {
+      background: linear-gradient(to right, rgb(129, 216, 228), rgb(154, 70, 223));
+    } */
+
+    body {
+      font-family: "Poppins", serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    header {
+      box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.4);
+    }
+
+    .bordering {
+      padding: 20px;
+      border-radius: 20px;
+      border: 5px solid rgb(39, 146, 247);
+    }
+  </style>
+
+</head>
+
+<body data-gr-c-s-loaded="true" class="vsc-initialized" style="user-select: auto">
+
+
+  <div class="snav-bar" style="background-color: black;">
+    <header class="header">
+      <nav class="nav containerofNavbar">
+        <div class="nav__data">
+          <a href="#" class="nav__logo">
+            <img src="assets/MERIISE FOUNDATION logo 2.0.png" alt="" class="h-16">
+          </a>
+
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__burger"></i>
+            <i class="ri-close-line nav__close"></i>
+          </div>
+        </div>
+
+        <!--=============== NAV MENU ===============-->
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link">Home</a></li>
+
+            <li class="dropdown__item">
+              <div class="nav__link">
+                About ME-RIISE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="aboutmeriise.html" class="dropdown__link">
+                    <i class="ri-pie-chart-line"></i> ME-RIISE FOUNDATION
+                  </a>
+                </li>
+
+
+                <li>
+                  <a href="infrastructure.html" class="dropdown__link">
+                    <i class="ri-pie-chart-line"></i> Infrastructure
+                  </a>
+                </li>
+
+
+                <li>
+                  <a href="ourAchivements.html" class="dropdown__link">
+                    <i class="ri-arrow-up-down-line"></i> Achievements
+                  </a>
+                </li>
+
+
+                <li class="dropdown__subitem">
+                  <div class="dropdown__link">
+                    <i class="ri-bar-chart-line"></i> Documents <i class="ri-add-line dropdown__add"></i>
+                  </div>
+
+                  <ul class="dropdown__submenu">
+                    <li>
+                      <a href="Nisp.html" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i> MCE NISP POLICY
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="collab.html" class="dropdown__sublink">
+                        <i class="ri-cash-line"></i> Collaborations
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="Certificates.html" class="dropdown__sublink">
+                        <i class="ri-cash-line"></i> Certificates
+                      </a>
+                    </li>
+
+
+                  </ul>
+                </li>
+
+
+                <li class="dropdown__subitem">
+                  <div class="dropdown__link">
+                    <i class="ri-bar-chart-line"></i> Members of ME-RIISE <i class="ri-add-line dropdown__add"></i>
+                  </div>
+
+                  <ul class="dropdown__submenu">
+                    <li>
+                      <a href="#" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i>Board of Directors
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="faculty.html" class="dropdown__sublink">
+                        <i class="ri-cash-line"></i> Faculty
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="team.html" class="dropdown__sublink">
+                        <i class="ri-refund-2-line"></i> Team ME-RIISE
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <!--=============== DROPDOWN SUBMENU ===============-->
+
+              </ul>
+            </li>
+
+            <!--=============== DROPDOWN 1 ===============-->
+            <li class="dropdown__item">
+              <div class="nav__link">
+                Wings of ME-RIISE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="startups.html" class="dropdown__link">
+                    <i class="ri-pie-chart-line"></i>Start Ups
+                  </a>
+                </li>
+
+
+
+                <li>
+                  <a href="iic.html" class="dropdown__link">
+                    <i class="ri-pie-chart-line"></i> MoE
+                  </a>
+                </li>
+
+                <li>
+                  <a href="nain.html" class="dropdown__link">
+                    <i class="ri-arrow-up-down-line"></i> NAIN
+                  </a>
+                </li>
+
+
+
+                <li>
+                  <a href="uba.html" class="dropdown__link">
+                    <i class="ri-arrow-up-down-line"></i> UBA
+                  </a>
+                </li>
+
+
+                <!-- <li class="dropdown__subitem">
+                              <div class="dropdown__link">
+                                  <i class="ri-bar-chart-line"></i> Documents <i
+                                      class="ri-add-line dropdown__add"></i>
+                              </div>
+
+                              <ul class="dropdown__submenu">
+                                  <li>
+                                      <a href="#" class="dropdown__sublink">
+                                          <i class="ri-file-list-line"></i> MCE NISP POLICY
+                                      </a>
+                                  </li>
+
+                                  <li>
+                                      <a href="#" class="dropdown__sublink">
+                                          <i class="ri-cash-line"></i> Collaborations
+                                      </a>
+                                  </li>
+
+                                  <li>
+                                      <a href="#" class="dropdown__sublink">
+                                          <i class="ri-refund-2-line"></i> Refunds
+                                      </a>
+                                  </li>
+                              </ul>
+                          </li> -->
+
+                <!--=============== DROPDOWN SUBMENU ===============-->
+                <li class="dropdown__subitem">
+                  <div class="dropdown__link">
+                    <i class="ri-bar-chart-line"></i> Pragyatha <i class="ri-add-line dropdown__add"></i>
+                  </div>
+
+                  <ul class="dropdown__submenu">
+                    <li>
+                      <a href="#" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i> Pragyatha24
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i> Pragyatha23
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i> Pragyatha22
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i> Pragyatha21
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li><a href="https://meriise-events.vercel.app/" class="nav__link">Events</a></li>
+            <li><a href="#" class="nav__link">Contact Us</a></li>
+
+            <!--=============== DROPDOWN 2 ===============-->
+
+
+            <!-- <li><a href="#" class="nav__link">Contact Us</a></li> -->
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </div>
+
+
+
+
+
+
+
+  <section id="two" class="wrapper style2">
+    <div class="inner ">
+      <div class="box ">
+        <div class="content  ">
+
+          <!-- <div class=" ">
+            <h2 style="padding-bottom: 10px;color:blue;text-shadow: 1px 1px 1px rgb(43, 43, 247);font-size: 35px;">
+              TECH@10</h2>
+
+          </div> -->
+          <div>
+            <p class="text-[100px] text-center">TECH@10</p>
+          </div>
+          <br>
+
+
+
+          <!-- <div class="a pb-2 pt-5 mb-5 mt-3 pr-3 pl-2 vision " style="box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);">
+
+            <h3 style="font-size: 26px;" class="pl-1 "><b style="color: blue;">GOAL</b></h3>
+
+            <p style="font-size: 16px;" class="pl-1"> It was started by Likith.H.N, president of ME-RIISE in the year
+              2019.</p>
+
+            <div class="row ">
+              <div class="col-md-12 align-center">
+                <img src="img/tech7.jpg" alt="" class="img-fluid   pb-3 w-50">
+              </div>
+
+
+            </div>
+            <p style="font-size: 16px;" class="pl-1"> It was started with only goal of teaching the budding engineers
+              move towards their destination and improving our knowledge in the course of teaching.
+            </p>
+            <p style="font-size: 16px;" class="pl-1">Tech@10 is a new platform for budding engineers to learn skills
+              like
+            <p style="margin-top: -20px;font-size: 16px;">1. Programming in different languages.</p>
+            <p style="margin-top: -20px;font-size: 16px;">2. Developing apps.</p>
+            <p style="margin-top: -20px;font-size: 16px;">3. Embedded electronics.</p>
+            <p style="margin-top: -20px;font-size: 16px;">4. IOT</p>
+
+
+            </p>
+            <div class="row ">
+              <div class="col-md-12 align-center">
+                <img src="img/tech6.jpg" alt="" class="img-fluid   pb-3 w-50">
+              </div>
+            </div>
+            <h3 style="font-size: 26px;" class=" pl-1 text-center"><b style="color: blue;">MOTTO</b></h3>
+
+            <p style="font-size: 16px;" class="pl-1 text-center"> "We teach to learn"
+            </p>
+            <div class="row ">
+              <div class="col-md-12 align-center">
+                <img src="img/tech2.jpg" alt="" class="img-fluid   pb-3 w-50">
+              </div>
+            </div>
+            <br>
+          </div> -->
+
+          <div class="goalsection">
+            <p class="text-4xl">Goal</p>
+            <p class="name text-2xl"> It was started by Likith.H.N, president of ME-RIISE in the year
+              2019</p>
+            <div class="my-10 flex justify-center items-center">
+              <img src="img/tech7.jpg" alt="" class="rounded-3xl">
+            </div>
+
+            <div class="bg-blue-400 p-10 rounded-2xl text-xl">
+              <p> It was started with only goal of teaching the budding engineers
+                move towards their destination and improving our knowledge in the course of teaching.</p>
+            </div>
+            <br>
+            <div class="bg-blue-400 p-10 rounded-2xl">
+              <p class="text-xl"> Tech@10 is a new platform for budding engineers to learn skills
+                like.</p>
+              <br>
+              <br>
+              <p class="p-4 bg-white rounded-2xl text-md">01. Programming in different Languages</p>
+              <br>
+              <p class="p-4 bg-white rounded-2xl text-md">02. Developing Apps</p>
+              <br>
+              <p class="p-4 bg-white rounded-2xl text-md">03. Embedded Electronics</p>
+              <br>
+              <p class="p-4 bg-white rounded-2xl text-md">04. Internet of Things</p>
+              <br>
+
+            </div>
+            <div class="lg:grid grid-cols-2">
+              <div class="m-10">
+                <img src="img/tech6.jpg" alt="" class="rounded-2xl h-[72vh]">
+
+              </div>
+              <div class="m-10">
+                <img src="img/tech2.jpg" alt="" class="rounded-2xl">
+                <br>
+                <img src="img/tech3.jpg" alt="" class="rounded-2xl">
+
+              </div>
+            </div>
+
+            <div>
+              <p class="text-6xl text-center m-4">MOTTO</p>
+              <p class="text-xl text-center">"We teach to Learn"</p>
+            </div>
+          </div>
+          <!-- <img src="img/tech4.jpg" alt=""> -->
+
+          <br>
+          <br>
+          <br>
+          <div class="bg-blue-400 p-10 rounded-2xl">
+            <p class="text-4xl"> Till now</p>
+            <br>
+            <br>
+            <p class="p-4 bg-white rounded-2xl text-md">Total Sessions - 5</p>
+            <br>
+            <p class="p-4 bg-white rounded-2xl text-md">Total Attendees - 96</p>
+            <br>
+            <p class="p-4 bg-white rounded-2xl text-md">Average Attendees per session - 19</p>
+            <br>
+            <p class="p-4 bg-white rounded-2xl text-md">Profit - 960 rupees</p>
+            <br>
+
+          </div>
+
+
+          <br>
+          <br>
+          <div class="bg-blue-400 p-10 rounded-2xl">
+            <p class="text-4xl"> Work done</p>
+            <br>
+            <br>
+            <p class="p-4 bg-white rounded-2xl text-md">Conducted Workshops for government school students at
+              Bhuvanahalli..</p>
+            <br>
+            <p class="p-4 bg-white rounded-2xl text-md">Conducted crash course for 1st year </p>
+            <br>
+
+
+
+          </div>
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <div>
+            <p class="text-6xl">Testimonials</p>
+            <br>
+            <div class="bordering text-lg">
+              "I'm Shashikumar. I have
+              attended the sessions of C programming and internship of IOT and App development in Tech@10. The
+              whole idea of Tech@10 is very new. They charge only Rs 10 per session which is cheap. It is
+              useful for most of the students. We had a subject regarding C in our 2nd semester. So those
+              sessions helped me alot to understand C programming very well. The concept of IOT was new to me
+              and tech@10 made me understand very easily. The way they teach will be very approaching. They
+              make the topics very clear by giving examples, slides and many more. My personal suggestion is
+              attend 1 session, then definitely you are going to attend every sessions.
+              "
+              <p class="float-right">- Shashikumar, CS 3rd year</p>
+            </div>
+
+            <br>
+            <div class="bordering text-lg">
+              ""Hello Everyone, My name is
+              Varshini. As a student of Malnad College of engineering, I have found the best platform to learn
+              technology based things. I have never seen such a great learning platform before which provide
+              you the technical knowledge just @ Rs. 10 . They are also providing various courses like app
+              development, Java, python etc as an internship to you which will help you in your career. Mr.
+              Likith, as a founder of Tech@10 with his innovative ideas doing a great job and I really like to
+              thank him for giving me a great opportunity and very good experience which will definitely help
+              me in my career.
+              Thank you Tech@10. Have a great Success in future!
+              "
+              <p class="float-right">- Varshini, IS 3rd year</p>
+            </div>
+
+            <br>
+            <div class="bordering text-lg p-10">
+              "My Tech@10 experience is
+              awesome.I have learned many things about home automation,arduino,nodemcu and IoT based projects
+              on the 10 days program Home Automation Internship conducted by Tech@10.Likhith who conducted the
+              program taught us all the concept nicely."
+              <p class="float-right">- Mahendra, CS 3rd year</p>
+            </div>
+          </div>
+
+
+
+          <!-- 
+          <div class="a pb-2 pt-5 mb-5 mt-3 pr-3 pl-2 vision" style="box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);">
+
+            <h3 style="font-size: 26px;padding-left: 9px;"><b style="color: blue;">Till now</b></h3>
+
+
+
+            <p style="font-size: 16px;margin-left: -20px;"> Total sessions - 5</p>
+            <p style="margin-top: -20px;font-size: 16px;margin-left: -20px;"> Total attendees - 96</p>
+
+            <p style="margin-top: -20px;font-size: 16px;margin-left: -20px;"> Average attendees per session - 19</p>
+
+            <p style="margin-top: -20px;font-size: 16px;margin-left: -20px;"> Profit - 960 rupees</p>
+
+
+          </div> -->
+          <!-- 
+          <div class="a pb-2 pt-5 mb-5 mt-3 pr-3 pl-2 vision" style="box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);">
+            <h3 style="font-size: 26px;padding-left: 9px;" class="pl-1 "><b style="color: blue;">WORK DONE</b></h3>
+
+            <p style="font-size: 16px;padding-left: 9px;" class="">They have</p>
+
+            <p style="margin-top: -20px;font-size: 16px;margin-left: -20px;">1. Conducted workshop for government school
+              students at Bhuvanahalli.</p>
+            <p style="margin-top: -20px;font-size: 16px;margin-left: -20px;">2. Conducted crash course for 1st year
+              students on "Overview of Motorcycle" and "Build your Website".</p>
+            <div class="row ">
+              <div class="col-md-6 align-center">
+                <img src="img/tech3.jpg" alt="" class="img-fluid   pb-3 w-50">
+              </div>
+              <div class="col-md-6 align-center">
+                <img src="img/tech4.jpg" alt="" class="img-fluid   pb-3 w-50">
+              </div>
+            </div>
+            <br>
+          </div> -->
+
+          <div class="container-fluid mb-5 pb-4 bg-white">
+            <section id="share" class=" text-white">
+
+              <!-- <div class="row">
+                <div class="col mt-5">
+                  <h2><b class="display-5 " style="color: blue;">Testimonials</b></h2>
+
+                  <div class="card mb-4 mt-3 " style="box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);">
+                    <div class="card-body bg-light ">
+                      <p class="card-text pt-2" style="font-size: 15px;margin-left: -25px;">"I'm Shashikumar. I have
+                        attended the sessions of C programming and internship of IOT and App development in Tech@10. The
+                        whole idea of Tech@10 is very new. They charge only Rs 10 per session which is cheap. It is
+                        useful for most of the students. We had a subject regarding C in our 2nd semester. So those
+                        sessions helped me alot to understand C programming very well. The concept of IOT was new to me
+                        and tech@10 made me understand very easily. The way they teach will be very approaching. They
+                        make the topics very clear by giving examples, slides and many more. My personal suggestion is
+                        attend 1 session, then definitely you are going to attend every sessions.
+                        "</p>
+                      <p class="float-right">- Shashikumar, CS 3rd year</p>
+                    </div>
+                  </div>
+                  <div class="card mb-4" style="box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);">
+                    <div class="card-body bg-light">
+                      <p class="card-text" style="font-size: 15px;margin-left: -25px;">"Hello Everyone, My name is
+                        Varshini. As a student of Malnad College of engineering, I have found the best platform to learn
+                        technology based things. I have never seen such a great learning platform before which provide
+                        you the technical knowledge just @ Rs. 10 . They are also providing various courses like app
+                        development, Java, python etc as an internship to you which will help you in your career. Mr.
+                        Likith, as a founder of Tech@10 with his innovative ideas doing a great job and I really like to
+                        thank him for giving me a great opportunity and very good experience which will definitely help
+                        me in my career.
+                        Thank you Tech@10. Have a great Success in future!
+                        "</p>
+                      <p class="float-right">- Varshini, IS 3rd year</p>
+
+                    </div>
+                  </div>
+                  <div class="card" style="box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);">
+                    <div class="card-body bg-light">
+                      <p class="card-text" style="font-size: 15px;margin-left: -25px;">"My Tech@10 experience is
+                        awesome.I have learned many things about home automation,arduino,nodemcu and IoT based projects
+                        on the 10 days program Home Automation Internship conducted by Tech@10.Likhith who conducted the
+                        program taught us all the concept nicely."</p>
+                      <p class="float-right">- Mahendra, CS 3rd year</p>
+
+                    </div>
+                  </div>
+                </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+
+
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <ul class="icons">
+        <li>
+          <a href="#" class="icon fa-twitter" style="color: rgb(51, 183, 235);text-decoration: none;"><span
+              class="label">Twitter</span></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mce.startup.club" class="icon fa-facebook"
+            style="color: rgb(43, 43, 247);text-decoration: none;"><span class="label">Facebook</span></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/me_riise/" class="icon fa-instagram"
+            style="color: rgb(250, 43, 112);;text-decoration:none"><span class="label">Instagram</span></a>
+        </li>
+        <li>
+          <a href="mailto:meriisehsn@gmail.com" class="icon fa-envelope"
+            style="color: rgb(228, 54, 11);text-decoration:none"><span class="label">Email</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="copyright">
+      © Developers Community. All rights reserved.
+    </div>
+  </footer>
+
+
+
+
+</body>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<!--<script src="assets/js/from/jquery.min.js"></script>
+        <script src="assets/js/from/skel.min.js"></script>
+        <script src="assets/js/from/skel-layers.min.js"></script>
+        <script src="assets/js/from/init.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+<!-- custom script -->
+<script src="js/script.js"></script>
+
+
+
+</html>
