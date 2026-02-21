@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Call for Quotations</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Main CSS Files (Same as Achievements Page) -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/newcss.css" />
+  <link rel="stylesheet" href="assets/NavbarCode/assets/css/styles.css" />
+
+  <!-- Icons -->
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- Font -->
+  <style>
+    body {
+      font-family: "Poppins", serif;
+    }
+
+    header {
+      box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.4);
+    }
+
+    /* ===== Call for Quotations Section ===== */
+    .quotation-section {
+      background: #f9fafb; /* Light gray background */
+      padding: 60px 20px;
+      min-height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .quotation-card {
+      background: #ffffff; /* White background for the card */
+      max-width: 800px;
+      width: 100%;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .quotation-card h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1f2937; /* Dark gray text */
+      margin-bottom: 20px;
+    }
+
+    .quotation-card p {
+      font-size: 1.125rem;
+      color: #6b7280; /* Medium gray text */
+      margin-bottom: 30px;
+    }
+
+    .quotation-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .quotation-card li {
+      margin-bottom: 15px;
+    }
+
+    .quotation-card a {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #1f2937; /* Dark gray background */
+      color: #ffffff; /* White text */
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .quotation-card a:hover {
+      background-color: #2563eb; /* Blue on hover */
+      transform: translateY(-3px); /* Slight lift effect */
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR (Exact Copy) ================= -->
+<div class="snav-bar" style="background-color: black">
+  <header class="header">
+    <nav class="nav containerofNavbar">
+      <div class="nav__data">
+        <a href="#" class="nav__logo">
+          <img src="assets/MERIISE FOUNDATION logo 2.0.png" alt="" class="h-16" />
+        </a>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__burger"></i>
+          <i class="ri-close-line nav__close"></i>
+        </div>
+      </div>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+
+          <li><a href="index.html" class="nav__link">Home</a></li>
+
+          <li class="dropdown__item">
+            <div class="nav__link">
+              About ME-RIISE
+              <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+
+            <ul class="dropdown__menu">
+              <li><a href="aboutmeriise.html" class="dropdown__link"><i class="ri-pie-chart-line"></i> ME-RIISE FOUNDATION</a></li>
+              <li><a href="infrastructure.html" class="dropdown__link"><i class="ri-pie-chart-line"></i> Infrastructure</a></li>
+              <li><a href="ourAchivements.html" class="dropdown__link"><i class="ri-arrow-up-down-line"></i> Achievements</a></li>
+
+              <li class="dropdown__subitem">
+                <div class="dropdown__link">
+                  <i class="ri-bar-chart-line"></i> Documents
+                  <i class="ri-add-line dropdown__add"></i>
+                </div>
+                <ul class="dropdown__submenu">
+                  <li><a href="Nisp.html" class="dropdown__sublink"><i class="ri-file-list-line"></i> MCE NISP POLICY</a></li>
+                  <li><a href="collab.html" class="dropdown__sublink"><i class="ri-cash-line"></i> Collaborations</a></li>
+                  <li><a href="Certificates.html" class="dropdown__sublink"><i class="ri-cash-line"></i> Certificates</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown__subitem">
+                <div class="dropdown__link">
+                  <i class="ri-bar-chart-line"></i> Members of ME-RIISE
+                  <i class="ri-add-line dropdown__add"></i>
+                </div>
+                <ul class="dropdown__submenu">
+                  <li><a href="index.html#boardofdirectors" class="dropdown__sublink"><i class="ri-file-list-line"></i> Board of Directors</a></li>
+                  <li><a href="faculty.html" class="dropdown__sublink"><i class="ri-cash-line"></i> Faculty</a></li>
+                  <li><a href="team.html" class="dropdown__sublink"><i class="ri-refund-2-line"></i> Team ME-RIISE</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown__item">
+            <div class="nav__link">
+              Wings of ME-RIISE
+              <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <ul class="dropdown__menu">
+              <li><a href="startups.html" class="dropdown__link"><i class="ri-pie-chart-line"></i> Start Ups</a></li>
+              <li><a href="iic.html" class="dropdown__link"><i class="ri-pie-chart-line"></i> MoE - IIC</a></li>
+              <li><a href="nain.html" class="dropdown__link"><i class="ri-arrow-up-down-line"></i> NAIN</a></li>
+              <li><a href="uba.html" class="dropdown__link"><i class="ri-arrow-up-down-line"></i> UBA</a></li>
+              <li><a href="rgep.html" class="dropdown__link"><i class="ri-arrow-up-down-line"></i> RGEP</a></li>
+
+              <li class="dropdown__subitem">
+                <div class="dropdown__link">
+                  <i class="ri-bar-chart-line"></i> Pragyatha
+                  <i class="ri-add-line dropdown__add"></i>
+                </div>
+                <ul class="dropdown__submenu">
+                  <li><a href="https://pragyatha25.meriise.org/" class="dropdown__sublink"><i class="ri-file-list-line"></i> Pragyatha25</a></li>
+                  <li><a href="https://pragyatha24.meriise.org/" class="dropdown__sublink"><i class="ri-file-list-line"></i> Pragyatha24</a></li>
+                  <li><a href="pragyatha23.html" class="dropdown__sublink"><i class="ri-file-list-line"></i> Pragyatha23</a></li>
+                  <li><a href="pragyatha22.html" class="dropdown__sublink"><i class="ri-file-list-line"></i> Pragyatha22</a></li>
+                  <li><a href="Pragyatha21.html" class="dropdown__sublink"><i class="ri-file-list-line"></i> Pragyatha21</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="https://meriise-events.vercel.app/" class="nav__link">Events</a></li>
+
+          <li class="dropdown__item">
+            <div class="nav__link">
+              TBI-MCE
+              <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <ul class="dropdown__menu">
+              <li><a href="tbi.html" class="dropdown__link"><i class="ri-pie-chart-line"></i> About TBI</a></li>
+              <li><a href="openPosition.html" class="dropdown__link"><i class="ri-pie-chart-line"></i> Open Positions</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#footer" class="nav__link">Contact Us</a></li>
+
+        </ul>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<!-- ================= CONTENT ================= -->
+<section class="quotation-section">
+  <div class="quotation-card">
+    <h1>Call for Quotations</h1>
+    <p class="text-center text-gray-600">
+      Please find the documents below. Click on the links to download:
+    </p>
+    <ul>
+      <li><a href="documents/CallforquotationsDell.pdf" download>Download Quotation Document 1</a></li>
+      <li><a href="documents/CallforquotationsTables.pdf" download>Download Quotation Document 2</a></li>
+      <li><a href="documents/CallforquotationsElectric.pdf" download>Download Quotation Document 3</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= FOOTER (Exact Copy) ================= -->
+<footer id="footer" class="bg-black">
+  <div class="container1">
+    <ul class="icons">
+      <li><a href="#" class="icon fa-twitter" style="color: rgb(51, 183, 235);"></a></li>
+      <li><a href="https://www.facebook.com/mce.startup.club" class="icon fa-facebook" style="color: rgb(43, 43, 247);"></a></li>
+      <li><a href="https://www.instagram.com/me_riise/" class="icon fa-instagram" style="color: rgb(250, 43, 112);"></a></li>
+      <li><a href="mailto:meriisehsn@gmail.com" class="icon fa-envelope" style="color: rgb(228, 54, 11);"></a></li>
+      <li><a href="https://www.linkedin.com" class="icon fa-linkedin" style="color: white;"></a></li>
+    </ul>
+  </div>
+  <div class="copyright">
+    &copy; ME-RIISE FOUNDATION. All rights reserved.
+  </div>
+</footer>
+
+<script src="assets/NavbarCode/assets/js/main.js"></script>
+
+</body>
+</html>
