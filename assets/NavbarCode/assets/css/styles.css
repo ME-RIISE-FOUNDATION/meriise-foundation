@@ -63,7 +63,9 @@ a {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .containerofNavbar {
   /* place-items: center; */
-  max-width: 1120px;
+  max-width: 1200px; /* Set a maximum width */
+  margin: 0 auto; /* Center the navbar */
+  width: 100%; /* Ensure it spans the full width of the container */
   /* padding: 0 350px; */
   /* background-color: aqua; */
   margin-inline: 1.5rem;
@@ -181,12 +183,10 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: background-color .3s;
+  transition: background-color .3s, transform .3s;
 }
 
-.nav__link:hover {
-  background-color: white;
-}
+ 
 
 /* Show menu */
 .show-menu {
@@ -369,4 +369,53 @@ a {
     pointer-events: initial;
     transition: top .3s;
   }
+}
+
+/* Ensure the navbar remains consistent and responsive */
+
+/* Set a fixed width or max-width for the navbar container */
+.containerofNavbar {
+    max-width: 1200px; /* Set a maximum width */
+    margin: 0 auto; /* Center the navbar */
+    width: 100%; /* Ensure it spans the full width of the container */
+}
+
+/* Use Flexbox for alignment */
+.nav__menu {
+    display: flex;
+    justify-content: space-between; /* Space out items evenly */
+    align-items: center; /* Align items vertically */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+/* Use rem units for better scaling */
+.nav__link {
+    font-size: 1rem; /* Use rem for font size */
+    padding: 0.5rem 1rem; /* Use rem for padding */
+    
+  
+}
+
+ 
+
+/* Add media queries for smaller screens */
+@media (max-width: 768px) {
+    .nav__menu {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .nav__list {
+        padding: 1rem;
+    }
+
+    .nav__link {
+        width: 100%; /* Make links span full width */
+        text-align: center;
+    }
+}
+
+/* Ensure proper spacing between navbar items */
+.nav__list {
+    gap: 1rem; /* Add spacing between items */
 }
