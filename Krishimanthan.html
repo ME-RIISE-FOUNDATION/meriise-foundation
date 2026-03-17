@@ -140,23 +140,60 @@
     font-family: 'Space Mono', monospace;
   }
 
-  .hero-title {
-    font-family: 'Syne', sans-serif, Arial, sans-serif;
-    /* Added fallback font */
+  #hero-title-main {
+    font-family: 'Syne', sans-serif;
     font-weight: 800;
-    font-size: clamp(5.5rem, 15vw, 6rem);
-    white-space: nowrap;
     line-height: 0.9;
     letter-spacing: -0.02em;
+
     background: linear-gradient(135deg, #00ff64 0%, #00e5cc 40%, #7b2fff 100%);
-    background-size: 200% 200%;
-    /* Ensures gradient covers the entire text */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+
+    text-align: center;
     margin-bottom: 0.5rem;
-    text-shadow: none;
+
+    font-size: clamp(2.5rem, 9vw, 7rem);
   }
+
+  #hero-title-main {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+
+  background: linear-gradient(135deg,#00ff64 0%,#00e5cc 40%,#7b2fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  text-align: center;
+  margin-bottom: 0.5rem;
+
+  font-size: 2rem;   /* mobile default */
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  #hero-title-main {
+    font-size: 4rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  #hero-title-main {
+    font-size: 3rem;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1400px) {
+  #hero-title-main {
+    font-size: 4rem;
+  }
+}
 
   .hero-subtitle {
     font-family: 'Space Mono', monospace;
@@ -866,7 +903,7 @@
         ME-RIISE Foundation<br>
         <span style="font-size:0.75rem; opacity:0.7;">@ Malnad College of Engineering, Hassan</span>
       </p>
-      <h1 class="hero-title">KRISHI<br>MANTHAN</h1>
+      <h1 id="hero-title-main">KRISHI <br> MANTHAN</h1>
       <p class="hero-subtitle">From Soil to Solution</p>
 
       <div class="hero-hackathon-label">
@@ -1080,7 +1117,7 @@
           <div style="font-family:'Syne',sans-serif;font-weight:700;color:#0d1f0d;font-size:1rem;">Dr. Geetha Kiran A
           </div>
           <div style="color:#1a7a3a;font-size:0.8rem;font-family:'Space Mono',monospace;margin-top:0.25rem;">Convenor ·
-            CEO, ME-RIISE FOUNDATION</div>
+            CEO,<br> ME-RIISE FOUNDATION</div>
         </div>
         <div style="background:#fff;border-radius:8px;padding:1.5rem;border:1px solid #deeede;">
           <div style="font-size:1.5rem;margin-bottom:0.5rem;">🧠</div>
@@ -1093,7 +1130,7 @@
           <div style="font-family:'Syne',sans-serif;font-weight:700;color:#0d1f0d;font-size:1rem;">Dr. Mohana Lakshmi J
           </div>
           <div style="color:#1a7a3a;font-size:0.8rem;font-family:'Space Mono',monospace;margin-top:0.25rem;">Coordinator
-            · COO, ME-RIISE FOUNDATION</div>
+            · COO,<br> ME-RIISE FOUNDATION</div>
         </div>
       </div>
       <div style="margin-top:1.5rem;background:#fff;border-radius:8px;padding:1.5rem;border:1px solid #deeede;">
