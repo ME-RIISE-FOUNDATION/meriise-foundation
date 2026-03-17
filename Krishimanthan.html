@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KrishiManthan - 36 Hour Hackathon | ME-RIISE Foundation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
+  integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
+  crossorigin="anonymous"></script>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" href="assets/css/newcss.css" />
+<link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+<link rel="stylesheet" href="assets/NavbarCode/assets/css/styles.css" />
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap");
+
+  body {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  header {
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.4);
+  }
+
+  .vision:hover {
+    background: linear-gradient(to right, rgb(129, 216, 228), rgb(154, 70, 223));
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  #list {
+    font-size: 15px;
+  }
+
+  #box2 {
+    z-index: 1;
+  }
+
+  @media only screen and (min-width: 200px) and (max-width: 480px) {
+    #board {
+      margin-left: 2px;
+    }
+  }
+
+  @media only screen and (min-width: 480px) and (max-width: 639px) {
+    #board {
+      margin-left: 2px;
+    }
+  }
+
+  @media only screen and (min-width: 980px) and (max-width: 1024px) {
+    #board {
+      margin-left: 2px;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) and (max-width: 1180px) {
+    #list {
+      font-size: 11px;
+    }
+  }
+
+  /* ===== KRISHIMANTHAN PAGE STYLES ===== */
+
+  .krishi-hero {
+    background: linear-gradient(135deg, #0a1a0a 0%, #0d2b0d 30%, #071a1a 60%, #050d1a 100%);
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .krishi-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba(0, 255, 100, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(0, 200, 255, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 60% 80%, rgba(120, 0, 255, 0.06) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  /* Circuit pattern overlay */
+  .circuit-overlay {
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    background-image:
+      linear-gradient(rgba(0, 255, 100, 1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 100, 1) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 4rem 2rem;
+    max-width: 900px;
+    width: 100%;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(0, 255, 100, 0.1);
+    border: 1px solid rgba(0, 255, 100, 0.3);
+    color: #00ff64;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.4rem 1.2rem;
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-org {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    font-family: 'Space Mono', monospace;
+  }
+
+  #hero-title-main {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+
+    background: linear-gradient(135deg, #00ff64 0%, #00e5cc 40%, #7b2fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    text-align: center;
+    margin-bottom: 0.5rem;
+
+    font-size: clamp(2.5rem, 9vw, 7rem);
+  }
+
+  #hero-title-main {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+
+  background: linear-gradient(135deg,#00ff64 0%,#00e5cc 40%,#7b2fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  text-align: center;
+  margin-bottom: 0.5rem;
+
+  font-size: 2rem;   /* mobile default */
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  #hero-title-main {
+    font-size: 4rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  #hero-title-main {
+    font-size: 3rem;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1400px) {
+  #hero-title-main {
+    font-size: 4rem;
+  }
+}
+
+  .hero-subtitle {
+    font-family: 'Space Mono', monospace;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+  }
+
+  .hero-hackathon-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .hackathon-line {
+    height: 1px;
+    width: 60px;
+    background: linear-gradient(to right, transparent, rgba(0, 255, 100, 0.5));
+  }
+
+  .hackathon-line.right {
+    background: linear-gradient(to left, transparent, rgba(0, 255, 100, 0.5));
+  }
+
+  .hackathon-text {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .hackathon-text span {
+    color: #00ff64;
+  }
+
+  /* Info Cards */
+  .info-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .info-chip {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 4px;
+    padding: 0.6rem 1.2rem;
+    color: #fff;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    backdrop-filter: blur(4px);
+    transition: all 0.2s;
+  }
+
+  .info-chip:hover {
+    border-color: rgba(0, 255, 100, 0.4);
+    background: rgba(0, 255, 100, 0.06);
+  }
+
+  .info-chip .icon {
+    font-size: 1.1rem;
+  }
+
+  .info-chip strong {
+    color: #00ff64;
+  }
+
+  /* Prize Section */
+  .prize-card {
+    background: linear-gradient(135deg, rgba(0, 255, 100, 0.08), rgba(0, 180, 255, 0.08));
+    border: 1px solid rgba(0, 255, 100, 0.25);
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .prize-card::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to right, #00ff64, #00e5cc, #7b2fff);
+  }
+
+  .prize-amount {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    background: linear-gradient(135deg, #00ff64, #00e5cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+  }
+
+  .prize-label {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-family: 'Space Mono', monospace;
+    margin-top: 0.25rem;
+  }
+
+  .prize-breakdown {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  /* CTA Button */
+  .cta-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #00ff64, #00c850);
+    color: #000;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    padding: 1rem 2.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+  }
+
+  .cta-btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .cta-btn:hover::after {
+    opacity: 1;
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 255, 100, 0.3);
+  }
+
+  .slots-warning {
+    color: rgba(255, 200, 0, 0.8);
+    font-size: 0.8rem;
+    font-family: 'Space Mono', monospace;
+    display: block;
+  }
+
+  /* Main Content Section */
+  .krishi-content {
+    background: #f8f9f5;
+    padding: 4rem 1rem;
+  }
+
+  .content-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-tag {
+    display: inline-block;
+    background: #e8faf0;
+    color: #1a7a3a;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border-radius: 2px;
+    margin-bottom: 0.75rem;
+    border-left: 3px solid #00c850;
+  }
+
+  .section-heading {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    color: #0d1f0d;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
+  .section-heading span {
+    color: #00a040;
+  }
+
+  /* Details Grid */
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+  }
+
+  .detail-item {
+    background: #fff;
+    border: 1px solid #e5ede5;
+    border-radius: 8px;
+    padding: 1.5rem;
+    border-top: 3px solid #00c850;
+    transition: all 0.2s;
+  }
+
+  .detail-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 100, 40, 0.1);
+  }
+
+  .detail-emoji {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  .detail-label {
+    font-size: 0.75rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: 'Space Mono', monospace;
+  }
+
+  .detail-value {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #0d1f0d;
+    margin-top: 0.25rem;
+  }
+
+  /* Poster + Content Layout */
+  .poster-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    margin: 3rem 0;
+  }
+
+  @media (max-width: 768px) {
+    .poster-section {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+    }
+  }
+
+  .poster-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 100, 40, 0.15);
+    border: 2px solid #e0ede0;
+  }
+
+  .poster-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .content-body {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+  .intro-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2a3a2a;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+  }
+
+  .highlight-box {
+    background: linear-gradient(135deg, #edfaf2, #e8f5ff);
+    border: 1px solid #b8e6c8;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .highlight-box p {
+    color: #1a4a2a;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* Features */
+  .features-section {
+    background: #0a1a0a;
+    padding: 4rem 1rem;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 2.5rem auto 0;
+  }
+
+  .feature-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to right, #00ff64, #00e5cc);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+
+  .feature-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .feature-card:hover {
+    background: rgba(0, 255, 100, 0.05);
+    border-color: rgba(0, 255, 100, 0.2);
+    transform: translateY(-4px);
+  }
+
+  .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .feature-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .feature-desc {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* Prize breakdown */
+  .prize-section {
+    background: #fff;
+    padding: 4rem 1rem;
+  }
+
+  .prize-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 2.5rem auto;
+  }
+
+  @media (max-width: 640px) {
+    .prize-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .prize-tier {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    border: 2px solid;
+    transition: all 0.2s;
+  }
+
+  .prize-tier:hover {
+    transform: translateY(-4px);
+  }
+
+  .prize-tier.gold {
+    border-color: #f0c040;
+    background: #fffdf0;
+  }
+
+  .prize-tier.silver {
+    border-color: #c0c8d0;
+    background: #f8f9fa;
+  }
+
+  .prize-tier.bronze {
+    border-color: #c0784a;
+    background: #fdf5f0;
+  }
+
+  .tier-medal {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  .tier-place {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: #0d1f0d;
+  }
+
+  .tier-amount {
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    color: #444;
+    margin-top: 0.25rem;
+  }
+
+  /* Consolation */
+  .consolation-strip {
+    background: #e8faf0;
+    border: 1px solid #b8e6c8;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+  }
+
+  /* Perks */
+  .perks-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+  }
+
+  .perk-tag {
+    background: #0d1f0d;
+    color: #00ff64;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    padding: 0.4rem 1rem;
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+  }
+
+  /* Register Section */
+  .register-section {
+    background: linear-gradient(135deg, #0a1a0a, #071a14);
+    padding: 5rem 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .register-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 30% 50%, rgba(0, 255, 100, 0.06) 0%, transparent 60%),
+      radial-gradient(circle at 70% 50%, rgba(0, 200, 255, 0.06) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .register-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .register-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .register-title span {
+    color: #00ff64;
+  }
+
+  .register-url {
+    font-family: 'Space Mono', monospace;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .register-url a {
+    color: #00e5cc;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  /* Partners */
+  .partner-section {
+    background: #f8f9f5;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+
+  .partner-logos {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    opacity: 0.6;
+  }
+
+  /* Countdown-style date display */
+  .date-display {
+    display: inline-flex;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .date-block {
+    text-align: center;
+    background: rgba(0, 255, 100, 0.07);
+    border: 1px solid rgba(0, 255, 100, 0.2);
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+    min-width: 80px;
+  }
+
+  .date-num {
+    font-family: 'Space Mono', monospace;
+    font-size: 2.5rem;
+    color: #00ff64;
+    line-height: 1;
+    display: block;
+  }
+
+  .date-lbl {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.45);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: 'Space Mono', monospace;
+    margin-top: 0.25rem;
+    display: block;
+  }
+
+  /* Pulse animation for the CTA */
+  @keyframes pulse-glow {
+
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgba(0, 255, 100, 0.4);
+    }
+
+    50% {
+      box-shadow: 0 0 0 12px rgba(0, 255, 100, 0);
+    }
+  }
+
+  .cta-btn-pulse {
+    animation: pulse-glow 2.5s ease-in-out infinite;
+  }
+
+  /* Floating leaf decorations */
+  .leaf-deco {
+    position: absolute;
+    opacity: 0.04;
+    pointer-events: none;
+    font-size: 8rem;
+    user-select: none;
+  }
+</style>
+
+<body>
+  <!-- ===== NAVBAR (unchanged) ===== -->
+  <div class="snav-bar" style="background-color: black">
+    <header class="header">
+      <nav class="nav containerofNavbar">
+        <div class="nav__data">
+          <a href="#" class="nav__logo">
+            <img src="assets/MERIISE FOUNDATION logo 2.0.png" alt="" class="h-16" />
+          </a>
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__burger"></i>
+            <i class="ri-close-line nav__close"></i>
+          </div>
+        </div>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link">Home</a></li>
+            <li class="dropdown__item">
+              <div class="nav__link">About ME-RIISE <i class="ri-arrow-down-s-line dropdown__arrow"></i></div>
+              <ul class="dropdown__menu">
+                <li><a href="aboutmeriise.html" class="dropdown__link"><i class="ri-pie-chart-line"></i> ME-RIISE
+                    FOUNDATION</a></li>
+                <li><a href="infrastructure.html" class="dropdown__link"><i class="ri-pie-chart-line"></i>
+                    Infrastructure</a></li>
+                <li><a href="ourAchivements.html" class="dropdown__link"><i class="ri-arrow-up-down-line"></i>
+                    Achievements</a></li>
+                <li class="dropdown__subitem">
+                  <div class="dropdown__link"><i class="ri-bar-chart-line"></i> Documents <i
+                      class="ri-add-line dropdown__add"></i></div>
+                  <ul class="dropdown__submenu">
+                    <li><a href="Nisp.html" class="dropdown__sublink"><i class="ri-file-list-line"></i> MCE NISP
+                        POLICY</a></li>
+                    <li><a href="collab.html" class="dropdown__sublink"><i class="ri-cash-line"></i> Collaborations</a>
+                    </li>
+                    <li><a href="Certificates.html" class="dropdown__sublink"><i class="ri-cash-line"></i>
+                        Certificates</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown__subitem">
+                  <div class="dropdown__link"><i class="ri-bar-chart-line"></i> Members of ME-RIISE <i
+                      class="ri-add-line dropdown__add"></i></div>
+                  <ul class="dropdown__submenu">
+                    <li><a href="index.html#boardofdirectors" class="dropdown__sublink"><i
+                          class="ri-file-list-line"></i>Board of Directors</a></li>
+                    <li><a href="faculty.html" class="dropdown__sublink"><i class="ri-cash-line"></i> Faculty</a></li>
+                    <li><a href="team.html" class="dropdown__sublink"><i class="ri-refund-2-line"></i> Team ME-RIISE</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown__item">
+              <div class="nav__link">Wings of ME-RIISE <i class="ri-arrow-down-s-line dropdown__arrow"></i></div>
+              <ul class="dropdown__menu">
+                <li><a href="startups.html" class="dropdown__link"><i class="ri-pie-chart-line"></i>Start Ups</a></li>
+                <li><a href="iic.html" class="dropdown__link"><i class="ri-pie-chart-line"></i> MoE - IIC</a></li>
+                <li><a href="nain.html" class="dropdown__link"><i class="ri-arrow-up-down-line"></i> NAIN</a></li>
+                <li><a href="uba.html" class="dropdown__link"><i class="ri-arrow-up-down-line"></i> UBA</a></li>
+                <li><a href="rgep.html" class="dropdown__link"><i class="ri-arrow-up-down-line"></i> RGEP</a></li>
+                <li class="dropdown__subitem">
+                  <div class="dropdown__link"><i class="ri-bar-chart-line"></i> Pragyatha <i
+                      class="ri-add-line dropdown__add"></i></div>
+                  <ul class="dropdown__submenu">
+                    <li><a href="https://pragyatha25.meriise.org/" class="dropdown__sublink"><i
+                          class="ri-file-list-line"></i>Pragyatha25</a></li>
+                    <li><a href="https://pragyatha24.meriise.org/" class="dropdown__sublink"><i
+                          class="ri-file-list-line"></i> Pragyatha24</a></li>
+                    <li><a href="pragyatha23.html" class="dropdown__sublink"><i class="ri-file-list-line"></i>
+                        Pragyatha23</a></li>
+                    <li><a href="pragyatha22.html" class="dropdown__sublink"><i class="ri-file-list-line"></i>
+                        Pragyatha22</a></li>
+                    <li><a href="Pragyatha21.html" class="dropdown__sublink"><i class="ri-file-list-line"></i>
+                        Pragyatha21</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="https://meriise-events.vercel.app/" class="nav__link">Events</a></li>
+            <li class="dropdown__item">
+              <div class="nav__link">TBI-MCE <i class="ri-arrow-down-s-line dropdown__arrow"></i></div>
+              <ul class="dropdown__menu">
+                <li><a href="tbi.html" class="dropdown__link"><i class="ri-pie-chart-line"></i> About TBI</a></li>
+                <li><a href="openPosition.html" class="dropdown__link"><i class="ri-pie-chart-line"></i> Open
+                    positions</a></li>
+              </ul>
+            </li>
+            <li><a href="#footer" class="nav__link">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="krishi-hero">
+    <div class="circuit-overlay"></div>
+    <span class="leaf-deco" style="top: 10%; left: 5%;">🌿</span>
+    <span class="leaf-deco" style="bottom: 15%; right: 8%;">🌱</span>
+
+    <div class="hero-content">
+      <div class="hero-badge">State Level Hackathon · 2026</div>
+      <p class="hero-org">
+        ME-RIISE Foundation<br>
+        <span style="font-size:0.75rem; opacity:0.7;">@ Malnad College of Engineering, Hassan</span>
+      </p>
+      <h1 id="hero-title-main">KRISHI <br> MANTHAN</h1>
+      <p class="hero-subtitle">From Soil to Solution</p>
+
+      <div class="hero-hackathon-label">
+        <span class="hackathon-line"></span>
+        <span class="hackathon-text">A <span>36-Hour</span> Hackathon</span>
+        <span class="hackathon-line right"></span>
+      </div>
+
+      <p
+        style="color: rgba(255,255,255,0.4); font-size:0.8rem; letter-spacing:0.15em; text-transform:uppercase; font-family:'Space Mono',monospace; margin-bottom:1.5rem;">
+        In Association with All India Radio, Hassan
+      </p>
+
+      <div class="date-display">
+        <div class="date-block">
+          <span class="date-num">25</span>
+          <span class="date-lbl">March</span>
+        </div>
+        <div style="display:flex;align-items:center;color:rgba(255,255,255,0.2);font-size:1.5rem;">—</div>
+        <div class="date-block">
+          <span class="date-num">26</span>
+          <span class="date-lbl">March 2026</span>
+        </div>
+      </div>
+
+      <div class="prize-card" style="max-width:420px;margin:0 auto 2rem;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+          <div>
+            <div class="prize-label">Prize Pool</div>
+            <div class="prize-amount">₹80,000</div>
+          </div>
+          <div style="text-align:right;">
+            <div style="color:#fff;font-family:'Syne',sans-serif;font-weight:700;">Top 3 Teams</div>
+            <div style="color:rgba(255,255,255,0.5);font-size:0.85rem;">+ 7 Consolation Prizes</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="https://forms.gle/L1fUEo5tD8Ac8NLn6" class="cta-btn cta-btn-pulse">Register now →</a>
+      <span class="slots-warning">⏳ Limited slots available — register soon!</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="krishi-content">
+    <div class="content-container">
+      <div class="poster-section">
+
+        <!-- Poster Image -->
+        <div>
+          <div class="poster-wrapper">
+            <img src="assets/Hackathon/Krishimanthan.jpeg" alt="KrishiManthan Hackathon Poster" />
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content-body">
+          <div class="section-tag">About the Event</div>
+          <h2 class="section-heading">Build solutions for the future of <span>Agri-Tech</span></h2>
+
+          <p class="intro-text">
+            Are you ready to innovate and build solutions for the future of Agri-Tech? 🌱💡 Join
+            <strong>KrishiManthan</strong> — a 36-hour state level hackathon where students collaborate, innovate, and
+            solve real-world agricultural challenges.
+          </p>
+
+          <div class="highlight-box">
+            <p>
+              Participants can choose from <strong>curated problem statements</strong> or propose their own innovative
+              agri-tech ideas. The best idea will receive incubation support, mentorship from CXOs, industry experts,
+              and farmers — plus a Live Krishi Drone Show!
+            </p>
+          </div>
+
+          <!-- Details Grid -->
+          <div class="details-grid">
+            <div class="detail-item">
+              <span class="detail-emoji">📅</span>
+              <div class="detail-label">Date</div>
+              <div class="detail-value">March 25–26, 2026</div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-emoji">📍</span>
+              <div class="detail-label">Venue</div>
+              <div class="detail-value">MCE, Hassan</div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-emoji">👥</span>
+              <div class="detail-label">Team Size</div>
+              <div class="detail-value">2–4 Members</div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-emoji">💳</span>
+              <div class="detail-label">Registration Fee</div>
+              <div class="detail-value">₹400 / Team</div>
+            </div>
+          </div>
+
+          <p style="color:#444;font-size:0.95rem;line-height:1.7;">
+            This is an open invitation to all student innovators across Karnataka. Whether you're a developer, designer,
+            agri-enthusiast, or entrepreneur — KrishiManthan is your stage to shine. 🚀
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES SECTION ===== -->
+  <section class="features-section">
+    <div style="max-width:1100px;margin:0 auto;text-align:center;">
+      <div class="section-tag" style="background:rgba(0,255,100,0.1);color:#00ff64;border-left-color:#00ff64;">What You
+        Get</div>
+      <h2
+        style="font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;color:#fff;margin-top:0.5rem;">
+        Why KrishiManthan?
+      </h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="feature-icon">🏆</span>
+        <div class="feature-title">₹80,000 Prize Pool</div>
+        <div class="feature-desc">Top 3 teams compete for the main prize pool, plus 7 consolation prizes up for grabs.
+        </div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🚀</span>
+        <div class="feature-title">Incubation Support</div>
+        <div class="feature-desc">The best idea gets incubated at ME-RIISE Foundation — turning your solution into a
+          real startup.</div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🧑‍🏫</span>
+        <div class="feature-title">Expert Mentorship</div>
+        <div class="feature-desc">Get direct mentorship from CXOs, industry experts, and farmers with on-ground agri
+          experience.</div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🌾</span>
+        <div class="feature-title">Open Problem Statements</div>
+        <div class="feature-desc">Pick from curated agri-tech challenges or propose your own innovative solution.</div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🚁</span>
+        <div class="feature-title">Live Krishi Drone Show</div>
+        <div class="feature-desc">Experience cutting-edge agricultural drone technology in action at the venue.</div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">📻</span>
+        <div class="feature-title">All India Radio Partnership</div>
+        <div class="feature-desc">Backed by All India Radio, Hassan — amplifying your solutions to a wider audience.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRIZES SECTION ===== -->
+  <section class="prize-section">
+    <div style="max-width:900px;margin:0 auto;text-align:center;">
+      <div class="section-tag" style="margin:0 auto 0.75rem;">Prize Breakdown</div>
+      <h2 class="section-heading">Win Big. <span>Build Bigger.</span></h2>
+      <p style="color:#555;font-size:1rem;max-width:520px;margin:0 auto 2rem;">
+        A total prize pool of ₹80,000 awaits the top teams, with additional recognition and rewards for all finalists.
+      </p>
+
+      <div class="prize-grid">
+        <div class="prize-tier gold">
+          <span class="tier-medal">🥇</span>
+          <div class="tier-place">1st Place</div>
+          <div class="tier-amount">Top Prize</div>
+        </div>
+        <div class="prize-tier silver">
+          <span class="tier-medal">🥈</span>
+          <div class="tier-place">2nd Place</div>
+          <div class="tier-amount">Runner Up</div>
+        </div>
+        <div class="prize-tier bronze">
+          <span class="tier-medal">🥉</span>
+          <div class="tier-place">3rd Place</div>
+          <div class="tier-amount">2nd Runner Up</div>
+        </div>
+      </div>
+
+      <div class="consolation-strip">
+        <strong style="color:#1a7a3a;font-family:'Syne',sans-serif;font-size:1.1rem;">+ 7 Consolation Prizes</strong>
+        <p style="color:#2a5a3a;margin-top:0.25rem;font-size:0.9rem;">Rewarding creativity and effort beyond the podium
+        </p>
+      </div>
+
+      <div>
+        <p style="color:#333;font-weight:600;font-family:'Syne',sans-serif;margin-bottom:1rem;">Special Perks</p>
+        <div class="perks-list">
+          <span class="perk-tag">🚀 Incubation Support</span>
+          <span class="perk-tag">🧑‍🏫 CXO Mentorship</span>
+          <span class="perk-tag">🌾 Farmer Interaction</span>
+          <span class="perk-tag">🚁 Drone Show</span>
+          <span class="perk-tag">📜 Certificates for all</span>
+          <span class="perk-tag">🌐 Networking</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COORDINATORS SECTION ===== -->
+  <section style="background:#f0f7f0;padding:3rem 1rem;">
+    <div style="max-width:900px;margin:0 auto;text-align:center;">
+      <div class="section-tag" style="margin:0 auto 0.75rem;">Team</div>
+      <h2 class="section-heading">The <span>Organising</span> Team</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:2rem;">
+        <div style="background:#fff;border-radius:8px;padding:1.5rem;border:1px solid #deeede;">
+          <!-- <div style="font-size:1.5rem;margin-bottom:0.5rem;"></div> -->
+          <div style="font-family:'Syne',sans-serif;font-weight:700;color:#0d1f0d;font-size:1rem;">Dr. Geetha Kiran A
+          </div>
+          <div style="color:#1a7a3a;font-size:0.8rem;font-family:'Space Mono',monospace;margin-top:0.25rem;">Convenor ·
+            CEO,<br> ME-RIISE FOUNDATION</div>
+        </div>
+        <div style="background:#fff;border-radius:8px;padding:1.5rem;border:1px solid #deeede;">
+          <!-- <div style="font-size:1.5rem;margin-bottom:0.5rem;"></div> -->
+          <div style="font-family:'Syne',sans-serif;font-weight:700;color:#0d1f0d;font-size:1rem;">Mr. Kiran N G</div>
+          <div style="color:#1a7a3a;font-size:0.8rem;font-family:'Space Mono',monospace;margin-top:0.25rem;">Mentor ·
+            Founder,<br> IgniteAI Labs</div>
+        </div>
+        <div style="background:#fff;border-radius:8px;padding:1.5rem;border:1px solid #deeede;">
+          <!-- <div style="font-size:1.5rem;margin-bottom:0.5rem;"></div> -->
+          <div style="font-family:'Syne',sans-serif;font-weight:700;color:#0d1f0d;font-size:1rem;">Dr. Mohana Lakshmi J
+          </div>
+          <div style="color:#1a7a3a;font-size:0.8rem;font-family:'Space Mono',monospace;margin-top:0.25rem;">Coordinator
+            · COO,<br> ME-RIISE FOUNDATION</div>
+        </div>
+      </div>
+      <div style="margin-top:1.5rem;background:#fff;border-radius:8px;padding:1.5rem;border:1px solid #deeede;">
+        <div style="font-family:'Syne',sans-serif;font-weight:700;color:#0d1f0d;margin-bottom:0.75rem;">Student
+          Coordinators</div>
+        <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
+          <div style="font-size:0.9rem;color:#333;">Aditya <span
+              style="color:#1a7a3a;font-family:'Space Mono',monospace;">9663381029</span></div>
+          <div style="color:#ccc;">|</div>
+          <div style="font-size:0.9rem;color:#333;">Pavan G Pai <span
+              style="color:#1a7a3a;font-family:'Space Mono',monospace;">8296713725</span></div>
+          <div style="color:#ccc;">|</div>
+          <div style="font-size:0.9rem;color:#333;">Gokul P Yadav <span
+              style="color:#1a7a3a;font-family:'Space Mono',monospace;">8660811953</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REGISTER CTA ===== -->
+  <section class="register-section">
+    <div class="register-content">
+      <div style="font-size:3rem;margin-bottom:1rem;">🌱</div>
+      <h2 class="register-title">Ready to build the<br><span>future of farming?</span></h2>
+      <p style="color:rgba(255,255,255,0.55);font-size:1rem;line-height:1.7;margin-bottom:1.5rem;">
+        Join KrishiManthan 2026 and turn your agri-tech ideas into real solutions. Limited seats. Unlimited
+        possibilities.
+      </p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="https://forms.gle/L1fUEo5tD8Ac8NLn6" class="cta-btn cta-btn-pulse"
+          style="font-size:1.15rem;padding:1.1rem 3rem;">
+          Register Now →
+        </a>
+      </div>
+      <p style="color:rgba(255,200,0,0.7);margin-top:1.25rem;font-family:'Space Mono',monospace;font-size:0.8rem;">
+        ⏳ Limited slots available — register soon!
+      </p>
+
+      <div class="info-strip" style="margin-top:2rem;">
+        <div class="info-chip"><span class="icon">📅</span> <span>March 25–26, 2026</span></div>
+        <div class="info-chip"><span class="icon">📍</span> <span>MCE, Hassan</span></div>
+        <div class="info-chip"><span class="icon">💳</span> <strong>₹400</strong><span>/team</span></div>
+        <div class="info-chip"><span class="icon">👥</span> <span>2–4 Members</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="assets/NavbarCode/assets/js/main.js"></script>
+  <script>
+    function clickFunction(e) {
+      let list = document.getElementById("elements");
+      list.classList.toggle("hidden");
+      let iconName = e.getAttribute("name");
+      e.setAttribute("name", iconName === "menu" ? "close" : "menu");
+    }
+
+    document.addEventListener("click", function (event) {
+      const box = document.getElementById("box");
+      const box2 = document.getElementById("box2");
+      if (box && box2 && !event.target.closest("#box, #box2, #icons, #icons2")) {
+        box.classList.add("hidden");
+        box2.classList.add("hidden");
+      }
+    });
+
+    function toggleFunction(event) {
+      event.stopPropagation();
+      const box = document.getElementById("box");
+      const box2 = document.getElementById("box2");
+      box.classList.toggle("hidden");
+      if (!box.classList.contains("hidden")) { box2.classList.add("hidden"); }
+      const icons = document.getElementById("icons");
+      const iconName = icons.getAttribute("name");
+      icons.setAttribute("name", iconName === "caret-down-outline" ? "caret-up-outline" : "caret-down-outline");
+    }
+
+    function toggleFunction2(event) {
+      event.stopPropagation();
+      const box2 = document.getElementById("box2");
+      const box = document.getElementById("box");
+      box2.classList.toggle("hidden");
+      if (!box2.classList.contains("hidden")) { box.classList.add("hidden"); }
+      const icons2 = document.getElementById("icons2");
+      const iconName = icons2.getAttribute("name");
+      icons2.setAttribute("name", iconName === "caret-down-outline" ? "caret-up-outline" : "caret-down-outline");
+    }
+  </script>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/skel.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+
+  <!-- ===== FOOTER (unchanged) ===== -->
+  <footer id="footer" class="bg-black">
+    <div class="container1">
+      <ul class="icons">
+        <li>
+          <a href="#" class="icon fa-twitter" style="color: rgb(51, 183, 235); text-decoration: none"><span
+              class="label">Twitter</span></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mce.startup.club" class="icon fa-facebook"
+            style="color: rgb(43, 43, 247); text-decoration: none"><span class="label">Facebook</span></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/me_riise/" class="icon fa-instagram"
+            style="color: rgb(250, 43, 112); text-decoration: none"><span class="label">Instagram</span></a>
+        </li>
+        <li>
+          <a href="mailto:meriisehsn@gmail.com" class="icon fa-envelope"
+            style="color: rgb(228, 54, 11); text-decoration: none"><span class="label">Email</span></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A72704849&keywords=me-riise%20foundation&origin=RICH_QUERY_SUGGESTION&position=0&searchId=a2da3c5d-f488-492f-9f3b-da0bce4973ef&sid=w7m&spellCorrectionEnabled=false"
+            class="icon fa-linkedin" style="color: rgb(255, 255, 255); text-decoration: none"><span
+              class="label">Linkedin</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="copyright">&copy; ME-RIISE FOUNDATION. All rights reserved.</div>
+    <div class="lg:grid grid-cols-3 cursor-pointer">
+      <div>
+        <p class="text-white text-left text-2xl font-bold m-10">Contact Us Through</p>
+        <p class="text-white text-left m-10"><a href="meriise.org">Dr Geetha Kiran A | CEO</a></p>
+        <p class="text-white text-left m-10"><a href="ceomeriise@mcehassan.ac.in">Email Us on :
+            ceomeriise@mcehassan.ac.in</a></p>
+        <p class="text-white text-left m-10"><a href="https://www.instagram.com/me_riise/">Follow Us on Instagram</a>
+        </p>
+      </div>
+      <div>
+        <p class="text-white text-left text-2xl m-10 font-bold">Quick Links</p>
+        <p class="text-white text-left m-10"><a href="infrastructure.html">Our Infrastructure</a></p>
+        <p class="text-white text-left m-10"><a href="uba.html">UBA Visit</a></p>
+        <p class="text-white text-left m-10"><a href="startups.html">Start Ups</a></p>
+      </div>
+      <div>
+        <p class="text-white text-left text-2xl m-10 font-bold">Location:</p>
+        <p class="text-white text-left m-10">About ME-RIISE Foundation</p>
+        <p class="text-white text-left m-10">
+          <span class="font-bold">Address : <br /></span>24F3+69J, Rangoli Halla, Malnad College of Engineering ,
+          Hassan, Karnataka 573201
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
