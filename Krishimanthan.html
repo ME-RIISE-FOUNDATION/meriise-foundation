@@ -273,8 +273,8 @@
     background: linear-gradient(135deg, rgba(0, 255, 100, 0.08), rgba(0, 180, 255, 0.08));
     border: 1px solid rgba(0, 255, 100, 0.25);
     border-radius: 8px;
-    padding: 1.5rem 2rem;
-    margin-bottom: 2rem;
+    padding: 1.9rem 0.0rem;
+    margin-bottom: 3.9rem;
     position: relative;
     overflow: hidden;
   }
@@ -290,15 +290,17 @@
   }
 
   .prize-amount {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    background: linear-gradient(135deg, #00ff64, #00e5cc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    line-height: 1;
-  }
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+
+  line-height: 1.2;  /* more breathing space */
+  padding-right: 5px; /* prevents clipping */
+
+  background: linear-gradient(135deg, #00ff64, #00e5cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
   .prize-label {
     color: rgba(255, 255, 255, 0.6);
@@ -575,13 +577,72 @@
     padding: 4rem 1rem;
   }
 
-  .prize-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  .date-prize-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;   /* ✅ allows stacking on mobile */
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  .date-prize-row {
+    flex-direction: column;
     gap: 1.5rem;
-    max-width: 800px;
-    margin: 2.5rem auto;
   }
+
+  .date-display {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.prize-card {
+  background: linear-gradient(135deg, rgba(0,255,100,0.08), rgba(0,180,255,0.08));
+  border: 1px solid rgba(0,255,100,0.25);
+  border-radius: 10px;
+  padding: 2rem 2.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 320px;   
+  width: 100%;
+}
+
+.prize-inner {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;
+  text-align: center;
+}
+
+.prize-amount {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 3rem;   
+  line-height: 1.1;
+
+  background: linear-gradient(135deg, #00ff64, #00e5cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  margin: 0.3rem 0;
+}
+
+.prize-main-text {
+  color: #ffffff;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.prize-sub-text {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.9rem;
+}
 
   @media (max-width: 640px) {
     .prize-grid {
@@ -737,12 +798,11 @@
 
   /* Countdown-style date display */
   .date-display {
-    display: inline-flex;
-    gap: 1.5rem;
-    margin: 1.5rem 0;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  display: flex;              
+  gap: 1rem;
+  flex-wrap: nowrap;         
+  align-items: center;
+}
 
   .date-block {
     text-align: center;
@@ -917,34 +977,161 @@
         In Association with All India Radio, Hassan
       </p>
 
-      <div class="date-display">
-        <div class="date-block">
-          <span class="date-num">25</span>
-          <span class="date-lbl">March</span>
-        </div>
-        <div style="display:flex;align-items:center;color:rgba(255,255,255,0.2);font-size:1.5rem;">—</div>
-        <div class="date-block">
-          <span class="date-num">26</span>
-          <span class="date-lbl">March 2026</span>
-        </div>
-      </div>
+     <!-- ===== DATE + PRIZE ===== -->
+<div class="date-prize-row">
 
-      <div class="prize-card" style="max-width:420px;margin:0 auto 2rem;">
-        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
-          <div>
-            <div class="prize-label">Prize Pool</div>
-            <div class="prize-amount">₹80,000</div>
-          </div>
-          <div style="text-align:right;">
-            <div style="color:#fff;font-family:'Syne',sans-serif;font-weight:700;">Top 3 Teams</div>
-            <div style="color:rgba(255,255,255,0.5);font-size:0.85rem;">+ 7 Consolation Prizes</div>
-          </div>
-        </div>
-      </div>
-
-      <a href="https://forms.gle/L1fUEo5tD8Ac8NLn6" class="cta-btn cta-btn-pulse">Register now →</a>
-      <span class="slots-warning">⏳ Limited slots available — register soon!</span>
+  <!-- DATE -->
+  <div class="date-display">
+    <div class="date-block">
+      <span class="date-num">25</span>
+      <span class="date-lbl">March</span>
     </div>
+
+    <div style="display:flex;align-items:center;color:rgba(255,255,255,0.2);font-size:1.5rem;">—</div>
+
+    <div class="date-block">
+      <span class="date-num">26</span>
+      <span class="date-lbl">March 2026</span>
+    </div>
+  </div>
+
+  <!-- PRIZE -->
+  <div class="prize-card">
+
+    <div class="prize-inner">
+      <div class="prize-label">PRIZE POOL</div>
+  
+      <div class="prize-amount">₹80,000</div>
+  
+      <div class="prize-main-text">Top 3 Teams</div>
+  
+      <div class="prize-sub-text">+ 7 Consolation Prizes</div>
+    </div>
+  
+  </div>
+
+</div>
+
+
+<!-- ===== OPEN BOOK (MATCHED WITH PRIZE CARD) ===== -->
+<div style="
+  display:grid;
+ grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap:40px; /* 👈 MORE GAP */
+  max-width:900px;
+  margin:2rem auto;
+  position:relative;
+">
+
+  <!-- CENTER SPINE -->
+  <div style="
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:50%;
+    width:2px;
+    transform:translateX(-50%);
+    background:linear-gradient(
+      to bottom,
+      transparent,
+      rgba(255,255,255,0.1),
+      rgba(0,255,100,0.3),
+      rgba(255,255,255,0.1),
+      transparent
+    );
+    z-index:3;
+  "></div>
+
+  <!-- STUDENT -->
+  <div class="book-page" style="
+    padding:2.5rem 2rem;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    /* 👇 SAME AS PRIZE CARD */
+    background:linear-gradient(135deg, rgba(0,255,100,0.08), rgba(0,180,255,0.08));
+    border:1px solid rgba(0,255,100,0.25);
+    border-radius:16px;
+  ">
+
+    <div style="font-size:2.5rem;margin-bottom:0.75rem;">🎓</div>
+
+    <h3 style="
+      font-family:'Syne',sans-serif;
+      font-weight:800;
+      color:#00ff64;
+      font-size:1.5rem;
+    ">Students</h3>
+
+    <p style="
+      color:rgba(255,255,255,0.55);
+      font-size:0.95rem;
+      margin:1rem 0 1.5rem;
+      line-height:1.6;
+    ">
+      Build innovative agri-tech solutions and compete in the hackathon.
+    </p>
+
+    <a href="https://forms.gle/L1fUEo5tD8Ac8NLn6"
+       class="cta-btn cta-btn-pulse">
+      Register as Student →
+    </a>
+
+  </div>
+
+  <!-- FARMER -->
+  <div class="book-page" style="
+    padding:2.5rem 2rem;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    /* 👇 SAME STYLE */
+    background:linear-gradient(135deg, rgba(0,255,100,0.08), rgba(0,180,255,0.08));
+    border:1px solid rgba(0,255,100,0.25);
+    border-radius:16px;
+  ">
+
+    <div style="font-size:2.5rem;margin-bottom:0.75rem;">🌾</div>
+
+    <h3 style="
+      font-family:'Syne',sans-serif;
+      font-weight:800;
+      color:#00e5cc;
+      font-size:1.5rem;
+    ">Farmers</h3>
+
+    <p style="
+      color:rgba(255,255,255,0.55);
+      font-size:0.95rem;
+      margin:1rem 0 1.5rem;
+      line-height:1.6;
+    ">
+      Share real challenges and collaborate with innovators for solutions.
+    </p>
+
+    <a href="https://forms.gle/z6Qs5gpLQMaCVr5X9"
+       class="cta-btn cta-btn-pulse"
+       style="background:linear-gradient(135deg,#00e5cc,#0099aa);">
+      Join as Farmer →
+    </a>
+
+  </div>
+
+</div>
+<!-- ===== LIMITED SLOTS ===== -->
+<p style="
+  text-align:center;
+  color:rgba(255,200,0,0.8);
+  font-size:0.85rem;
+  font-family:'Space Mono', monospace;
+  margin-top:1rem;
+">
+  ⏳ Limited slots available — register soon!
+</p>
   </section>
 
   <!-- ===== ABOUT SECTION ===== -->
@@ -1145,6 +1332,9 @@
           <div style="color:#ccc;">|</div>
           <div style="font-size:0.9rem;color:#333;">Gokul P Yadav <span
               style="color:#1a7a3a;font-family:'Space Mono',monospace;">8660811953</span></div>
+              <div style="color:#ccc;">|</div>
+              <div style="font-size:0.9rem;color:#333;">Ananya B V <span
+                  style="color:#1a7a3a;font-family:'Space Mono',monospace;">9108725834</span></div>
         </div>
       </div>
     </div>
@@ -1159,12 +1349,76 @@
         Join KrishiManthan 2026 and turn your agri-tech ideas into real solutions. Limited seats. Unlimited
         possibilities.
       </p>
-      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-        <a href="https://forms.gle/L1fUEo5tD8Ac8NLn6" class="cta-btn cta-btn-pulse"
-          style="font-size:1.15rem;padding:1.1rem 3rem;">
-          Register Now →
-        </a>
-      </div>
+      <!-- STUDENT + FARMER BOXES -->
+<div style="
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+max-width:500px;
+margin:1.5rem auto;
+">
+
+<!-- STUDENT -->
+<div style="
+  padding:1.5rem;
+  text-align:center;
+
+  background:linear-gradient(135deg, rgba(0,255,100,0.08), rgba(0,180,255,0.08));
+  border:1px solid rgba(0,255,100,0.25);
+  border-radius:12px;
+">
+
+  <div style="font-size:1.8rem;">🎓</div>
+
+  <h3 style="
+    font-family:'Syne',sans-serif;
+    font-weight:800;
+    color:#00ff64;
+    font-size:1.1rem;
+    margin:0.5rem 0;
+  ">
+    Students
+  </h3>
+
+  <a href="https://forms.gle/L1fUEo5tD8Ac8NLn6"
+     class="cta-btn cta-btn-pulse"
+     style="padding:0.7rem 1.5rem;font-size:0.9rem;">
+    Register →
+  </a>
+
+</div>
+
+<!-- FARMER -->
+<div style="
+  padding:1.5rem;
+  text-align:center;
+
+  background:linear-gradient(135deg, rgba(0,255,100,0.08), rgba(0,180,255,0.08));
+  border:1px solid rgba(0,255,100,0.25);
+  border-radius:12px;
+">
+
+  <div style="font-size:1.8rem;">🌾</div>
+
+  <h3 style="
+    font-family:'Syne',sans-serif;
+    font-weight:800;
+    color:#00e5cc;
+    font-size:1.1rem;
+    margin:0.5rem 0;
+  ">
+    Farmers
+  </h3>
+
+  <a href="https://forms.gle/z6Qs5gpLQMaCVr5X9"
+     class="cta-btn cta-btn-pulse"
+     style="padding:0.7rem 1.5rem;font-size:0.9rem;background:linear-gradient(135deg,#00e5cc,#0099aa);">
+    Join →
+  </a>
+
+</div>
+
+</div>  
       <p style="color:rgba(255,200,0,0.7);margin-top:1.25rem;font-family:'Space Mono',monospace;font-size:0.8rem;">
         ⏳ Limited slots available — register soon!
       </p>
