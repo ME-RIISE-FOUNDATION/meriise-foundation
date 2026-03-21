@@ -1042,45 +1042,7 @@
     z-index:3;
   "></div>
 
-  <!-- STUDENT -->
-  <div class="book-page" style="
-    padding:2.5rem 2rem;
-    text-align:center;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-
-    /* 👇 SAME AS PRIZE CARD */
-    background:linear-gradient(135deg, rgba(0,255,100,0.08), rgba(0,180,255,0.08));
-    border:1px solid rgba(0,255,100,0.25);
-    border-radius:16px;
-  ">
-
-    <div style="font-size:2.5rem;margin-bottom:0.75rem;">🎓</div>
-
-    <h3 style="
-      font-family:'Syne',sans-serif;
-      font-weight:800;
-      color:#00ff64;
-      font-size:1.5rem;
-    ">Students</h3>
-
-    <p style="
-      color:rgba(255,255,255,0.55);
-      font-size:0.95rem;
-      margin:1rem 0 1.5rem;
-      line-height:1.6;
-    ">
-      Build innovative agri-tech solutions and compete in the hackathon.
-    </p>
-
-    <a href="https://forms.gle/L1fUEo5tD8Ac8NLn6"
-       class="cta-btn cta-btn-pulse">
-      Register as Student →
-    </a>
-
-  </div>
-
+   
   <!-- FARMER -->
   <div class="book-page" style="
     padding:2.5rem 2rem;
@@ -1120,6 +1082,45 @@
     </a>
 
   </div>
+<!-- STUDENT -->
+<div class="book-page" style="
+padding:2.5rem 2rem;
+text-align:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+
+/* 👇 SAME AS PRIZE CARD */
+background:linear-gradient(135deg, rgba(0,255,100,0.08), rgba(0,180,255,0.08));
+border:1px solid rgba(0,255,100,0.25);
+border-radius:16px;
+">
+
+<div style="font-size:2.5rem;margin-bottom:0.75rem;">🎓</div>
+
+<h3 style="
+  font-family:'Syne',sans-serif;
+  font-weight:800;
+  color:#00ff64;
+  font-size:1.5rem;
+">Students</h3>
+
+<p style="
+  color:rgba(255,255,255,0.55);
+  font-size:0.95rem;
+  margin:1rem 0 1.5rem;
+  line-height:1.6;
+">
+  Build innovative agri-tech solutions and compete in the hackathon.
+</p>
+
+<a href="https://forms.gle/L1fUEo5tD8Ac8NLn6"
+   class="cta-btn cta-btn-pulse">
+  Register as Student →
+</a>
+
+</div>
+
 
 </div>
 <!-- ===== LIMITED SLOTS ===== -->
@@ -1352,7 +1353,7 @@
       <!-- STUDENT + FARMER BOXES -->
 <div style="
 display:grid;
-grid-template-columns:1fr 1fr;
+grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
 gap:20px;
 max-width:500px;
 margin:1.5rem auto;
