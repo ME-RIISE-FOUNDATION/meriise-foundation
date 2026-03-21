@@ -1001,54 +1001,115 @@
 </div>
 
 
-<!-- ===== STUDENT + FARMER ===== -->
+<!-- ===== OPEN BOOK (MATCHED WITH PRIZE CARD) ===== -->
 <div style="
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:40px;
+  gap:40px; /* 👈 MORE GAP */
   max-width:900px;
   margin:2rem auto;
+  position:relative;
 ">
 
-  <!-- STUDENT -->
+  <!-- CENTER SPINE -->
   <div style="
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:50%;
+    width:2px;
+    transform:translateX(-50%);
+    background:linear-gradient(
+      to bottom,
+      transparent,
+      rgba(255,255,255,0.1),
+      rgba(0,255,100,0.3),
+      rgba(255,255,255,0.1),
+      transparent
+    );
+    z-index:3;
+  "></div>
+
+  <!-- STUDENT -->
+  <div class="book-page" style="
     padding:2.5rem 2rem;
     text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    /* 👇 SAME AS PRIZE CARD */
     background:linear-gradient(135deg, rgba(0,255,100,0.08), rgba(0,180,255,0.08));
     border:1px solid rgba(0,255,100,0.25);
     border-radius:16px;
   ">
-    <div style="font-size:2.5rem;">🎓</div>
-    <h3 style="color:#00ff64;font-weight:800;">Students</h3>
-    <p style="color:rgba(255,255,255,0.6);margin:1rem 0;">
+
+    <div style="font-size:2.5rem;margin-bottom:0.75rem;">🎓</div>
+
+    <h3 style="
+      font-family:'Syne',sans-serif;
+      font-weight:800;
+      color:#00ff64;
+      font-size:1.5rem;
+    ">Students</h3>
+
+    <p style="
+      color:rgba(255,255,255,0.55);
+      font-size:0.95rem;
+      margin:1rem 0 1.5rem;
+      line-height:1.6;
+    ">
       Build innovative agri-tech solutions and compete in the hackathon.
     </p>
-    <a href="https://forms.gle/L1fUEo5tD8Ac8NLn6" class="cta-btn">Register as Student →</a>
+
+    <a href="https://forms.gle/L1fUEo5tD8Ac8NLn6"
+       class="cta-btn cta-btn-pulse">
+      Register as Student →
+    </a>
+
   </div>
 
   <!-- FARMER -->
-  <div style="
+  <div class="book-page" style="
     padding:2.5rem 2rem;
     text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    /* 👇 SAME STYLE */
     background:linear-gradient(135deg, rgba(0,255,100,0.08), rgba(0,180,255,0.08));
     border:1px solid rgba(0,255,100,0.25);
     border-radius:16px;
   ">
-    <div style="font-size:2.5rem;">🌾</div>
-    <h3 style="color:#00e5cc;font-weight:800;">Farmers</h3>
-    <p style="color:rgba(255,255,255,0.6);margin:1rem 0;">
-      Share real challenges and collaborate with innovators.
+
+    <div style="font-size:2.5rem;margin-bottom:0.75rem;">🌾</div>
+
+    <h3 style="
+      font-family:'Syne',sans-serif;
+      font-weight:800;
+      color:#00e5cc;
+      font-size:1.5rem;
+    ">Farmers</h3>
+
+    <p style="
+      color:rgba(255,255,255,0.55);
+      font-size:0.95rem;
+      margin:1rem 0 1.5rem;
+      line-height:1.6;
+    ">
+      Share real challenges and collaborate with innovators for solutions.
     </p>
+
     <a href="https://forms.gle/z6Qs5gpLQMaCVr5X9"
-       class="cta-btn"
+       class="cta-btn cta-btn-pulse"
        style="background:linear-gradient(135deg,#00e5cc,#0099aa);">
       Join as Farmer →
     </a>
+
   </div>
 
 </div>
-
-
 <!-- ===== LIMITED SLOTS ===== -->
 <p style="
   text-align:center;
@@ -1276,12 +1337,76 @@
         Join KrishiManthan 2026 and turn your agri-tech ideas into real solutions. Limited seats. Unlimited
         possibilities.
       </p>
-      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-        <a href="https://forms.gle/L1fUEo5tD8Ac8NLn6" class="cta-btn cta-btn-pulse"
-          style="font-size:1.15rem;padding:1.1rem 3rem;">
-          Register Now →
-        </a>
-      </div>
+      <!-- STUDENT + FARMER BOXES -->
+<div style="
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+max-width:500px;
+margin:1.5rem auto;
+">
+
+<!-- STUDENT -->
+<div style="
+  padding:1.5rem;
+  text-align:center;
+
+  background:linear-gradient(135deg, rgba(0,255,100,0.08), rgba(0,180,255,0.08));
+  border:1px solid rgba(0,255,100,0.25);
+  border-radius:12px;
+">
+
+  <div style="font-size:1.8rem;">🎓</div>
+
+  <h3 style="
+    font-family:'Syne',sans-serif;
+    font-weight:800;
+    color:#00ff64;
+    font-size:1.1rem;
+    margin:0.5rem 0;
+  ">
+    Students
+  </h3>
+
+  <a href="https://forms.gle/L1fUEo5tD8Ac8NLn6"
+     class="cta-btn cta-btn-pulse"
+     style="padding:0.7rem 1.5rem;font-size:0.9rem;">
+    Register →
+  </a>
+
+</div>
+
+<!-- FARMER -->
+<div style="
+  padding:1.5rem;
+  text-align:center;
+
+  background:linear-gradient(135deg, rgba(0,255,100,0.08), rgba(0,180,255,0.08));
+  border:1px solid rgba(0,255,100,0.25);
+  border-radius:12px;
+">
+
+  <div style="font-size:1.8rem;">🌾</div>
+
+  <h3 style="
+    font-family:'Syne',sans-serif;
+    font-weight:800;
+    color:#00e5cc;
+    font-size:1.1rem;
+    margin:0.5rem 0;
+  ">
+    Farmers
+  </h3>
+
+  <a href="https://forms.gle/z6Qs5gpLQMaCVr5X9"
+     class="cta-btn cta-btn-pulse"
+     style="padding:0.7rem 1.5rem;font-size:0.9rem;background:linear-gradient(135deg,#00e5cc,#0099aa);">
+    Join →
+  </a>
+
+</div>
+
+</div>  
       <p style="color:rgba(255,200,0,0.7);margin-top:1.25rem;font-family:'Space Mono',monospace;font-size:0.8rem;">
         ⏳ Limited slots available — register soon!
       </p>
