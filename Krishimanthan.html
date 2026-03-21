@@ -577,13 +577,7 @@
     padding: 4rem 1rem;
   }
 
-  .date-prize-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;   /* ✅ allows stacking on mobile */
-}
+
 
 /* Mobile fix */
 @media (max-width: 768px) {
@@ -798,10 +792,12 @@
 
   /* Countdown-style date display */
   .date-display {
-  display: flex;              
+  display: flex;
   gap: 1rem;
-  flex-wrap: nowrap;         
+  flex-wrap: nowrap;
   align-items: center;
+  justify-content: center;   
+  width: 100%;                
 }
 
   .date-block {
@@ -994,21 +990,7 @@
       <span class="date-lbl">March 2026</span>
     </div>
   </div>
-
-  <!-- PRIZE -->
-  <div class="prize-card">
-
-    <div class="prize-inner">
-      <div class="prize-label">PRIZE POOL</div>
-  
-      <div class="prize-amount">₹80,000</div>
-  
-      <div class="prize-main-text">Top 3 Teams</div>
-  
-      <div class="prize-sub-text">+ 7 Consolation Prizes</div>
-    </div>
-  
-  </div>
+ 
 
 </div>
 
@@ -1133,6 +1115,24 @@ border-radius:16px;
 ">
   ⏳ Limited slots available — register soon!
 </p>
+
+<!-- PRIZE -->
+<div style="
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  margin-top:1.5rem;
+">
+  <div class="prize-card" style="margin:0 auto;">
+    <div class="prize-inner">
+      <div class="prize-label">PRIZE POOL</div>
+      <div class="prize-amount">₹80,000</div>
+      <div class="prize-main-text">Top 3 Teams</div>
+      <div class="prize-sub-text">+ 7 Consolation Prizes</div>
+    </div>
+  </div>
+</div>
   </section>
 
   <!-- ===== ABOUT SECTION ===== -->
