@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Registration | ME-RIISE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f5f8ff;
+      --panel: #ffffff;
+      --primary: #1547a6;
+      --primary-soft: #e5eefc;
+      --accent: #ff7d3d;
+      --text: #0f1a33;
+      --muted: #5f6d82;
+      --border: rgba(15, 26, 51, 0.12);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #eef4ff 0%, #f8fbff 100%);
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page-header {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 24px 0;
+    }
+
+    .brand-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 24px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      backdrop-filter: blur(14px);
+      margin-bottom: 24px;
+    }
+
+    .brand-bar h1 {
+      font-size: 1rem;
+      margin: 0;
+      letter-spacing: 0.06em;
+      color: var(--primary);
+    }
+
+    .brand-bar span {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 32px;
+      align-items: start;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px 32px;
+    }
+
+    .hero-text {
+      max-width: 640px;
+    }
+
+    .hero-text h2 {
+      font-size: clamp(2.25rem, 3vw, 3.4rem);
+      line-height: 1.02;
+      margin: 0 0 16px;
+    }
+
+    .hero-text p {
+      margin: 0 0 24px;
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .hero-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 24px 64px rgba(23, 54, 120, 0.08);
+    }
+
+    .hero-card h3 {
+      margin: 0 0 16px;
+      font-size: 1.15rem;
+      color: var(--primary);
+    }
+
+    .hero-card ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .hero-card li {
+      margin-bottom: 12px;
+    }
+
+    .registration-panel {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px 48px;
+      display: grid;
+      grid-template-columns: 1.25fr 0.85fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .form-card,
+    .info-card {
+      background: var(--panel);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: 0 28px 64px rgba(15, 26, 51, 0.07);
+    }
+
+    .form-card {
+      padding: 32px;
+    }
+
+    .form-card h3 {
+      margin: 0 0 18px;
+      font-size: 1.35rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .form-row.full {
+      grid-template-columns: 1fr;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-size: 0.98rem;
+      color: #18233d;
+      background: #fbfcff;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #7c9eff;
+      box-shadow: 0 0 0 4px rgba(125, 157, 255, 0.14);
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .form-fieldset {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .form-fieldset + .form-fieldset {
+      margin-top: 24px;
+    }
+
+    .form-note {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .checkbox-group input {
+      width: auto;
+      margin-top: 6px;
+      border-radius: 5px;
+      border-color: var(--border);
+    }
+
+    .checkbox-group label {
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      margin-top: 26px;
+    }
+
+    .button-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 28px;
+      border-radius: 14px;
+      border: none;
+      background: var(--primary);
+      color: white;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .button-primary:hover {
+      transform: translateY(-1px);
+      background: #0f3f94;
+    }
+
+    .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      border-radius: 14px;
+      border: 1px solid var(--primary);
+      background: transparent;
+      color: var(--primary);
+      font-size: 0.98rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 0.92rem;
+      font-weight: 600;
+      margin-top: 12px;
+    }
+
+    .info-card {
+      padding: 28px;
+      display: grid;
+      gap: 20px;
+    }
+
+    .info-card h3 {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+
+    .event-summary {
+      display: grid;
+      gap: 16px;
+    }
+
+    .event-summary p {
+      margin: 0;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .event-summary strong {
+      color: var(--text);
+    }
+
+    .info-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .info-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.98rem;
+      color: var(--muted);
+    }
+
+    .info-list li::before {
+      content: '•';
+      color: var(--accent);
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .footer-note {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.94rem;
+      padding: 24px 0 0;
+    }
+
+    @media (max-width: 960px) {
+      .hero,
+      .registration-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card,
+      .form-card,
+      .info-card {
+        padding: 24px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .page-header,
+      .hero,
+      .registration-panel {
+        padding: 0 16px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <div class="brand-bar">
+      <div>
+        <h1>ME-RIISE Event Registration</h1>
+        <span>Program-specific registration for workshops and events</span>
+      </div>
+      <span class="status-pill">Live registration template</span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Register for workshops and programs under NAIN 2.0, TBI, MRF, UBA, RGEP and IIC</h2>
+      <p>Use a single professional form to capture participant details, workshop preferences, institutional information and program-specific registration data. The template is structured for clarity and fast completion.</p>
+      <div class="hero-card">
+        <h3>Why this form works</h3>
+        <ul>
+          <li>Clear user flow with program selection first.</li>
+          <li>Responsive layout built for desktop and mobile.</li>
+          <li>High-contrast labels, spacious inputs, and accessible controls.</li>
+        </ul>
+      </div>
+    </div>
+
+    <aside class="hero-card">
+      <h3>Programs supported</h3>
+      <ul>
+        <li>NAIN 2.0</li>
+        <li>Technology Business Incubator (TBI)</li>
+        <li>MRF</li>
+        <li>Unnat Bharat Abhiyan (UBA)</li>
+        <li>RGEP</li>
+        <li>Institution's Innovation Council (IIC)</li>
+      </ul>
+    </aside>
+  </section>
+
+  <main class="registration-panel">
+    <section class="form-card">
+      <h3>Event registration form</h3>
+      <form id="registrationForm" action="#" method="POST">
+        <div class="form-fieldset">
+          <div class="form-row">
+            <div>
+              <label for="program">Select Program/Event</label>
+              <select id="program" name="program" required>
+                <option value="">Choose an option</option>
+                <option value="NAIN 2.0">NAIN 2.0</option>
+                <option value="TBI">TBI</option>
+                <option value="MRF">MRF</option>
+                <option value="UBA">UBA</option>
+                <option value="RGEP">RGEP</option>
+                <option value="IIC">IIC</option>
+              </select>
+            </div>
+            <div>
+              <label for="participationType">Registration Type</label>
+              <select id="participationType" name="participationType" required>
+                <option value="">Select type</option>
+                <option value="Individual">Individual</option>
+                <option value="Team">Team</option>
+                <option value="Institutional">Institutional</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required />
+            </div>
+            <div>
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="name@example.com" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required />
+            </div>
+            <div>
+              <label for="institution">Institution / Organization</label>
+              <input type="text" id="institution" name="institution" placeholder="Enter institution name" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="department">Department / Domain</label>
+              <input type="text" id="department" name="department" placeholder="E.g. Computer Science" required />
+            </div>
+            <div>
+              <label for="year">Year / Designation</label>
+              <input type="text" id="year" name="year" placeholder="E.g. 3rd Year / Mentor" required />
+            </div>
+          </div>
+
+          <div class="form-row full">
+            <div>
+              <label for="location">City / State</label>
+              <input type="text" id="location" name="location" placeholder="Enter city and state" required />
+            </div>
+          </div>
+
+          <div class="form-row full">
+            <div>
+              <label for="sessionPreference">Preferred Session / Workshop Topic</label>
+              <textarea id="sessionPreference" name="sessionPreference" placeholder="Tell us your preferred sessions or expectations" rows="4"></textarea>
+            </div>
+          </div>
+
+          <div class="form-row full">
+            <div>
+              <label for="additionalInfo">Additional Notes</label>
+              <textarea id="additionalInfo" name="additionalInfo" placeholder="Any special requirements, accommodations, or team details"></textarea>
+            </div>
+          </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="consent" name="consent" required />
+            <label for="consent">I agree to receive updates and confirm the details provided are accurate.</label>
+          </div>
+
+          <div class="button-row">
+            <button type="submit" class="button-primary">Submit Registration</button>
+            <button type="reset" class="button-secondary">Clear Form</button>
+          </div>
+          <p class="form-note">You can integrate this template with your backend or Google Forms / database service for live registrations.</p>
+        </div>
+      </form>
+    </section>
+
+    <aside class="info-card">
+      <div>
+        <h3>Program details</h3>
+        <div class="event-summary" id="eventSummary">
+          <p><strong>Choose a program above to view its registration overview.</strong></p>
+        </div>
+      </div>
+
+      <div>
+        <h3>Registration benefits</h3>
+        <ul class="info-list">
+          <li>Streamlined onboarding for participants and institutions.</li>
+          <li>Centralized event tracking for organizers.</li>
+          <li>Professional form layout for workshop promotions.</li>
+          <li>Mobile-friendly fields and clear required inputs.</li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer-note">ME-RIISE Foundation | Designed for workshop and event registration across all programs.</footer>
+
+  <script>
+    const programSelect = document.getElementById('program');
+    const eventSummary = document.getElementById('eventSummary');
+
+    const summaries = {
+      'NAIN 2.0': {
+        title: 'NAIN 2.0',
+        description: 'National Accelerator Induction Network 2.0 for student innovation and ideation support.',
+        highlights: [
+          'Idea submission and mentorship planning.',
+          'Project incubation support and ecosystem guidance.',
+          'Eligibility for academic institutions and student teams.'
+        ]
+      },
+      'TBI': {
+        title: 'TBI',
+        description: 'Technology Business Incubator pathway for startups, mentors, and innovation projects.',
+        highlights: [
+          'Business model support and incubation guidance.',
+          'Mentor connect for technology-based startups.',
+          'Dedicated support for institutional startups.'
+        ]
+      },
+      'MRF': {
+        title: 'MRF',
+        description: 'MRF program registration for research, fellowships, and industry collaboration.',
+        highlights: [
+          'Research funding and innovation fellowship access.',
+          'Opportunity to work with industry mentors.',
+          'Project-based registration and review process.'
+        ]
+      },
+      'UBA': {
+        title: 'UBA',
+        description: 'Unnat Bharat Abhiyan program for rural outreach, institutional participation, and social innovation.',
+        highlights: [
+          'Community-focused project registration.',
+          'Institutional mapping and rural development support.',
+          'Track records for outreach and impact projects.'
+        ]
+      },
+      'RGEP': {
+        title: 'RGEP',
+        description: 'Rural Green Entrepreneurship Program registration for sustainable enterprise building.',
+        highlights: [
+          'Support for green startups and agritech ideas.',
+          'Mentorship for rural entrepreneurship projects.',
+          'Funding and ecosystem enablement details.'
+        ]
+      },
+      'IIC': {
+        title: 'IIC',
+        description: 'Institution Innovation Council registration for fostering innovation culture across campuses.',
+        highlights: [
+          'Innovation leadership and student engagement.',
+          'Project showcases, workshops, and networking.',
+          'Support for campus-wide ideation initiatives.'
+        ]
+      }
+    };
+
+    function updateSummary() {
+      const value = programSelect.value;
+      if (!summaries[value]) {
+        eventSummary.innerHTML = '<p><strong>Choose a program above to view its registration overview.</strong></p>';
+        return;
+      }
+
+      const program = summaries[value];
+      eventSummary.innerHTML = `
+        <p><strong>${program.title}</strong></p>
+        <p>${program.description}</p>
+        <ul class="info-list">
+          ${program.highlights.map(item => `<li>${item}</li>`).join('')}
+        </ul>
+      `;
+    }
+
+    programSelect.addEventListener('change', updateSummary);
+  </script>
+</body>
+</html>
