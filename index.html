@@ -15,349 +15,389 @@
         integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
         crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="/images/meriise-favicon.jpg" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/newcss.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="assets/js/newjs.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="assets/sliderPart/css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-        .img1:hover {
-            transform: scale(1.14);
-        }
+    <!DOCTYPE html>
 
-        .img2 {
-            transition: all ease-in-out .3s;
-        }
+    <html>
 
-        .img2:hover {
-            transform: scale(1.08);
-        }
+    <head>
+        <title>ME-RIISE Foundation</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- bootstrap 4 css -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-        .marq {
-            padding-top: 30px;
-            padding-bottom: 10px;
-        }
+        <!-- fontawesome cdn -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
+            integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
+            crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="/images/meriise-favicon.jpg" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/newcss.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script defer src="assets/js/newjs.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="assets/sliderPart/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-
-        .blink {
-            animation: blink 2s infinite;
-            color: blue;
-        }
-
-        .event-list {
-            padding-top: -50px;
-            width: 100%;
-        }
-
-        #list {
-            font-size: 15px;
-        }
-
-        #box2 {
-            z-index: 1;
-        }
-
-
-
-        .card {
-            /* font-family: "Inria Sans", sans-serif; */
-            /* font-weight: 700; */
-            font-style: normal;
-            /* z-index: 40; */
-            pointer-events: all;
-            filter: none;
-            /* Add this line */
-            /* position: sticky; */
-        }
+        <!-- CSS -->
+        <link rel="stylesheet" href="assets/sliderPart/css/style.css" />
+        <link rel="stylesheet" href="assets/slider2/style.css">
+        <!-- Boxicons CSS -->
+        <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/NavbarCode/assets/css/styles.css">
+        <link rel="stylesheet" href="SliderMain/slider.css">
+        <link rel="stylesheet" href="SliderMain/slider.js">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+            
+            
+            
+            
+            
 
 
 
-        .symbol {
-            background-color: white;
-            height: 20vh;
-            border-radius: 0px 22px 22px 0px;
-            /* box-shadow: 3px 3px 3px 9px rgba(0, 0, 0, 0.5); */
-        }
-
-        .image img {
-            /* background-color: red; */
-            height: 20vh;
-
-        }
-
-        .image {
-            padding-top: 20px;
-            padding-left: 100px;
-        }
-
-        /* .wrongBtn {
-            margin: 9px;
-        } */
-        /* .logoimg {
-            height: 90px;
-            /* background-color: green; */
-        /* }  */
-
-
-        @media only screen and (max-width: 800px) {
-            .symbol {
-                border-radius: 22px 22px 0px 0px;
+            .main {
+                text-align: center;
             }
 
-            .image img {
-                /* background-color: red; */
-                height: 10vh;
-
+            .img1 {
+                transition: all ease-in-out .3s;
             }
 
-            .image {
-                padding-left: 60px;
-                padding-top: 1px;
+            a {
+                text-decoration: none;
+                color: blue;
             }
 
 
-            .wrong {
-                text-align: right;
+            .img1:hover {
+                transform: scale(1.14);
+            }
+
+            .img2 {
+                transition: all ease-in-out .3s;
+            }
+
+            .img2:hover {
+                transform: scale(1.08);
+            }
+
+            .marq {
+                padding-top: 30px;
+                padding-bottom: 10px;
             }
 
 
-
-
-        }
-
-        @media only screen and (max-width: 400px) {
-            .pragtext {
-                font-size: 10px;
-                /* background-color: red; */
+            .blink {
+                animation: blink 2s infinite;
+                color: blue;
             }
 
-            .image img {
-                /* background-color: red; */
-                height: 10vh;
-
+            .event-list {
+                padding-top: -50px;
+                width: 100%;
             }
 
-            .image {
-                padding-left: 50px;
-            }
-
-            .wrong {
-                text-align: right;
-            }
-
-
-
-
-        }
-
-
-        @media only screen and (min-width: 200px) and (max-width: 480px) {
-            #board {
-                margin-left: 2px;
-            }
-
-            .visit1 {
-                height: 3vh;
-                width: 25vw;
-                margin-left: 3rem;
-                padding-top: 4px;
-                margin-top: 3px;
-
-            }
-        }
-
-
-        @media only screen and (min-width: 480px) and (max-width: 639px) {
-            #board {
-                margin-left: 2px;
-            }
-        }
-
-        @media only screen and (min-width: 980px) and (max-width: 1024px) {
-            #board {
-                margin-left: 2px;
-            }
-
-            .visit {
-                margin-right: 5rem;
-            }
-        }
-
-
-        @media only screen and (min-width: 1024px) and (max-width: 1180px) {
             #list {
-                font-size: 10px;
-
-            }
-        }
-
-
-
-
-
-
-        @keyframes blink {
-            0% {
-                opacity: 5;
+                font-size: 15px;
             }
 
-            100% {
-                opacity: 2;
-                color: red;
+            #box2 {
+                z-index: 1;
             }
 
 
-        }
 
-        #opaqueScreen {
-            opacity: .4;
-            z-index: 30;
-            position: absolute;
-            /* background-color:white; */
-            /* backdrop-filter: blur(700px); */
-        }
-
-        /* .blurring{
-             filter: blur(5px); 
-        } */
-
-        .countdown {
-            /* white-space: 3px; */
-            margin-left: 50px;
-            width: 300px;
-            word-spacing: 10px;
-
-        }
-
-        .time-unit {
-            padding-left: 15px;
-
-        }
-
-        /* .visit{
-            border:2px solid white;
-            text-align: center;
-            color:white;
-            font-family:"Inria Sans", sans-serif;
-            border-radius:15px;
-            padding:8px 30px 8px 30px;
-            text-decoration: none;
-            margin:3em 0 0 8rem; 
+            .card {
+                /* font-family: "Inria Sans", sans-serif; */
+                /* font-weight: 700; */
+                font-style: normal;
+                /* z-index: 40; */
+                pointer-events: all;
+                filter: none;
+                /* Add this line */
+                /* position: sticky; */
+            }
 
 
 
-        }*/
-        /* .visit:hover {background-color: transparent;
-        text-decoration: none;}
 
-        @media only screen and (max-width: 667px) {
-            .visit{
-            margin:0px;
-            padding:0px;
-            margin-right: 5px;
+            .symbol {
+                background-color: white;
+                height: 20vh;
+                border-radius: 0px 22px 22px 0px;
+                /* box-shadow: 3px 3px 3px 9px rgba(0, 0, 0, 0.5); */
+            }
+
+            .image img {
+                /* background-color: red; */
+                height: 20vh;
+
+            }
+
+            .image {
+                padding-top: 20px;
+                padding-left: 100px;
+            }
+
+            /* .wrongBtn {
+                margin: 9px;
+            } */
+            /* .logoimg {
+                height: 90px;
+                /* background-color: green; */
+            /* }  */
+
+
+            @media only screen and (max-width: 800px) {
+                .symbol {
+                    border-radius: 22px 22px 0px 0px;
+                }
+
+                .image img {
+                    /* background-color: red; */
+                    height: 10vh;
+
+                }
+
+                .image {
+                    padding-left: 60px;
+                    padding-top: 1px;
+                }
+
+
+                .wrong {
+                    text-align: right;
+                }
+
+
+
+            }
+
+        
+            @media only screen and (max-width: 400px) {
+                .pragtext {
+                    font-size: 10px;
+                    /* background-color: red; */
+                }
+
+                .image img {
+                    /* background-color: red; */
+                    height: 10vh;
+
+                }
+
+                .image {
+                    padding-left: 50px;
+                }
+
+                .wrong {
+                    text-align: right;
+                }
+
+
+
+            }
+
+
+
+            @media only screen and (min-width: 200px) and (max-width: 480px) {
+                #board {
+                    margin-left: 2px;
+                }
+
+                .visit1 {
+                    height: 3vh;
+                    width: 25vw;
+                    margin-left: 3rem;
+                    padding-top: 4px;
+                    margin-top: 3px;
+
+                }
+            }
+
+
+        
+            @media only screen and (min-width: 480px) and (max-width: 639px) {
+                #board {
+                    margin-left: 2px;
+                }
+            }
+
+            @media only screen and (min-width: 980px) and (max-width: 1024px) {
+                #board {
+                    margin-left: 2px;
+                }
+
+                .visit {
+                    margin-right: 5rem;
+                }
+            }
+
+
+            @media only screen and (min-width: 1024px) and (max-width: 1180px) {
+                #list {
+                    font-size: 10px;
+
+                }
+            }
+
+
+
+
+
+            @keyframes blink {
+                0% {
+                    opacity: 5;
+                }
+
+                100% {
+                    opacity: 2;
+                    color: red;
+                }
+
+
+            }
+
+            #opaqueScreen {
+                opacity: .4;
+                z-index: 30;
+                position: absolute;
+                /* background-color:white; */
+                /* backdrop-filter: blur(700px); */
+            }
+
+            /* .blurring{
+                 filter: blur(5px); 
+            } */
+
+            .countdown {
+                /* white-space: 3px; */
+                margin-left: 50px;
+                width: 300px;
+                word-spacing: 10px;
+
+            }
+
+            .time-unit {
+                padding-left: 15px;
+
+            }
+
+            /* .visit{
+                border:2px solid white;
+                text-align: center;
+                color:white;
+                font-family:"Inria Sans", sans-serif;
+                border-radius:15px;
+                padding:8px 30px 8px 30px;
+                text-decoration: none;
+                margin:3em 0 0 8rem; 
+
+
+
+            }*/
+            /* .visit:hover {background-color: transparent;
+            text-decoration: none;}
+
+            @media only screen and (max-width: 667px) {
+                .visit{
+                margin:0px;
+                padding:0px;
+                margin-right: 5px;
                     
+                }
+            } 
+            @media only screen and (min-width: 400px) and (max-width: 950px) {
+                .visit {
+                margin-top:1rem;
+                }
             }
-        } 
-        @media only screen and (min-width: 400px) and (max-width: 950px) {
-            .visit {
-            margin-top:1rem;
-            }
-        }
-        @media only screen and (min-width: 770px) and (max-width: 1236px) {
-            .visit {
-            margin-top:0px;
-            margin-left:5rem;
-            }
-        } */
-
-        /* Modal styles to match design */
-        #alert-box-container {
-            backdrop-filter: blur(3px);
-            -webkit-backdrop-filter: blur(3px);
-        }
-
-        #alert-box {
-            max-width: 440px;
-            padding: 26px 26px 30px 26px;
-            border-radius: 14px;
-            box-shadow: 0 18px 40px rgba(3, 10, 26, 0.35);
-            transition: transform 220ms ease, opacity 220ms ease;
-        }
-
-        #alert-box img {
-            height: 72px;
-            object-fit: contain;
-        }
-
-        #alert-badge {
-            background: #e6fbef;
-            color: #15803d;
-            font-weight: 700;
-            letter-spacing: 0.2px;
-            font-size: 12px;
-        }
-
-        #alert-title {
-            font-family: 'Inria Sans', sans-serif;
-            font-size: 20px;
-            margin-top: 6px;
-            margin-bottom: 6px;
-        }
-
-        #alert-desc {
-            color: #4b5563;
-            font-size: 13px;
-            margin-bottom: 12px;
-            line-height: 1.35;
-        }
-
-        #alert-cta {
-            background: #10b981;
-            border: none;
-            color: #fff;
-            padding: 12px 28px;
-            border-radius: 10px;
-            font-weight: 700;
-            box-shadow: 0 10px 30px rgba(16,185,129,0.16);
-            transition: transform 160ms ease, background 160ms ease;
-        }
-
-        #alert-cta:hover {
-            background: #059669;
-            transform: translateY(-3px);
-        }
-
-        #close-alert-btn {
-            width: 36px;
-            height: 36px;
-            line-height: 36px;
-            font-size: 18px;
-            border-radius: 50%;
-            box-shadow: 0 8px 20px rgba(2,6,23,0.12);
-            right: -12px;
-            top: -12px;
-        }
-
-        @media (max-width: 480px) {
-            #alert-box { margin: 0 12px; max-width: 92%; padding: 18px; }
-            #alert-box img { height: 60px; }
-            #alert-title { font-size: 18px; }
-            #alert-cta { width: 100%; padding: 12px 16px; }
-        }
-
-    </style>
-</head>
+            @media only screen and (min-width: 770px) and (max-width: 1236px) {
+                .visit {
+                margin-top:0px;
+                margin-left:5rem;
+                }
+            } */
+        </style>
+    </head>
 
 
-<body style="position: relative;">
-  <div id="alert-box-container"
-    class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-[999] p-4 transition-opacity duration-300 opacity-0"
-    style="display: none;">
-    <div id="alert-box" role="dialog" aria-modal="true" aria-labelledby="alert-title" aria-describedby="alert-desc"
-        class="relative bg-white w-full max-w-md rounded-2xl shadow-2xl p-6 text-center transform scale-95 transition-transform duration-300">
+    <body style="position: relative;">
+        <!-- <div id="alert-box-container"
+            class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-[999] p-4 transition-opacity duration-300 opacity-0"
+            style="display: none;">
+            <div
+                class="relative bg-white w-full max-w-md rounded-2xl shadow-2xl p-6 text-center transform scale-95 transition-transform duration-300">
+                <button id="close-alert-btn"
+                    class="absolute -top-2 -right-2 bg-white rounded-full h-8 w-8 flex items-center justify-center text-gray-600 hover:text-red-500 hover:bg-gray-100 text-2xl font-bold shadow-md">&times;</button>
+
+                <div class="flex justify-center mb-4">
+                    <img src="assets/MERIISE FOUNDATION logo 2.0.png" class="h-32" alt="Event Logo" class="h-24">
+                </div>
+
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">Vision Hunt</h3>
+                <p class="text-gray-600 mb-6 text-sm ">An Online quiz developed by ME-RIISE Foundation where the questions will be based on Business, entrepreneurial questions and tech news.</p>
+                <a href="Leaderboard.html" 
+                    class="inline-block bg-blue-500 text-white font-bold py-3 px-8 rounded-lg hover:from-blue-600 hover:to-purple-700 transition duration-300 shadow-lg transform hover:scale-105">
+                     View Leaderboard
+                </a>
+            </div>
+        </div>  -->
+
+    <!-- <div id="alert-box-container"
+        class="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center 
+               p-4 sm:p-6 z-[999] opacity-0 transition"
+        style="display:none">
+
+        <div class="relative w-full max-w-2xl bg-white rounded-3xl shadow-xl border border-gray-200 
+                    p-6 sm:p-10 flex flex-col sm:flex-row gap-6 sm:gap-10 items-center transform scale-95 transition">
+
+            <button id="close-alert-btn"
+                class="absolute top-3 right-3 sm:top-4 sm:right-4 h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center
+                       text-gray-500 hover:text-gray-900 rounded-full hover:bg-gray-200 
+                       transition text-xl sm:text-2xl leading-none">
+                &times;
+            </button>
+            <div class="w-full sm:w-1/3 flex justify-center">
+                <img src="img/pragyathalogo.jpg"
+                    class="h-32 w-32 sm:h-40 sm:w-40 object-contain rounded-xl" />
+            </div>
+            <div class="w-full sm:w-2/3 text-center sm:text-left">
+
+                <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 sm:mb-3">
+                    Pragyatha'25
+                </h3>
+
+                <p class="text-blue-600 text-xs uppercase tracking-widest mb-4 sm:mb-5 font-medium">
+                LET THE REALM RISE ONCE MORE
+                </p>
+
+                <p class="text-gray-600 text-sm sm:text-[15px] leading-relaxed mb-2 sm:mb-2 px-2 sm:px-0">
+                    An event born of frost and fire—where creativity becomes power, intellect becomes might, and every participant shapes their own legacy.
+                </p>
+                            <p class="text-gray-600 text-sm sm:text-[15px] leading-relaxed mb-6 sm:mb-8 px-2 sm:px-0">
+       <b>The realm awaits you</b>
+                </p>
+
+                <a href="https://pragyatha25.meriise.org"
+                   target="_blank"
+                   class="inline-block w-full sm:w-auto bg-gradient-to-r from-blue-600 to-cyan-500 text-white 
+                          font-semibold py-3 px-10 rounded-xl shadow-md hover:scale-105 
+                          transition-all">
+                   Register Now
+                </a>
+
+            </div>
+
+        </div>
+    </div> -->
+
         <button id="close-alert-btn"
             class="absolute -top-3 -right-3 bg-white rounded-full h-9 w-9 flex items-center justify-center text-gray-600 hover:text-red-500 hover:bg-gray-100 text-2xl font-bold shadow-md" aria-label="Close">&times;</button>
 
