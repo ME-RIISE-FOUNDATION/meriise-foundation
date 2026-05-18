@@ -15,408 +15,323 @@
         integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
         crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="/images/meriise-favicon.jpg" />
-    <!DOCTYPE html>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/newcss.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="assets/js/newjs.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="assets/sliderPart/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-    <html>
-
-    <head>
-        <title>ME-RIISE Foundation</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!-- bootstrap 4 css -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-        <!-- fontawesome cdn -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
-            integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
-            crossorigin="anonymous"></script>
-        <link rel="icon" type="image/x-icon" href="/images/meriise-favicon.jpg" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/newcss.css" />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script defer src="assets/js/newjs.js"></script>
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-        <!-- Swiper CSS -->
-        <link rel="stylesheet" href="assets/sliderPart/css/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-
-        <!-- CSS -->
-        <link rel="stylesheet" href="assets/sliderPart/css/style.css" />
-        <link rel="stylesheet" href="assets/slider2/style.css">
-        <!-- Boxicons CSS -->
-        <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-        <link rel="stylesheet" href="assets/NavbarCode/assets/css/styles.css">
-        <link rel="stylesheet" href="SliderMain/slider.css">
-        <link rel="stylesheet" href="SliderMain/slider.js">
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-            
-            
-            
-            
-            
-
-
-
-            .main {
-                text-align: center;
-            }
-
-            .img1 {
-                transition: all ease-in-out .3s;
-            }
-
-            a {
-                text-decoration: none;
-                color: blue;
-            }
-
-
-            .img1:hover {
-                transform: scale(1.14);
-            }
-
-            .img2 {
-                transition: all ease-in-out .3s;
-            }
-
-            .img2:hover {
-                transform: scale(1.08);
-            }
-
-            .marq {
-                padding-top: 30px;
-                padding-bottom: 10px;
-            }
-
-
-            .blink {
-                animation: blink 2s infinite;
-                color: blue;
-            }
-
-            .event-list {
-                padding-top: -50px;
-                width: 100%;
-            }
-
-            #list {
-                font-size: 15px;
-            }
-
-            #box2 {
-                z-index: 1;
-            }
-
-
-
-            .card {
-                /* font-family: "Inria Sans", sans-serif; */
-                /* font-weight: 700; */
-                font-style: normal;
-                /* z-index: 40; */
-                pointer-events: all;
-                filter: none;
-                /* Add this line */
-                /* position: sticky; */
-            }
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/sliderPart/css/style.css" />
+    <link rel="stylesheet" href="assets/slider2/style.css">
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/NavbarCode/assets/css/styles.css">
+    <link rel="stylesheet" href="SliderMain/slider.css">
+    <link rel="stylesheet" href="SliderMain/slider.js">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 
 
 
+
+        .main {
+            text-align: center;
+        }
+
+        .img1 {
+            transition: all ease-in-out .3s;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+
+
+        .img1:hover {
+            transform: scale(1.14);
+        }
+
+        .img2 {
+            transition: all ease-in-out .3s;
+        }
+
+        .img2:hover {
+            transform: scale(1.08);
+        }
+
+        .marq {
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+
+
+        .blink {
+            animation: blink 2s infinite;
+            color: blue;
+        }
+
+        .event-list {
+            padding-top: -50px;
+            width: 100%;
+        }
+
+        #list {
+            font-size: 15px;
+        }
+
+        #box2 {
+            z-index: 1;
+        }
+
+
+
+        .card {
+            /* font-family: "Inria Sans", sans-serif; */
+            /* font-weight: 700; */
+            font-style: normal;
+            /* z-index: 40; */
+            pointer-events: all;
+            filter: none;
+            /* Add this line */
+            /* position: sticky; */
+        }
+
+
+
+        .symbol {
+            background-color: white;
+            height: 20vh;
+            border-radius: 0px 22px 22px 0px;
+            /* box-shadow: 3px 3px 3px 9px rgba(0, 0, 0, 0.5); */
+        }
+
+        .image img {
+            /* background-color: red; */
+            height: 20vh;
+
+        }
+
+        .image {
+            padding-top: 20px;
+            padding-left: 100px;
+        }
+
+        /* .wrongBtn {
+            margin: 9px;
+        } */
+        /* .logoimg {
+            height: 90px;
+            /* background-color: green; */
+        /* }  */
+
+
+        @media only screen and (max-width: 800px) {
             .symbol {
-                background-color: white;
-                height: 20vh;
-                border-radius: 0px 22px 22px 0px;
-                /* box-shadow: 3px 3px 3px 9px rgba(0, 0, 0, 0.5); */
+                border-radius: 22px 22px 0px 0px;
             }
 
             .image img {
                 /* background-color: red; */
-                height: 20vh;
+                height: 10vh;
 
             }
 
             .image {
-                padding-top: 20px;
-                padding-left: 100px;
-            }
-
-            /* .wrongBtn {
-                margin: 9px;
-            } */
-            /* .logoimg {
-                height: 90px;
-                /* background-color: green; */
-            /* }  */
-
-
-            @media only screen and (max-width: 800px) {
-                .symbol {
-                    border-radius: 22px 22px 0px 0px;
-                }
-
-                .image img {
-                    /* background-color: red; */
-                    height: 10vh;
-
-                }
-
-                .image {
-                    padding-left: 60px;
-                    padding-top: 1px;
-                }
-
-
-                .wrong {
-                    text-align: right;
-                }
-
-
-
-            }
-
-        
-            @media only screen and (max-width: 400px) {
-                .pragtext {
-                    font-size: 10px;
-                    /* background-color: red; */
-                }
-
-                .image img {
-                    /* background-color: red; */
-                    height: 10vh;
-
-                }
-
-                .image {
-                    padding-left: 50px;
-                }
-
-                .wrong {
-                    text-align: right;
-                }
-
-
-
+                padding-left: 60px;
+                padding-top: 1px;
             }
 
 
-
-            @media only screen and (min-width: 200px) and (max-width: 480px) {
-                #board {
-                    margin-left: 2px;
-                }
-
-                .visit1 {
-                    height: 3vh;
-                    width: 25vw;
-                    margin-left: 3rem;
-                    padding-top: 4px;
-                    margin-top: 3px;
-
-                }
-            }
-
-
-        
-            @media only screen and (min-width: 480px) and (max-width: 639px) {
-                #board {
-                    margin-left: 2px;
-                }
-            }
-
-            @media only screen and (min-width: 980px) and (max-width: 1024px) {
-                #board {
-                    margin-left: 2px;
-                }
-
-                .visit {
-                    margin-right: 5rem;
-                }
-            }
-
-
-            @media only screen and (min-width: 1024px) and (max-width: 1180px) {
-                #list {
-                    font-size: 10px;
-
-                }
+            .wrong {
+                text-align: right;
             }
 
 
 
 
+        }
 
-            @keyframes blink {
-                0% {
-                    opacity: 5;
-                }
+        @media only screen and (max-width: 400px) {
+            .pragtext {
+                font-size: 10px;
+                /* background-color: red; */
+            }
 
-                100% {
-                    opacity: 2;
-                    color: red;
-                }
-
+            .image img {
+                /* background-color: red; */
+                height: 10vh;
 
             }
 
-            #opaqueScreen {
-                opacity: .4;
-                z-index: 30;
-                position: absolute;
-                /* background-color:white; */
-                /* backdrop-filter: blur(700px); */
+            .image {
+                padding-left: 50px;
             }
 
-            /* .blurring{
-                 filter: blur(5px); 
-            } */
-
-            .countdown {
-                /* white-space: 3px; */
-                margin-left: 50px;
-                width: 300px;
-                word-spacing: 10px;
-
+            .wrong {
+                text-align: right;
             }
 
-            .time-unit {
-                padding-left: 15px;
 
+
+
+        }
+
+
+        @media only screen and (min-width: 200px) and (max-width: 480px) {
+            #board {
+                margin-left: 2px;
             }
 
-            /* .visit{
-                border:2px solid white;
-                text-align: center;
-                color:white;
-                font-family:"Inria Sans", sans-serif;
-                border-radius:15px;
-                padding:8px 30px 8px 30px;
-                text-decoration: none;
-                margin:3em 0 0 8rem; 
+            .visit1 {
+                height: 3vh;
+                width: 25vw;
+                margin-left: 3rem;
+                padding-top: 4px;
+                margin-top: 3px;
+
+            }
+        }
+
+
+        @media only screen and (min-width: 480px) and (max-width: 639px) {
+            #board {
+                margin-left: 2px;
+            }
+        }
+
+        @media only screen and (min-width: 980px) and (max-width: 1024px) {
+            #board {
+                margin-left: 2px;
+            }
+
+            .visit {
+                margin-right: 5rem;
+            }
+        }
+
+
+        @media only screen and (min-width: 1024px) and (max-width: 1180px) {
+            #list {
+                font-size: 10px;
+
+            }
+        }
 
 
 
-            }*/
-            /* .visit:hover {background-color: transparent;
-            text-decoration: none;}
 
-            @media only screen and (max-width: 667px) {
-                .visit{
-                margin:0px;
-                padding:0px;
-                margin-right: 5px;
+
+
+        @keyframes blink {
+            0% {
+                opacity: 5;
+            }
+
+            100% {
+                opacity: 2;
+                color: red;
+            }
+
+
+        }
+
+        #opaqueScreen {
+            opacity: .4;
+            z-index: 30;
+            position: absolute;
+            /* background-color:white; */
+            /* backdrop-filter: blur(700px); */
+        }
+
+        /* .blurring{
+             filter: blur(5px); 
+        } */
+
+        .countdown {
+            /* white-space: 3px; */
+            margin-left: 50px;
+            width: 300px;
+            word-spacing: 10px;
+
+        }
+
+        .time-unit {
+            padding-left: 15px;
+
+        }
+
+        /* .visit{
+            border:2px solid white;
+            text-align: center;
+            color:white;
+            font-family:"Inria Sans", sans-serif;
+            border-radius:15px;
+            padding:8px 30px 8px 30px;
+            text-decoration: none;
+            margin:3em 0 0 8rem; 
+
+
+
+        }*/
+        /* .visit:hover {background-color: transparent;
+        text-decoration: none;}
+
+        @media only screen and (max-width: 667px) {
+            .visit{
+            margin:0px;
+            padding:0px;
+            margin-right: 5px;
                     
-                }
-            } 
-            @media only screen and (min-width: 400px) and (max-width: 950px) {
-                .visit {
-                margin-top:1rem;
-                }
             }
-            @media only screen and (min-width: 770px) and (max-width: 1236px) {
-                .visit {
-                margin-top:0px;
-                margin-left:5rem;
-                }
-            } */
-        </style>
-    </head>
+        } 
+        @media only screen and (min-width: 400px) and (max-width: 950px) {
+            .visit {
+            margin-top:1rem;
+            }
+        }
+        @media only screen and (min-width: 770px) and (max-width: 1236px) {
+            .visit {
+            margin-top:0px;
+            margin-left:5rem;
+            }
+        } */
+    </style>
+</head>
 
 
-    <body style="position: relative;">
-        <!-- <div id="alert-box-container"
-            class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-[999] p-4 transition-opacity duration-300 opacity-0"
-            style="display: none;">
-            <div
-                class="relative bg-white w-full max-w-md rounded-2xl shadow-2xl p-6 text-center transform scale-95 transition-transform duration-300">
-                <button id="close-alert-btn"
-                    class="absolute -top-2 -right-2 bg-white rounded-full h-8 w-8 flex items-center justify-center text-gray-600 hover:text-red-500 hover:bg-gray-100 text-2xl font-bold shadow-md">&times;</button>
-
-                <div class="flex justify-center mb-4">
-                    <img src="assets/MERIISE FOUNDATION logo 2.0.png" class="h-32" alt="Event Logo" class="h-24">
-                </div>
-
-                <h3 class="text-2xl font-bold text-gray-800 mb-2">Vision Hunt</h3>
-                <p class="text-gray-600 mb-6 text-sm ">An Online quiz developed by ME-RIISE Foundation where the questions will be based on Business, entrepreneurial questions and tech news.</p>
-                <a href="Leaderboard.html" 
-                    class="inline-block bg-blue-500 text-white font-bold py-3 px-8 rounded-lg hover:from-blue-600 hover:to-purple-700 transition duration-300 shadow-lg transform hover:scale-105">
-                     View Leaderboard
-                </a>
-            </div>
-        </div>  -->
-
-    <!-- <div id="alert-box-container"
-        class="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center 
-               p-4 sm:p-6 z-[999] opacity-0 transition"
-        style="display:none">
-
-        <div class="relative w-full max-w-2xl bg-white rounded-3xl shadow-xl border border-gray-200 
-                    p-6 sm:p-10 flex flex-col sm:flex-row gap-6 sm:gap-10 items-center transform scale-95 transition">
-
-            <button id="close-alert-btn"
-                class="absolute top-3 right-3 sm:top-4 sm:right-4 h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center
-                       text-gray-500 hover:text-gray-900 rounded-full hover:bg-gray-200 
-                       transition text-xl sm:text-2xl leading-none">
-                &times;
-            </button>
-            <div class="w-full sm:w-1/3 flex justify-center">
-                <img src="img/pragyathalogo.jpg"
-                    class="h-32 w-32 sm:h-40 sm:w-40 object-contain rounded-xl" />
-            </div>
-            <div class="w-full sm:w-2/3 text-center sm:text-left">
-
-                <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 sm:mb-3">
-                    Pragyatha'25
-                </h3>
-
-                <p class="text-blue-600 text-xs uppercase tracking-widest mb-4 sm:mb-5 font-medium">
-                LET THE REALM RISE ONCE MORE
-                </p>
-
-                <p class="text-gray-600 text-sm sm:text-[15px] leading-relaxed mb-2 sm:mb-2 px-2 sm:px-0">
-                    An event born of frost and fire—where creativity becomes power, intellect becomes might, and every participant shapes their own legacy.
-                </p>
-                            <p class="text-gray-600 text-sm sm:text-[15px] leading-relaxed mb-6 sm:mb-8 px-2 sm:px-0">
-       <b>The realm awaits you</b>
-                </p>
-
-                <a href="https://pragyatha25.meriise.org"
-                   target="_blank"
-                   class="inline-block w-full sm:w-auto bg-gradient-to-r from-blue-600 to-cyan-500 text-white 
-                          font-semibold py-3 px-10 rounded-xl shadow-md hover:scale-105 
-                          transition-all">
-                   Register Now
-                </a>
-
-            </div>
-
-        </div>
-    </div> -->
-
+<body style="position: relative;">
+  <div id="alert-box-container"
+    class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-[999] p-4 transition-opacity duration-300 opacity-0"
+    style="display: none;">
+    <div
+        class="relative bg-white w-full max-w-md rounded-2xl shadow-2xl p-6 text-center transform scale-95 transition-transform duration-300">
         <button id="close-alert-btn"
-            class="absolute -top-3 -right-3 bg-white rounded-full h-9 w-9 flex items-center justify-center text-gray-600 hover:text-red-500 hover:bg-gray-100 text-2xl font-bold shadow-md" aria-label="Close">&times;</button>
+            class="absolute -top-2 -right-2 bg-white rounded-full h-8 w-8 flex items-center justify-center text-gray-600 hover:text-red-500 hover:bg-gray-100 text-2xl font-bold shadow-md">&times;</button>
 
         <div class="flex justify-center mb-4">
             <img src="assets/MERIISE FOUNDATION logo 2.0.png" class="h-32" alt="ME-RIISE Logo">
         </div>
 
-        <span id="alert-badge" class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full mb-3 tracking-wide uppercase">
+        <span class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full mb-3 tracking-wide uppercase">
             We Are Back with Bridging Generations – Alumni Insights 2.0! 🌍
         </span>
 
-        <h3 id="alert-title" class="text-2xl font-bold text-gray-800 mb-2">Bridging Generations - Alumni Insights 2.0</h3>
-        <p id="alert-desc" class="text-gray-600 mb-1 text-sm font-semibold">After an inspiring first phase, we are excited to relaunch Bridging Generations – Alumni Insights 2.0 with an all-new segment, new experiences, and impactful conversations!</p>
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Bridging Generations - Alumni Insights 2.0</h3>
+        <p class="text-gray-600 mb-1 text-sm font-semibold">After an inspiring first phase, we are excited to relaunch Bridging Generations – Alumni Insights 2.0 with an all-new segment, new experiences, and impactful conversations!</p>
 
         <div class="flex justify-center gap-3 text-xs text-gray-500 mb-5">
             🎥 Watch our speaker here:
         </div>
 
-        <a id="alert-cta" href="https://youtube.com/shorts/y9HQQNGeZPE?feature=share" target="_blank" rel="noopener"
+        <a href="https://youtube.com/shorts/y9HQQNGeZPE?feature=share"
             class="inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 shadow-lg transform hover:scale-105">
             Click here
         </a>
@@ -2990,7 +2905,36 @@
 
 
 
-        
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const alertContainer = document.getElementById('alert-box-container');
+                const alertBox = alertContainer.querySelector('div'); // The inner box
+                const closeBtn = document.getElementById('close-alert-btn');
+
+                // Function to show the alert with animation
+                function showAlert() {
+                    alertContainer.style.display = 'flex';
+                    setTimeout(() => {
+                        alertContainer.style.opacity = '1';
+                        alertBox.style.transform = 'scale(1)';
+                    }, 50); // Small delay to trigger transition
+                }
+
+                // Function to hide the alert with animation
+                function hideAlert() {
+                    alertBox.style.transform = 'scale(0.95)';
+                    alertContainer.style.opacity = '0';
+                    setTimeout(() => {
+                        alertContainer.style.display = 'none';
+                    }, 300); // Match transition duration
+                }
+
+                // Show the alert after a 2-second delay
+                setTimeout(showAlert, 500);
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', hideAlert);
+                }
+            });
             // const menu = document.getElementById('menu12');
             // const navlinks = document.querySelector('.navlinks');
             // const clickEvent = document.getElementById('click');
@@ -3129,55 +3073,218 @@
 
 
 
-            <script>
             document.addEventListener('DOMContentLoaded', function () {
                 const alertContainer = document.getElementById('alert-box-container');
-                const alertBox = document.getElementById('alert-box');
+                const alertBox = alertContainer.querySelector('div');
                 const closeBtn = document.getElementById('close-alert-btn');
-                const CTA = document.getElementById('alert-cta');
 
-                const STORAGE_KEY = 'meriise_alert_seen_v1';
+                // Check if user has already viewed the leaderboard
+                const hasViewedLeaderboard = localStorage.getItem('viewedLeaderboard');
 
-                function hasQueryShow() {
-                    try { return new URLSearchParams(window.location.search).get('showModal') === '1'; } catch (e) { return false; }
-                }
-
+                // Function to show the alert with animation
                 function showAlert() {
-                    if (!alertContainer) return;
                     alertContainer.style.display = 'flex';
-                    requestAnimationFrame(() => {
+                    setTimeout(() => {
                         alertContainer.style.opacity = '1';
-                        if (alertBox) alertBox.style.transform = 'scale(1)';
-                    });
-                    if (closeBtn) closeBtn.focus();
+                        alertBox.style.transform = 'scale(1)';
+                    }, 50);
                 }
 
-                function hideAlert(save = true) {
-                    if (!alertContainer) return;
-                    if (alertBox) alertBox.style.transform = 'scale(0.95)';
+                // Function to hide the alert with animation
+                function hideAlert() {
+                    alertBox.style.transform = 'scale(0.95)';
                     alertContainer.style.opacity = '0';
-                    setTimeout(() => { alertContainer.style.display = 'none'; }, 300);
-                    if (save) { try { localStorage.setItem(STORAGE_KEY, '1'); } catch (e) { } }
+                    setTimeout(() => {
+                        alertContainer.style.display = 'none';
+                    }, 300);
                 }
 
-                if (alertContainer) {
-                    alertContainer.addEventListener('click', function (e) { if (e.target === alertContainer) hideAlert(true); });
+                // Only show alert if user hasn't viewed leaderboard
+                if (!hasViewedLeaderboard) {
+                    setTimeout(showAlert, 500);
                 }
 
-                if (closeBtn) closeBtn.addEventListener('click', function () { hideAlert(true); });
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', hideAlert);
+                }
 
-                document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && alertContainer && alertContainer.style.display !== 'none') hideAlert(true); });
-
-                if (CTA) CTA.addEventListener('click', function () { try { localStorage.setItem(STORAGE_KEY, '1'); } catch (e) { } });
-
-                const seen = (() => { try { return localStorage.getItem(STORAGE_KEY) === '1'; } catch (e) { return false; } })();
-                if (!seen || hasQueryShow()) setTimeout(showAlert, 500);
+                // Add click handler for leaderboard link
+                const leaderboardLink = alertBox.querySelector('a[href="Leaderboard.html"]');
+                if (leaderboardLink) {
+                    leaderboardLink.addEventListener('click', function () {
+                        localStorage.setItem('viewedLeaderboard', 'true');
+                    });
+                }
             });
-            </script>
 
 
 
 
+
+        </script>
+
+        <!-- Bridging Generations Modal -->
+        <div id="bridging-modal" class="modal-bridge" style="display: flex;">
+            <div class="modal-bridge-content">
+                <button class="modal-bridge-close" onclick="closeBridgingModal()">✕</button>
+                <img src="meriise.png" alt="ME-RIISE Foundation Logo" class="modal-bridge-logo">
+                <div class="modal-bridge-pill">🎉 WE ARE BACK WITH BRIDGING GENERATIONS – ALUMNI INSIGHTS 2.0! 🎉</div>
+                <h2 class="modal-bridge-title">Bridging Generations – Alumni Insights 2.0</h2>
+                <p class="modal-bridge-text">After an inspiring first phase, we are excited to relaunch Bridging Generations – Alumni Insights 2.0 with an all-new segment, new experiences, and impactful conversations!</p>
+                <p class="modal-bridge-subtitle">👤 Watch our speaker here:</p>
+                <a href="bridging-generations/index.html" class="btn-bridge-click">Click here</a>
+                <button class="btn-bridge-close" onclick="closeBridgingModal()">Close</button>
+            </div>
+        </div>
+
+        <style>
+            .modal-bridge {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.6);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 9999;
+                padding: 20px;
+            }
+
+            .modal-bridge-content {
+                background: white;
+                border-radius: 20px;
+                padding: 40px;
+                max-width: 500px;
+                width: 100%;
+                text-align: center;
+                position: relative;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+                animation: slideIn 0.3s ease-out;
+            }
+
+            @keyframes slideIn {
+                from {
+                    transform: translateY(-50px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            .modal-bridge-close {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                background: none;
+                border: none;
+                font-size: 28px;
+                cursor: pointer;
+                color: #666;
+                transition: color 0.2s;
+            }
+
+            .modal-bridge-close:hover {
+                color: #000;
+            }
+
+            .modal-bridge-logo {
+                height: 60px;
+                margin-bottom: 20px;
+            }
+
+            .modal-bridge-pill {
+                display: inline-block;
+                background: #d4edda;
+                color: #155724;
+                padding: 10px 20px;
+                border-radius: 50px;
+                font-size: 13px;
+                font-weight: 600;
+                margin-bottom: 20px;
+                text-align: center;
+                line-height: 1.4;
+            }
+
+            .modal-bridge-title {
+                font-size: 24px;
+                font-weight: 700;
+                color: #333;
+                margin: 15px 0;
+            }
+
+            .modal-bridge-text {
+                font-size: 15px;
+                color: #555;
+                line-height: 1.6;
+                margin: 15px 0;
+            }
+
+            .modal-bridge-subtitle {
+                font-size: 14px;
+                color: #666;
+                margin: 15px 0 10px 0;
+            }
+
+            .btn-bridge-click {
+                display: inline-block;
+                background: #28a745;
+                color: white;
+                padding: 12px 40px;
+                border-radius: 50px;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 16px;
+                margin: 20px 0 10px 0;
+                transition: all 0.3s ease;
+                cursor: pointer;
+                border: none;
+            }
+
+            .btn-bridge-click:hover {
+                background: #218838;
+                transform: scale(1.05);
+                box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+            }
+
+            .btn-bridge-close {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                background: #f0f0f0;
+                border: none;
+                border-radius: 8px;
+                color: #333;
+                font-weight: 600;
+                cursor: pointer;
+                margin-top: 15px;
+                transition: all 0.2s;
+            }
+
+            .btn-bridge-close:hover {
+                background: #e0e0e0;
+            }
+
+            .modal-bridge.hidden {
+                display: none !important;
+            }
+        </style>
+
+        <script>
+            function closeBridgingModal() {
+                document.getElementById('bridging-modal').classList.add('hidden');
+            }
+
+            // Optional: Close modal when clicking outside
+            document.getElementById('bridging-modal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeBridgingModal();
+                }
+            });
+        </script>
 
         </body>
 
