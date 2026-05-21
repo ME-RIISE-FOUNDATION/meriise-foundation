@@ -1,51 +1,11 @@
 'use strict';
 
 (function () {
-    var nav = document.getElementById('site-nav');
-    var heroTrigger = document.getElementById('hero-video-trigger');
     var watchBtn = document.getElementById('watch-talk-btn');
     var modal = document.getElementById('live-modal');
     var modalDialog = modal.querySelector('[role="dialog"]');
     var closeSelectors = '[data-modal-close]';
     var lastFocusedElement = null;
-    var youtubeEmbedUrl = 'https://www.youtube.com/embed/y9HQQNGeZPE?autoplay=1&rel=0';
-    var hasInlineVideoLoaded = false;
-
-    function updateNavShadow() {
-        if (window.scrollY > 8) {
-            nav.classList.add('is-scrolled');
-        } else {
-            nav.classList.remove('is-scrolled');
-        }
-    }
-
-    updateNavShadow();
-    window.addEventListener('scroll', updateNavShadow, { passive: true });
-
-    function injectInlineVideo() {
-        if (hasInlineVideoLoaded) return;
-        hasInlineVideoLoaded = true;
-        heroTrigger.innerHTML =
-            '<iframe ' +
-            'title="Featured talk video" ' +
-            'src="' + youtubeEmbedUrl + '" ' +
-            'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ' +
-            'allowfullscreen ' +
-            'style="width:100%;height:100%;border:0;"></iframe>';
-    }
-
-    if (heroTrigger) {
-        heroTrigger.addEventListener('click', function () {
-            injectInlineVideo();
-        });
-
-        heroTrigger.addEventListener('keydown', function (event) {
-            if (event.key === 'Enter' || event.key === ' ') {
-                event.preventDefault();
-                injectInlineVideo();
-            }
-        });
-    }
 
     function getFocusableElements(container) {
         return container.querySelectorAll(

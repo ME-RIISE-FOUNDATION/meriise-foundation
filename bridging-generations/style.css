@@ -344,12 +344,17 @@ a {
     cursor: pointer;
 }
 
-.hero-media > img {
+.hero-media > img,
+.hero-media > iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    border: 0;
+}
+
+.hero-media > img {
     object-fit: cover;
     transition: transform 300ms;
 }
@@ -502,11 +507,22 @@ a {
     position: absolute;
     inset: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 0.6rem;
     background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-surface-2) 100%);
-    font-size: 0.875rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     color: var(--color-text-muted);
+}
+
+.thumb-placeholder svg {
+    width: 2.2rem;
+    height: 2.2rem;
+    opacity: 0.35;
 }
 
 .thumb-play {

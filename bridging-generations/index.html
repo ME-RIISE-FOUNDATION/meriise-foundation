@@ -8,27 +8,199 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/NavbarCode/assets/css/styles.css" />
+    <style>
+      .h-16 { height: 4rem; }
+      header.header { box-shadow: 1px 1px 4px 2px rgba(0,0,0,0.4); }
+    </style>
 </head>
 <body>
     <a class="skip-link" href="#main-content" aria-label="Skip to main content">Skip to main content</a>
 
-    <header class="site-nav" id="site-nav">
-        <div class="container">
-            <div class="nav-row">
-                <div class="brand-wrap">
-                    <a href="../index.html" aria-label="Go to homepage">
-                        <img src="logos/meriise_logo.png" alt="ME-RIISE Foundation Logo" class="logo-left">
-                    </a>
-                    <div class="brand-divider" aria-hidden="true"></div>
-                    <span class="tagline">Innovating Ideas, Incubating Success</span>
-                </div>
-                <div class="nav-actions">
-                    <button id="theme-toggle" class="theme-switcher" type="button" aria-pressed="false" aria-label="Switch to dark theme">Dark</button>
-                    <img src="logos/mce_logo.png" alt="MCE Logo" class="logo-right">
-                </div>
-            </div>
+  <div class="snav-bar" style="background-color: black">
+    <header class="header">
+      <nav class="nav containerofNavbar">
+        <div class="nav__data">
+          <a href="#" class="nav__logo">
+            <img src="../assets/MERIISE FOUNDATION logo 2.0.png" alt="" class="h-16" />
+          </a>
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__burger"></i>
+            <i class="ri-close-line nav__close"></i>
+          </div>
         </div>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="../index.html" class="nav__link">Home</a></li>
+
+            <li class="dropdown__item">
+              <div class="nav__link">
+                About ME-RIISE
+                <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="../aboutmeriise.html" class="dropdown__link">
+                    <i class="ri-pie-chart-line"></i> ME-RIISE FOUNDATION
+                  </a>
+                </li>
+                <li>
+                  <a href="../infrastructure.html" class="dropdown__link">
+                    <i class="ri-pie-chart-line"></i> Infrastructure
+                  </a>
+                </li>
+                <li>
+                  <a href="../ourAchivements.html" class="dropdown__link">
+                    <i class="ri-arrow-up-down-line"></i> Achievements
+                  </a>
+                </li>
+                <li class="dropdown__subitem">
+                  <div class="dropdown__link">
+                    <i class="ri-bar-chart-line"></i> Documents
+                    <i class="ri-add-line dropdown__add"></i>
+                  </div>
+                  <ul class="dropdown__submenu">
+                    <li>
+                      <a href="../Nisp.html" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i> MCE NISP POLICY
+                      </a>
+                    </li>
+                    <li>
+                      <a href="../collab.html" class="dropdown__sublink">
+                        <i class="ri-cash-line"></i> Collaborations
+                      </a>
+                    </li>
+                    <li>
+                      <a href="../Certificates.html" class="dropdown__sublink">
+                        <i class="ri-cash-line"></i> Certificates
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown__subitem">
+                  <div class="dropdown__link">
+                    <i class="ri-bar-chart-line"></i> Members of ME-RIISE
+                    <i class="ri-add-line dropdown__add"></i>
+                  </div>
+                  <ul class="dropdown__submenu">
+                    <li>
+                      <a href="../index.html#boardofdirectors" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i> Board of Directors
+                      </a>
+                    </li>
+                    <li>
+                      <a href="../faculty.html" class="dropdown__sublink">
+                        <i class="ri-cash-line"></i> Faculty
+                      </a>
+                    </li>
+                    <li>
+                      <a href="../team.html" class="dropdown__sublink">
+                        <i class="ri-refund-2-line"></i> Team ME-RIISE
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li class="dropdown__item">
+              <div class="nav__link">
+                Wings of ME-RIISE
+                <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="../startups.html" class="dropdown__link">
+                    <i class="ri-pie-chart-line"></i> Start Ups
+                  </a>
+                </li>
+                <li>
+                  <a href="../iic.html" class="dropdown__link">
+                    <i class="ri-pie-chart-line"></i> MoE - IIC
+                  </a>
+                </li>
+                <li>
+                  <a href="../nain.html" class="dropdown__link">
+                    <i class="ri-arrow-up-down-line"></i> NAIN
+                  </a>
+                </li>
+                <li>
+                  <a href="../uba.html" class="dropdown__link">
+                    <i class="ri-arrow-up-down-line"></i> UBA
+                  </a>
+                </li>
+                <li>
+                  <a href="../rgep.html" class="dropdown__link">
+                    <i class="ri-arrow-up-down-line"></i> RGEP
+                  </a>
+                </li>
+                <li class="dropdown__subitem">
+                  <div class="dropdown__link">
+                    <i class="ri-bar-chart-line"></i> Pragyatha
+                    <i class="ri-add-line dropdown__add"></i>
+                  </div>
+                  <ul class="dropdown__submenu">
+                    <li>
+                      <a href="https://pragyatha25.meriise.org/" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i> Pragyatha25
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://pragyatha24.meriise.org/" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i> Pragyatha24
+                      </a>
+                    </li>
+                    <li>
+                      <a href="../pragyatha23.html" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i> Pragyatha23
+                      </a>
+                    </li>
+                    <li>
+                      <a href="../pragyatha22.html" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i> Pragyatha22
+                      </a>
+                    </li>
+                    <li>
+                      <a href="../Pragyatha21.html" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i> Pragyatha21
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="https://meriise-events.vercel.app/" class="nav__link">Events</a>
+            </li>
+
+            <li class="dropdown__item">
+              <div class="nav__link">
+                TBI-MCE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="../tbi.html" class="dropdown__link">
+                    <i class="ri-pie-chart-line"></i> About TBI
+                  </a>
+                </li>
+                <li>
+                  <a href="../openPosition.html" class="dropdown__link">
+                    <i class="ri-pie-chart-line"></i> Open positions
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li><a href="#footer" class="nav__link">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
+  </div>
 
     <main id="main-content">
         <section class="hero" aria-label="Featured talk">
@@ -44,20 +216,17 @@
                         </p>
                         <div class="hero-buttons">
                             <button id="watch-talk-btn" class="btn btn-primary">Watch Live</button>
-                            <a href="../alumni.html" class="btn btn-secondary">Back to Alumni</a>
+                            <a href="https://forms.gle/wbHejKjpZgCgyLt48" class="btn btn-secondary">Ask Questions</a>
                         </div>
                     </div>
                     <div class="hero-media-wrap">
-                        <div class="hero-media" id="hero-video-trigger" role="button" tabindex="0" aria-label="Play featured talk video">
-                            <img src="Alumni/hero-placeholder.jpg" alt="Featured speaker" />
-                            <div class="play-layer">
-                                <div class="play-ring">
-                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                                        <polygon points="5 3 19 12 5 21"></polygon>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="video-length">12:34</div>
+                        <div class="hero-media">
+                            <iframe
+                                title="Featured talk video"
+                                src="https://www.youtube.com/embed/_TJaEHnwIus?rel=0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen
+                                loading="lazy"></iframe>
                         </div>
                         <p class="hero-caption">Meet our featured speaker this month</p>
                     </div>
@@ -74,7 +243,15 @@
                 <div class="cards" role="list" aria-label="Upcoming alumni talks">
                     <article class="card" role="listitem">
                         <div class="thumb">
-                            <img src="Alumni/speaker1.jpg" alt="Speaker 1" loading="lazy">
+                            <div class="thumb-placeholder">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    Coming Soon
+                                </div>
                             <div class="thumb-play">
                                 <div class="thumb-play-badge">
                                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
@@ -91,7 +268,15 @@
 
                     <article class="card" role="listitem">
                         <div class="thumb">
-                            <img src="Alumni/speaker2.jpg" alt="Speaker 2" loading="lazy">
+                            <div class="thumb-placeholder">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    Coming Soon
+                                </div>
                             <div class="thumb-play">
                                 <div class="thumb-play-badge">
                                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
@@ -108,7 +293,15 @@
 
                     <article class="card" role="listitem">
                         <div class="thumb">
-                            <img src="Alumni/speaker3.jpg" alt="Speaker 3" loading="lazy">
+                            <div class="thumb-placeholder">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    Coming Soon
+                                </div>
                             <div class="thumb-play">
                                 <div class="thumb-play-badge">
                                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
@@ -125,7 +318,15 @@
 
                     <article class="card" role="listitem">
                         <div class="thumb">
-                            <img src="Alumni/speaker4.jpg" alt="Speaker 4" loading="lazy">
+                            <div class="thumb-placeholder">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    Coming Soon
+                                </div>
                             <div class="thumb-play">
                                 <div class="thumb-play-badge">
                                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
@@ -206,6 +407,9 @@
         </div>
     </div>
 
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../assets/NavbarCode/assets/js/main.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
