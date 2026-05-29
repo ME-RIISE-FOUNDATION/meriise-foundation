@@ -77,8 +77,8 @@
 
     		<div class="courses">
     			<h2 class="co">Courses Offered</h2>
-    			<div class="c">
-    				<h4>CORE JAVA- AN INDUSTRIAL APPROACH
+	    		<div class="c" data-img="../assets/Pragyatha25/Cloudlab.jpeg">
+	    			<h4>CORE JAVA- AN INDUSTRIAL APPROACH
 				</h4>
 				<p>
 					This is comprehensive certification course in Core Java that will make you grow in your software coding career. 
@@ -87,18 +87,17 @@
                 <a class="download"  target="_blank" href="assets/files/java industry.pdf">More details</a>
 				</p>
 			</div>
-			<div class="c">
-					<h4>Data Structures & Algorithms (DSA) — Newly Started Course
+			<div class="c" data-img="../assets/NAIN/ai.jpg">
+				<h4><a class="course-link" href="dsa.html">Data Structures & Algorithms (DSA) — Newly Started Course</a>
 				</h4>
 					<p>
 						This new DSA course focuses on algorithm design, data structures, problem solving, and interview readiness. Students will learn arrays, linked lists, stacks, queues, trees, graphs, sorting, searching, dynamic programming, and real-world application strategies.
 						For details and registration, please contact ME-RIISE or use the Register Now link below.
 					</p>
 			</div>
-			<div class="c">
-    			</div>
-    			<div class="c">
-    				<h4>Artificial Intelligence & Machine Learning with Hardware Implementation
+
+				<div class="c" data-img="../assets/EdutechSphere/6.jpeg">
+					<h4>Artificial Intelligence & Machine Learning with Hardware Implementation
 				</h4>
 				<p>
 					This course provides a comprehensive introduction and focuses on data analytics and machine learning techniques, practical deep learning using MATLAB®. The course demonstrates the use of unsupervised learning to discover features in large data sets and supervised learning to build predictive models. Attendees will learn how to create, train, and evaluate different kinds of deep neural networks. They will also learn how deploy algorithms on hardware like GPU and FPGAs.
@@ -106,16 +105,16 @@
                 <a class="download"  target="_blank" href="assets/files/ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING WITH HARDWARE IMPLEMENTATION.pdf">More details</a>
 				</p>
     			</div>
-    			<div class="c">
-    				<h4>Practical & Real World Deep Learning 
+				<div class="c" data-img="../assets/RollingSlider/rollingbanner2.jpg">
+					<h4>Practical & Real World Deep Learning 
 				</h4>
 				<p>
 					This course provides a comprehensive introduction and focuses on few concepts of machine learning techniques and practical deep learning using MATLAB® and Python. This course provides a comprehensive introduction to practical deep learning using MATLAB®. Attendees will learn how to create, train, and evaluate different kinds of deep neural networks. The training will also cover how to implement algorithms of NVIDIA GPUs to accelerate network training.
                     <a class="download"  target="_blank" href="assets/files/PRACTICAL DEEP LEARNING_REAL WORLD DEEP LEARNING PROJECTS WITH HARDWARE IMPLEMENTATION.pdf">More details</a>
 				</p>
     			</div>
-    			<div class="c">
-    				<h4>Fundamentals of Matlab & Simulink in Engineering Applications
+				<div class="c" data-img="../assets/NAIN/Cloud lab.png">
+					<h4>Fundamentals of Matlab & Simulink in Engineering Applications
     			</h4>
     				<p>
     					This course provides a comprehensive introduction to the MATLAB® technical computing environment. No prior programming experience or knowledge of MATLAB is assumed. Themes of data analysis, visualization, modeling, and programming are explored throughout the course. <br>
@@ -132,8 +131,8 @@
                     <a class="download" target="_blank" href="assets/files/MATLAB AND SIMULINK FUNDAMENTALS_Coursecontents.pdf">More details</a>
     				</p>
     			</div>
-    			<div class="c">
-    				<h4>Internet of Things (IoT)
+				<div class="c" data-img="../assets/Pragyatha22/Blockchain.jpeg">
+					<h4>Internet of Things (IoT)
     			</h4>
     				<p>
     					This course aims to start with the basics of IoT and finish with advanced concepts. During this time, we will discuss various technologies, standards, use case, and implementations of IoT.
@@ -141,8 +140,8 @@
                         <a class="download"  target="_blank" href="assets/files/IOT CERTIFICATION COURSE.pdf">More details</a>
     				</p>
     			</div>
-    			<div class="c">
-    				<h4>Advancements in Robotics, PLC & Automation
+				<div class="c" data-img="../assets/Pragyatha22/Trade Show.jpeg">
+					<h4>Advancements in Robotics, PLC & Automation
     			</h4>
     				<p>
     					This course will provide a comprehensive educational environment and enable students to gain expertise in next generation robotics and automation systems.
@@ -150,8 +149,8 @@
                         <a class="download"  target="_blank" href="assets/files/ADVANCEMENTS IN ROBOTICS, PLC & AUTOMATION_Coursecontents.pdf">More details</a>
     				</p>
     			</div>
-    			<div class="c">
-    				<h4>Data Science for Real World Analytics
+				<div class="c" data-img="../assets/Pragyatha25/Entrorphosis.jpg">
+					<h4>Data Science for Real World Analytics
     			</h4>
     				<p>
     					This course provides a comprehensive introduction and focuses on data analytics and machine learning techniques, practical deep learning using MATLAB® and Python. The course demonstrates the use of unsupervised learning to discover features in large data sets and supervised learning to build predictive models. Attendees will learn how to create, train, and evaluate different kinds of deep neural networks.
@@ -160,7 +159,7 @@
 					</p>
 				</div>
 
-				<div class="c">
+				<div class="c" data-img="../assets/NAIN/ai2.jpeg">
 					<h4>DSA Bootcamp — Launch Event</h4>
 					<p>
 						Date: June 15, 2026<br>
@@ -195,5 +194,38 @@
         </div>
     </footer>
 
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+	const imgs = [
+		'../assets/Pragyatha25/UI UX.jpg',
+		'../assets/NAIN/ai.jpg',
+		'../assets/NAIN/cloud lab 1.PNG',
+		'../assets/Pragyatha22/Blockchain.jpeg',
+		'../assets/EdutechSphere/6.jpeg',
+		'../assets/RollingSlider/rollingbanner2.jpg'
+	];
+
+	document.querySelectorAll('.c').forEach(function(card){
+		try{
+			const img = document.createElement('img');
+			img.className = 'course-img';
+			const src = card.getAttribute('data-img') || imgs[Math.floor(Math.random()*imgs.length)];
+			img.src = src;
+
+			const body = document.createElement('div');
+			body.className = 'c-body';
+
+			while(card.firstChild){
+				body.appendChild(card.firstChild);
+			}
+
+			card.appendChild(img);
+			card.appendChild(body);
+		}catch(e){
+			console.error('card-insert', e);
+		}
+	});
+});
+</script>
 </body>
 </html>
