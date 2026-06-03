@@ -1,174 +1,667 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Courses</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/indexstyles.css">
-	<meta charset="utf-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro-Engineering Certification Program | MCE Hassan</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Swiper Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="page-header">
-        <div class="header-brand">
-            <div class="logo-group">
-                <img src="assets/img/mr_logo.png" alt="ME-RIISE logo" class="logo">
-                <img src="assets/img/mce_logo.png" alt="MCE logo" class="logo logo--small">
-            </div>
-            <div class="header-copy">
-                <p class="eyebrow">Micro-Engineering Certification Program</p>
-                <h1>Empowering learners with industry-ready engineering and technology certification</h1>
-                <p>Delivered by the Department of Computer Science and Engineering in partnership with ME-RIISE, Malnad College of Engineering, Hassan.</p>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="fas fa-graduation-cap me-2" style="color: #FF6B35;"></i>ME-RIISE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#msme">MSME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <main class="page-main">
-        <section class="hero">
-            <div class="hero-copy">
-                <span class="eyebrow">Micro-Engineering Certification Program</span>
-                <h2>Industry-ready certification for engineering and technology learners</h2>
-                <p>The Micro Engineering Certification Program is designed to help students and professionals build practical skills in engineering, computing, and digital practice. Delivered by the Department of Computer Science and Engineering in partnership with ME-RIISE, Malnad College of Engineering, Hassan.</p>
-                <div class="hero-actions">
-                    <a class="button button--primary" target="_blank" href="assets/files/Micro Engineering Certification Program_CSE&MERIISE.pdf">Download brochure</a>
-                    <a class="button button--secondary" href="#courses">Explore courses</a>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center text-center text-white">
+                <div class="col-lg-10" data-aos="fade-up" data-aos-duration="1000">
+                    <h1 class="display-3 fw-bold mb-4 hero-title">
+                        Micro-Engineering Certification Program
+                    </h1>
+                    <p class="lead mb-4 hero-subtitle">
+                        Empowering learners with industry-ready engineering and technology certification
+                    </p>
+                    <p class="mb-5 hero-description">
+                        Delivered by the Department of Computer Science and Engineering in partnership with ME-RIISE, 
+                        Malnad College of Engineering, Hassan.
+                    </p>
+                    <div class="d-flex gap-3 justify-content-center flex-wrap">
+                        <a href="#programs" class="btn btn-primary btn-lg rounded-pill px-5">
+                            <i class="fas fa-compass me-2"></i>Explore Programs
+                        </a>
+                        <a href="#contact" class="btn btn-light btn-lg rounded-pill px-5 text-primary fw-bold">
+                            <i class="fas fa-clipboard-list me-2"></i>Register Now
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="hero-highlights">
-                <div class="highlight-card">
-                    <div class="highlight-number">01</div>
-                    <h3>Flexible delivery</h3>
-                    <p>Online and offline learning options supported with hands-on projects, assignments, and assessments.</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-number">02</div>
-                    <h3>Certification-driven learning</h3>
-                    <p>Complete modules, evaluations, and project work to earn a recognized micro-engineering credential.</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-number">03</div>
-                    <h3>Skill-based outcomes</h3>
-                    <p>Gain practical expertise in MATLAB, web design, Power BI, Excel, and data structures for future-ready careers.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title" data-aos="fade-up">About the Program</h2>
+                    <div class="title-underline mx-auto mb-4"></div>
+                    <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">
+                        The Micro Engineering Certification Program is intended to predominantly enhance skill sets 
+                        in specific technical areas and provide significant industry-recognized credentials.
+                    </p>
+                    <p class="text-muted" data-aos="fade-up" data-aos-delay="200">
+                        This certification program is jointly offered by the Department of Computer Science and Engineering 
+                        and ME-RIISE (Malnad Enclave for Research, Innovation, Incubation, Startups and Entrepreneurship), 
+                        Malnad College of Engineering, Hassan, in collaboration with reputed academic institutions and industries.
+                    </p>
+                    <p class="text-muted" data-aos="fade-up" data-aos-delay="300">
+                        The program focuses on practical learning, industry exposure, innovation, entrepreneurship, 
+                        and employability enhancement through specialized certification courses.
+                    </p>
                 </div>
             </div>
-        </section>
-        <section class="section info-grid">
-            <div class="info-panel">
-                <h3>Program objectives</h3>
-                <ul>
-                    <li>Advance expertise in strategic technical areas with credentialed learning.</li>
-                    <li>Gain skills for emerging fields in computer science and allied engineering.</li>
-                </ul>
-                <p>The program welcomes engineering, diploma, and degree students, faculty members, job seekers, and professionals seeking career growth.</p>
+
+            <!-- About Features Cards -->
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-delay="100">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h5 class="mt-3 fw-bold">Industry Collaboration</h5>
+                        <p class="text-muted">Partnership with leading organizations</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-delay="200">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h5 class="mt-3 fw-bold">Skill Enhancement</h5>
+                        <p class="text-muted">Advanced technical skill development</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-delay="300">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h5 class="mt-3 fw-bold">Certification</h5>
+                        <p class="text-muted">Industry-recognized credentials</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-delay="400">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h5 class="mt-3 fw-bold">Hands-on Training</h5>
+                        <p class="text-muted">Practical learning experience</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-delay="500">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h5 class="mt-3 fw-bold">Placement Support</h5>
+                        <p class="text-muted">Career guidance and job assistance</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-delay="600">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h5 class="mt-3 fw-bold">Startup Exposure</h5>
+                        <p class="text-muted">Innovation and entrepreneurship opportunities</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Institution Information Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Our Institutions</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+                    <div class="institution-card">
+                        <div class="institution-icon">
+                            <i class="fas fa-university" style="font-size: 3rem; color: #0066CC;"></i>
+                        </div>
+                        <h4 class="mt-3 fw-bold">Malnad College of Engineering</h4>
+                        <p class="text-muted">A premier engineering institute in Hassan, recognized for excellence in technical education and research.</p>
+                        <small class="text-primary"><strong>Hassan, Karnataka</strong></small>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="institution-card">
+                        <div class="institution-icon">
+                            <i class="fas fa-brain" style="font-size: 3rem; color: #FF6B35;"></i>
+                        </div>
+                        <h4 class="mt-3 fw-bold">Department of CSE</h4>
+                        <p class="text-muted">Leading the innovation in computer science and engineering education with cutting-edge curriculum and research.</p>
+                        <small class="text-primary"><strong>MCE Hassan</strong></small>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="institution-card">
+                        <div class="institution-icon">
+                            <i class="fas fa-rocket" style="font-size: 3rem; color: #00C896;"></i>
+                        </div>
+                        <h4 class="mt-3 fw-bold">ME-RIISE Foundation</h4>
+                        <p class="text-muted">Malnad Enclave for Research, Innovation, Incubation, Startups and Entrepreneurship.</p>
+                        <small class="text-primary"><strong>Innovation Hub</strong></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Micro Engineering Certification Programs</h2>
+            
+            <div class="row g-4">
+                <!-- DSA Program -->
+                <div class="col-md-6 col-lg-6" data-aos="fade-up">
+                    <div class="program-card">
+                        <div class="program-image-container">
+                            <img src="https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=500&h=300&fit=crop" alt="DSA Course" class="program-image">
+                            <span class="status-badge ongoing">ONGOING</span>
+                        </div>
+                        <div class="program-content">
+                            <h5 class="fw-bold mb-2">Data Structures and Algorithms</h5>
+                            <p class="small text-muted mb-3">
+                                Master problem solving, coding techniques, algorithms, data structures, competitive programming concepts, interview preparation, and software development fundamentals.
+                            </p>
+                            <div class="topics mb-3">
+                                <span class="topic-tag">Arrays</span>
+                                <span class="topic-tag">Linked Lists</span>
+                                <span class="topic-tag">Trees</span>
+                                <span class="topic-tag">Graphs</span>
+                                <span class="topic-tag">Dynamic Programming</span>
+                                <span class="topic-tag">Recursion</span>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-primary rounded-pill">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MATLAB Program -->
+                <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="program-card">
+                        <div class="program-image-container">
+                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop" alt="MATLAB Course" class="program-image">
+                            <span class="status-badge active">ACTIVE</span>
+                        </div>
+                        <div class="program-content">
+                            <h5 class="fw-bold mb-2">Fundamentals of MATLAB</h5>
+                            <p class="small text-muted mb-3">
+                                Learn MATLAB programming, numerical computation, simulation, engineering analysis, data visualization, and mathematical modelling.
+                            </p>
+                            <div class="topics mb-3">
+                                <span class="topic-tag">MATLAB Basics</span>
+                                <span class="topic-tag">Matrix Operations</span>
+                                <span class="topic-tag">Plotting</span>
+                                <span class="topic-tag">Simulations</span>
+                                <span class="topic-tag">Data Analysis</span>
+                                <span class="topic-tag">Engineering Apps</span>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-primary rounded-pill">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MSME Programs Section -->
+    <section id="msme" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">MSME Sponsored Programmes</h2>
+            
+            <div class="row g-4">
+                <!-- Web Designing -->
+                <div class="col-md-6 col-lg-6" data-aos="fade-up">
+                    <div class="msme-card">
+                        <div class="msme-badge">MSME SPONSORED</div>
+                        <div class="msme-image">
+                            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=300&fit=crop" alt="Web Designing">
+                        </div>
+                        <div class="msme-content">
+                            <h5 class="fw-bold">Web Designing</h5>
+                            <p class="small text-primary mb-2">
+                                <i class="fas fa-tag me-1"></i>Entrepreneurship Skill Development
+                            </p>
+                            <p class="text-muted small mb-3">
+                                Comprehensive training on modern web development using HTML, CSS, JavaScript, responsive design, UI/UX principles, and deployment.
+                            </p>
+                            <button class="btn btn-sm btn-outline-primary rounded-pill">Explore</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Digital Marketing -->
+                <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="msme-card">
+                        <div class="msme-badge">MSME SPONSORED</div>
+                        <div class="msme-image">
+                            <img src="https://images.unsplash.com/photo-1460925895917-adf4e565016a?w=500&h=300&fit=crop" alt="Digital Marketing">
+                        </div>
+                        <div class="msme-content">
+                            <h5 class="fw-bold">Digital Marketing</h5>
+                            <p class="small text-primary mb-2">
+                                <i class="fas fa-tag me-1"></i>Management Development Programme
+                            </p>
+                            <p class="text-muted small mb-3">
+                                Learn SEO, social media marketing, content strategy, branding, Google Analytics, digital advertising, and campaign management.
+                            </p>
+                            <button class="btn btn-sm btn-outline-primary rounded-pill">Explore</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Power BI -->
+                <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="msme-card">
+                        <div class="msme-badge">MSME SPONSORED</div>
+                        <div class="msme-image">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f70d504d0?w=500&h=300&fit=crop" alt="Power BI">
+                        </div>
+                        <div class="msme-content">
+                            <h5 class="fw-bold">Power BI</h5>
+                            <p class="small text-primary mb-2">
+                                <i class="fas fa-tag me-1"></i>Management Development Programme
+                            </p>
+                            <p class="text-muted small mb-3">
+                                Master business intelligence, dashboards, data visualization, reporting, analytics, and decision-making tools using Microsoft Power BI.
+                            </p>
+                            <button class="btn btn-sm btn-outline-primary rounded-pill">Explore</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DTP & Innovation -->
+                <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="msme-card">
+                        <div class="msme-badge">MSME SPONSORED</div>
+                        <div class="msme-image">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop" alt="DTP Innovation">
+                        </div>
+                        <div class="msme-content">
+                            <h5 class="fw-bold">Elevate: Concept to Create</h5>
+                            <p class="small text-primary mb-2">
+                                <i class="fas fa-tag me-1"></i>Entrepreneurship Skill Development
+                            </p>
+                            <p class="text-muted small mb-3">
+                                Transform innovative ideas into practical products through design thinking, digital tools, prototyping, entrepreneurship development.
+                            </p>
+                            <button class="btn btn-sm btn-outline-primary rounded-pill">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics-section py-5">
+        <div class="container">
+            <div class="row text-center text-white">
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up">
+                    <div class="stat-card">
+                        <h3 class="stat-number" data-counter="500">0</h3>
+                        <p class="stat-text">Students Trained</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-card">
+                        <h3 class="stat-number" data-counter="10">0</h3>
+                        <p class="stat-text">Certification Programs</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-card">
+                        <h3 class="stat-number" data-counter="15">0</h3>
+                        <p class="stat-text">Industry Collaborations</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-card">
+                        <h3 class="stat-number" data-counter="95">0</h3>
+                        <span class="stat-text">Satisfaction Rate</span>
+                        <span class="stat-text">%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Program Gallery</h2>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop" alt="DSA Training" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <p class="gallery-text">DSA Training</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=400&h=300&fit=crop" alt="MATLAB Workshop" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <p class="gallery-text">MATLAB Workshop</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop" alt="Web Design Training" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <p class="gallery-text">Web Design Training</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1460925895917-adf4e565016a?w=400&h=300&fit=crop" alt="Digital Marketing" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <p class="gallery-text">Digital Marketing</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f70d504d0?w=400&h=300&fit=crop" alt="Power BI Training" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <p class="gallery-text">Power BI Training</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" alt="Innovation Programs" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <p class="gallery-text">Innovation Programs</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-<div class="info-panel">
-                <h3>Program structure</h3>
-                <p><strong>Mode of delivery:</strong> Online / Offline</p>
-                <p><strong>Duration:</strong> Core Java – 120 hours; other courses – 2 months (3–4 hrs/week).</p>
-                <p><strong>Certification:</strong> Complete the course modules, assessments, and evaluations to receive the credential.</p>
+            <!-- Testimonials Carousel -->
+            <div class="mt-5 pt-5 border-top">
+                <h3 class="section-title text-center mb-5" data-aos="fade-up">Participant Testimonials</h3>
+                <div class="swiper testimonial-swiper" data-aos="fade-up">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-content">
+                                    <p class="mb-3">
+                                        "The DSA program was exceptionally structured. I improved my problem-solving skills and secured a great job offer. Highly recommended!"
+                                    </p>
+                                    <div class="testimonial-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="testimonial-author">
+                                    <p class="fw-bold mb-0">Rahul Kumar</p>
+                                    <small class="text-muted">Software Developer</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-content">
+                                    <p class="mb-3">
+                                        "The MATLAB workshop was comprehensive and hands-on. The instructors were knowledgeable and supportive throughout the program."
+                                    </p>
+                                    <div class="testimonial-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="testimonial-author">
+                                    <p class="fw-bold mb-0">Priya Singh</p>
+                                    <small class="text-muted">Engineer</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-content">
+                                    <p class="mb-3">
+                                        "The web design program taught me practical skills that I immediately applied to my freelance projects. Great experience!"
+                                    </p>
+                                    <div class="testimonial-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="testimonial-author">
+                                    <p class="fw-bold mb-0">Amit Patel</p>
+                                    <small class="text-muted">Web Developer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    		<div class="pre">
-    			
-    			<h4> Mode of Delivery:  </h4>Online/Offline<br>Core Java: An Industrial Approach - offline
-    			<h4>Pre-requisites:</h4>
-    			<p>Every program will have its own pre-requisites which will be notified along with the contents of the course</p>
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Get In Touch</h2>
+            
+            <div class="row g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h4 class="fw-bold mb-4">Micro-Engineering Certification Program</h4>
+                    <div class="contact-info mb-4">
+                        <div class="contact-item mb-3">
+                            <i class="fas fa-building" style="color: #FF6B35; width: 30px;"></i>
+                            <div>
+                                <p class="fw-bold mb-0">Department of Computer Science & Engineering</p>
+                                <p class="text-muted small">Malnad College of Engineering, Hassan</p>
+                            </div>
+                        </div>
+                        <div class="contact-item mb-3">
+                            <i class="fas fa-phone" style="color: #FF6B35; width: 30px;"></i>
+                            <div>
+                                <p class="fw-bold mb-0">+91-XXXXXXXXXX</p>
+                                <p class="text-muted small">Available Mon-Fri, 9 AM - 5 PM</p>
+                            </div>
+                        </div>
+                        <div class="contact-item mb-3">
+                            <i class="fas fa-envelope" style="color: #FF6B35; width: 30px;"></i>
+                            <div>
+                                <p class="fw-bold mb-0">info@meriise.org</p>
+                                <p class="text-muted small">We'll respond within 24 hours</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt" style="color: #FF6B35; width: 30px;"></i>
+                            <div>
+                                <p class="fw-bold mb-0">Hassan, Karnataka</p>
+                                <p class="text-muted small">India</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
 
-    			
-    			<h4>Duration of Course</h4>
-    			<p>Every program has its own duration: <br>
-    			     CORE JAVA: AN INDUSTRIAL APPROACH - 120 hours <br>
-    	
-    			     OTHERS: 2 months (3 to 4hrs/week- on weekdays/weekends)</p>
-    			<h4>Course delivery & Certification</h4>
-    			<p>
-    				These courses include offline lectures with hands-on, online video lectures, quizzes, programming assignments and end of course examination.
-					Learners are required to complete all the modules specified in the respective course and achieve minimum grade. Minimum grade will be specified by the institution.
-    			</p>
-    		</div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <form class="contact-form" id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label fw-bold">Full Name</label>
+                            <input type="text" class="form-control form-control-lg" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold">Email Address</label>
+                            <input type="email" class="form-control form-control-lg" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="program" class="form-label fw-bold">Program Interest</label>
+                            <select class="form-select form-select-lg" id="program" required>
+                                <option selected disabled>Select a program</option>
+                                <option>Data Structures and Algorithms</option>
+                                <option>Fundamentals of MATLAB</option>
+                                <option>Web Designing</option>
+                                <option>Digital Marketing</option>
+                                <option>Power BI</option>
+                                <option>Elevate: Concept to Create</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label fw-bold">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill">Send Message</button>
+                    </form>
+                </div>
+            </div>
 
-    		<section id="courses" class="section courses">
-    			<div class="section-heading">
-				<span class="eyebrow">Courses Offered</span>
-				<h2>Choose the right certification path</h2>
-			</div>
-			<div class="course-grid">
-						<article class="course-card">
-							<div class="course-card__icon">🧮</div>
-							<div class="course-card__copy">
-								<h3>Fundamentals of MATLAB</h3>						<p>Build programming proficiency for engineering analysis, simulation, and automation using MATLAB.</p>								<span class="course-badge course-badge--micro">MicroEngineering</span>
-								<a href="#" class="course-button">View More</a>
-							</div>
-						</article>
-						<article class="course-card">
-							<div class="course-card__icon">🌐</div>
-							<div class="course-card__copy">
-								<h3>Web Designing, Power BI, and Elevate from Concept to Create through Innovate DTP</h3>						<p>Learn UI/UX, data visualization, and digital publishing skills for modern engineering projects.</p>								<span class="course-badge course-badge--msme">MSME</span>
-								<a href="#" class="course-button">View More</a>
-							</div>
-						</article>
-						<article class="course-card">
-							<div class="course-card__icon">📊</div>
-							<div class="course-card__copy">
-								<h3>Excel Essentials</h3>						<p>Master spreadsheets, formulas, and dashboards to manage data for engineering and analysis work.</p>								<span class="course-badge course-badge--general">General</span>
-								<a href="#" class="course-button">View More</a>
-							</div>
-						</article>
-						<article class="course-card">
-							<div class="course-card__icon">🔢</div>
-							<div class="course-card__copy">
-								<h3>DSA (Data Structures &amp; Algorithms)</h3>						<p>Strengthen your coding and problem-solving skills with practical algorithm design and data structure techniques.</p>								<span class="course-badge course-badge--micro">MicroEngineering</span>
-								<a href="#" class="course-button">View More</a>
-							</div>
-						</article>
-					</div>
-			<div class="register-container">
-    		<a href="https://docs.google.com/forms/d/e/1FAIpQLScOW-FJcpWFRCDcPMlUY97YNXOi9W9NkBjgJaZy6HMH-d7GcA/viewform?usp=sf_link" class="register">Register Now</a>	
-    		</div>
-    	</section>
+            <!-- Action Buttons -->
+            <div class="row mt-5 pt-5 border-top">
+                <div class="col-md-6 col-lg-4 text-center mb-4" data-aos="zoom-in">
+                    <a href="#" class="action-button">
+                        <i class="fas fa-user-plus"></i>
+                        <p class="fw-bold mt-2">Apply Now</p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 text-center mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <a href="#" class="action-button">
+                        <i class="fas fa-download"></i>
+                        <p class="fw-bold mt-2">Download Brochure</p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 text-center mb-4" data-aos="zoom-in" data-aos-delay="200">
+                    <a href="#" class="action-button">
+                        <i class="fas fa-phone-alt"></i>
+                        <p class="fw-bold mt-2">Contact Coordinator</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </div>
-     <footer>
-        <div class="footer-container">
-            <p>MICRO-ENGINEERING CERTIFICATION PROGRAM</p>
-            <p>Malnad College of Engineering,Hassan</p>
+    <!-- Footer -->
+    <footer class="footer-section bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">About Program</h5>
+                    <p class="text-muted small">
+                        The Micro Engineering Certification Program enhances skill sets and provides industry-recognized credentials.
+                    </p>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#hero" class="footer-link">Home</a></li>
+                        <li><a href="#programs" class="footer-link">Courses</a></li>
+                        <li><a href="#msme" class="footer-link">MSME Initiatives</a></li>
+                        <li><a href="#contact" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Institutions</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Malnad College of Engineering</a></li>
+                        <li><a href="#" class="footer-link">Department of CSE</a></li>
+                        <li><a href="#" class="footer-link">ME-RIISE Foundation</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Follow Us</h5>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="footer-social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer-social"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="footer-social"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="row">
+                <div class="col-md-12 text-center pt-3">
+                    <p class="text-muted small mb-0">
+                        © 2026 Micro-Engineering Certification Program | ME-RIISE Foundation | Malnad College of Engineering, Hassan
+                    </p>
+                </div>
+            </div>
         </div>
     </footer>
 
-<script>
-document.addEventListener('DOMContentLoaded', function(){
-	const imgs = [
-		'../assets/Pragyatha25/UI UX.jpg',
-		'../assets/NAIN/ai.jpg',
-		'../assets/NAIN/cloud lab 1.PNG',
-		'../assets/Pragyatha22/Blockchain.jpeg',
-		'../assets/EdutechSphere/6.jpeg',
-		'../assets/RollingSlider/rollingbanner2.jpg'
-	];
-
-	document.querySelectorAll('.c').forEach(function(card){
-		try{
-			const img = document.createElement('img');
-			img.className = 'course-img';
-			const src = card.getAttribute('data-img') || imgs[Math.floor(Math.random()*imgs.length)];
-			img.src = src;
-
-			const body = document.createElement('div');
-			body.className = 'c-body';
-
-			while(card.firstChild){
-				body.appendChild(card.firstChild);
-			}
-
-			card.appendChild(img);
-			card.appendChild(body);
-		}catch(e){
-			console.error('card-insert', e);
-		}
-	});
-});
-</script>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
