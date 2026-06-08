@@ -2754,22 +2754,75 @@
         <!-- Auto-show popups on page load -->
         <script>
             $(document).ready(function() {
-                // Show both modals when page loads
+                let openPositionsClosed = false;
+                let incubationClosed = false;
+                
+                // Show Open Positions modal for 20 seconds
                 $('#tbiOpenPositionsModal').modal('show');
                 
-                // Show incubation modal after 3 seconds to avoid overlap
+                // Track if user closes Open Positions modal early (before 20 seconds)
+                $('#tbiOpenPositionsModal').on('hidden.bs.modal', function() {
+                    if (!openPositionsClosed) {
+                        openPositionsClosed = true;
+                        // Show warning that they closed it early
+                        console.warn('User closed Open Positions popup early');
+                        // Optionally show a subtle notification
+                        showNotification('You closed the job opportunities notification. Click the Learn More button anytime to see details!', 'warning');
+                    }
+                });
+                
+                // Auto-hide Open Positions modal after 20 seconds and show Incubation
                 setTimeout(function() {
                     $('#tbiOpenPositionsModal').modal('hide');
                     $('#tbiIncubationModal').modal('show');
-                }, 4000);
+                }, 20000);
                 
-                // Optional: Show both in sequence
-                // After 7 seconds, hide incubation modal
+                // Track if user closes Incubation modal early (before 20 seconds)
+                $('#tbiIncubationModal').on('hidden.bs.modal', function() {
+                    if (!incubationClosed) {
+                        incubationClosed = true;
+                        // Show warning that they closed it early
+                        console.warn('User closed Incubation popup early');
+                        // Optionally show a subtle notification
+                        showNotification('You closed the incubation opportunities notification. Click the Learn More button anytime to see details!', 'warning');
+                    }
+                });
+                
+                // Auto-hide Incubation modal after 20 seconds
                 setTimeout(function() {
                     $('#tbiIncubationModal').modal('hide');
-                }, 8000);
+                }, 40000);
             });
+            
+            // Function to show notifications
+            function showNotification(message, type = 'info') {
+                const notification = document.createElement('div');
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    padding: 15px 20px;
+                    background: ${type === 'warning' ? '#fef3c7' : '#e0f2fe'};
+                    color: ${type === 'warning' ? '#92400e' : '#075985'};
+                    border-left: 4px solid ${type === 'warning' ? '#f59e0b' : '#0284c7'};
+                    border-radius: 4px;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                    z-index: 9999;
+                    font-size: 14px;
+                    max-width: 400px;
+                `;
+                notification.textContent = message;
+                document.body.appendChild(notification);
+                
+                // Auto-remove notification after 5 seconds
+                setTimeout(function() {
+                    notification.style.opacity = '0';
+                    notification.style.transition = 'opacity 0.3s ease';
+                    setTimeout(() => notification.remove(), 300);
+                }, 5000);
+            }
         </script>
+
 
 
 
