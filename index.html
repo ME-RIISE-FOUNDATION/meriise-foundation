@@ -324,6 +324,60 @@
             z-index: 1050 !important;
         }
         
+        /* Side-by-side modal layout */
+        .modal-side-by-side {
+            position: fixed !important;
+            left: 0 !important;
+            right: 0 !important;
+            top: 0 !important;
+            bottom: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            z-index: 1050 !important;
+        }
+        
+        .modal-side-by-side .modal-dialog {
+            width: 48%;
+            max-width: 100%;
+            margin: 0 1%;
+        }
+        
+        .modal-side-by-side .modal-content {
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+        
+        /* Container for side-by-side modals */
+        .modals-container {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            gap: 2rem;
+            width: 100%;
+            height: 100%;
+            padding: 2rem;
+        }
+        
+        .modals-container .modal-dialog {
+            width: 48% !important;
+            margin: 0 !important;
+            max-height: 85vh;
+        }
+        
+        /* Responsive: Stack on smaller screens */
+        @media (max-width: 1200px) {
+            .modals-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .modals-container .modal-dialog {
+                width: 90% !important;
+                max-width: 600px;
+            }
+        }
+        
     </style>
 </head>
 
@@ -2772,10 +2826,10 @@
             </div>
         </div>
 
-        <!-- Auto-show popups on page load -->
+        <!-- Auto-show popups side-by-side on page load -->
         <script>
             // Wait for Bootstrap to be loaded
-            function showPopups() {
+            function showPopupsSideBySide() {
                 let openPositionsClosed = false;
                 let incubationClosed = false;
                 
@@ -2791,60 +2845,121 @@
                     // Ensure modals are visible
                     openPositionsModal.style.display = 'block';
                     incubationModal.style.display = 'block';
+                    openPositionsModal.style.position = 'fixed';
+                    incubationModal.style.position = 'fixed';
                     
                     try {
-                        // Create Bootstrap 5 modal instances
-                        const openPosModalInstance = new bootstrap.Modal(openPositionsModal, {
-                            backdrop: 'static',
-                            keyboard: true
+                        // Create a container for side-by-side display
+                        const backdropOverlay = document.createElement('div');
+                        backdropOverlay.id = 'backdrop-overlay-sidebyside';
+                        backdropOverlay.style.cssText = `
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background: rgba(0, 0, 0, 0.5);
+                            z-index: 1040;
+                        `;
+                        document.body.appendChild(backdropOverlay);
+                        
+                        // Create container for modals
+                        const modalsContainer = document.createElement('div');
+                        modalsContainer.id = 'modals-container-sidebyside';
+                        modalsContainer.style.cssText = `
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 2rem;
+                            z-index: 1050;
+                            padding: 2rem;
+                            flex-wrap: wrap;
+                        `;
+                        document.body.appendChild(modalsContainer);
+                        
+                        // Adjust modal positioning for side-by-side
+                        openPositionsModal.style.cssText = `
+                            position: relative !important;
+                            margin: 0 !important;
+                            width: 48% !important;
+                            max-width: 550px;
+                            top: auto !important;
+                            left: auto !important;
+                            right: auto !important;
+                            bottom: auto !important;
+                            transform: none !important;
+                            display: block !important;
+                            max-height: 85vh;
+                            z-index: 1050;
+                        `;
+                        
+                        incubationModal.style.cssText = `
+                            position: relative !important;
+                            margin: 0 !important;
+                            width: 48% !important;
+                            max-width: 550px;
+                            top: auto !important;
+                            left: auto !important;
+                            right: auto !important;
+                            bottom: auto !important;
+                            transform: none !important;
+                            display: block !important;
+                            max-height: 85vh;
+                            z-index: 1050;
+                        `;
+                        
+                        // Move modals to container
+                        modalsContainer.appendChild(openPositionsModal.cloneNode(true));
+                        modalsContainer.appendChild(incubationModal.cloneNode(true));
+                        
+                        console.log('Side-by-side container created');
+                        
+                        // Add close button functionality to cloned modals
+                        const closeButtons = modalsContainer.querySelectorAll('[data-dismiss="modal"]');
+                        closeButtons.forEach(btn => {
+                            btn.addEventListener('click', function() {
+                                modalsContainer.style.display = 'none';
+                                backdropOverlay.style.display = 'none';
+                                console.log('Modals closed by user');
+                            });
                         });
-                        const incubModalInstance = new bootstrap.Modal(incubationModal, {
-                            backdrop: 'static',
-                            keyboard: true
+                        
+                        // Also make original modals closeable
+                        const originalCloseButtons = document.querySelectorAll('[data-dismiss="modal"]');
+                        originalCloseButtons.forEach(btn => {
+                            btn.addEventListener('click', function() {
+                                modalsContainer.style.display = 'none';
+                                backdropOverlay.style.display = 'none';
+                                openPositionsModal.style.display = 'none';
+                                incubationModal.style.display = 'none';
+                                console.log('Modals closed by user');
+                            });
                         });
                         
-                        console.log('Modal instances created successfully');
+                        console.log('Side-by-side modals shown');
                         
-                        // Show Open Positions modal immediately
-                        openPosModalInstance.show();
-                        console.log('Open Positions modal shown');
-                        
-                        // Track if user closes Open Positions modal early
-                        openPositionsModal.addEventListener('hidden.bs.modal', function() {
-                            if (!openPositionsClosed) {
-                                openPositionsClosed = true;
-                                console.warn('User closed Open Positions popup early');
-                                showNotification('You closed the job opportunities notification. Click the Learn More button anytime to see details!', 'warning');
-                            }
-                        });
-                        
-                        // Auto-hide Open Positions and show Incubation after 20 seconds
+                        // Auto-hide both modals after 20 seconds
                         setTimeout(function() {
-                            console.log('20 seconds passed - hiding Open Positions, showing Incubation');
-                            openPosModalInstance.hide();
-                            // Small delay before showing next modal
+                            console.log('20 seconds passed - hiding modals');
+                            modalsContainer.style.opacity = '0';
+                            modalsContainer.style.transition = 'opacity 0.5s ease';
+                            backdropOverlay.style.opacity = '0';
+                            backdropOverlay.style.transition = 'opacity 0.5s ease';
                             setTimeout(function() {
-                                incubModalInstance.show();
-                                console.log('Incubation modal shown');
+                                modalsContainer.style.display = 'none';
+                                backdropOverlay.style.display = 'none';
+                                openPositionsModal.style.display = 'none';
+                                incubationModal.style.display = 'none';
                             }, 500);
                         }, 20000);
                         
-                        // Track if user closes Incubation modal early
-                        incubationModal.addEventListener('hidden.bs.modal', function() {
-                            if (!incubationClosed) {
-                                incubationClosed = true;
-                                console.warn('User closed Incubation popup early');
-                                showNotification('You closed the incubation opportunities notification. Click the Learn More button anytime to see details!', 'warning');
-                            }
-                        });
-                        
-                        // Auto-hide Incubation modal after 20 seconds
-                        setTimeout(function() {
-                            console.log('40 seconds passed - hiding Incubation modal');
-                            incubModalInstance.hide();
-                        }, 40000);
                     } catch(error) {
-                        console.error('Error creating modal instances:', error);
+                        console.error('Error creating side-by-side modals:', error);
                     }
                 } else {
                     console.error('Modal elements not found!');
@@ -2855,39 +2970,10 @@
             
             // Wait for DOM to be fully loaded
             if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', showPopups);
+                document.addEventListener('DOMContentLoaded', showPopupsSideBySide);
             } else {
                 // DOM is already loaded (e.g., this script was added late)
-                setTimeout(showPopups, 100);
-            }
-            
-            // Function to show notifications
-            function showNotification(message, type = 'info') {
-                const notification = document.createElement('div');
-                notification.style.cssText = `
-                    position: fixed;
-                    top: 20px;
-                    right: 20px;
-                    padding: 15px 20px;
-                    background: ${type === 'warning' ? '#fef3c7' : '#e0f2fe'};
-                    color: ${type === 'warning' ? '#92400e' : '#075985'};
-                    border-left: 4px solid ${type === 'warning' ? '#f59e0b' : '#0284c7'};
-                    border-radius: 4px;
-                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-                    z-index: 9999;
-                    font-size: 14px;
-                    max-width: 400px;
-                    font-family: Arial, sans-serif;
-                `;
-                notification.textContent = message;
-                document.body.appendChild(notification);
-                
-                // Auto-remove notification after 5 seconds
-                setTimeout(function() {
-                    notification.style.opacity = '0';
-                    notification.style.transition = 'opacity 0.3s ease';
-                    setTimeout(() => notification.remove(), 300);
-                }, 5000);
+                setTimeout(showPopupsSideBySide, 100);
             }
         </script>
 
