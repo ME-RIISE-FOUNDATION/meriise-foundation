@@ -2832,6 +2832,8 @@
             function showPopupsSideBySide() {
                 let openPositionsClosed = false;
                 let incubationClosed = false;
+                let isHovering = false;
+                let hideTimeout = null;
                 
                 // Get modal elements
                 const openPositionsModal = document.getElementById('tbiOpenPositionsModal');
@@ -2914,38 +2916,15 @@
                         `;
                         
                         // Move modals to container
-                        modalsContainer.appendChild(openPositionsModal.cloneNode(true));
-                        modalsContainer.appendChild(incubationModal.cloneNode(true));
+                        const openPosCopy = openPositionsModal.cloneNode(true);
+                        const incubCopy = incubationModal.cloneNode(true);
+                        modalsContainer.appendChild(openPosCopy);
+                        modalsContainer.appendChild(incubCopy);
                         
                         console.log('Side-by-side container created');
                         
-                        // Add close button functionality to cloned modals
-                        const closeButtons = modalsContainer.querySelectorAll('[data-dismiss="modal"]');
-                        closeButtons.forEach(btn => {
-                            btn.addEventListener('click', function() {
-                                modalsContainer.style.display = 'none';
-                                backdropOverlay.style.display = 'none';
-                                console.log('Modals closed by user');
-                            });
-                        });
-                        
-                        // Also make original modals closeable
-                        const originalCloseButtons = document.querySelectorAll('[data-dismiss="modal"]');
-                        originalCloseButtons.forEach(btn => {
-                            btn.addEventListener('click', function() {
-                                modalsContainer.style.display = 'none';
-                                backdropOverlay.style.display = 'none';
-                                openPositionsModal.style.display = 'none';
-                                incubationModal.style.display = 'none';
-                                console.log('Modals closed by user');
-                            });
-                        });
-                        
-                        console.log('Side-by-side modals shown');
-                        
-                        // Auto-hide both modals after 10 seconds
-                        setTimeout(function() {
-                            console.log('10 seconds passed - hiding modals');
+                        // Function to close modals
+                        function closeModals() {
                             modalsContainer.style.opacity = '0';
                             modalsContainer.style.transition = 'opacity 0.5s ease';
                             backdropOverlay.style.opacity = '0';
@@ -2956,7 +2935,59 @@
                                 openPositionsModal.style.display = 'none';
                                 incubationModal.style.display = 'none';
                             }, 500);
-                        }, 10000);
+                        }
+                        
+                        // Add close button functionality to cloned modals
+                        const closeButtons = modalsContainer.querySelectorAll('[data-dismiss="modal"]');
+                        closeButtons.forEach(btn => {
+                            btn.addEventListener('click', function() {
+                                console.log('Modals closed by user button click');
+                                closeModals();
+                                clearTimeout(hideTimeout);
+                            });
+                        });
+                        
+                        // Add hover detection to pause auto-close
+                        modalsContainer.addEventListener('mouseenter', function() {
+                            console.log('User hovering over modals - pausing auto-close');
+                            isHovering = true;
+                            if (hideTimeout) {
+                                clearTimeout(hideTimeout);
+                            }
+                        });
+                        
+                        modalsContainer.addEventListener('mouseleave', function() {
+                            console.log('User left modals - resuming auto-close');
+                            isHovering = false;
+                            // Restart the timeout
+                            startAutoClose();
+                        });
+                        
+                        // Also make modals clickable (for links and buttons)
+                        const applyButtons = modalsContainer.querySelectorAll('a, button');
+                        applyButtons.forEach(btn => {
+                            btn.addEventListener('click', function(e) {
+                                // Allow all clicks to work without closing
+                                console.log('User clicked on link/button in modal');
+                            });
+                        });
+                        
+                        // Function to start auto-close timer
+                        function startAutoClose() {
+                            if (!isHovering) {
+                                hideTimeout = setTimeout(function() {
+                                    if (!isHovering) {
+                                        console.log('10 seconds passed and no hover - hiding modals');
+                                        closeModals();
+                                    }
+                                }, 10000);
+                            }
+                        }
+                        
+                        console.log('Side-by-side modals shown');
+                        
+                        // Start the initial auto-close timer
+                        startAutoClose();
                         
                     } catch(error) {
                         console.error('Error creating side-by-side modals:', error);
