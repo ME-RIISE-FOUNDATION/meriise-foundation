@@ -2739,9 +2739,12 @@
                             </p>
                         </div>
                     </div>
-                    <div class="modal-footer" style="border-top: 1px solid #e5e7eb; padding: 1.5rem;">
-                        <button type="button" class="btn" data-dismiss="modal" style="background: #e5e7eb; color: #1f2937; border: none; padding: 0.75rem 2rem; border-radius: 6px; font-weight: 600;">Close</button>
-                        <a href="https://meriise.org/openPosition.html" target="_blank" class="btn" style="background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); color: white; border: none; padding: 0.75rem 2rem; border-radius: 6px; font-weight: 600; text-decoration: none;">
+                    <div class="modal-footer" style="border-top: 1px solid #e5e7eb; padding: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+                        <button type="button" class="btn" data-dismiss="modal" style="background: #e5e7eb; color: #1f2937; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; flex: 1; min-width: 100px;">Close</button>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd65kte3daSmrCCDGxmiKsS2kXIT_RsUl95RAZpMA8XT3zarQ/viewform?pli=1" target="_blank" class="btn" style="background: #10b981; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; text-decoration: none; flex: 1; min-width: 100px;">
+                            <i class="fas fa-check-circle"></i> Apply Now
+                        </a>
+                        <a href="https://meriise.org/openPosition.html" target="_blank" class="btn" style="background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; text-decoration: none; flex: 1; min-width: 100px;">
                             <i class="fas fa-external-link-alt"></i> View Full Details
                         </a>
                     </div>
@@ -2816,9 +2819,12 @@
                             </p>
                         </div>
                     </div>
-                    <div class="modal-footer" style="border-top: 1px solid #e5e7eb; padding: 1.5rem;">
-                        <button type="button" class="btn" data-dismiss="modal" style="background: #e5e7eb; color: #1f2937; border: none; padding: 0.75rem 2rem; border-radius: 6px; font-weight: 600;">Close</button>
-                        <a href="https://meriise.org/callforincubation.html" target="_blank" class="btn" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: white; border: none; padding: 0.75rem 2rem; border-radius: 6px; font-weight: 600; text-decoration: none;">
+                    <div class="modal-footer" style="border-top: 1px solid #e5e7eb; padding: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+                        <button type="button" class="btn" data-dismiss="modal" style="background: #e5e7eb; color: #1f2937; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; flex: 1; min-width: 100px;">Close</button>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdWq0TaTQ1GKdiEIyxXFHoSEalCmDTFx5JY-xi-ltQ4cIWwgw/viewform" target="_blank" class="btn" style="background: #10b981; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; text-decoration: none; flex: 1; min-width: 100px;">
+                            <i class="fas fa-check-circle"></i> Apply Now
+                        </a>
+                        <a href="https://meriise.org/callforincubation.html" target="_blank" class="btn" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; text-decoration: none; flex: 1; min-width: 100px;">
                             <i class="fas fa-external-link-alt"></i> View Full Details
                         </a>
                     </div>
@@ -2828,184 +2834,209 @@
 
         <!-- Auto-show popups side-by-side on page load -->
         <script>
-            // Wait for Bootstrap to be loaded
-            function showPopupsSideBySide() {
-                let openPositionsClosed = false;
-                let incubationClosed = false;
-                let isHovering = false;
-                let hideTimeout = null;
-                
-                // Get modal elements
-                const openPositionsModal = document.getElementById('tbiOpenPositionsModal');
-                const incubationModal = document.getElementById('tbiIncubationModal');
-                
-                console.log('Looking for modals...');
-                console.log('Open Positions Modal:', openPositionsModal);
-                console.log('Incubation Modal:', incubationModal);
-                
-                if (openPositionsModal && incubationModal) {
-                    // Ensure modals are visible
-                    openPositionsModal.style.display = 'block';
-                    incubationModal.style.display = 'block';
-                    openPositionsModal.style.position = 'fixed';
-                    incubationModal.style.position = 'fixed';
-                    
-                    try {
-                        // Create a container for side-by-side display
-                        const backdropOverlay = document.createElement('div');
-                        backdropOverlay.id = 'backdrop-overlay-sidebyside';
-                        backdropOverlay.style.cssText = `
-                            position: fixed;
-                            top: 0;
-                            left: 0;
-                            right: 0;
-                            bottom: 0;
-                            background: rgba(0, 0, 0, 0.5);
-                            z-index: 1040;
-                        `;
-                        document.body.appendChild(backdropOverlay);
-                        
-                        // Create container for modals
-                        const modalsContainer = document.createElement('div');
-                        modalsContainer.id = 'modals-container-sidebyside';
-                        modalsContainer.style.cssText = `
-                            position: fixed;
-                            top: 0;
-                            left: 0;
-                            right: 0;
-                            bottom: 0;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            gap: 2rem;
-                            z-index: 1050;
-                            padding: 2rem;
-                            flex-wrap: wrap;
-                        `;
-                        document.body.appendChild(modalsContainer);
-                        
-                        // Adjust modal positioning for side-by-side
-                        openPositionsModal.style.cssText = `
-                            position: relative !important;
-                            margin: 0 !important;
-                            width: 48% !important;
-                            max-width: 550px;
-                            top: auto !important;
-                            left: auto !important;
-                            right: auto !important;
-                            bottom: auto !important;
-                            transform: none !important;
-                            display: block !important;
-                            max-height: 85vh;
-                            z-index: 1050;
-                        `;
-                        
-                        incubationModal.style.cssText = `
-                            position: relative !important;
-                            margin: 0 !important;
-                            width: 48% !important;
-                            max-width: 550px;
-                            top: auto !important;
-                            left: auto !important;
-                            right: auto !important;
-                            bottom: auto !important;
-                            transform: none !important;
-                            display: block !important;
-                            max-height: 85vh;
-                            z-index: 1050;
-                        `;
-                        
-                        // Move modals to container
-                        const openPosCopy = openPositionsModal.cloneNode(true);
-                        const incubCopy = incubationModal.cloneNode(true);
-                        modalsContainer.appendChild(openPosCopy);
-                        modalsContainer.appendChild(incubCopy);
-                        
-                        console.log('Side-by-side container created');
-                        
-                        // Function to close modals
-                        function closeModals() {
-                            modalsContainer.style.opacity = '0';
-                            modalsContainer.style.transition = 'opacity 0.5s ease';
-                            backdropOverlay.style.opacity = '0';
-                            backdropOverlay.style.transition = 'opacity 0.5s ease';
-                            setTimeout(function() {
-                                modalsContainer.style.display = 'none';
-                                backdropOverlay.style.display = 'none';
-                                openPositionsModal.style.display = 'none';
-                                incubationModal.style.display = 'none';
-                            }, 500);
-                        }
-                        
-                        // Add close button functionality to cloned modals
-                        const closeButtons = modalsContainer.querySelectorAll('[data-dismiss="modal"]');
-                        closeButtons.forEach(btn => {
-                            btn.addEventListener('click', function() {
-                                console.log('Modals closed by user button click');
-                                closeModals();
-                                clearTimeout(hideTimeout);
-                            });
-                        });
-                        
-                        // Add hover detection to pause auto-close
-                        modalsContainer.addEventListener('mouseenter', function() {
-                            console.log('User hovering over modals - pausing auto-close');
-                            isHovering = true;
-                            if (hideTimeout) {
-                                clearTimeout(hideTimeout);
-                            }
-                        });
-                        
-                        modalsContainer.addEventListener('mouseleave', function() {
-                            console.log('User left modals - resuming auto-close');
-                            isHovering = false;
-                            // Restart the timeout
-                            startAutoClose();
-                        });
-                        
-                        // Also make modals clickable (for links and buttons)
-                        const applyButtons = modalsContainer.querySelectorAll('a, button');
-                        applyButtons.forEach(btn => {
-                            btn.addEventListener('click', function(e) {
-                                // Allow all clicks to work without closing
-                                console.log('User clicked on link/button in modal');
-                            });
-                        });
-                        
-                        // Function to start auto-close timer
-                        function startAutoClose() {
-                            if (!isHovering) {
-                                hideTimeout = setTimeout(function() {
-                                    if (!isHovering) {
-                                        console.log('10 seconds passed and no hover - hiding modals');
-                                        closeModals();
-                                    }
-                                }, 10000);
-                            }
-                        }
-                        
-                        console.log('Side-by-side modals shown');
-                        
-                        // Start the initial auto-close timer
-                        startAutoClose();
-                        
-                    } catch(error) {
-                        console.error('Error creating side-by-side modals:', error);
-                    }
+            (function () {
+            'use strict';
+            
+            var MODAL_IDS    = ['tbiOpenPositionsModal', 'tbiIncubationModal'];
+            var AUTO_SHOW    = true;   // set to false if you only want button-triggered modals
+            var AUTO_CLOSE_MS = 10000; // 0 disables auto-close
+            var FADE_MS       = 300;
+            
+            function ready(fn) {
+                if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', fn);
                 } else {
-                    console.error('Modal elements not found!');
-                    console.error('Open Positions Modal found:', !!openPositionsModal);
-                    console.error('Incubation Modal found:', !!incubationModal);
+                fn();
                 }
             }
             
-            // Wait for DOM to be fully loaded
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', showPopupsSideBySide);
-            } else {
-                // DOM is already loaded (e.g., this script was added late)
-                setTimeout(showPopupsSideBySide, 100);
+            // Helper function to detect if device is mobile
+            function isMobileDevice() {
+                return window.innerWidth <= 768;
             }
+            
+            ready(function () {
+                var modals = MODAL_IDS
+                .map(function (id) { return document.getElementById(id); })
+                .filter(Boolean);
+            
+                if (!modals.length) {
+                console.warn('TBI modals: no modal elements found.');
+                return;
+                }
+            
+                // Remember each modal's original spot so we can put it back (hidden) on close.
+                var origin = modals.map(function (el) {
+                return { el: el, parent: el.parentNode, next: el.nextSibling };
+                });
+            
+                var backdrop    = null;
+                var container   = null;
+                var hideTimeout = null;
+                var isHovering  = false;
+                var isOpen      = false;
+            
+                function applyModalStyles(el, width) {
+                el.classList.add('show');
+                el.setAttribute('aria-hidden', 'false');
+                el.style.cssText = [
+                    'position:relative', 'margin:0', 'inset:auto',
+                    'width:' + width, 'max-width:95vw',
+                    'transform:none', 'display:block',
+                    'max-height:90vh', 'overflow-y:auto', 'z-index:1050'
+                ].join(' !important;') + ' !important;';
+            
+                var dialog = el.querySelector('.modal-dialog');
+                if (dialog) {
+                    dialog.style.cssText = 'width:100%!important;max-width:100%!important;margin:0!important;';
+                }
+                }
+            
+                function resetModal(el) {
+                el.classList.remove('show');
+                el.setAttribute('aria-hidden', 'true');
+                el.style.cssText = 'display:none !important;';
+                var dialog = el.querySelector('.modal-dialog');
+                if (dialog) dialog.style.cssText = '';
+                }
+            
+                function buildOverlay() {
+                backdrop = document.createElement('div');
+                backdrop.className = 'tbi-modal-backdrop';
+                backdrop.style.cssText =
+                    'position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1040;' +
+                    'opacity:0;transition:opacity ' + FADE_MS + 'ms ease;';
+            
+                container = document.createElement('div');
+                container.className = 'tbi-modal-container';
+                
+                // Mobile-responsive settings
+                var isMobile = isMobileDevice();
+                var gap = isMobile ? '1rem' : '2rem';
+                var padding = isMobile ? '1rem' : '2rem';
+                
+                container.style.cssText =
+                    'position:fixed;inset:0;display:flex;align-items:center;justify-content:center;' +
+                    'gap:' + gap + ';padding:' + padding + ';flex-wrap:wrap;overflow-y:auto;z-index:1050;' +
+                    'opacity:0;transition:opacity ' + FADE_MS + 'ms ease;';
+            
+                document.body.appendChild(backdrop);
+                document.body.appendChild(container);
+            
+                // One delegated click handler: closes on empty-area click or any dismiss
+                // control. Links/buttons inside the modals keep working normally.
+                container.addEventListener('click', function (e) {
+                    if (e.target === container) { close(); return; }
+                    if (e.target.closest('[data-dismiss="modal"],[data-bs-dismiss="modal"],.close,.btn-close')) {
+                    e.preventDefault();
+                    close();
+                    }
+                });
+            
+                container.addEventListener('mouseenter', function () {
+                    isHovering = true;
+                    clearTimeout(hideTimeout);
+                });
+                container.addEventListener('mouseleave', function () {
+                    isHovering = false;
+                    startAutoClose();
+                });
+            
+                document.addEventListener('keydown', onKeydown);
+                }
+            
+                function open(which, withAutoClose) {
+                if (isOpen) return;
+                isOpen = true;
+                buildOverlay();
+            
+                var toShow = which === 'all'
+                    ? modals
+                    : modals.filter(function (m) { return m.id === which; });
+            
+                // Responsive width calculation
+                var isMobile = isMobileDevice();
+                var width;
+                
+                if (isMobile) {
+                    width = toShow.length > 1 ? '95%' : '90%';
+                } else {
+                    width = toShow.length > 1 ? '48%' : '90%';
+                }
+            
+                toShow.forEach(function (el) {
+                    applyModalStyles(el, width);
+                    container.appendChild(el); // MOVE the real node in (no cloning)
+                });
+            
+                requestAnimationFrame(function () {
+                    backdrop.style.opacity  = '1';
+                    container.style.opacity = '1';
+                });
+            
+                if (withAutoClose && AUTO_CLOSE_MS > 0) startAutoClose();
+                }
+            
+                function close() {
+                if (!isOpen) return;
+                isOpen = false;
+                clearTimeout(hideTimeout);
+                document.removeEventListener('keydown', onKeydown);
+                if (container) container.style.opacity = '0';
+                if (backdrop)  backdrop.style.opacity  = '0';
+                setTimeout(cleanup, FADE_MS);
+                }
+            
+                function cleanup() {
+                origin.forEach(function (o) {
+                    resetModal(o.el);
+                    if (o.parent) o.parent.insertBefore(o.el, o.next); // restore to original spot
+                });
+                if (container && container.parentNode) container.parentNode.removeChild(container);
+                if (backdrop && backdrop.parentNode)   backdrop.parentNode.removeChild(backdrop);
+                container = null;
+                backdrop = null;
+                isHovering = false;
+                }
+            
+                function startAutoClose() {
+                clearTimeout(hideTimeout);
+                if (isHovering || !isOpen || AUTO_CLOSE_MS <= 0) return;
+                hideTimeout = setTimeout(function () {
+                    if (!isHovering && isOpen) close();
+                }, AUTO_CLOSE_MS);
+                }
+            
+                function onKeydown(e) {
+                if (e.key === 'Escape') close();
+                }
+            
+                // --- Wire the "Learn More" trigger buttons (Bootstrap 4 OR 5 attributes) ---
+                document.querySelectorAll('[data-target],[data-bs-target]').forEach(function (trigger) {
+                var target = trigger.getAttribute('data-bs-target') || trigger.getAttribute('data-target');
+                if (!target) return;
+                var id = target.charAt(0) === '#' ? target.slice(1) : target;
+                if (MODAL_IDS.indexOf(id) === -1) return; // only our two modals
+            
+                // Stop Bootstrap's own plugin from also firing on these.
+                trigger.removeAttribute('data-toggle');
+                trigger.removeAttribute('data-bs-toggle');
+            
+                trigger.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    if (isOpen) {
+                    close();
+                    setTimeout(function () { open(id, false); }, FADE_MS + 20);
+                    } else {
+                    open(id, false);
+                    }
+                });
+                });
+            
+                // --- Auto-show both side-by-side on load ---
+                if (AUTO_SHOW) open('all', true);
+            });
+            })();
         </script>
 
 
