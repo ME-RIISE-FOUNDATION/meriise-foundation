@@ -303,6 +303,27 @@
             margin-left:5rem;
             }
         } */
+        
+        /* Modal visibility styles */
+        .modal {
+            display: none;
+            z-index: 1050 !important;
+        }
+        
+        .modal.show {
+            display: block !important;
+        }
+        
+        .modal-backdrop {
+            z-index: 1040 !important;
+            background-color: rgba(0, 0, 0, 0.5) !important;
+        }
+        
+        #tbiOpenPositionsModal,
+        #tbiIncubationModal {
+            z-index: 1050 !important;
+        }
+        
     </style>
 </head>
 
@@ -2753,46 +2774,92 @@
 
         <!-- Auto-show popups on page load -->
         <script>
-            $(document).ready(function() {
+            // Wait for Bootstrap to be loaded
+            function showPopups() {
                 let openPositionsClosed = false;
                 let incubationClosed = false;
                 
-                // Show Open Positions modal for 20 seconds
-                $('#tbiOpenPositionsModal').modal('show');
+                // Get modal elements
+                const openPositionsModal = document.getElementById('tbiOpenPositionsModal');
+                const incubationModal = document.getElementById('tbiIncubationModal');
                 
-                // Track if user closes Open Positions modal early (before 20 seconds)
-                $('#tbiOpenPositionsModal').on('hidden.bs.modal', function() {
-                    if (!openPositionsClosed) {
-                        openPositionsClosed = true;
-                        // Show warning that they closed it early
-                        console.warn('User closed Open Positions popup early');
-                        // Optionally show a subtle notification
-                        showNotification('You closed the job opportunities notification. Click the Learn More button anytime to see details!', 'warning');
+                console.log('Looking for modals...');
+                console.log('Open Positions Modal:', openPositionsModal);
+                console.log('Incubation Modal:', incubationModal);
+                
+                if (openPositionsModal && incubationModal) {
+                    // Ensure modals are visible
+                    openPositionsModal.style.display = 'block';
+                    incubationModal.style.display = 'block';
+                    
+                    try {
+                        // Create Bootstrap 5 modal instances
+                        const openPosModalInstance = new bootstrap.Modal(openPositionsModal, {
+                            backdrop: 'static',
+                            keyboard: true
+                        });
+                        const incubModalInstance = new bootstrap.Modal(incubationModal, {
+                            backdrop: 'static',
+                            keyboard: true
+                        });
+                        
+                        console.log('Modal instances created successfully');
+                        
+                        // Show Open Positions modal immediately
+                        openPosModalInstance.show();
+                        console.log('Open Positions modal shown');
+                        
+                        // Track if user closes Open Positions modal early
+                        openPositionsModal.addEventListener('hidden.bs.modal', function() {
+                            if (!openPositionsClosed) {
+                                openPositionsClosed = true;
+                                console.warn('User closed Open Positions popup early');
+                                showNotification('You closed the job opportunities notification. Click the Learn More button anytime to see details!', 'warning');
+                            }
+                        });
+                        
+                        // Auto-hide Open Positions and show Incubation after 20 seconds
+                        setTimeout(function() {
+                            console.log('20 seconds passed - hiding Open Positions, showing Incubation');
+                            openPosModalInstance.hide();
+                            // Small delay before showing next modal
+                            setTimeout(function() {
+                                incubModalInstance.show();
+                                console.log('Incubation modal shown');
+                            }, 500);
+                        }, 20000);
+                        
+                        // Track if user closes Incubation modal early
+                        incubationModal.addEventListener('hidden.bs.modal', function() {
+                            if (!incubationClosed) {
+                                incubationClosed = true;
+                                console.warn('User closed Incubation popup early');
+                                showNotification('You closed the incubation opportunities notification. Click the Learn More button anytime to see details!', 'warning');
+                            }
+                        });
+                        
+                        // Auto-hide Incubation modal after 20 seconds
+                        setTimeout(function() {
+                            console.log('40 seconds passed - hiding Incubation modal');
+                            incubModalInstance.hide();
+                        }, 40000);
+                    } catch(error) {
+                        console.error('Error creating modal instances:', error);
                     }
-                });
-                
-                // Auto-hide Open Positions modal after 20 seconds and show Incubation
-                setTimeout(function() {
-                    $('#tbiOpenPositionsModal').modal('hide');
-                    $('#tbiIncubationModal').modal('show');
-                }, 20000);
-                
-                // Track if user closes Incubation modal early (before 20 seconds)
-                $('#tbiIncubationModal').on('hidden.bs.modal', function() {
-                    if (!incubationClosed) {
-                        incubationClosed = true;
-                        // Show warning that they closed it early
-                        console.warn('User closed Incubation popup early');
-                        // Optionally show a subtle notification
-                        showNotification('You closed the incubation opportunities notification. Click the Learn More button anytime to see details!', 'warning');
-                    }
-                });
-                
-                // Auto-hide Incubation modal after 20 seconds
-                setTimeout(function() {
-                    $('#tbiIncubationModal').modal('hide');
-                }, 40000);
-            });
+                } else {
+                    console.error('Modal elements not found!');
+                    console.error('Open Positions Modal found:', !!openPositionsModal);
+                    console.error('Incubation Modal found:', !!incubationModal);
+                }
+            }
+            
+            // Wait for DOM to be fully loaded
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', showPopups);
+            } else {
+                // DOM is already loaded (e.g., this script was added late)
+                setTimeout(showPopups, 100);
+            }
             
             // Function to show notifications
             function showNotification(message, type = 'info') {
@@ -2810,6 +2877,7 @@
                     z-index: 9999;
                     font-size: 14px;
                     max-width: 400px;
+                    font-family: Arial, sans-serif;
                 `;
                 notification.textContent = message;
                 document.body.appendChild(notification);
