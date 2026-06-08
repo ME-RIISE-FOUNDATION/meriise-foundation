@@ -2943,9 +2943,9 @@
                         
                         console.log('Side-by-side modals shown');
                         
-                        // Auto-hide both modals after 20 seconds
+                        // Auto-hide both modals after 10 seconds
                         setTimeout(function() {
-                            console.log('20 seconds passed - hiding modals');
+                            console.log('10 seconds passed - hiding modals');
                             modalsContainer.style.opacity = '0';
                             modalsContainer.style.transition = 'opacity 0.5s ease';
                             backdropOverlay.style.opacity = '0';
@@ -2956,7 +2956,7 @@
                                 openPositionsModal.style.display = 'none';
                                 incubationModal.style.display = 'none';
                             }, 500);
-                        }, 20000);
+                        }, 10000);
                         
                     } catch(error) {
                         console.error('Error creating side-by-side modals:', error);
