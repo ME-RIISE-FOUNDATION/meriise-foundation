@@ -1,6 +1,7 @@
 <?php
 // Email configuration
 $recipient_email = "ceomeriise@mcehassan.ac.in";
+$messages_file = __DIR__ . '/contact_messages.json';
 
 // Check if form was submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -12,114 +13,85 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validate form data
     if (empty($name) || empty($email) || empty($program_interest) || empty($message)) {
-        die("Error: All fields are required.");
+        echo json_encode(['success' => false, 'message' => 'All fields are required.']);
+        http_response_code(400);
+        exit;
     }
 
     // Validate email
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        die("Error: Invalid email address.");
+        echo json_encode(['success' => false, 'message' => 'Invalid email address.']);
+        http_response_code(400);
+        exit;
     }
 
-    // Prepare email content
-    $subject = "New Contact Form Submission from ME-RIISE Foundation";
-    
-    $email_body = "You have received a new message from the Contact Us form.\n\n";
-    $email_body .= "Full Name: " . $name . "\n";
-    $email_body .= "Email Address: " . $email . "\n";
-    $email_body .= "Program Interest: " . $program_interest . "\n";
-    $email_body .= "Message:\n" . $message . "\n\n";
-    $email_body .= "---\n";
-    $email_body .= "This is an automated message from your website contact form.";
+    // Save message to file
+    $submission = [
+        'timestamp' => date('Y-m-d H:i:s'),
+        'name' => $name,
+        'email' => $email,
+        'program_interest' => $program_interest,
+        'message' => $message,
+        'ip_address' => $_SERVER['REMOTE_ADDR']
+    ];
 
-    // Set headers
-    $headers = "From: " . $email . "\r\n";
-    $headers .= "Reply-To: " . $email . "\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+    // Read existing messages
+    $messages = [];
+    if (file_exists($messages_file)) {
+        $json_content = file_get_contents($messages_file);
+        if ($json_content) {
+            $messages = json_decode($json_content, true) ?? [];
+        }
+    }
 
-    // Send email to recipient
-    if (mail($recipient_email, $subject, $email_body, $headers)) {
+    // Add new message
+    $messages[] = $submission;
+
+    // Write back to file
+    if (file_put_contents($messages_file, json_encode($messages, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES))) {
+        // Try to send email using mail function (if available on server)
+        $subject = "New Contact Form Submission from ME-RIISE Foundation";
+        $email_body = "You have received a new message from the Contact Us form.\n\n";
+        $email_body .= "Full Name: " . $name . "\n";
+        $email_body .= "Email Address: " . $email . "\n";
+        $email_body .= "Program Interest: " . $program_interest . "\n";
+        $email_body .= "Message:\n" . $message . "\n\n";
+        $email_body .= "---\n";
+        $email_body .= "Submitted on: " . date('Y-m-d H:i:s') . "\n";
+        $email_body .= "IP Address: " . $_SERVER['REMOTE_ADDR'];
+
+        $headers = "From: noreply@mcehassan.ac.in\r\n";
+        $headers .= "Reply-To: " . $email . "\r\n";
+        $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+
+        // Attempt to send email
+        @mail($recipient_email, $subject, $email_body, $headers);
+
         // Send confirmation email to user
         $user_subject = "We received your message - ME-RIISE Foundation";
         $user_body = "Dear " . $name . ",\n\n";
         $user_body .= "Thank you for contacting ME-RIISE Foundation. We have received your message and will get back to you soon.\n\n";
-        $user_body .= "Program Interest: " . $program_interest . "\n";
-        $user_body .= "Message: " . $message . "\n\n";
+        $user_body .= "Program Interest: " . $program_interest . "\n\n";
         $user_body .= "Best regards,\n";
         $user_body .= "ME-RIISE Foundation Team\n";
         $user_body .= "Email: ceomeriise@mcehassan.ac.in\n";
         $user_body .= "Phone: +91 9448179074";
 
-        $user_headers = "From: ceomeriise@mcehassan.ac.in\r\n";
+        $user_headers = "From: noreply@mcehassan.ac.in\r\n";
         $user_headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-        mail($email, $user_subject, $user_body, $user_headers);
+        @mail($email, $user_subject, $user_body, $user_headers);
 
-        // Display success message
-        ?>
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Message Sent Successfully</title>
-            <style>
-                body {
-                    font-family: Arial, sans-serif;
-                    margin: 0;
-                    padding: 0;
-                    background-color: #f4f4f4;
-                }
-                .container {
-                    width: 50%;
-                    margin: 50px auto;
-                    background: white;
-                    padding: 20px;
-                    border-radius: 8px;
-                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-                    text-align: center;
-                }
-                .success-message {
-                    color: #28a745;
-                    font-size: 18px;
-                    margin: 20px 0;
-                }
-                .back-link {
-                    margin-top: 20px;
-                }
-                .back-link a {
-                    display: inline-block;
-                    padding: 10px 20px;
-                    background: #28a745;
-                    color: white;
-                    text-decoration: none;
-                    border-radius: 5px;
-                }
-                .back-link a:hover {
-                    background: #218838;
-                }
-            </style>
-        </head>
-        <body>
-            <div class="container">
-                <h2>Message Sent Successfully!</h2>
-                <div class="success-message">
-                    <p>Thank you for contacting ME-RIISE Foundation.</p>
-                    <p>Your message has been sent to ceomeriise@mcehassan.ac.in</p>
-                    <p>We will get back to you soon.</p>
-                </div>
-                <div class="back-link">
-                    <a href="contactus.html">Back to Contact Form</a>
-                </div>
-            </div>
-        </body>
-        </html>
-        <?php
+        // Return success response
+        echo json_encode(['success' => true, 'message' => 'Message sent successfully!']);
+        http_response_code(200);
     } else {
-        die("Error: Failed to send email. Please try again later.");
+        echo json_encode(['success' => false, 'message' => 'Failed to save message.']);
+        http_response_code(500);
     }
 } else {
-    // If not a POST request, redirect to contact form
-    header("Location: contactus.html");
-    exit;
+    // If not a POST request, return error
+    echo json_encode(['success' => false, 'message' => 'Invalid request method.']);
+    http_response_code(405);
 }
 ?>
