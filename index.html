@@ -2751,6 +2751,25 @@
             </div>
         </div>
 
+        <!-- Auto-show popups on page load -->
+        <script>
+            $(document).ready(function() {
+                // Show both modals when page loads
+                $('#tbiOpenPositionsModal').modal('show');
+                
+                // Show incubation modal after 3 seconds to avoid overlap
+                setTimeout(function() {
+                    $('#tbiOpenPositionsModal').modal('hide');
+                    $('#tbiIncubationModal').modal('show');
+                }, 4000);
+                
+                // Optional: Show both in sequence
+                // After 7 seconds, hide incubation modal
+                setTimeout(function() {
+                    $('#tbiIncubationModal').modal('hide');
+                }, 8000);
+            });
+        </script>
 
 
 
