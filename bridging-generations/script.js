@@ -103,11 +103,50 @@
         onScroll();
     }
 
-    // Handle video cover click to play embedded video
-    var videoCover = document.getElementById('latest-video-cover');
-    var videoIframe = document.getElementById('latest-video-iframe');
+    // Mobile full-screen nav overlay
+    var navToggle = document.querySelector('[data-nav-toggle]');
+    var navMenu = document.getElementById('primary-nav');
 
-    if (videoCover && videoIframe) {
+    if (navToggle && navMenu) {
+        var openNav = function () {
+            navMenu.classList.add('is-open');
+            navToggle.setAttribute('aria-expanded', 'true');
+            document.body.style.overflow = 'hidden';
+            var firstLink = navMenu.querySelector('a, button');
+            if (firstLink) firstLink.focus();
+        };
+
+        var closeNav = function () {
+            navMenu.classList.remove('is-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        };
+
+        navToggle.addEventListener('click', openNav);
+
+        navMenu.addEventListener('click', function (event) {
+            if (event.target.closest('[data-nav-close]')) {
+                closeNav();
+                if (navToggle.getAttribute('aria-expanded') === 'false') {
+                    navToggle.focus();
+                }
+            }
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' && navMenu.classList.contains('is-open')) {
+                closeNav();
+                navToggle.focus();
+            }
+        });
+    }
+
+    // Wire a video cover to reveal/autoplay its embedded iframe
+    function setupVideoCover(coverId, iframeId) {
+        var videoCover = document.getElementById(coverId);
+        var videoIframe = document.getElementById(iframeId);
+        if (!videoCover || !videoIframe) return;
+
         var playVideo = function (event) {
             // Support both click and keyboard (Enter/Space)
             if (event.type === 'keydown' && event.key !== 'Enter' && event.key !== ' ') {
@@ -127,4 +166,7 @@
         videoCover.addEventListener('click', playVideo);
         videoCover.addEventListener('keydown', playVideo);
     }
+
+    setupVideoCover('latest-video-cover', 'latest-video-iframe');
+    setupVideoCover('featured-video-cover', 'featured-video-iframe');
 })();

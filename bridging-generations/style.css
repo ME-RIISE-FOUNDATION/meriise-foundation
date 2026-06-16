@@ -284,6 +284,63 @@ a {
     height: 1.3rem;
 }
 
+/* Hamburger + drawer-only elements (hidden on desktop) */
+.ted-nav__toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    background: none;
+    border: none;
+    color: var(--color-ink);
+    cursor: pointer;
+    border-radius: var(--radius-full);
+    transition: background-color 200ms, color 200ms;
+}
+
+.ted-nav__toggle:hover {
+    background-color: var(--color-surface);
+    color: var(--color-accent);
+}
+
+.ted-nav__toggle svg {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.ted-nav__close {
+    display: none;
+    position: absolute;
+    top: var(--space-5);
+    right: var(--space-5);
+    align-items: center;
+    justify-content: center;
+    width: 2.8rem;
+    height: 2.8rem;
+    background: none;
+    border: none;
+    color: var(--color-ink);
+    cursor: pointer;
+    border-radius: var(--radius-full);
+    transition: background-color 200ms, color 200ms;
+}
+
+.ted-nav__close:hover {
+    background-color: var(--color-surface);
+    color: var(--color-accent);
+}
+
+.ted-nav__close svg {
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+/* The drawer CTA only shows inside the mobile overlay */
+.ted-nav__cta--drawer {
+    display: none;
+}
+
 /* ---------- Featured story ---------- */
 .featured {
     padding: var(--space-16) 0 var(--space-12);
@@ -739,8 +796,68 @@ address {
         font-size: 2.3rem;
     }
 
-    .ted-nav__menu {
+    /* Slim down the sticky header on tablets/phones */
+    .ted-nav__row {
+        min-height: 64px;
+        gap: var(--space-4);
+    }
+
+    .ted-nav__logo img {
+        height: 52px;
+    }
+
+    /* Hide the desktop CTA + search; show the hamburger */
+    .ted-nav__actions .ted-nav__cta,
+    .ted-search {
         display: none;
+    }
+
+    .ted-nav__toggle {
+        display: inline-flex;
+    }
+
+    /* Turn the primary nav into a full-screen overlay */
+    .ted-nav__menu {
+        position: fixed;
+        inset: 0;
+        z-index: 60;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-8);
+        background-color: var(--color-bg);
+        padding: var(--space-12) var(--space-6);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition: opacity 250ms ease, transform 250ms ease, visibility 250ms;
+    }
+
+    .ted-nav__menu.is-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .ted-nav__close {
+        display: inline-flex;
+    }
+
+    .ted-nav__links {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-6);
+    }
+
+    .ted-nav__links a {
+        font-size: 1.1rem;
+        letter-spacing: 0.04em;
+    }
+
+    .ted-nav__cta--drawer {
+        display: inline-flex;
+        font-size: 0.95rem;
+        padding: 0.8rem 1.8rem;
     }
 }
 
@@ -761,10 +878,6 @@ address {
         display: none;
     }
 
-    .ted-nav__cta {
-        padding: 0.5rem 0.85rem;
-    }
-
     .talk-grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -776,6 +889,10 @@ address {
 }
 
 @media (max-width: 479px) {
+    .container {
+        padding: 0 1rem;
+    }
+
     h2 {
         font-size: 1.5rem;
     }
@@ -784,8 +901,23 @@ address {
         font-size: 1.75rem;
     }
 
+    .featured__lead {
+        font-size: 1rem;
+    }
+
     .talk-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Full-width, thumb-friendly buttons */
+    .featured__buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .featured__buttons .btn {
+        width: 100%;
+        padding: 0.85rem 1.5rem;
     }
 }
 

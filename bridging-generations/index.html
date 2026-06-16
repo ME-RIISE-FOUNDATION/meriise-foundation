@@ -22,14 +22,21 @@
                 <span class="ted-nav__tagline">Bridging Generations</span>
             </div>
 
-            <nav class="ted-nav__menu" aria-label="Primary">
+            <nav class="ted-nav__menu" id="primary-nav" aria-label="Primary">
+                <button class="ted-nav__close" type="button" aria-label="Close menu" data-nav-close>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
                 <ul class="ted-nav__links">
-                    <li><a href="#featured">Watch</a></li>
-                    <li><a href="#upcoming">Speakers</a></li>
-                    <li><a href="#upcoming">Upcoming</a></li>
+                    <li><a href="#featured" data-nav-close>Watch</a></li>
+                    <li><a href="#upcoming" data-nav-close>Speakers</a></li>
+                    <li><a href="#upcoming" data-nav-close>Upcoming</a></li>
                     <li><a href="../aboutmeriise.html">About</a></li>
                     <li><a href="../index.html">Home</a></li>
                 </ul>
+                <a href="https://forms.gle/wbHejKjpZgCgyLt48" class="ted-nav__cta ted-nav__cta--drawer">Ask Questions</a>
             </nav>
 
             <div class="ted-nav__actions">
@@ -38,6 +45,13 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+                <button class="ted-nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
                     </svg>
                 </button>
             </div>
@@ -59,7 +73,7 @@
                         <span class="dot" aria-hidden="true">·</span>
                         <span>Live Session</span>
                         <span class="dot" aria-hidden="true">·</span>
-                        <span>7 days</span>
+                        <!-- <span>7 days</span> -->
                     </p>
                     <div class="featured__buttons">
                         <button id="watch-talk-btn" class="btn btn-primary" type="button">Watch Live</button>
@@ -70,12 +84,13 @@
                 <figure class="featured__media">
                     <div class="media-frame">
                         <iframe
+                            id="featured-video-iframe"
                             title="Featured talk video"
                             src="https://www.youtube.com/embed/PlQI_gluABE"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen
                             loading="lazy"></iframe>
-                            <div class="video-cover" id="latest-video-cover" role="button" tabindex="0" aria-label="Play video">
+                            <div class="video-cover" id="featured-video-cover" role="button" tabindex="0" aria-label="Play video">
                             <img src="images/devanand.png" alt="" loading="lazy">
                             <div class="play-icon">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
