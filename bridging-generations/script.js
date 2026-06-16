@@ -102,4 +102,29 @@
         window.addEventListener('scroll', onScroll, { passive: true });
         onScroll();
     }
+
+    // Handle video cover click to play embedded video
+    var videoCover = document.getElementById('latest-video-cover');
+    var videoIframe = document.getElementById('latest-video-iframe');
+
+    if (videoCover && videoIframe) {
+        var playVideo = function (event) {
+            // Support both click and keyboard (Enter/Space)
+            if (event.type === 'keydown' && event.key !== 'Enter' && event.key !== ' ') {
+                return;
+            }
+            event.preventDefault();
+
+            var src = videoIframe.src;
+            // Only add autoplay if not already present
+            if (src.indexOf('autoplay=1') === -1) {
+                videoIframe.src = src + (src.indexOf('?') > -1 ? '&' : '?') + 'autoplay=1';
+            }
+            // Hide the cover to reveal the iframe
+            videoCover.style.display = 'none';
+        };
+
+        videoCover.addEventListener('click', playVideo);
+        videoCover.addEventListener('keydown', playVideo);
+    }
 })();
