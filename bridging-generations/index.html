@@ -8,245 +8,88 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../assets/NavbarCode/assets/css/styles.css" />
-    <style>
-      .h-16 { height: 4rem; }
-      header.header { box-shadow: 1px 1px 4px 2px rgba(0,0,0,0.4); }
-    </style>
 </head>
 <body>
     <a class="skip-link" href="#main-content" aria-label="Skip to main content">Skip to main content</a>
 
-  <div class="snav-bar" style="background-color: black">
-    <header class="header">
-      <nav class="nav containerofNavbar">
-        <div class="nav__data">
-          <a href="#" class="nav__logo">
-            <img src="../assets/MERIISE FOUNDATION logo 2.0.png" alt="" class="h-16" />
-          </a>
-          <div class="nav__toggle" id="nav-toggle">
-            <i class="ri-menu-line nav__burger"></i>
-            <i class="ri-close-line nav__close"></i>
-          </div>
+    <header class="ted-nav" id="site-header">
+        <div class="container ted-nav__row">
+            <div class="ted-nav__brand">
+                <a href="../index.html" class="ted-nav__logo" aria-label="ME-RIISE Foundation home">
+                    <img src="../assets/MERIISE FOUNDATION logo 2.0.png" alt="ME-RIISE Foundation" />
+                </a>
+                <span class="ted-nav__divider" aria-hidden="true"></span>
+                <span class="ted-nav__tagline">Bridging Generations</span>
+            </div>
+
+            <nav class="ted-nav__menu" aria-label="Primary">
+                <ul class="ted-nav__links">
+                    <li><a href="#featured">Watch</a></li>
+                    <li><a href="#upcoming">Speakers</a></li>
+                    <li><a href="#upcoming">Upcoming</a></li>
+                    <li><a href="../aboutmeriise.html">About</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                </ul>
+            </nav>
+
+            <div class="ted-nav__actions">
+                <a href="https://forms.gle/wbHejKjpZgCgyLt48" class="ted-nav__cta">Ask Questions</a>
+                <button class="ted-search" type="button" aria-label="Search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
         </div>
-
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-            <li><a href="../index.html" class="nav__link">Home</a></li>
-
-            <li class="dropdown__item">
-              <div class="nav__link">
-                About ME-RIISE
-                <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-              </div>
-              <ul class="dropdown__menu">
-                <li>
-                  <a href="../aboutmeriise.html" class="dropdown__link">
-                    <i class="ri-pie-chart-line"></i> ME-RIISE FOUNDATION
-                  </a>
-                </li>
-                <li>
-                  <a href="../infrastructure.html" class="dropdown__link">
-                    <i class="ri-pie-chart-line"></i> Infrastructure
-                  </a>
-                </li>
-                <li>
-                  <a href="../ourAchivements.html" class="dropdown__link">
-                    <i class="ri-arrow-up-down-line"></i> Achievements
-                  </a>
-                </li>
-                <li class="dropdown__subitem">
-                  <div class="dropdown__link">
-                    <i class="ri-bar-chart-line"></i> Documents
-                    <i class="ri-add-line dropdown__add"></i>
-                  </div>
-                  <ul class="dropdown__submenu">
-                    <li>
-                      <a href="../Nisp.html" class="dropdown__sublink">
-                        <i class="ri-file-list-line"></i> MCE NISP POLICY
-                      </a>
-                    </li>
-                    <li>
-                      <a href="../collab.html" class="dropdown__sublink">
-                        <i class="ri-cash-line"></i> Collaborations
-                      </a>
-                    </li>
-                    <li>
-                      <a href="../Certificates.html" class="dropdown__sublink">
-                        <i class="ri-cash-line"></i> Certificates
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="dropdown__subitem">
-                  <div class="dropdown__link">
-                    <i class="ri-bar-chart-line"></i> Members of ME-RIISE
-                    <i class="ri-add-line dropdown__add"></i>
-                  </div>
-                  <ul class="dropdown__submenu">
-                    <li>
-                      <a href="../index.html#boardofdirectors" class="dropdown__sublink">
-                        <i class="ri-file-list-line"></i> Board of Directors
-                      </a>
-                    </li>
-                    <li>
-                      <a href="../faculty.html" class="dropdown__sublink">
-                        <i class="ri-cash-line"></i> Faculty
-                      </a>
-                    </li>
-                    <li>
-                      <a href="../team.html" class="dropdown__sublink">
-                        <i class="ri-refund-2-line"></i> Team ME-RIISE
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-
-            <li class="dropdown__item">
-              <div class="nav__link">
-                Wings of ME-RIISE
-                <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-              </div>
-              <ul class="dropdown__menu">
-                <li>
-                  <a href="../startups.html" class="dropdown__link">
-                    <i class="ri-pie-chart-line"></i> Start Ups
-                  </a>
-                </li>
-                <li>
-                  <a href="../iic.html" class="dropdown__link">
-                    <i class="ri-pie-chart-line"></i> MoE - IIC
-                  </a>
-                </li>
-                <li>
-                  <a href="../nain.html" class="dropdown__link">
-                    <i class="ri-arrow-up-down-line"></i> NAIN
-                  </a>
-                </li>
-                <li>
-                  <a href="../uba.html" class="dropdown__link">
-                    <i class="ri-arrow-up-down-line"></i> UBA
-                  </a>
-                </li>
-                <li>
-                  <a href="../rgep.html" class="dropdown__link">
-                    <i class="ri-arrow-up-down-line"></i> RGEP
-                  </a>
-                </li>
-                <li class="dropdown__subitem">
-                  <div class="dropdown__link">
-                    <i class="ri-bar-chart-line"></i> Pragyatha
-                    <i class="ri-add-line dropdown__add"></i>
-                  </div>
-                  <ul class="dropdown__submenu">
-                    <li>
-                      <a href="https://pragyatha25.meriise.org/" class="dropdown__sublink">
-                        <i class="ri-file-list-line"></i> Pragyatha25
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://pragyatha24.meriise.org/" class="dropdown__sublink">
-                        <i class="ri-file-list-line"></i> Pragyatha24
-                      </a>
-                    </li>
-                    <li>
-                      <a href="../pragyatha23.html" class="dropdown__sublink">
-                        <i class="ri-file-list-line"></i> Pragyatha23
-                      </a>
-                    </li>
-                    <li>
-                      <a href="../pragyatha22.html" class="dropdown__sublink">
-                        <i class="ri-file-list-line"></i> Pragyatha22
-                      </a>
-                    </li>
-                    <li>
-                      <a href="../Pragyatha21.html" class="dropdown__sublink">
-                        <i class="ri-file-list-line"></i> Pragyatha21
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <a href="https://meriise-events.vercel.app/" class="nav__link">Events</a>
-            </li>
-
-            <li class="dropdown__item">
-              <div class="nav__link">
-                TBI-MCE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-              </div>
-              <ul class="dropdown__menu">
-                <li>
-                  <a href="../tbi.html" class="dropdown__link">
-                    <i class="ri-pie-chart-line"></i> About TBI
-                  </a>
-                </li>
-                <li>
-                  <a href="../openPosition.html" class="dropdown__link">
-                    <i class="ri-pie-chart-line"></i> Open positions
-                  </a>
-                </li>
-
-                <li>
-                  <a href="../callforincubation.html" class="dropdown__link">
-                    <i class="ri-pie-chart-line"></i> Call for incubation application
-                  </a>
-                </li>
-              </ul>
-            </li>
-
-            <li><a href="#footer" class="nav__link">Contact Us</a></li>
-          </ul>
-        </div>
-      </nav>
     </header>
-  </div>
 
     <main id="main-content">
-        <section class="hero" aria-label="Featured talk">
-            <div class="container">
-                <div class="hero-grid">
-                    <div class="hero-content">
-                        <div class="hero-eyebrow">Bridging Generations</div>
-                        <h1 class="hero-title">
-                            Alumni Insights <span>2.0</span>
-                        </h1>
-                        <p class="hero-description">
-                            Connect with successful alumni who share their journey, insights, and vision for the future. Learn from their experiences and discover the path to success.
-                        </p>
-                        <div class="hero-buttons">
-                            <button id="watch-talk-btn" class="btn btn-primary">Watch Live</button>
-                            <a href="https://forms.gle/wbHejKjpZgCgyLt48" class="btn btn-secondary">Ask Questions</a>
-                        </div>
-                    </div>
-                    <div class="hero-media-wrap">
-                        <div class="hero-media">
-                            <iframe
-                                title="Featured talk video"
-                                src="https://www.youtube.com/embed/PlQI_gluABE"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen
-                                loading="lazy"></iframe>
-                        </div>
-                        <p class="hero-caption">Meet our featured speaker this month</p>
+        <section class="featured" id="featured" aria-label="Featured talk">
+            <div class="container featured__grid">
+                <div class="featured__content">
+                    <p class="eyebrow">Alumni Insights</p>
+                    <h1 class="featured__title">Alumni Insights 2.0 — wisdom from those who walked the path</h1>
+                    <p class="featured__lead">
+                        Connect with successful alumni who share their journey, insights, and vision for the future.
+                        Learn from their experiences and discover the path to success.
+                    </p>
+                    <p class="featured__meta">
+                        <span>Featured Speaker</span>
+                        <span class="dot" aria-hidden="true">·</span>
+                        <span>Live Session</span>
+                        <span class="dot" aria-hidden="true">·</span>
+                        <span>7 days</span>
+                    </p>
+                    <div class="featured__buttons">
+                        <button id="watch-talk-btn" class="btn btn-primary" type="button">Watch Live</button>
+                        <a href="https://forms.gle/wbHejKjpZgCgyLt48" class="btn btn-secondary">Ask Questions</a>
                     </div>
                 </div>
+
+                <figure class="featured__media">
+                    <div class="media-frame">
+                        <iframe
+                            title="Featured talk video"
+                            src="https://www.youtube.com/embed/PlQI_gluABE"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                        <span class="duration-badge">12 MIN</span>
+                    </div>
+                    <figcaption class="featured__caption">Meet our featured speaker this month</figcaption>
+                </figure>
             </div>
         </section>
 
-        <section class="section" aria-label="Latest talk video">
+        <section class="section section--latest" aria-label="Latest talk video">
             <div class="container">
                 <div class="section-head">
-                    <h2>Bridging Generations Alumni Insights</h2>
+                    <p class="eyebrow">Now Playing</p>
+                    <h2>Latest Alumni Talk</h2>
                 </div>
-                <div class="hero-media-wrap" style="max-width: 1200px; margin: 0 auto;">
-                    <div class="hero-media">
+                <figure class="latest__media">
+                    <div class="media-frame">
                         <iframe
                             title="Latest alumni talk video"
                             src="https://www.youtube.com/embed/_TJaEHnwIus"
@@ -254,122 +97,95 @@
                             allowfullscreen
                             loading="lazy"></iframe>
                     </div>
-                </div>
+                </figure>
             </div>
         </section>
 
-        <section class="section" aria-label="Upcoming talks">
+        <section class="section" id="upcoming" aria-label="Upcoming talks">
             <div class="container">
                 <div class="section-head">
+                    <p class="eyebrow">Coming Soon</p>
                     <h2>Upcoming Alumni Talks</h2>
                 </div>
 
-                <div class="cards" role="list" aria-label="Upcoming alumni talks">
-                    <article class="card" role="listitem">
+                <div class="talk-grid" role="list" aria-label="Upcoming alumni talks">
+                    <article class="talk-card" role="listitem">
                         <div class="thumb">
                             <div class="thumb-placeholder">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
-                                        <rect x="3" y="4" width="18" height="18" rx="2"></rect>
-                                        <line x1="16" y1="2" x2="16" y2="6"></line>
-                                        <line x1="8" y1="2" x2="8" y2="6"></line>
-                                        <line x1="3" y1="10" x2="21" y2="10"></line>
-                                    </svg>
-                                    Coming Soon
-                                </div>
-                            <div class="thumb-play">
-                                <div class="thumb-play-badge">
-                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                                        <polygon points="5 3 19 12 5 21"></polygon>
-                                    </svg>
-                                </div>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                Coming Soon
                             </div>
+                            <span class="duration-badge">25 MIN</span>
                         </div>
-                        <p class="meta-line"><span class="meta-key">Coming Soon</span></p>
-                        <h3 class="card-title">Success in Startups: From Idea to IPO</h3>
-                        <p class="card-sub">Learn how our alumni transformed their startup vision into a thriving business.</p>
-                        <div class="duration-chip">25 min</div>
+                        <p class="talk-card__cat">Startups</p>
+                        <h3 class="talk-card__title">Success in Startups: From Idea to IPO</h3>
+                        <p class="talk-card__meta">Speaker TBA · Coming soon</p>
                     </article>
 
-                    <article class="card" role="listitem">
+                    <article class="talk-card" role="listitem">
                         <div class="thumb">
                             <div class="thumb-placeholder">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
-                                        <rect x="3" y="4" width="18" height="18" rx="2"></rect>
-                                        <line x1="16" y1="2" x2="16" y2="6"></line>
-                                        <line x1="8" y1="2" x2="8" y2="6"></line>
-                                        <line x1="3" y1="10" x2="21" y2="10"></line>
-                                    </svg>
-                                    Coming Soon
-                                </div>
-                            <div class="thumb-play">
-                                <div class="thumb-play-badge">
-                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                                        <polygon points="5 3 19 12 5 21"></polygon>
-                                    </svg>
-                                </div>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                Coming Soon
                             </div>
+                            <span class="duration-badge">18 MIN</span>
                         </div>
-                        <p class="meta-line"><span class="meta-key">Coming Soon</span></p>
-                        <h3 class="card-title">Leadership & Innovation in Tech</h3>
-                        <p class="card-sub">Explore the principles of effective leadership in the rapidly evolving tech industry.</p>
-                        <div class="duration-chip">18 min</div>
+                        <p class="talk-card__cat">Leadership</p>
+                        <h3 class="talk-card__title">Leadership &amp; Innovation in Tech</h3>
+                        <p class="talk-card__meta">Speaker TBA · Coming soon</p>
                     </article>
 
-                    <article class="card" role="listitem">
+                    <article class="talk-card" role="listitem">
                         <div class="thumb">
                             <div class="thumb-placeholder">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
-                                        <rect x="3" y="4" width="18" height="18" rx="2"></rect>
-                                        <line x1="16" y1="2" x2="16" y2="6"></line>
-                                        <line x1="8" y1="2" x2="8" y2="6"></line>
-                                        <line x1="3" y1="10" x2="21" y2="10"></line>
-                                    </svg>
-                                    Coming Soon
-                                </div>
-                            <div class="thumb-play">
-                                <div class="thumb-play-badge">
-                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                                        <polygon points="5 3 19 12 5 21"></polygon>
-                                    </svg>
-                                </div>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                Coming Soon
                             </div>
+                            <span class="duration-badge">22 MIN</span>
                         </div>
-                        <p class="meta-line"><span class="meta-key">Coming Soon</span></p>
-                        <h3 class="card-title">Entrepreneurship Beyond Borders</h3>
-                        <p class="card-sub">Discover how to build and scale global businesses with international perspectives.</p>
-                        <div class="duration-chip">22 min</div>
+                        <p class="talk-card__cat">Entrepreneurship</p>
+                        <h3 class="talk-card__title">Entrepreneurship Beyond Borders</h3>
+                        <p class="talk-card__meta">Speaker TBA · Coming soon</p>
                     </article>
 
-                    <article class="card" role="listitem">
+                    <article class="talk-card" role="listitem">
                         <div class="thumb">
                             <div class="thumb-placeholder">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
-                                        <rect x="3" y="4" width="18" height="18" rx="2"></rect>
-                                        <line x1="16" y1="2" x2="16" y2="6"></line>
-                                        <line x1="8" y1="2" x2="8" y2="6"></line>
-                                        <line x1="3" y1="10" x2="21" y2="10"></line>
-                                    </svg>
-                                    Coming Soon
-                                </div>
-                            <div class="thumb-play">
-                                <div class="thumb-play-badge">
-                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                                        <polygon points="5 3 19 12 5 21"></polygon>
-                                    </svg>
-                                </div>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                Coming Soon
                             </div>
+                            <span class="duration-badge">20 MIN</span>
                         </div>
-                        <p class="meta-line"><span class="meta-key">Coming Soon</span></p>
-                        <h3 class="card-title">Career Growth & Personal Development</h3>
-                        <p class="card-sub">Expert advice on building a fulfilling career while maintaining personal growth.</p>
-                        <div class="duration-chip">20 min</div>
+                        <p class="talk-card__cat">Career</p>
+                        <h3 class="talk-card__title">Career Growth &amp; Personal Development</h3>
+                        <p class="talk-card__meta">Speaker TBA · Coming soon</p>
                     </article>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" id="footer">
         <div class="container footer-top">
             <div class="social" aria-label="Social links">
                 <a href="#" aria-label="Visit our Twitter page">
@@ -422,7 +238,7 @@
         <div class="modal-dialog-wrap">
             <section class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="live-modal-title" tabindex="-1">
                 <button class="modal-close" type="button" data-modal-close aria-label="Close live soon dialog">✕</button>
-                <img src="logos/meriise_logo.png" alt="ME-RIISE Foundation Logo" class="modal-logo">
+                <img src="../assets/MERIISE FOUNDATION logo 2.0.png" alt="ME-RIISE Foundation Logo" class="modal-logo">
                 <div class="modal-pill">Bridging Generations</div>
                 <h2 id="live-modal-title" class="modal-title">Will be live soon</h2>
                 <p class="modal-text">Our speaker session link will be available shortly.</p>
@@ -431,9 +247,6 @@
         </div>
     </div>
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="../assets/NavbarCode/assets/js/main.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

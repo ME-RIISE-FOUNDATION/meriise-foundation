@@ -69,7 +69,8 @@
         });
     }
 
-    var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+    // Reveal talk cards as they scroll into view.
+    var cards = Array.prototype.slice.call(document.querySelectorAll('.talk-card'));
     if ('IntersectionObserver' in window && cards.length) {
         var observer = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
@@ -92,37 +93,13 @@
         });
     }
 
-    var themeToggle = document.getElementById('theme-toggle');
-    var themeStorageKey = 'preferredTheme';
-
-    function applyTheme(theme) {
-        var isDark = theme === 'dark';
-        document.documentElement.classList.toggle('theme-dark', isDark);
-        if (!themeToggle) return;
-        themeToggle.setAttribute('aria-pressed', String(isDark));
-        themeToggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
-        themeToggle.textContent = isDark ? 'Light' : 'Dark';
-    }
-
-    function getSavedTheme() {
-        return localStorage.getItem(themeStorageKey);
-    }
-
-    function getPreferredTheme() {
-        var saved = getSavedTheme();
-        if (saved === 'light' || saved === 'dark') {
-            return saved;
-        }
-        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-
-    applyTheme(getPreferredTheme());
-
-    if (themeToggle) {
-        themeToggle.addEventListener('click', function () {
-            var newTheme = document.documentElement.classList.contains('theme-dark') ? 'light' : 'dark';
-            localStorage.setItem(themeStorageKey, newTheme);
-            applyTheme(newTheme);
-        });
+    // Add a subtle shadow to the sticky header once the page scrolls.
+    var header = document.getElementById('site-header');
+    if (header) {
+        var onScroll = function () {
+            header.classList.toggle('is-scrolled', window.scrollY > 8);
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
     }
 })();
