@@ -3614,6 +3614,127 @@
 
         </script>
 
+        <!-- Bridging Generations 2.0 Popup -->
+        <div id="bg2-popup" class="bg2-popup" role="dialog" aria-modal="true" aria-labelledby="bg2-popup-title">
+            <div class="bg2-popup__card">
+                <button class="bg2-popup__close" type="button" aria-label="Close popup" onclick="closeBg2Popup()">&times;</button>
+                <h2 id="bg2-popup-title" class="bg2-popup__title">Bridging Generations 2.0</h2>
+                <a href="bridging-generations/index.html" class="bg2-popup__poster" aria-label="Open Bridging Generations 2.0">
+                    <img src="popup_assets/poster.png" alt="Bridging Generations 2.0 poster" loading="lazy">
+                </a>
+                <a href="bridging-generations/index.html" class="bg2-popup__cta">Know More</a>
+            </div>
+        </div>
+
+        <style>
+            .bg2-popup {
+                position: fixed;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.65);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 10000;
+                padding: 20px;
+            }
+
+            .bg2-popup.hidden {
+                display: none !important;
+            }
+
+            .bg2-popup__card {
+                background: #ffffff;
+                border: 4px solid #01adfc;
+                border-radius: 18px;
+                padding: 18px;
+                max-width: 320px;
+                width: 100%;
+                text-align: center;
+                position: relative;
+                box-shadow: 0 18px 50px rgba(1, 173, 252, 0.35);
+                animation: bg2PopIn 0.3s ease-out;
+            }
+
+            @keyframes bg2PopIn {
+                from { transform: translateY(-30px) scale(0.97); opacity: 0; }
+                to { transform: translateY(0) scale(1); opacity: 1; }
+            }
+
+            .bg2-popup__close {
+                position: absolute;
+                top: 10px;
+                right: 14px;
+                background: none;
+                border: none;
+                font-size: 30px;
+                line-height: 1;
+                cursor: pointer;
+                color: #01adfc;
+                transition: color 0.2s;
+            }
+
+            .bg2-popup__close:hover {
+                color: #0182bd;
+            }
+
+            .bg2-popup__title {
+                font-size: 19px;
+                font-weight: 700;
+                color: #01adfc;
+                margin: 4px 0 14px;
+            }
+
+            .bg2-popup__poster {
+                display: block;
+                border-radius: 12px;
+                overflow: hidden;
+                border: 2px solid #01adfc;
+                transition: transform 0.25s ease;
+            }
+
+            .bg2-popup__poster:hover {
+                transform: scale(1.02);
+            }
+
+            .bg2-popup__poster img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+            .bg2-popup__cta {
+                display: inline-block;
+                background: #01adfc;
+                color: #ffffff;
+                padding: 9px 30px;
+                border-radius: 50px;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 14px;
+                margin-top: 14px;
+                transition: background 0.25s ease, transform 0.25s ease;
+            }
+
+            .bg2-popup__cta:hover {
+                background: #0182bd;
+                color: #ffffff;
+                transform: scale(1.04);
+            }
+        </style>
+
+        <script>
+            function closeBg2Popup() {
+                document.getElementById('bg2-popup').classList.add('hidden');
+            }
+            document.getElementById('bg2-popup').addEventListener('click', function (e) {
+                if (e.target === this) {
+                    closeBg2Popup();
+                }
+            });
+        </script>
+
         <!-- Bridging Generations Modal -->
         <!-- <div id="bridging-modal" class="modal-bridge" style="display: flex;">
             <div class="modal-bridge-content">
