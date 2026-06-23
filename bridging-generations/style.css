@@ -875,7 +875,9 @@ address {
     }
 
     .ted-nav__tagline {
-        display: none;
+        display: inline-block;
+        font-size: 0.8rem;
+        white-space: normal;
     }
 
     .talk-grid {
