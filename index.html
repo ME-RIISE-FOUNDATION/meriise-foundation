@@ -3622,7 +3622,10 @@
                 <a href="bridging-generations/index.html" class="bg2-popup__poster" aria-label="Open Bridging Generations 2.0">
                     <img src="popup_assets/poster.png" alt="Bridging Generations 2.0 poster" loading="lazy">
                 </a>
-                <a href="bridging-generations/index.html" class="bg2-popup__cta">Know More</a>
+                <div class="bg2-popup__buttons">
+                    <a href="https://teams.microsoft.com/meet/41783379945761?p=RZoLdbOcywF6EFhsfW" class="bg2-popup__cta bg2-popup__cta--primary">Watch Live</a>
+                    <a href="bridging-generations/index.html" class="bg2-popup__cta bg2-popup__cta--secondary">Know More</a>
+                </div>
             </div>
         </div>
 
@@ -3713,7 +3716,6 @@
                 text-decoration: none;
                 font-weight: 700;
                 font-size: 14px;
-                margin-top: 14px;
                 transition: background 0.25s ease, transform 0.25s ease;
             }
 
@@ -3721,6 +3723,30 @@
                 background: #0182bd;
                 color: #ffffff;
                 transform: scale(1.04);
+            }
+
+            .bg2-popup__buttons {
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                margin-top: 14px;
+                flex-wrap: wrap;
+            }
+
+            .bg2-popup__cta--primary {
+                background: #01adfc;
+            }
+
+            .bg2-popup__cta--primary:hover {
+                background: #0182bd;
+            }
+
+            .bg2-popup__cta--secondary {
+                background: #6b7280;
+            }
+
+            .bg2-popup__cta--secondary:hover {
+                background: #4b5563;
             }
         </style>
 
