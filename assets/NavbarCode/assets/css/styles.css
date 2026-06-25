@@ -179,6 +179,7 @@ a {
   color: black;
   font-weight: var(--font-semi-bold);
   padding: 1.25rem 1.25rem;
+  white-space: nowrap;
 
   display: flex;
   justify-content: space-between;
