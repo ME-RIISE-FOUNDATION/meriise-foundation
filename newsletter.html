@@ -535,8 +535,40 @@
           <h2 class="nl-heading reveal">2026 Newsletters</h2>
           <p class="nl-subheading reveal">Every monthly issue from ME-RIISE Foundation, starting April 2026.</p>
 
+<<<<<<< HEAD
           <!--=============== 2026 MONTH GRID (built by JS) ===============-->
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" id="nl-2026-grid"></div>
+=======
+          <!--=============== YEAR GRID ===============-->
+          <div id="year-grid">
+            <!-- <h2 class="text-2xl text-gray-800 m-10">Select a Year</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6"> -->
+
+              <!-- <div class="bg-white p-6 rounded-lg shadow-lg card hover:shadow-xl cursor-pointer" onclick="showYear('2024')">
+                <i class="ri-newspaper-line text-6xl text-blue-600"></i>
+                <h2 class="text-2xl font-semibold mt-3 text-gray-900">2024</h2>
+                <p class="text-gray-600 text-sm">View monthly newsletters</p>
+              </div> -->
+
+              <!-- <div class="bg-white p-6 rounded-lg shadow-lg card hover:shadow-xl cursor-pointer" onclick="showYear('2025')">
+                <i class="ri-newspaper-line text-6xl text-blue-600"></i>
+                <h2 class="text-2xl font-semibold mt-3 text-gray-900">2025</h2>
+                <p class="text-gray-600 text-sm">View monthly newsletters</p>
+              </div> -->
+
+              <div class="bg-white p-6 rounded-lg shadow-lg card hover:shadow-xl cursor-pointer" onclick="showYear('2026')">
+                <i class="ri-newspaper-line text-6xl text-blue-600"></i>
+                <h2 class="text-2xl font-semibold mt-3 text-gray-900">2026</h2>
+                <p class="text-gray-600 text-sm">View monthly newsletters</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!--=============== MONTH SECTIONS ===============-->
+          <div id="months-container"></div>
+
+>>>>>>> d41eb02ee2a717972d2346928484e1ab65c6d499
         </div>
       </div>
     </div>
@@ -615,6 +647,7 @@
 
   <!--=============== 2026 NEWSLETTER GRID ===============-->
   <script>
+<<<<<<< HEAD
     /*
      * 2026 monthly newsletters, starting from April.
      * To publish a month: drop its PDF at the listed path and set available:true.
@@ -629,6 +662,11 @@
       { name: 'October',   file: 'assets/newsletter/2026/october.pdf',   available: false },
       { name: 'November',  file: 'assets/newsletter/2026/november.pdf',  available: false },
       { name: 'December',  file: 'assets/newsletter/2026/december.pdf',  available: false }
+=======
+    var MONTHS = [
+       'April', 'May', 'June',
+      // 'July', 'August', 'September', 'October', 'November', 'December'
+>>>>>>> d41eb02ee2a717972d2346928484e1ab65c6d499
     ];
 
     (function () {
