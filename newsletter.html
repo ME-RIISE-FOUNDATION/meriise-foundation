@@ -30,6 +30,254 @@
     header {
       box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.4);
     }
+
+    /*=============== FEATURED CAROUSEL ===============*/
+    .nl-carousel {
+      position: relative;
+      max-width: 72rem;
+      margin: 0 auto 2.5rem;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .nl-track {
+      display: flex;
+      transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nl-slide {
+      min-width: 100%;
+      height: 20rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 2rem;
+    }
+
+    .nl-eyebrow {
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.9;
+      margin-bottom: 0.5rem;
+    }
+
+    .nl-title {
+      font-size: 2.75rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .nl-sub {
+      font-size: 1.05rem;
+      opacity: 0.95;
+      margin-top: 0.5rem;
+    }
+
+    .nl-cta {
+      display: inline-block;
+      margin-top: 1.25rem;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      color: #fff;
+      padding: 0.6rem 1.4rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .nl-cta:hover {
+      background: rgba(255, 255, 255, 0.32);
+      transform: translateY(-2px);
+    }
+
+    .nl-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 9999px;
+      background: rgba(0, 0, 0, 0.35);
+      color: #fff;
+      font-size: 1.25rem;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
+      z-index: 2;
+    }
+
+    .nl-arrow:hover {
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .nl-prev { left: 1rem; }
+    .nl-next { right: 1rem; }
+
+    .nl-dots {
+      position: absolute;
+      bottom: 1rem;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      z-index: 2;
+    }
+
+    .nl-dot {
+      width: 0.7rem;
+      height: 0.7rem;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.5);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .nl-dot.is-active {
+      background: #fff;
+      transform: scale(1.25);
+    }
+
+    @media (max-width: 640px) {
+      .nl-slide { height: 16rem; }
+      .nl-title { font-size: 2rem; }
+    }
+
+    /*=============== 2026 NEWSLETTER GRID ===============*/
+    .nl-section {
+      background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+      padding: 3.5rem 1.5rem;
+      min-height: 60vh;
+      border-radius: 1.5rem;
+      max-width: 78rem;
+      margin: 0 auto 3rem;
+    }
+
+    .nl-heading {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+      background: linear-gradient(90deg, #2563eb, #7c3aed, #2563eb);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: nl-shine 5s linear infinite;
+    }
+
+    @keyframes nl-shine {
+      to { background-position: 200% center; }
+    }
+
+    .nl-subheading {
+      color: #6b7280;
+      font-size: 1.05rem;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Scroll-reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.in-view {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* Newsletter card */
+    .nl-card {
+      position: relative;
+      background: #fff;
+      border-radius: 1rem;
+      padding: 2.25rem 1.5rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      overflow: hidden;
+    }
+
+    .nl-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.06), rgba(124, 58, 237, 0.06));
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .nl-card.available:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 22px 45px rgba(37, 99, 235, 0.22);
+    }
+
+    .nl-card.available:hover::before { opacity: 1; }
+
+    .nl-card-icon {
+      font-size: 3.75rem;
+      position: relative;
+    }
+
+    .nl-card.available .nl-card-icon {
+      color: #dc2626;
+      animation: nl-float 3s ease-in-out infinite;
+    }
+
+    .nl-card.soon .nl-card-icon { color: #9ca3af; }
+
+    @keyframes nl-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-7px); }
+    }
+
+    .nl-card-month {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #111827;
+      margin-top: 0.75rem;
+      position: relative;
+    }
+
+    .nl-card-note {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-top: 0.25rem;
+      position: relative;
+    }
+
+    .nl-card.soon { opacity: 0.72; }
+
+    .nl-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: #16a34a;
+      color: #fff;
+      font-size: 0.68rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.28rem 0.65rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      z-index: 1;
+      animation: nl-pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes nl-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.5); }
+      50% { box-shadow: 0 0 0 8px rgba(22, 163, 74, 0); }
+    }
   </style>
 
   <title>Newsletter | ME-RIISE</title>
@@ -273,39 +521,22 @@
   <div class="newwarp">
     <h1 class="text-4xl m-4 p-5">Newsletter</h1>
 
+    <!--=============== FEATURED CAROUSEL (auto-sliding) ===============-->
+    <div class="nl-carousel" id="nl-carousel">
+      <div class="nl-track" id="nl-track"><!-- slides injected by JS --></div>
+      <button class="nl-arrow nl-prev" id="nl-prev" aria-label="Previous newsletter">&#10094;</button>
+      <button class="nl-arrow nl-next" id="nl-next" aria-label="Next newsletter">&#10095;</button>
+      <div class="nl-dots" id="nl-dots"></div>
+    </div>
+
     <div class="container">
-      <div class="bg-gray-200 p-6 min-h-screen">
+      <div class="nl-section">
         <div class="max-w-6xl mx-auto text-center">
+          <h2 class="nl-heading reveal">2026 Newsletters</h2>
+          <p class="nl-subheading reveal">Every monthly issue from ME-RIISE Foundation, starting April 2026.</p>
 
-          <!--=============== YEAR GRID ===============-->
-          <div id="year-grid">
-            <h2 class="text-2xl text-gray-800 m-10">Select a Year</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-
-              <div class="bg-white p-6 rounded-lg shadow-lg card hover:shadow-xl cursor-pointer" onclick="showYear('2024')">
-                <i class="ri-newspaper-line text-6xl text-blue-600"></i>
-                <h2 class="text-2xl font-semibold mt-3 text-gray-900">2024</h2>
-                <p class="text-gray-600 text-sm">View monthly newsletters</p>
-              </div>
-
-              <div class="bg-white p-6 rounded-lg shadow-lg card hover:shadow-xl cursor-pointer" onclick="showYear('2025')">
-                <i class="ri-newspaper-line text-6xl text-blue-600"></i>
-                <h2 class="text-2xl font-semibold mt-3 text-gray-900">2025</h2>
-                <p class="text-gray-600 text-sm">View monthly newsletters</p>
-              </div>
-
-              <div class="bg-white p-6 rounded-lg shadow-lg card hover:shadow-xl cursor-pointer" onclick="showYear('2026')">
-                <i class="ri-newspaper-line text-6xl text-blue-600"></i>
-                <h2 class="text-2xl font-semibold mt-3 text-gray-900">2026</h2>
-                <p class="text-gray-600 text-sm">View monthly newsletters</p>
-              </div>
-
-            </div>
-          </div>
-
-          <!--=============== MONTH SECTIONS ===============-->
-          <div id="months-container"></div>
-
+          <!--=============== 2026 MONTH GRID (built by JS) ===============-->
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" id="nl-2026-grid"></div>
         </div>
       </div>
     </div>
@@ -382,66 +613,174 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/NavbarCode/assets/js/main.js"></script>
 
-  <!--=============== NEWSLETTER DRILL-DOWN LOGIC ===============-->
+  <!--=============== 2026 NEWSLETTER GRID ===============-->
   <script>
-    var MONTHS = [
-      'January', 'February', 'March', 'April', 'May', 'June',
-      'July', 'August', 'September', 'October', 'November', 'December'
+    /*
+     * 2026 monthly newsletters, starting from April.
+     * To publish a month: drop its PDF at the listed path and set available:true.
+     */
+    var MONTHS_2026 = [
+      { name: 'April',     file: 'assets/newsletter/2026/april.pdf',     available: true },
+      { name: 'May',       file: 'assets/newsletter/2026/may.pdf',       available: false },
+      { name: 'June',      file: 'assets/newsletter/2026/june.pdf',      available: false },
+      { name: 'July',      file: 'assets/newsletter/2026/july.pdf',      available: false },
+      { name: 'August',    file: 'assets/newsletter/2026/august.pdf',    available: false },
+      { name: 'September', file: 'assets/newsletter/2026/september.pdf', available: false },
+      { name: 'October',   file: 'assets/newsletter/2026/october.pdf',   available: false },
+      { name: 'November',  file: 'assets/newsletter/2026/november.pdf',  available: false },
+      { name: 'December',  file: 'assets/newsletter/2026/december.pdf',  available: false }
     ];
 
-    var container = document.getElementById('months-container');
+    (function () {
+      var grid = document.getElementById('nl-2026-grid');
+      if (!grid) return;
 
-    // Build a hidden month section for each year.
-    ['2024', '2025', '2026'].forEach(function (year) {
-      var section = document.createElement('div');
-      section.id = 'months-' + year;
-      section.style.display = 'none';
+      var firstAvailable = MONTHS_2026.findIndex(function (m) { return m.available; });
 
-      var heading = document.createElement('h2');
-      heading.className = 'text-2xl text-gray-800 m-10';
-      heading.textContent = 'Newsletters — ' + year;
+      MONTHS_2026.forEach(function (m, i) {
+        var card = document.createElement(m.available ? 'a' : 'div');
+        card.className = 'nl-card reveal ' + (m.available ? 'available' : 'soon');
+        card.style.transitionDelay = (i * 0.08) + 's';
 
-      var back = document.createElement('button');
-      back.className = 'bg-blue-600 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700 mb-6';
-      back.innerHTML = '&larr; Back to years';
-      back.onclick = showYears;
+        if (m.available) {
+          card.href = m.file;
+          card.target = '_blank';
+        }
 
-      var grid = document.createElement('div');
-      grid.className = 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6';
+        var badge = (i === firstAvailable)
+          ? '<span class="nl-badge">Latest</span>' : '';
 
-      MONTHS.forEach(function (month) {
-        var card = document.createElement('a');
-        card.href = 'assets/newsletter/' + year + '/' + month.toLowerCase() + '.pdf';
-        card.target = '_blank';
-        card.className = 'bg-white p-6 rounded-lg shadow-lg card hover:shadow-xl block';
         card.innerHTML =
-          '<i class="ri-file-pdf-2-line text-6xl text-red-600"></i>' +
-          '<h2 class="text-xl font-semibold mt-3 text-gray-900">' + month + '</h2>' +
-          '<p class="text-gray-600 text-sm">Open newsletter (PDF)</p>';
+          badge +
+          '<i class="ri-file-pdf-2-line nl-card-icon"></i>' +
+          '<div class="nl-card-month">' + m.name + ' 2026</div>' +
+          '<div class="nl-card-note">' +
+          (m.available ? 'Open newsletter (PDF)' : 'Coming soon') +
+          '</div>';
+
         grid.appendChild(card);
       });
+    })();
+  </script>
 
-      section.appendChild(back);
-      section.appendChild(heading);
-      section.appendChild(grid);
-      container.appendChild(section);
-    });
+  <!--=============== SCROLL-REVEAL ANIMATIONS ===============-->
+  <script>
+    (function () {
+      var items = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        items.forEach(function (el) { el.classList.add('in-view'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      items.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
 
-    function showYear(year) {
-      document.getElementById('year-grid').style.display = 'none';
-      ['2024', '2025', '2026'].forEach(function (y) {
-        document.getElementById('months-' + y).style.display = (y === year) ? 'block' : 'none';
+  <!--=============== FEATURED CAROUSEL LOGIC ===============-->
+  <script>
+    /*
+     * Featured newsletters shown in the auto-sliding carousel at the top.
+     * To add a new featured issue: copy one line below and edit it.
+     *   file = where the PDF lives (drop your PDF at exactly this path).
+     *   The newest issue should be FIRST so it shows on load.
+     */
+    var FEATURED = [
+      {
+        eyebrow: 'Latest Issue',
+        title: 'April 2026',
+        sub: 'ME-RIISE Foundation Monthly Newsletter',
+        file: 'assets/newsletter/2026/april.pdf',
+        gradient: 'linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%)'
+      }
+      // ,{ eyebrow:'Issue', title:'March 2026', sub:'Monthly Newsletter',
+      //    file:'assets/newsletter/2026/march.pdf',
+      //    gradient:'linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%)' }
+    ];
+
+    (function () {
+      var track = document.getElementById('nl-track');
+      var dotsBox = document.getElementById('nl-dots');
+      var prev = document.getElementById('nl-prev');
+      var next = document.getElementById('nl-next');
+      var carousel = document.getElementById('nl-carousel');
+      if (!track) return;
+
+      // Build slides + dots from the FEATURED data.
+      FEATURED.forEach(function (item, i) {
+        var slide = document.createElement('a');
+        slide.className = 'nl-slide';
+        slide.href = item.file;
+        slide.target = '_blank';
+        slide.style.background = item.gradient;
+        slide.innerHTML =
+          '<span class="nl-eyebrow">' + item.eyebrow + '</span>' +
+          '<span class="nl-title">' + item.title + '</span>' +
+          '<span class="nl-sub">' + item.sub + '</span>' +
+          '<span class="nl-cta"><i class="ri-file-pdf-2-line"></i> Read newsletter &rarr;</span>';
+        track.appendChild(slide);
+
+        var dot = document.createElement('button');
+        dot.className = 'nl-dot' + (i === 0 ? ' is-active' : '');
+        dot.setAttribute('aria-label', 'Go to ' + item.title);
+        dot.addEventListener('click', function (e) {
+          e.preventDefault();
+          goTo(i);
+        });
+        dotsBox.appendChild(dot);
       });
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
 
-    function showYears() {
-      ['2024', '2025', '2026'].forEach(function (y) {
-        document.getElementById('months-' + y).style.display = 'none';
-      });
-      document.getElementById('year-grid').style.display = 'block';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+      var count = FEATURED.length;
+      var index = 0;
+      var timer = null;
+
+      function render() {
+        track.style.transform = 'translateX(' + (-index * 100) + '%)';
+        var dots = dotsBox.querySelectorAll('.nl-dot');
+        dots.forEach(function (d, i) {
+          d.classList.toggle('is-active', i === index);
+        });
+      }
+
+      function goTo(i) {
+        index = (i + count) % count;
+        render();
+      }
+
+      function start() {
+        if (count <= 1) return;
+        stop();
+        timer = setInterval(function () { goTo(index + 1); }, 4500);
+      }
+
+      function stop() {
+        if (timer) { clearInterval(timer); timer = null; }
+      }
+
+      // Single slide: no arrows, dots, or autoplay needed.
+      if (count <= 1) {
+        prev.style.display = 'none';
+        next.style.display = 'none';
+        dotsBox.style.display = 'none';
+        return;
+      }
+
+      prev.addEventListener('click', function () { goTo(index - 1); start(); });
+      next.addEventListener('click', function () { goTo(index + 1); start(); });
+
+      // Pause auto-slide while the user is hovering the carousel.
+      carousel.addEventListener('mouseenter', stop);
+      carousel.addEventListener('mouseleave', start);
+
+      render();
+      start();
+    })();
   </script>
 </body>
 
