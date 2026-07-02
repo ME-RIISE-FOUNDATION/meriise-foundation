@@ -621,7 +621,7 @@
      */
     var MONTHS_2026 = [
       { name: 'April',     file: 'assets/newsletter/2026/april.pdf',     available: true },
-      { name: 'May',       file: 'assets/newsletter/2026/may.pdf',       available: false },
+      { name: 'May',       file: 'assets/newsletter/2026/may.pdf',       available: true },
       { name: 'June',      file: 'assets/newsletter/2026/june.pdf',      available: false },
       { name: 'July',      file: 'assets/newsletter/2026/july.pdf',      available: false },
       { name: 'August',    file: 'assets/newsletter/2026/august.pdf',    available: false },
@@ -635,7 +635,8 @@
       var grid = document.getElementById('nl-2026-grid');
       if (!grid) return;
 
-      var firstAvailable = MONTHS_2026.findIndex(function (m) { return m.available; });
+      var latestAvailable = -1;
+      MONTHS_2026.forEach(function (m, i) { if (m.available) latestAvailable = i; });
 
       MONTHS_2026.forEach(function (m, i) {
         var card = document.createElement(m.available ? 'a' : 'div');
@@ -647,7 +648,7 @@
           card.target = '_blank';
         }
 
-        var badge = (i === firstAvailable)
+        var badge = (i === latestAvailable)
           ? '<span class="nl-badge">Latest</span>' : '';
 
         card.innerHTML =
@@ -694,14 +695,18 @@
     var FEATURED = [
       {
         eyebrow: 'Latest Issue',
+        title: 'May 2026',
+        sub: 'ME-RIISE Foundation Monthly Newsletter',
+        file: 'assets/newsletter/2026/may.pdf',
+        gradient: 'linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%)'
+      },
+      {
+        eyebrow: 'Issue',
         title: 'April 2026',
         sub: 'ME-RIISE Foundation Monthly Newsletter',
         file: 'assets/newsletter/2026/april.pdf',
         gradient: 'linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%)'
       }
-      // ,{ eyebrow:'Issue', title:'March 2026', sub:'Monthly Newsletter',
-      //    file:'assets/newsletter/2026/march.pdf',
-      //    gradient:'linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%)' }
     ];
 
     (function () {
