@@ -156,6 +156,9 @@ a {
     overflow: auto;
     pointer-events: none;
     opacity: 0;
+    /* Opaque background so an open menu never lets page content (e.g. the
+       rolling banner) show through behind the nav links. */
+    background-color: #ffffff;
     transition: top .4s, opacity .3s;
   }
 

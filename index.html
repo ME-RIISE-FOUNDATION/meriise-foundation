@@ -377,7 +377,119 @@
                 max-width: 600px;
             }
         }
-        
+
+    </style>
+
+    <!--=============== NAVBAR OVERLAP FIX + MODERN HERO SLIDER ===============-->
+    <style>
+      /* --- Keep the sticky navbar a solid, opaque bar that always sits
+             cleanly ABOVE the hero slider (no bleed-through / overlap) --- */
+      .snav-bar {
+        background: #ffffff !important;
+        z-index: 1000 !important;
+        box-shadow: 0 2px 14px rgba(0, 0, 0, 0.10);
+        position: sticky;
+        top: 0;
+      }
+      .snav-bar header.header,
+      .snav-bar .nav__data,
+      .snav-bar .nav__menu,
+      .snav-bar .nav__list {
+        background: #ffffff !important;
+      }
+
+      /* --- Modern hero slider --- */
+      .hero-slider-section {
+        width: 100%;
+        padding: 1.5rem 1rem 0.5rem;
+        margin-top: 0.5rem;            /* clear gap under the navbar */
+        background: transparent;
+      }
+      .hero-slider {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        border-radius: 1.25rem;
+        overflow: hidden;
+        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+        background: linear-gradient(135deg, #eef2ff 0%, #e0f2fe 100%);
+      }
+      .hero-slider__track {
+        display: flex;
+        transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: transform;
+      }
+      .hero-slide {
+        min-width: 100%;
+        height: clamp(230px, 44vw, 560px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #eef2ff 0%, #e0f2fe 100%);
+      }
+      .hero-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;           /* show full poster, never crop or stretch */
+        display: block;
+      }
+
+      /* Prev / Next arrows */
+      .hero-slider__arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2.75rem;
+        height: 2.75rem;
+        border: none;
+        border-radius: 9999px;
+        background: rgba(15, 23, 42, 0.45);
+        color: #fff;
+        font-size: 1.15rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s, transform 0.3s;
+        z-index: 3;
+      }
+      .hero-slider__arrow:hover {
+        background: rgba(15, 23, 42, 0.75);
+      }
+      .hero-slider__arrow--prev { left: 0.9rem; }
+      .hero-slider__arrow--next { right: 0.9rem; }
+
+      /* Dot indicators */
+      .hero-slider__dots {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0.9rem;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        z-index: 3;
+      }
+      .hero-slider__dot {
+        width: 0.7rem;
+        height: 0.7rem;
+        padding: 0;
+        border: none;
+        border-radius: 9999px;
+        background: rgba(255, 255, 255, 0.6);
+        box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.25);
+        cursor: pointer;
+        transition: background 0.3s, transform 0.3s;
+      }
+      .hero-slider__dot.is-active {
+        background: #2563eb;
+        transform: scale(1.25);
+      }
+
+      @media (max-width: 640px) {
+        .hero-slider__arrow { width: 2.25rem; height: 2.25rem; font-size: 1rem; }
+        .hero-slider { border-radius: 1rem; }
+      }
     </style>
 </head>
 
@@ -1223,55 +1335,36 @@
 
         <!--  ml-[80px]  h-32 mt-[30px] ml-[80px] md:h-48 text-center-->
         <!-- button : wrong text-right text-2xl text-blue-700 m-0 md:m-4 -->
-        <div>
-
-            <div class="flex items-center justify-center h-[50%]">
-                <div class="relative w-[100vw] overflow-hidden rounded-lg">
-                    <div class="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
-                    <div class="flex transition-transform duration-500 ease-in-out" id="slider">
-
-                        <!-- <div class="w-full flex-shrink-0">
-                            <img src="assets/RollingSlider/Tbi_job_openings.png" class="w-full h-[35vh] md:h-[90vh]" 
-                            alt="Slide 1">
-                        </div> -->
-
-                        <!-- <div class="w-full flex-shrink-0">
-                            <img src="assets/RollingSlider/Tbi_call_for_projects.png" class="w-full h-[35vh] md:h-[90vh]" 
-                            alt="Slide 2">
-                        </div> -->
-
-                        <div class="w-full flex-shrink-0">
-                            <img src="assets/RollingSlider/rollingbanner.png" class="w-full h-[35vh] md:h-[90vh]"
-                                alt="Slide 3">
-                        </div>
-                        <div class="w-full flex-shrink-0">
-                            <img src="assets/RollingSlider/rollingbanner2.jpg" class="w-full h-[35vh] md:h-[90vh]"
-                                alt="Slide 4">
-                        </div>
-                        <div class="w-full flex-shrink-0">
-                            <img src="assets/RollingSlider/chathur2.png" class="w-full h-[35vh] md:h-[90vh]"
-                                alt="Slide 5">
-                        </div>
-
-                        <div class="w-full flex-shrink-0">
-                            <img src="assets/RollingSlider/Tbi_job_openings.png" class="w-full h-[35vh] md:h-[90vh]" alt="Slide 6">
-                        </div>
-                        <div class="w-full flex-shrink-0">
-                            <img src="assets/RollingSlider/chathurpravthan.png" class="w-full h-[35vh] md:h-[90vh]"
-                                alt="Slide 7">
-                        </div>
-                         <div class="w-full flex-shrink-0">
-                            <img src="assets/RollingSlider/fueling_future.png" class="w-full h-[35vh] md:h-[90vh]"
-                                alt="Slide 8">
-                        </div>
-
-
+        <section class="hero-slider-section">
+            <div class="hero-slider" id="heroSlider">
+                <div class="hero-slider__track" id="slider">
+                    <div class="hero-slide">
+                        <img src="assets/RollingSlider/rollingbanner.png" alt="ME-RIISE highlight 1">
+                    </div>
+                    <div class="hero-slide">
+                        <img src="assets/RollingSlider/rollingbanner2.jpg" alt="ME-RIISE highlight 2">
+                    </div>
+                    <div class="hero-slide">
+                        <img src="assets/RollingSlider/chathur2.png" alt="ME-RIISE highlight 3">
+                    </div>
+                    <div class="hero-slide">
+                        <img src="assets/RollingSlider/Tbi_job_openings.png" alt="ME-RIISE highlight 4">
+                    </div>
+                    <div class="hero-slide">
+                        <img src="assets/RollingSlider/chathurpravthan.png" alt="ME-RIISE highlight 5">
+                    </div>
+                    <div class="hero-slide">
+                        <img src="assets/RollingSlider/fueling_future.png" alt="ME-RIISE highlight 6">
                     </div>
                 </div>
 
+                <button class="hero-slider__arrow hero-slider__arrow--prev" id="heroPrev"
+                    aria-label="Previous slide" type="button">&#10094;</button>
+                <button class="hero-slider__arrow hero-slider__arrow--next" id="heroNext"
+                    aria-label="Next slide" type="button">&#10095;</button>
+                <div class="hero-slider__dots" id="heroDots"></div>
             </div>
-
-        </div>
+        </section>
 <!-- 
         TBI Opportunities Buttons Section
         <section style="background: linear-gradient(135deg, #f0f9ff 0%, #ecfdf5 100%); padding: 3rem 1rem;"> -->
@@ -3355,17 +3448,59 @@
         </footer>
         <!-- Scripts -->
         <script>
-            let currentIndex = 0;
-            const slides = document.querySelectorAll('#slider > div');
-            const totalSlides = slides.length;
-            const slider = document.getElementById('slider');
+            (function () {
+                const slider = document.getElementById('slider');
+                if (!slider) return;
 
-            function nextSlide() {
-                currentIndex = (currentIndex + 1) % totalSlides;
-                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-            }
+                const slides = slider.querySelectorAll('.hero-slide');
+                const totalSlides = slides.length;
+                const dotsBox = document.getElementById('heroDots');
+                const prevBtn = document.getElementById('heroPrev');
+                const nextBtn = document.getElementById('heroNext');
+                const carousel = document.getElementById('heroSlider');
 
-            setInterval(nextSlide, 5000);
+                let currentIndex = 0;
+                let timer = null;
+
+                // Build dot indicators
+                for (let i = 0; i < totalSlides; i++) {
+                    const dot = document.createElement('button');
+                    dot.type = 'button';
+                    dot.className = 'hero-slider__dot' + (i === 0 ? ' is-active' : '');
+                    dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+                    dot.addEventListener('click', function () { goTo(i); startAuto(); });
+                    dotsBox.appendChild(dot);
+                }
+
+                function render() {
+                    slider.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+                    const dots = dotsBox.querySelectorAll('.hero-slider__dot');
+                    dots.forEach(function (d, i) { d.classList.toggle('is-active', i === currentIndex); });
+                }
+
+                function goTo(i) {
+                    currentIndex = (i + totalSlides) % totalSlides;
+                    render();
+                }
+
+                function startAuto() {
+                    stopAuto();
+                    if (totalSlides > 1) timer = setInterval(function () { goTo(currentIndex + 1); }, 5000);
+                }
+                function stopAuto() { if (timer) { clearInterval(timer); timer = null; } }
+
+                if (prevBtn) prevBtn.addEventListener('click', function () { goTo(currentIndex - 1); startAuto(); });
+                if (nextBtn) nextBtn.addEventListener('click', function () { goTo(currentIndex + 1); startAuto(); });
+
+                // Pause auto-play while hovering
+                if (carousel) {
+                    carousel.addEventListener('mouseenter', stopAuto);
+                    carousel.addEventListener('mouseleave', startAuto);
+                }
+
+                render();
+                startAuto();
+            })();
         </script>
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/jquery.scrollex.min.js"></script>
