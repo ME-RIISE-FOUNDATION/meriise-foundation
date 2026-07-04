@@ -3905,27 +3905,31 @@
             <div class="am-popup__card">
                 <button class="am-popup__close" type="button" aria-label="Close popup" onclick="closeAmPopup()">&times;</button>
 
-                <span class="am-popup__badge">🚀 Registrations Open</span>
-                <h2 id="am-popup-title" class="am-popup__title">Arogya Manthan 2K26</h2>
-                <p class="am-popup__subtitle">A 24-Hour Healthcare Innovation Hackathon</p>
-
+                <!-- LEFT: Poster -->
                 <a href="https://www.certifyy.in" class="am-popup__poster" target="_blank" rel="noopener" aria-label="Register for Arogya Manthan 2K26">
                     <img src="popup_assets/arogya-manthan.jpeg" alt="Arogya Manthan 2K26 poster" loading="lazy">
                 </a>
 
-                <p class="am-popup__theme">💡 Theme: <strong>Healthcare for a Better Tomorrow</strong></p>
+                <!-- RIGHT: Content -->
+                <div class="am-popup__content">
+                    <span class="am-popup__badge">🚀 Registrations Open</span>
+                    <h2 id="am-popup-title" class="am-popup__title">Arogya Manthan 2K26</h2>
+                    <p class="am-popup__subtitle">A 24-Hour Healthcare Innovation Hackathon</p>
 
-                <ul class="am-popup__details">
-                    <li><span>📅 Date</span> 27 &amp; 28 July 2026</li>
-                    <li><span>📍 Venue</span> Malnad College of Engineering, Hassan</li>
-                    <li><span>👥 Team Size</span> 3–5 Members</li>
-                    <li><span>🏆 Cash Prizes</span> Up to ₹1,00,000</li>
-                    <li><span>⏳ Early Bird Ends</span> 21 July 2026</li>
-                </ul>
+                    <p class="am-popup__theme">💡 Theme: <strong>Healthcare for a Better Tomorrow</strong></p>
 
-                <div class="am-popup__buttons">
-                    <a href="https://www.certifyy.in" class="am-popup__cta am-popup__cta--primary" target="_blank" rel="noopener">Register Now</a>
-                    <button type="button" class="am-popup__cta am-popup__cta--secondary" onclick="closeAmPopup()">Close</button>
+                    <ul class="am-popup__details">
+                        <li><span>📅 Date</span> 27 &amp; 28 July 2026</li>
+                        <li><span>📍 Venue</span> Malnad College of Engineering, Hassan</li>
+                        <li><span>👥 Team Size</span> 3–5 Members</li>
+                        <li><span>🏆 Cash Prizes</span> Up to ₹1,00,000</li>
+                        <li><span>⏳ Early Bird Ends</span> 21 July 2026</li>
+                    </ul>
+
+                    <div class="am-popup__buttons">
+                        <a href="https://www.certifyy.in" class="am-popup__cta am-popup__cta--primary" target="_blank" rel="noopener">Register Now</a>
+                        <button type="button" class="am-popup__cta am-popup__cta--secondary" onclick="closeAmPopup()">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -3952,15 +3956,18 @@
                 background: #ffffff;
                 border: 4px solid #0e7c86;
                 border-radius: 18px;
-                padding: 20px 18px;
-                max-width: 360px;
+                padding: 18px;
+                max-width: 820px;
                 width: 100%;
-                max-height: 90vh;
+                max-height: 92vh;
                 overflow-y: auto;
-                text-align: center;
                 position: relative;
                 box-shadow: 0 18px 50px rgba(14, 124, 134, 0.35);
                 animation: amPopIn 0.3s ease-out;
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                align-items: stretch;
             }
 
             @keyframes amPopIn {
@@ -3986,34 +3993,12 @@
                 color: #0a5960;
             }
 
-            .am-popup__badge {
-                display: inline-block;
-                background: linear-gradient(90deg, #0e7c86, #3aab5b);
-                color: #ffffff;
-                font-size: 12px;
-                font-weight: 700;
-                letter-spacing: 0.5px;
-                padding: 5px 14px;
-                border-radius: 50px;
-                margin-bottom: 8px;
-            }
-
-            .am-popup__title {
-                font-size: 22px;
-                font-weight: 800;
-                color: #0e7c86;
-                margin: 4px 0 2px;
-            }
-
-            .am-popup__subtitle {
-                font-size: 13px;
-                color: #3aab5b;
-                font-weight: 600;
-                margin: 0 0 12px;
-            }
-
+            /* LEFT column: poster */
             .am-popup__poster {
                 display: block;
+                flex: 1 1 45%;
+                min-width: 0;
+                align-self: center;
                 border-radius: 12px;
                 overflow: hidden;
                 border: 2px solid #0e7c86;
@@ -4030,10 +4015,48 @@
                 height: auto;
             }
 
+            /* RIGHT column: content */
+            .am-popup__content {
+                flex: 1 1 55%;
+                min-width: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: left;
+                padding-right: 6px;
+            }
+
+            .am-popup__badge {
+                display: inline-block;
+                align-self: flex-start;
+                background: linear-gradient(90deg, #0e7c86, #3aab5b);
+                color: #ffffff;
+                font-size: 12px;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+                padding: 5px 14px;
+                border-radius: 50px;
+                margin-bottom: 8px;
+            }
+
+            .am-popup__title {
+                font-size: 24px;
+                font-weight: 800;
+                color: #0e7c86;
+                margin: 4px 0 2px;
+            }
+
+            .am-popup__subtitle {
+                font-size: 13px;
+                color: #3aab5b;
+                font-weight: 600;
+                margin: 0 0 12px;
+            }
+
             .am-popup__theme {
                 font-size: 13px;
                 color: #333;
-                margin: 12px 0 8px;
+                margin: 4px 0 8px;
             }
 
             .am-popup__theme strong {
@@ -4070,9 +4093,30 @@
             .am-popup__buttons {
                 display: flex;
                 gap: 10px;
-                justify-content: center;
-                margin-top: 12px;
+                justify-content: flex-start;
+                margin-top: 14px;
                 flex-wrap: wrap;
+            }
+
+            /* Stack into a single column on small screens */
+            @media (max-width: 720px) {
+                .am-popup__card {
+                    flex-direction: column;
+                    gap: 14px;
+                    max-width: 380px;
+                    padding: 16px;
+                }
+                .am-popup__poster {
+                    flex: none;
+                    width: 100%;
+                }
+                .am-popup__content {
+                    flex: none;
+                    text-align: center;
+                    align-items: center;
+                }
+                .am-popup__badge { align-self: center; }
+                .am-popup__buttons { justify-content: center; }
             }
 
             .am-popup__cta {
