@@ -3749,8 +3749,8 @@
 
         </script>
 
-        <!-- Bridging Generations 2.0 Popup -->
-        <div id="bg2-popup" class="bg2-popup" role="dialog" aria-modal="true" aria-labelledby="bg2-popup-title">
+        <!-- Bridging Generations 2.0 Popup (disabled: replaced by Arogya Manthan 2K26 popup below) -->
+        <div id="bg2-popup" class="bg2-popup hidden" role="dialog" aria-modal="true" aria-labelledby="bg2-popup-title">
             <div class="bg2-popup__card">
                 <button class="bg2-popup__close" type="button" aria-label="Close popup" onclick="closeBg2Popup()">&times;</button>
                 <h2 id="bg2-popup-title" class="bg2-popup__title">Bridging Generations 2.0</h2>
@@ -3892,6 +3892,227 @@
             document.getElementById('bg2-popup').addEventListener('click', function (e) {
                 if (e.target === this) {
                     closeBg2Popup();
+                }
+            });
+        </script>
+
+        <!-- ============================================================= -->
+        <!-- Arogya Manthan 2K26 Popup                                     -->
+        <!-- TODO: 1) Save the poster as popup_assets/arogya-manthan.png   -->
+        <!--       2) Replace PASTE_REGISTRATION_LINK_HERE with your link  -->
+        <!-- ============================================================= -->
+        <div id="am-popup" class="am-popup" role="dialog" aria-modal="true" aria-labelledby="am-popup-title">
+            <div class="am-popup__card">
+                <button class="am-popup__close" type="button" aria-label="Close popup" onclick="closeAmPopup()">&times;</button>
+
+                <span class="am-popup__badge">🚀 Registrations Open</span>
+                <h2 id="am-popup-title" class="am-popup__title">Arogya Manthan 2K26</h2>
+                <p class="am-popup__subtitle">A 24-Hour Healthcare Innovation Hackathon</p>
+
+                <a href="PASTE_REGISTRATION_LINK_HERE" class="am-popup__poster" target="_blank" rel="noopener" aria-label="Register for Arogya Manthan 2K26">
+                    <img src="popup_assets/arogya-manthan.png" alt="Arogya Manthan 2K26 poster" loading="lazy">
+                </a>
+
+                <p class="am-popup__theme">💡 Theme: <strong>Healthcare for a Better Tomorrow</strong></p>
+
+                <ul class="am-popup__details">
+                    <li><span>📅 Date</span> 27 &amp; 28 July 2026</li>
+                    <li><span>📍 Venue</span> Malnad College of Engineering, Hassan</li>
+                    <li><span>👥 Team Size</span> 3–5 Members</li>
+                    <li><span>🏆 Cash Prizes</span> Up to ₹1,00,000</li>
+                    <li><span>⏳ Early Bird Ends</span> 21 July 2026</li>
+                </ul>
+
+                <div class="am-popup__buttons">
+                    <a href="PASTE_REGISTRATION_LINK_HERE" class="am-popup__cta am-popup__cta--primary" target="_blank" rel="noopener">Register Now</a>
+                    <button type="button" class="am-popup__cta am-popup__cta--secondary" onclick="closeAmPopup()">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .am-popup {
+                position: fixed;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.65);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 10001;
+                padding: 20px;
+            }
+
+            .am-popup.hidden {
+                display: none !important;
+            }
+
+            .am-popup__card {
+                background: #ffffff;
+                border: 4px solid #0e7c86;
+                border-radius: 18px;
+                padding: 20px 18px;
+                max-width: 360px;
+                width: 100%;
+                max-height: 90vh;
+                overflow-y: auto;
+                text-align: center;
+                position: relative;
+                box-shadow: 0 18px 50px rgba(14, 124, 134, 0.35);
+                animation: amPopIn 0.3s ease-out;
+            }
+
+            @keyframes amPopIn {
+                from { transform: translateY(-30px) scale(0.97); opacity: 0; }
+                to { transform: translateY(0) scale(1); opacity: 1; }
+            }
+
+            .am-popup__close {
+                position: absolute;
+                top: 8px;
+                right: 14px;
+                background: none;
+                border: none;
+                font-size: 30px;
+                line-height: 1;
+                cursor: pointer;
+                color: #0e7c86;
+                transition: color 0.2s;
+                z-index: 2;
+            }
+
+            .am-popup__close:hover {
+                color: #0a5960;
+            }
+
+            .am-popup__badge {
+                display: inline-block;
+                background: linear-gradient(90deg, #0e7c86, #3aab5b);
+                color: #ffffff;
+                font-size: 12px;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+                padding: 5px 14px;
+                border-radius: 50px;
+                margin-bottom: 8px;
+            }
+
+            .am-popup__title {
+                font-size: 22px;
+                font-weight: 800;
+                color: #0e7c86;
+                margin: 4px 0 2px;
+            }
+
+            .am-popup__subtitle {
+                font-size: 13px;
+                color: #3aab5b;
+                font-weight: 600;
+                margin: 0 0 12px;
+            }
+
+            .am-popup__poster {
+                display: block;
+                border-radius: 12px;
+                overflow: hidden;
+                border: 2px solid #0e7c86;
+                transition: transform 0.25s ease;
+            }
+
+            .am-popup__poster:hover {
+                transform: scale(1.02);
+            }
+
+            .am-popup__poster img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+            .am-popup__theme {
+                font-size: 13px;
+                color: #333;
+                margin: 12px 0 8px;
+            }
+
+            .am-popup__theme strong {
+                color: #0e7c86;
+            }
+
+            .am-popup__details {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 6px;
+                text-align: left;
+            }
+
+            .am-popup__details li {
+                font-size: 13px;
+                color: #333;
+                padding: 6px 0;
+                border-bottom: 1px dashed #d5e8ea;
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+            }
+
+            .am-popup__details li:last-child {
+                border-bottom: none;
+            }
+
+            .am-popup__details li span {
+                color: #0e7c86;
+                font-weight: 700;
+                white-space: nowrap;
+            }
+
+            .am-popup__buttons {
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                margin-top: 12px;
+                flex-wrap: wrap;
+            }
+
+            .am-popup__cta {
+                display: inline-block;
+                color: #ffffff;
+                padding: 10px 26px;
+                border: none;
+                border-radius: 50px;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 14px;
+                cursor: pointer;
+                transition: background 0.25s ease, transform 0.25s ease;
+            }
+
+            .am-popup__cta--primary {
+                background: linear-gradient(90deg, #0e7c86, #3aab5b);
+            }
+
+            .am-popup__cta--primary:hover {
+                filter: brightness(1.08);
+                transform: scale(1.04);
+            }
+
+            .am-popup__cta--secondary {
+                background: #6b7280;
+            }
+
+            .am-popup__cta--secondary:hover {
+                background: #4b5563;
+            }
+        </style>
+
+        <script>
+            function closeAmPopup() {
+                document.getElementById('am-popup').classList.add('hidden');
+            }
+            document.getElementById('am-popup').addEventListener('click', function (e) {
+                if (e.target === this) {
+                    closeAmPopup();
                 }
             });
         </script>
