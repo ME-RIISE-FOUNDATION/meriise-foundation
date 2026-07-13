@@ -142,19 +142,41 @@ if (contactForm) {
             return;
         }
 
-        // Simulate form submission
+        // Prepare form data
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('email', email);
+        formData.append('program', program);
+        formData.append('message', message);
+
+        // Show loading state
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
         submitBtn.disabled = true;
 
-        // Simulate API call
-        setTimeout(() => {
-            showAlert('Thank you! Your message has been sent successfully. We will contact you soon.', 'success');
-            contactForm.reset();
+        // Submit form via AJAX
+        fetch('send_email.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                showAlert('✓ Message sent successfully! We will contact you soon.', 'success');
+                contactForm.reset();
+            } else {
+                showAlert('Error: ' + (data.message || 'Failed to send message. Please try again.'), 'danger');
+            }
             submitBtn.innerHTML = originalText;
             submitBtn.disabled = false;
-        }, 2000);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            showAlert('Network error. Please check your connection and try again.', 'danger');
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        });
     });
 }
 

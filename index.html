@@ -303,6 +303,193 @@
             margin-left:5rem;
             }
         } */
+        
+        /* Modal visibility styles */
+        .modal {
+            display: none;
+            z-index: 1050 !important;
+        }
+        
+        .modal.show {
+            display: block !important;
+        }
+        
+        .modal-backdrop {
+            z-index: 1040 !important;
+            background-color: rgba(0, 0, 0, 0.5) !important;
+        }
+        
+        #tbiOpenPositionsModal,
+        #tbiIncubationModal {
+            z-index: 1050 !important;
+        }
+        
+        /* Side-by-side modal layout */
+        .modal-side-by-side {
+            position: fixed !important;
+            left: 0 !important;
+            right: 0 !important;
+            top: 0 !important;
+            bottom: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            z-index: 1050 !important;
+        }
+        
+        .modal-side-by-side .modal-dialog {
+            width: 48%;
+            max-width: 100%;
+            margin: 0 1%;
+        }
+        
+        .modal-side-by-side .modal-content {
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+        
+        /* Container for side-by-side modals */
+        .modals-container {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            gap: 2rem;
+            width: 100%;
+            height: 100%;
+            padding: 2rem;
+        }
+        
+        .modals-container .modal-dialog {
+            width: 48% !important;
+            margin: 0 !important;
+            max-height: 85vh;
+        }
+        
+        /* Responsive: Stack on smaller screens */
+        @media (max-width: 1200px) {
+            .modals-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .modals-container .modal-dialog {
+                width: 90% !important;
+                max-width: 600px;
+            }
+        }
+
+    </style>
+
+    <!--=============== NAVBAR OVERLAP FIX + MODERN HERO SLIDER ===============-->
+    <style>
+      /* --- Keep the sticky navbar a solid, opaque bar that always sits
+             cleanly ABOVE the hero slider (no bleed-through / overlap) --- */
+      .snav-bar {
+        background: #ffffff !important;
+        z-index: 1000 !important;
+        box-shadow: 0 2px 14px rgba(0, 0, 0, 0.10);
+        position: sticky;
+        top: 0;
+      }
+      .snav-bar header.header,
+      .snav-bar .nav__data,
+      .snav-bar .nav__menu,
+      .snav-bar .nav__list {
+        background: #ffffff !important;
+      }
+
+      /* --- Modern hero slider --- */
+      .hero-slider-section {
+        width: 100%;
+        padding: 1.5rem 1rem 0.5rem;
+        margin-top: 0.5rem;            /* clear gap under the navbar */
+        background: transparent;
+      }
+      .hero-slider {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        border-radius: 1.25rem;
+        overflow: hidden;
+        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+        background: linear-gradient(135deg, #eef2ff 0%, #e0f2fe 100%);
+      }
+      .hero-slider__track {
+        display: flex;
+        transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: transform;
+      }
+      .hero-slide {
+        min-width: 100%;
+        height: clamp(230px, 44vw, 560px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #eef2ff 0%, #e0f2fe 100%);
+      }
+      .hero-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;           /* show full poster, never crop or stretch */
+        display: block;
+      }
+
+      /* Prev / Next arrows */
+      .hero-slider__arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2.75rem;
+        height: 2.75rem;
+        border: none;
+        border-radius: 9999px;
+        background: rgba(15, 23, 42, 0.45);
+        color: #fff;
+        font-size: 1.15rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s, transform 0.3s;
+        z-index: 3;
+      }
+      .hero-slider__arrow:hover {
+        background: rgba(15, 23, 42, 0.75);
+      }
+      .hero-slider__arrow--prev { left: 0.9rem; }
+      .hero-slider__arrow--next { right: 0.9rem; }
+
+      /* Dot indicators */
+      .hero-slider__dots {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0.9rem;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        z-index: 3;
+      }
+      .hero-slider__dot {
+        width: 0.7rem;
+        height: 0.7rem;
+        padding: 0;
+        border: none;
+        border-radius: 9999px;
+        background: rgba(255, 255, 255, 0.6);
+        box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.25);
+        cursor: pointer;
+        transition: background 0.3s, transform 0.3s;
+      }
+      .hero-slider__dot.is-active {
+        background: #2563eb;
+        transform: scale(1.25);
+      }
+
+      @media (max-width: 640px) {
+        .hero-slider__arrow { width: 2.25rem; height: 2.25rem; font-size: 1rem; }
+        .hero-slider { border-radius: 1rem; }
+      }
     </style>
 </head>
 
@@ -731,7 +918,7 @@
                                     </li>
 
 
-                                    <li>
+                                    <!-- <li>
                                         <a href="openPosition.html" class="dropdown__link">
                                             <i class="ri-pie-chart-line"></i> Open positions
                                         </a>
@@ -741,7 +928,7 @@
                                         <a href="callforincubation.html" class="dropdown__link">
                                             <i class="ri-pie-chart-line"></i> Call for incubation application
                                         </a>
-                                    </li>
+                                    </li> -->
 
 
 
@@ -749,6 +936,8 @@
 
                                 </ul>
                             </li>
+
+                            <li><a href="newsletter.html" class="nav__link">Newsletter</a></li>
 
 
                             <li><a href="#footer" class="nav__link">Contact Us</a></li>
@@ -1146,42 +1335,86 @@
 
         <!--  ml-[80px]  h-32 mt-[30px] ml-[80px] md:h-48 text-center-->
         <!-- button : wrong text-right text-2xl text-blue-700 m-0 md:m-4 -->
-        <div>
-
-            <div class="flex items-center justify-center h-[50%]">
-                <div class="relative w-[100vw] overflow-hidden rounded-lg">
-                    <div class="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
-                    <div class="flex transition-transform duration-500 ease-in-out" id="slider">
-                        <div class="w-full flex-shrink-0">
-                            <img src="assets/RollingSlider/rollingbanner.png" class="w-full h-[35vh] md:h-[90vh]"
-                                alt="Slide 1">
-                        </div>
-                        <div class="w-full flex-shrink-0">
-                            <img src="assets/RollingSlider/rollingbanner2.jpg" class="w-full h-[35vh] md:h-[90vh]"
-                                alt="Slide 2">
-                        </div>
-                        <div class="w-full flex-shrink-0">
-                            <img src="assets/RollingSlider/chathur2.png" class="w-full h-[35vh] md:h-[90vh]"
-                                alt="Slide 3">
-                        </div>
-
-                        <div class="w-full flex-shrink-0">
-                            <img src="assets/RollingSlider/pmp.png" class="w-full h-[35vh] md:h-[90vh]" alt="Slide 4">
-                        </div>
-                        <div class="w-full flex-shrink-0">
-                            <img src="assets/RollingSlider/chathurpravthan.png" class="w-full h-[35vh] md:h-[90vh]"
-                                alt="Slide 5">
-                        </div>
-
-
+        <section class="hero-slider-section">
+            <div class="hero-slider" id="heroSlider">
+                <div class="hero-slider__track" id="slider">
+                    <div class="hero-slide">
+                        <a href="assets/newsletter/2026/june.pdf" target="_blank" style="display:flex; align-items:center; justify-content:center; width:100%; height:100%; background: linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%); text-decoration:none; cursor:pointer;">
+                            <div style="text-align:center; color:white;">
+                                <div style="font-size:3rem; margin-bottom:1rem;"><i class="ri-file-pdf-2-line"></i></div>
+                                <div style="font-size:2rem; font-weight:700; margin-bottom:0.5rem;">June 2026</div>
+                                <div style="font-size:1.1rem;">Monthly Newsletter</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="hero-slide">
+                        <img src="assets/RollingSlider/rollingbanner.png" alt="ME-RIISE highlight 1">
+                    </div>
+                    <div class="hero-slide">
+                        <img src="assets/RollingSlider/rollingbanner2.jpg" alt="ME-RIISE highlight 2">
+                    </div>
+                    <div class="hero-slide">
+                        <img src="assets/RollingSlider/chathur2.png" alt="ME-RIISE highlight 3">
+                    </div>
+                    <!-- <div class="hero-slide">
+                        <img src="assets/RollingSlider/Tbi_job_openings.png" alt="ME-RIISE highlight 4">
+                    </div> -->
+                    <div class="hero-slide">
+                        <img src="assets/RollingSlider/chathurpravthan.png" alt="ME-RIISE highlight 5">
+                    </div>
+                    <div class="hero-slide">
+                        <img src="assets/RollingSlider/fueling_future.png" alt="ME-RIISE highlight 6">
                     </div>
                 </div>
 
+                <button class="hero-slider__arrow hero-slider__arrow--prev" id="heroPrev"
+                    aria-label="Previous slide" type="button">&#10094;</button>
+                <button class="hero-slider__arrow hero-slider__arrow--next" id="heroNext"
+                    aria-label="Next slide" type="button">&#10095;</button>
+                <div class="hero-slider__dots" id="heroDots"></div>
             </div>
+        </section>
+<!-- 
+        TBI Opportunities Buttons Section
+        <section style="background: linear-gradient(135deg, #f0f9ff 0%, #ecfdf5 100%); padding: 3rem 1rem;"> -->
+            <!-- <div style="max-width: 1200px; margin: 0 auto;">
+                <h2 style="text-align: center; color: #1f2937; font-weight: 700; margin-bottom: 2rem; font-size: 2rem;">
+                    🚀 TBI-MCE Opportunities
+                </h2>
+                
+                <!-- <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                    <!-- Open Positions Button -->
+                    <!-- <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">💼</div>
+                        <h3 style="color: #2563eb; font-weight: 700; margin-bottom: 0.5rem; font-size: 1.3rem;">
+                            Open Positions
+                        </h3>
+                        <p style="color: #4b5563; font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">
+                            Join our dynamic team at TBI-MCE. We're hiring for exciting roles in innovation and entrepreneurship.
+                        </p>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#tbiOpenPositionsModal" 
+                            style="background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; width: 100%; cursor: pointer;">
+                            Learn More
+                        </button>
+                    </div> -->
 
-        </div>
-
-
+                    <!-- Call for Incubation Button -->
+                    <!-- <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🚀</div>
+                        <h3 style="color: #059669; font-weight: 700; margin-bottom: 0.5rem; font-size: 1.3rem;">
+                            Call for Incubation
+                        </h3>
+                        <p style="color: #4b5563; font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">
+                            Have an innovative idea? Join our incubation program and turn your vision into reality.
+                        </p>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#tbiIncubationModal" 
+                            style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; width: 100%; cursor: pointer;">
+                            Learn More
+                        </button>
+                    </div> -->
+                </div> 
+            </div>
+        </section>
 
 
 
@@ -2554,6 +2787,363 @@
             </div>
         </div>
 
+        <!-- TBI Open Positions Modal -->
+        <!-- <div class="modal fade" id="tbiOpenPositionsModal" tabindex="-1" role="dialog" aria-labelledby="tbiOpenPositionsLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content" style="border-radius: 10px; border: 2px solid #2563eb;">
+                    <div class="modal-header" style="background: linear-gradient(135deg, #2766b8 0%, #1e40af 100%); color: rgb(201, 181, 181); border-bottom: none;">
+                        <h5 class="modal-title" id="tbiOpenPositionsLabel" style="font-weight: 700; font-size: 1.5rem; color: white;">
+                            <i class="fas fa-briefcase"></i> JOB OPENINGS - TBI-MCE
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white; opacity: 0.8;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div style="padding: 1rem 1.5rem; border-bottom: 1px solid #e5e7eb; display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                        <button type="button" class="btn" data-dismiss="modal" style="background: #e5e7eb; color: #1f2937; border: none; padding: 0.65rem 1.25rem; border-radius: 6px; font-weight: 600; flex: 1; min-width: 90px;">Close</button>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd65kte3daSmrCCDGxmiKsS2kXIT_RsUl95RAZpMA8XT3zarQ/viewform?pli=1" target="_blank" class="btn" style="background: #10b981; color: white; border: none; padding: 0.65rem 1.25rem; border-radius: 6px; font-weight: 600; text-decoration: none; flex: 1; min-width: 90px;">
+                            <i class="fas fa-check-circle"></i> Apply Now
+                        </a>
+                        <a href="https://meriise.org/openPosition.html" target="_blank" class="btn" style="background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); color: white; border: none; padding: 0.65rem 1.25rem; border-radius: 6px; font-weight: 600; text-decoration: none; flex: 1; min-width: 90px;">
+                            <i class="fas fa-external-link-alt"></i> View Full Details
+                        </a>
+                    </div>
+                    <div class="modal-body" style="padding: 2rem;">
+                        <div style="margin-bottom: 1.5rem;">
+                            <!-- <h6 style="color: #000000; font-weight: 700; margin-bottom: 0.5rem;">📍 About ME-RIISE Foundation</h6> -->
+                            <!-- <p style="font-size: 0.95rem; color: #374151; line-height: 1.6;">
+                                The ME-RIISE Foundation at Malnad College of Engineering is dedicated to fostering innovation, entrepreneurship, and research excellence. We are seeking talented professionals to join our dynamic team at the Technology Business Incubator.
+                            </p> -->
+                        </div>
+
+                        <!-- <div style="margin-bottom: 1.5rem;">
+                            <h6 style="color: #2563eb; font-weight: 700; margin-bottom: 1rem;">💼 OPEN POSITIONS</h6>
+                            
+                            <div style="background: #f3f4f6; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #2563eb;">
+                                <p style="margin: 0; font-weight: 600; color: #1f2937;">1. Incubation Manager</p>
+                                <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: #4b5563;">Lead and manage incubation programs</p>
+                            </div>
+
+                            <div style="background: #f3f4f6; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #2563eb;">
+                                <p style="margin: 0; font-weight: 600; color: #1f2937;">2. Program Associate / Outreach Officer</p>
+                                <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: #4b5563;">Support program delivery and outreach initiatives</p>
+                            </div>
+
+                            <div style="background: #f3f4f6; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #2563eb;">
+                                <p style="margin: 0; font-weight: 600; color: #1f2937;">3. Technical Associate / Admin Associate</p>
+                                <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: #4b5563;">Provide technical and administrative support</p>
+                            </div>
+                        </div> -->
+
+                        <!-- <div style="background: #fef3c7; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 4px solid #f59e0b;">
+                            <p style="margin: 0; font-size: 0.95rem; color: #92400e;">
+                                <strong>⚠️ Important:</strong> Applicants can apply for only ONE position. Please review all positions before applying.
+                            </p>
+                        </div> -->
+
+                        <!-- <div style="background: #f0f9ff; padding: 1rem; border-radius: 8px;">
+                            <h6 style="color: #2563eb; font-weight: 700; margin-bottom: 0.5rem;">📞 Contact Information</h6>
+                            <p style="margin: 0.5rem 0; font-size: 0.95rem;">
+                                <strong>Dr. Geetha Kiran A</strong><br>
+                                CEO, TBI-MCE
+                            </p>
+                            <p style="margin: 0; font-size: 0.95rem;">
+                                📧 <a href="mailto:ceomeriise@mcehassan.ac.in" style="color: #2563eb; font-weight: 600;">ceomeriise@mcehassan.ac.in</a>
+                            </p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- TBI Incubation Modal -->
+        <!-- <div class="modal fade" id="tbiIncubationModal" tabindex="-1" role="dialog" aria-labelledby="tbiIncubationLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content" style="border-radius: 10px; border: 2px solid #059669;">
+                    <div class="modal-header" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: white; border-bottom: none;">
+                        <h5 class="modal-title" id="tbiIncubationLabel" style="font-weight: 700; font-size: 1.5rem;color: white;">
+                            <i class="fas fa-rocket"></i> INCUBATION PROGRAMME - TBI-MCE
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white; opacity: 0.8;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div style="padding: 1rem 1.5rem; border-bottom: 1px solid #e5e7eb; display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                        <button type="button" class="btn" data-dismiss="modal" style="background: #e5e7eb; color: #1f2937; border: none; padding: 0.65rem 1.25rem; border-radius: 6px; font-weight: 600; flex: 1; min-width: 90px;">Close</button>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdWq0TaTQ1GKdiEIyxXFHoSEalCmDTFx5JY-xi-ltQ4cIWwgw/viewform" target="_blank" class="btn" style="background: #10b981; color: white; border: none; padding: 0.65rem 1.25rem; border-radius: 6px; font-weight: 600; text-decoration: none; flex: 1; min-width: 90px;">
+                            <i class="fas fa-check-circle"></i> Apply Now
+                        </a>
+                        <a href="https://meriise.org/callforincubation.html" target="_blank" class="btn" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: white; border: none; padding: 0.65rem 1.25rem; border-radius: 6px; font-weight: 600; text-decoration: none; flex: 1; min-width: 90px;">
+                            <i class="fas fa-external-link-alt"></i> View Full Details
+                        </a>
+                    </div>
+
+                    <div class="modal-body" style="padding: 2rem;">
+                        <!-- <div style="margin-bottom: 1.5rem;">
+                            <h6 style="color: #0f0f0f; font-weight: 700; margin-bottom: 0.5rem;">🎯 Call for Incubation Applications</h6>
+                            <p style="font-size: 0.95rem; color: #374151; line-height: 1.6;">
+                                Are you an innovator or entrepreneur with a groundbreaking idea? The Technology Business Incubator (TBI-MCE) managed by ME-RIISE Foundation invites applications from talented individuals and teams to join our incubation program.
+                            </p>
+                        </div> -->
+
+                        <!-- <div style="margin-bottom: 1.5rem;">
+                            <h6 style="color: #059669; font-weight: 700; margin-bottom: 1rem;">📋 SECTORS WE SUPPORT</h6>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div style="background: #ecfdf5; padding: 0.75rem; border-radius: 6px; border-left: 3px solid #059669;">
+                                    <p style="margin: 0; color: #047857; font-weight: 600;">🌾 Agritech</p>
+                                </div>
+                                <div style="background: #ecfdf5; padding: 0.75rem; border-radius: 6px; border-left: 3px solid #059669;">
+                                    <p style="margin: 0; color: #047857; font-weight: 600;">🏥 Healthcare</p>
+                                </div>
+                                <div style="background: #ecfdf5; padding: 0.75rem; border-radius: 6px; border-left: 3px solid #059669;">
+                                    <p style="margin: 0; color: #047857; font-weight: 600;">⚡ Renewable Energy</p>
+                                </div>
+                                <div style="background: #ecfdf5; padding: 0.75rem; border-radius: 6px; border-left: 3px solid #059669;">
+                                    <p style="margin: 0; color: #047857; font-weight: 600;">🤖 Smart Systems</p>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- <div style="margin-bottom: 1.5rem;">
+                            <h6 style="color: #059669; font-weight: 700; margin-bottom: 1rem;">👥 WHO CAN APPLY?</h6>
+                            <ul style="margin: 0; padding-left: 1.5rem; color: #374151; font-size: 0.95rem;">
+                                <li>Students (UG/PG/PhD)</li>
+                                <li>Faculty Members</li>
+                                <li>Researchers</li>
+                                <li>Individual Innovators</li>
+                                <li>Entrepreneurial Teams</li>
+                                <li>Early-Stage / Registered Startups</li>
+                            </ul>
+                        </div> -->
+
+                        <!-- <div style="background: #fef3c7; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 4px solid #f59e0b;">
+                            <p style="margin: 0; font-size: 0.95rem; color: #92400e;">
+                                <strong>📎 Required Documents:</strong> Pitch Deck / Business Proposal with supporting documents.
+                            </p>
+                        </div> -->
+
+                        <!-- <div style="background: #f0f9ff; padding: 1rem; border-radius: 8px;">
+                            <h6 style="color: #059669; font-weight: 700; margin-bottom: 0.5rem;">📞 Contact Information</h6>
+                            <p style="margin: 0.5rem 0; font-size: 0.95rem;">
+                                <strong>TBI-MCE</strong><br>
+                                Managed by ME-RIISE Foundation
+                            </p>
+                            <p style="margin: 0; font-size: 0.95rem;">
+                                📧 <a href="mailto:ceomeriise@mcehassan.ac.in" style="color: #059669; font-weight: 600;">ceomeriise@mcehassan.ac.in</a>
+                            </p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Auto-show popups side-by-side on page load -->
+        <script>
+            (function () {
+            'use strict';
+            
+            var MODAL_IDS    = ['tbiOpenPositionsModal', 'tbiIncubationModal'];
+            var AUTO_SHOW    = true;   // set to false if you only want button-triggered modals
+            var AUTO_CLOSE_MS = 10000; // 0 disables auto-close
+            var FADE_MS       = 300;
+            
+            function ready(fn) {
+                if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', fn);
+                } else {
+                fn();
+                }
+            }
+            
+            // Helper function to detect if device is mobile
+            function isMobileDevice() {
+                return window.innerWidth <= 768;
+            }
+            
+            ready(function () {
+                var modals = MODAL_IDS
+                .map(function (id) { return document.getElementById(id); })
+                .filter(Boolean);
+            
+                if (!modals.length) {
+                console.warn('TBI modals: no modal elements found.');
+                return;
+                }
+            
+                // Remember each modal's original spot so we can put it back (hidden) on close.
+                var origin = modals.map(function (el) {
+                return { el: el, parent: el.parentNode, next: el.nextSibling };
+                });
+            
+                var backdrop    = null;
+                var container   = null;
+                var hideTimeout = null;
+                var isHovering  = false;
+                var isOpen      = false;
+            
+                function applyModalStyles(el, width) {
+                el.classList.add('show');
+                el.setAttribute('aria-hidden', 'false');
+                el.style.cssText = [
+                    'position:relative', 'margin:0', 'inset:auto',
+                    'width:' + width, 'max-width:95vw',
+                    'transform:none', 'display:block',
+                    'max-height:90vh', 'overflow-y:auto', 'z-index:1050'
+                ].join(' !important;') + ' !important;';
+            
+                var dialog = el.querySelector('.modal-dialog');
+                if (dialog) {
+                    dialog.style.cssText = 'width:100%!important;max-width:100%!important;margin:0!important;';
+                }
+                }
+            
+                function resetModal(el) {
+                el.classList.remove('show');
+                el.setAttribute('aria-hidden', 'true');
+                el.style.cssText = 'display:none !important;';
+                var dialog = el.querySelector('.modal-dialog');
+                if (dialog) dialog.style.cssText = '';
+                }
+            
+                function buildOverlay() {
+                backdrop = document.createElement('div');
+                backdrop.className = 'tbi-modal-backdrop';
+                backdrop.style.cssText =
+                    'position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1040;' +
+                    'opacity:0;transition:opacity ' + FADE_MS + 'ms ease;';
+            
+                container = document.createElement('div');
+                container.className = 'tbi-modal-container';
+                
+                // Mobile-responsive settings
+                var isMobile = isMobileDevice();
+                var gap = isMobile ? '1rem' : '2rem';
+                var padding = isMobile ? '1rem' : '2rem';
+                
+                container.style.cssText =
+                    'position:fixed;inset:0;display:flex;align-items:center;justify-content:center;' +
+                    'gap:' + gap + ';padding:' + padding + ';flex-wrap:wrap;overflow-y:auto;z-index:1050;' +
+                    'opacity:0;transition:opacity ' + FADE_MS + 'ms ease;';
+            
+                document.body.appendChild(backdrop);
+                document.body.appendChild(container);
+            
+                // One delegated click handler: closes on empty-area click or any dismiss
+                // control. Links/buttons inside the modals keep working normally.
+                container.addEventListener('click', function (e) {
+                    if (e.target === container) { close(); return; }
+                    if (e.target.closest('[data-dismiss="modal"],[data-bs-dismiss="modal"],.close,.btn-close')) {
+                    e.preventDefault();
+                    close();
+                    }
+                });
+            
+                container.addEventListener('mouseenter', function () {
+                    isHovering = true;
+                    clearTimeout(hideTimeout);
+                });
+                container.addEventListener('mouseleave', function () {
+                    isHovering = false;
+                    startAutoClose();
+                });
+            
+                document.addEventListener('keydown', onKeydown);
+                }
+            
+                function open(which, withAutoClose) {
+                if (isOpen) return;
+                isOpen = true;
+                buildOverlay();
+            
+                var toShow = which === 'all'
+                    ? modals
+                    : modals.filter(function (m) { return m.id === which; });
+            
+                // Responsive width calculation
+                var isMobile = isMobileDevice();
+                var width;
+                
+                if (isMobile) {
+                    width = toShow.length > 1 ? '95%' : '90%';
+                } else {
+                    width = toShow.length > 1 ? '48%' : '90%';
+                }
+            
+                toShow.forEach(function (el) {
+                    applyModalStyles(el, width);
+                    container.appendChild(el); // MOVE the real node in (no cloning)
+                });
+            
+                requestAnimationFrame(function () {
+                    backdrop.style.opacity  = '1';
+                    container.style.opacity = '1';
+                });
+            
+                if (withAutoClose && AUTO_CLOSE_MS > 0) startAutoClose();
+                }
+            
+                function close() {
+                if (!isOpen) return;
+                isOpen = false;
+                clearTimeout(hideTimeout);
+                document.removeEventListener('keydown', onKeydown);
+                if (container) container.style.opacity = '0';
+                if (backdrop)  backdrop.style.opacity  = '0';
+                setTimeout(cleanup, FADE_MS);
+                }
+            
+                function cleanup() {
+                origin.forEach(function (o) {
+                    resetModal(o.el);
+                    if (o.parent) o.parent.insertBefore(o.el, o.next); // restore to original spot
+                });
+                if (container && container.parentNode) container.parentNode.removeChild(container);
+                if (backdrop && backdrop.parentNode)   backdrop.parentNode.removeChild(backdrop);
+                container = null;
+                backdrop = null;
+                isHovering = false;
+                }
+            
+                function startAutoClose() {
+                clearTimeout(hideTimeout);
+                if (isHovering || !isOpen || AUTO_CLOSE_MS <= 0) return;
+                hideTimeout = setTimeout(function () {
+                    if (!isHovering && isOpen) close();
+                }, AUTO_CLOSE_MS);
+                }
+            
+                function onKeydown(e) {
+                if (e.key === 'Escape') close();
+                }
+            
+                // --- Wire the "Learn More" trigger buttons (Bootstrap 4 OR 5 attributes) ---
+                document.querySelectorAll('[data-target],[data-bs-target]').forEach(function (trigger) {
+                var target = trigger.getAttribute('data-bs-target') || trigger.getAttribute('data-target');
+                if (!target) return;
+                var id = target.charAt(0) === '#' ? target.slice(1) : target;
+                if (MODAL_IDS.indexOf(id) === -1) return; // only our two modals
+            
+                // Stop Bootstrap's own plugin from also firing on these.
+                trigger.removeAttribute('data-toggle');
+                trigger.removeAttribute('data-bs-toggle');
+            
+                trigger.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    if (isOpen) {
+                    close();
+                    setTimeout(function () { open(id, false); }, FADE_MS + 20);
+                    } else {
+                    open(id, false);
+                    }
+                });
+                });
+            
+                // --- Auto-show both side-by-side on load ---
+                if (AUTO_SHOW) open('all', true);
+            });
+            })();
+        </script>
+
 
 
 
@@ -2572,13 +3162,13 @@
                 to excel in their entrepreneurial journey. Its mission is to
                 create a
                 sustainable ecosystem for innovation and growth.</p>
-            <div class="mx-10 my-6">
+            <!-- <div class="mx-10 my-6">
                 <a href="event-registration.html">
                     <div class="my-2 bg-blue-500 text-white py-4 text-center rounded-2xl buttons w-max px-8">
                         Register for Events
                     </div>
                 </a>
-            </div>
+            </div> -->
         </div>
 
 
@@ -2867,17 +3457,59 @@
         </footer>
         <!-- Scripts -->
         <script>
-            let currentIndex = 0;
-            const slides = document.querySelectorAll('#slider > div');
-            const totalSlides = slides.length;
-            const slider = document.getElementById('slider');
+            (function () {
+                const slider = document.getElementById('slider');
+                if (!slider) return;
 
-            function nextSlide() {
-                currentIndex = (currentIndex + 1) % totalSlides;
-                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-            }
+                const slides = slider.querySelectorAll('.hero-slide');
+                const totalSlides = slides.length;
+                const dotsBox = document.getElementById('heroDots');
+                const prevBtn = document.getElementById('heroPrev');
+                const nextBtn = document.getElementById('heroNext');
+                const carousel = document.getElementById('heroSlider');
 
-            setInterval(nextSlide, 5000);
+                let currentIndex = 0;
+                let timer = null;
+
+                // Build dot indicators
+                for (let i = 0; i < totalSlides; i++) {
+                    const dot = document.createElement('button');
+                    dot.type = 'button';
+                    dot.className = 'hero-slider__dot' + (i === 0 ? ' is-active' : '');
+                    dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+                    dot.addEventListener('click', function () { goTo(i); startAuto(); });
+                    dotsBox.appendChild(dot);
+                }
+
+                function render() {
+                    slider.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+                    const dots = dotsBox.querySelectorAll('.hero-slider__dot');
+                    dots.forEach(function (d, i) { d.classList.toggle('is-active', i === currentIndex); });
+                }
+
+                function goTo(i) {
+                    currentIndex = (i + totalSlides) % totalSlides;
+                    render();
+                }
+
+                function startAuto() {
+                    stopAuto();
+                    if (totalSlides > 1) timer = setInterval(function () { goTo(currentIndex + 1); }, 5000);
+                }
+                function stopAuto() { if (timer) { clearInterval(timer); timer = null; } }
+
+                if (prevBtn) prevBtn.addEventListener('click', function () { goTo(currentIndex - 1); startAuto(); });
+                if (nextBtn) nextBtn.addEventListener('click', function () { goTo(currentIndex + 1); startAuto(); });
+
+                // Pause auto-play while hovering
+                if (carousel) {
+                    carousel.addEventListener('mouseenter', stopAuto);
+                    carousel.addEventListener('mouseleave', startAuto);
+                }
+
+                render();
+                startAuto();
+            })();
         </script>
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/jquery.scrollex.min.js"></script>
@@ -3124,6 +3756,463 @@
 
 
 
+        </script>
+
+        <!-- Bridging Generations 2.0 Popup (disabled: replaced by Arogya Manthan 2K26 popup below) -->
+        <div id="bg2-popup" class="bg2-popup hidden" role="dialog" aria-modal="true" aria-labelledby="bg2-popup-title">
+            <div class="bg2-popup__card">
+                <button class="bg2-popup__close" type="button" aria-label="Close popup" onclick="closeBg2Popup()">&times;</button>
+                <h2 id="bg2-popup-title" class="bg2-popup__title">Bridging Generations 2.0</h2>
+                <a href="bridging-generations/index.html" class="bg2-popup__poster" aria-label="Open Bridging Generations 2.0">
+                    <img src="popup_assets/poster.png" alt="Bridging Generations 2.0 poster" loading="lazy">
+                </a>
+                <div class="bg2-popup__buttons">
+                    <a href="https://teams.microsoft.com/meet/41783379945761?p=RZoLdbOcywF6EFhsfW" class="bg2-popup__cta bg2-popup__cta--primary">Watch Live</a>
+                    <a href="bridging-generations/index.html" class="bg2-popup__cta bg2-popup__cta--secondary">Know More</a>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .bg2-popup {
+                position: fixed;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.65);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 10000;
+                padding: 20px;
+            }
+
+            .bg2-popup.hidden {
+                display: none !important;
+            }
+
+            .bg2-popup__card {
+                background: #ffffff;
+                border: 4px solid #01adfc;
+                border-radius: 18px;
+                padding: 18px;
+                max-width: 320px;
+                width: 100%;
+                text-align: center;
+                position: relative;
+                box-shadow: 0 18px 50px rgba(1, 173, 252, 0.35);
+                animation: bg2PopIn 0.3s ease-out;
+            }
+
+            @keyframes bg2PopIn {
+                from { transform: translateY(-30px) scale(0.97); opacity: 0; }
+                to { transform: translateY(0) scale(1); opacity: 1; }
+            }
+
+            .bg2-popup__close {
+                position: absolute;
+                top: 10px;
+                right: 14px;
+                background: none;
+                border: none;
+                font-size: 30px;
+                line-height: 1;
+                cursor: pointer;
+                color: #01adfc;
+                transition: color 0.2s;
+            }
+
+            .bg2-popup__close:hover {
+                color: #0182bd;
+            }
+
+            .bg2-popup__title {
+                font-size: 19px;
+                font-weight: 700;
+                color: #01adfc;
+                margin: 4px 0 14px;
+            }
+
+            .bg2-popup__poster {
+                display: block;
+                border-radius: 12px;
+                overflow: hidden;
+                border: 2px solid #01adfc;
+                transition: transform 0.25s ease;
+            }
+
+            .bg2-popup__poster:hover {
+                transform: scale(1.02);
+            }
+
+            .bg2-popup__poster img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+            .bg2-popup__cta {
+                display: inline-block;
+                background: #01adfc;
+                color: #ffffff;
+                padding: 9px 30px;
+                border-radius: 50px;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 14px;
+                transition: background 0.25s ease, transform 0.25s ease;
+            }
+
+            .bg2-popup__cta:hover {
+                background: #0182bd;
+                color: #ffffff;
+                transform: scale(1.04);
+            }
+
+            .bg2-popup__buttons {
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                margin-top: 14px;
+                flex-wrap: wrap;
+            }
+
+            .bg2-popup__cta--primary {
+                background: #01adfc;
+            }
+
+            .bg2-popup__cta--primary:hover {
+                background: #0182bd;
+            }
+
+            .bg2-popup__cta--secondary {
+                background: #6b7280;
+            }
+
+            .bg2-popup__cta--secondary:hover {
+                background: #4b5563;
+            }
+        </style>
+
+        <script>
+            function closeBg2Popup() {
+                document.getElementById('bg2-popup').classList.add('hidden');
+            }
+            document.getElementById('bg2-popup').addEventListener('click', function (e) {
+                if (e.target === this) {
+                    closeBg2Popup();
+                }
+            });
+        </script>
+
+        <!-- ============================================================= -->
+        <!-- Arogya Manthan 2K26 Popup                                     -->
+        <!-- Poster: popup_assets/arogya-manthan.jpeg                      -->
+        <!-- Register link: https://www.certifyy.in                        -->
+        <!-- ============================================================= -->
+        <div id="am-popup" class="am-popup" role="dialog" aria-modal="true" aria-labelledby="am-popup-title">
+            <div class="am-popup__card">
+                <button class="am-popup__close" type="button" aria-label="Close popup" onclick="closeAmPopup()">&times;</button>
+
+                <!-- LEFT: Poster -->
+                <a href="https://www.certifyy.in" class="am-popup__poster" target="_blank" rel="noopener" aria-label="Register for Arogya Manthan 2K26">
+                    <img src="popup_assets/arogya-manthan.jpg" alt="Arogya Manthan 2K26 poster" loading="lazy">
+                </a>
+
+                <!-- RIGHT: Content -->
+                <div class="am-popup__content">
+                    <span class="am-popup__badge">🚀 Registrations Open</span>
+                    <h2 id="am-popup-title" class="am-popup__title">Arogya Manthan 2K26</h2>
+                    <p class="am-popup__subtitle">A 24-Hour Healthcare Innovation Hackathon</p>
+
+                    <p class="am-popup__theme">💡 Theme: <strong>Healthcare for a Better Tomorrow</strong></p>
+
+                    <ul class="am-popup__details">
+                        <li><span>📅 Date</span> 27 &amp; 28 July 2026</li>
+                        <li><span>📍 Venue</span> Malnad College of Engineering, Hassan</li>
+                        <li><span>👥 Team Size</span> 3–5 Members</li>
+                        <li><span>🏆 Cash Prizes</span> Up to ₹1,00,000</li>
+                        <li><span>⏳ Early Bird Ends</span> 21 July 2026</li>
+                    </ul>
+
+                    <div class="am-popup__buttons">
+                        <a href="https://www.certifyy.in" class="am-popup__cta am-popup__cta--primary" target="_blank" rel="noopener">Register Now</a>
+                        <a href="popup_assets/Arogyamanthan_rulebook.pdf" class="am-popup__cta am-popup__cta--secondary" download>📄 Rule Book</a>
+                        <button type="button" class="am-popup__cta am-popup__cta--secondary" onclick="closeAmPopup()">Close</button>
+                    </div>
+
+                    <div class="am-popup__contact">
+                        <p class="am-popup__contact-label">For more information, contact:</p>
+                        <p class="am-popup__contact-name">Dr. Geetha Kiran A</p>
+                        <p class="am-popup__contact-role">CEO, ME-RIISE FOUNDATION</p>
+                        <a href="tel:+919448179074" class="am-popup__contact-phone">📞 9448179074</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .am-popup {
+                position: fixed;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.65);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 10001;
+                padding: 20px;
+            }
+
+            .am-popup.hidden {
+                display: none !important;
+            }
+
+            .am-popup__card {
+                background: #ffffff;
+                border: 4px solid #0e7c86;
+                border-radius: 18px;
+                padding: 18px;
+                max-width: 820px;
+                width: 100%;
+                max-height: 92vh;
+                overflow-y: auto;
+                position: relative;
+                box-shadow: 0 18px 50px rgba(14, 124, 134, 0.35);
+                animation: amPopIn 0.3s ease-out;
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                align-items: stretch;
+            }
+
+            @keyframes amPopIn {
+                from { transform: translateY(-30px) scale(0.97); opacity: 0; }
+                to { transform: translateY(0) scale(1); opacity: 1; }
+            }
+
+            .am-popup__close {
+                position: absolute;
+                top: 8px;
+                right: 14px;
+                background: none;
+                border: none;
+                font-size: 30px;
+                line-height: 1;
+                cursor: pointer;
+                color: #0e7c86;
+                transition: color 0.2s;
+                z-index: 2;
+            }
+
+            .am-popup__close:hover {
+                color: #0a5960;
+            }
+
+            /* LEFT column: poster */
+            .am-popup__poster {
+                display: block;
+                flex: 1 1 45%;
+                min-width: 0;
+                align-self: center;
+                border-radius: 12px;
+                overflow: hidden;
+                border: 2px solid #0e7c86;
+                transition: transform 0.25s ease;
+            }
+
+            .am-popup__poster:hover {
+                transform: scale(1.02);
+            }
+
+            .am-popup__poster img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+            /* RIGHT column: content */
+            .am-popup__content {
+                flex: 1 1 55%;
+                min-width: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: left;
+                padding-right: 6px;
+            }
+
+            .am-popup__badge {
+                display: inline-block;
+                align-self: flex-start;
+                background: linear-gradient(90deg, #0e7c86, #3aab5b);
+                color: #ffffff;
+                font-size: 12px;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+                padding: 5px 14px;
+                border-radius: 50px;
+                margin-bottom: 8px;
+            }
+
+            .am-popup__title {
+                font-size: 24px;
+                font-weight: 800;
+                color: #0e7c86;
+                margin: 4px 0 2px;
+            }
+
+            .am-popup__subtitle {
+                font-size: 13px;
+                color: #3aab5b;
+                font-weight: 600;
+                margin: 0 0 12px;
+            }
+
+            .am-popup__theme {
+                font-size: 13px;
+                color: #333;
+                margin: 4px 0 8px;
+            }
+
+            .am-popup__theme strong {
+                color: #0e7c86;
+            }
+
+            .am-popup__details {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 6px;
+                text-align: left;
+            }
+
+            .am-popup__details li {
+                font-size: 13px;
+                color: #333;
+                padding: 6px 0;
+                border-bottom: 1px dashed #d5e8ea;
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+            }
+
+            .am-popup__details li:last-child {
+                border-bottom: none;
+            }
+
+            .am-popup__details li span {
+                color: #0e7c86;
+                font-weight: 700;
+                white-space: nowrap;
+            }
+
+            .am-popup__buttons {
+                display: flex;
+                gap: 10px;
+                justify-content: flex-start;
+                margin-top: 14px;
+                flex-wrap: wrap;
+            }
+
+            .am-popup__contact {
+                margin-top: 14px;
+                padding-top: 12px;
+                border-top: 1px solid #d5e8ea;
+            }
+
+            .am-popup__contact-label {
+                font-size: 12px;
+                color: #666;
+                margin: 0 0 4px;
+            }
+
+            .am-popup__contact-name {
+                font-size: 14px;
+                font-weight: 700;
+                color: #0e7c86;
+                margin: 0;
+            }
+
+            .am-popup__contact-role {
+                font-size: 12px;
+                color: #333;
+                margin: 0 0 4px;
+            }
+
+            .am-popup__contact-phone {
+                font-size: 14px;
+                font-weight: 700;
+                color: #0e7c86;
+                text-decoration: none;
+            }
+
+            .am-popup__contact-phone:hover {
+                color: #0a5960;
+                text-decoration: underline;
+            }
+
+            /* Stack into a single column on small screens */
+            @media (max-width: 720px) {
+                .am-popup__card {
+                    flex-direction: column;
+                    gap: 14px;
+                    max-width: 380px;
+                    padding: 16px;
+                }
+                .am-popup__poster {
+                    flex: none;
+                    width: 100%;
+                }
+                .am-popup__content {
+                    flex: none;
+                    text-align: center;
+                    align-items: center;
+                }
+                .am-popup__badge { align-self: center; }
+                .am-popup__buttons { justify-content: center; }
+            }
+
+            .am-popup__cta {
+                display: inline-block;
+                color: #ffffff;
+                padding: 10px 26px;
+                border: none;
+                border-radius: 50px;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 14px;
+                cursor: pointer;
+                transition: background 0.25s ease, transform 0.25s ease;
+            }
+
+            .am-popup__cta--primary {
+                background: linear-gradient(90deg, #0e7c86, #3aab5b);
+            }
+
+            .am-popup__cta--primary:hover {
+                filter: brightness(1.08);
+                transform: scale(1.04);
+            }
+
+            .am-popup__cta--secondary {
+                background: #6b7280;
+            }
+
+            .am-popup__cta--secondary:hover {
+                background: #4b5563;
+            }
+        </style>
+
+        <script>
+            function closeAmPopup() {
+                document.getElementById('am-popup').classList.add('hidden');
+            }
+            document.getElementById('am-popup').addEventListener('click', function (e) {
+                if (e.target === this) {
+                    closeAmPopup();
+                }
+            });
         </script>
 
         <!-- Bridging Generations Modal -->
