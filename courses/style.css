@@ -327,14 +327,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .program-image-container {
     position: relative;
-    height: auto;
-    overflow: visible;
+    height: 250px;
+    overflow: hidden;
 }
 
 .program-image {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.5s ease;
 }
 
@@ -451,14 +451,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .msme-image {
     position: relative;
-    height: auto;
-    overflow: visible;
+    height: 200px;
+    overflow: hidden;
 }
 
 .msme-image img {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.5s ease;
 }
 
@@ -543,9 +543,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .gallery-item {
     position: relative;
-    height: auto;
+    height: 250px;
     border-radius: 15px;
-    overflow: visible;
+    overflow: hidden;
     cursor: pointer;
     box-shadow: var(--shadow-md);
     transition: all 0.3s ease;
@@ -558,8 +558,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .gallery-image {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.5s ease;
 }
 
