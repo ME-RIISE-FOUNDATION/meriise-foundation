@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="assets/css/teamstyles.css" />
+  <link rel="stylesheet" href="assets/css/newcss.css" />
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/NavbarCode/assets/css/styles.css">
+  <script defer src="js/script.js"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style type="text/css">
+    a:link {
+      text-decoration: none;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    header {
+      box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.4);
+    }
+
+    /*=============== FEATURED CAROUSEL ===============*/
+    .nl-carousel {
+      position: relative;
+      max-width: 72rem;
+      margin: 0 auto 2.5rem;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .nl-track {
+      display: flex;
+      transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nl-slide {
+      min-width: 100%;
+      height: 20rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 2rem;
+    }
+
+    .nl-eyebrow {
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.9;
+      margin-bottom: 0.5rem;
+    }
+
+    .nl-title {
+      font-size: 2.75rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .nl-sub {
+      font-size: 1.05rem;
+      opacity: 0.95;
+      margin-top: 0.5rem;
+    }
+
+    .nl-cta {
+      display: inline-block;
+      margin-top: 1.25rem;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      color: #fff;
+      padding: 0.6rem 1.4rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .nl-cta:hover {
+      background: rgba(255, 255, 255, 0.32);
+      transform: translateY(-2px);
+    }
+
+    .nl-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 9999px;
+      background: rgba(0, 0, 0, 0.35);
+      color: #fff;
+      font-size: 1.25rem;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
+      z-index: 2;
+    }
+
+    .nl-arrow:hover {
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .nl-prev { left: 1rem; }
+    .nl-next { right: 1rem; }
+
+    .nl-dots {
+      position: absolute;
+      bottom: 1rem;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      z-index: 2;
+    }
+
+    .nl-dot {
+      width: 0.7rem;
+      height: 0.7rem;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.5);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .nl-dot.is-active {
+      background: #fff;
+      transform: scale(1.25);
+    }
+
+    @media (max-width: 640px) {
+      .nl-slide { height: 16rem; }
+      .nl-title { font-size: 2rem; }
+    }
+
+    /*=============== 2026 NEWSLETTER GRID ===============*/
+    .nl-section {
+      background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+      padding: 3.5rem 1.5rem;
+      min-height: 60vh;
+      border-radius: 1.5rem;
+      max-width: 78rem;
+      margin: 0 auto 3rem;
+    }
+
+    .nl-heading {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+      background: linear-gradient(90deg, #2563eb, #7c3aed, #2563eb);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: nl-shine 5s linear infinite;
+    }
+
+    @keyframes nl-shine {
+      to { background-position: 200% center; }
+    }
+
+    .nl-subheading {
+      color: #6b7280;
+      font-size: 1.05rem;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Scroll-reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.in-view {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* Newsletter card */
+    .nl-card {
+      position: relative;
+      background: #fff;
+      border-radius: 1rem;
+      padding: 2.25rem 1.5rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      overflow: hidden;
+    }
+
+    .nl-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.06), rgba(124, 58, 237, 0.06));
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .nl-card.available:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 22px 45px rgba(37, 99, 235, 0.22);
+    }
+
+    .nl-card.available:hover::before { opacity: 1; }
+
+    .nl-card-icon {
+      font-size: 3.75rem;
+      position: relative;
+    }
+
+    .nl-card.available .nl-card-icon {
+      color: #dc2626;
+      animation: nl-float 3s ease-in-out infinite;
+    }
+
+    .nl-card.soon .nl-card-icon { color: #9ca3af; }
+
+    @keyframes nl-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-7px); }
+    }
+
+    .nl-card-month {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #111827;
+      margin-top: 0.75rem;
+      position: relative;
+    }
+
+    .nl-card-note {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-top: 0.25rem;
+      position: relative;
+    }
+
+    .nl-card.soon { opacity: 0.72; }
+
+    .nl-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: #16a34a;
+      color: #fff;
+      font-size: 0.68rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.28rem 0.65rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      z-index: 1;
+      animation: nl-pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes nl-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.5); }
+      50% { box-shadow: 0 0 0 8px rgba(22, 163, 74, 0); }
+    }
+  </style>
+
+  <title>Newsletter | ME-RIISE</title>
+</head>
+
+<body>
+  <div class="snav-bar" style="background-color: black; margin-top: -105px">
+
+    <header class="header">
+      <nav class="nav containerofNavbar">
+        <div class="nav__data">
+          <a href="#" class="nav__logo">
+            <img src="assets/MERIISE FOUNDATION logo 2.0.png" alt="" class="h-16">
+          </a>
+
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__burger"></i>
+            <i class="ri-close-line nav__close"></i>
+          </div>
+        </div>
+
+        <!--=============== NAV MENU ===============-->
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link">Home</a></li>
+
+            <li class="dropdown__item">
+              <div class="nav__link">
+                About ME-RIISE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="aboutmeriise.html" class="dropdown__link">
+                    <i class="ri-pie-chart-line"></i> ME-RIISE FOUNDATION
+                  </a>
+                </li>
+
+
+                <li>
+                  <a href="infrastructure.html" class="dropdown__link">
+                    <i class="ri-pie-chart-line"></i> Infrastructure
+                  </a>
+                </li>
+
+
+                <li>
+                  <a href="ourAchivements.html" class="dropdown__link">
+                    <i class="ri-arrow-up-down-line"></i> Achievements
+                  </a>
+                </li>
+
+
+                <li class="dropdown__subitem">
+                  <div class="dropdown__link">
+                    <i class="ri-bar-chart-line"></i> Documents <i class="ri-add-line dropdown__add"></i>
+                  </div>
+
+                  <ul class="dropdown__submenu">
+                    <li>
+                      <a href="Nisp.html" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i> MCE NISP POLICY
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="collab.html" class="dropdown__sublink">
+                        <i class="ri-cash-line"></i> Collaborations
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="Certificates.html" class="dropdown__sublink">
+                        <i class="ri-cash-line"></i> Certificates
+                      </a>
+                    </li>
+
+
+                  </ul>
+                </li>
+
+
+                <li class="dropdown__subitem">
+                  <div class="dropdown__link">
+                    <i class="ri-bar-chart-line"></i> Members of ME-RIISE <i class="ri-add-line dropdown__add"></i>
+                  </div>
+
+                  <ul class="dropdown__submenu">
+                    <li>
+                      <a href="index.html#boardofdirectors" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i>Board of Directors
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="faculty.html" class="dropdown__sublink">
+                        <i class="ri-cash-line"></i> Faculty
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="team.html" class="dropdown__sublink">
+                        <i class="ri-refund-2-line"></i> Team ME-RIISE
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <!--=============== DROPDOWN SUBMENU ===============-->
+
+              </ul>
+            </li>
+
+            <!--=============== DROPDOWN 1 ===============-->
+            <li class="dropdown__item">
+              <div class="nav__link">
+                Wings of ME-RIISE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="startups.html" class="dropdown__link">
+                    <i class="ri-pie-chart-line"></i>Start Ups
+                  </a>
+                </li>
+
+
+
+                <li>
+                  <a href="iic.html" class="dropdown__link">
+                    <i class="ri-pie-chart-line"></i>  MoE - IIC
+                  </a>
+                </li>
+
+                <li>
+                  <a href="nain.html" class="dropdown__link">
+                    <i class="ri-arrow-up-down-line"></i> NAIN
+                  </a>
+                </li>
+
+
+
+                <li>
+                  <a href="uba.html" class="dropdown__link">
+                    <i class="ri-arrow-up-down-line"></i> UBA
+                  </a>
+                </li>
+
+                <li>
+                  <a href="rgep.html" class="dropdown__link">
+                    <i class="ri-arrow-up-down-line"></i> RGEP
+                  </a>
+                </li>
+
+                <!--=============== DROPDOWN SUBMENU ===============-->
+                <li class="dropdown__subitem">
+                  <div class="dropdown__link">
+                    <i class="ri-bar-chart-line"></i> Pragyatha <i class="ri-add-line dropdown__add"></i>
+                  </div>
+
+                  <ul class="dropdown__submenu">
+                    <li>
+                      <a href="https://pragyatha25.meriise.org/" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i>Pragyatha25
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i> Pragyatha24
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i> Pragyatha23
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i> Pragyatha22
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__sublink">
+                        <i class="ri-file-list-line"></i> Pragyatha21
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li><a href="https://meriise-events.vercel.app/" class="nav__link">Events</a></li>
+
+            <li class="dropdown__item">
+              <div class="nav__link">
+                TBI-MCE <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="tbi.html" class="dropdown__link">
+                    <i class="ri-pie-chart-line"></i> About TBI
+                  </a>
+                </li>
+
+
+                <li>
+                  <a href="openPosition.html" class="dropdown__link">
+                    <i class="ri-pie-chart-line"></i> Open positions
+                  </a>
+                </li>
+
+                <li>
+                  <a href="callforincubation.html" class="dropdown__link">
+                    <i class="ri-pie-chart-line"></i> Call for incubation application
+                  </a>
+                </li>
+
+
+
+                <!--=============== DROPDOWN SUBMENU ===============-->
+
+              </ul>
+            </li>
+
+            <li><a href="newsletter.html" class="nav__link">Newsletter</a></li>
+
+            <li><a href="#footer" class="nav__link">Contact Us</a></li>
+
+            <!--=============== DROPDOWN 2 ===============-->
+
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+  </div>
+
+
+  <div class="newwarp">
+    <h1 class="text-4xl m-4 p-5">Newsletter</h1>
+
+    <!--=============== FEATURED CAROUSEL (auto-sliding) ===============-->
+    <div class="nl-carousel" id="nl-carousel">
+      <div class="nl-track" id="nl-track"><!-- slides injected by JS --></div>
+      <button class="nl-arrow nl-prev" id="nl-prev" aria-label="Previous newsletter">&#10094;</button>
+      <button class="nl-arrow nl-next" id="nl-next" aria-label="Next newsletter">&#10095;</button>
+      <div class="nl-dots" id="nl-dots"></div>
+    </div>
+
+    <div class="container">
+      <div class="nl-section">
+        <div class="max-w-6xl mx-auto text-center">
+          <h2 class="nl-heading reveal">2026 Newsletters</h2>
+          <p class="nl-subheading reveal">Every monthly issue from ME-RIISE Foundation, starting April 2026.</p>
+
+          <!--=============== 2026 MONTH GRID (built by JS) ===============-->
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" id="nl-2026-grid"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer" class="bg-black">
+    <div class="container1">
+      <ul class="icons">
+        <li>
+          <a href="#" class="icon fa-twitter" style="color: rgb(51, 183, 235);text-decoration: none;"><span
+              class="label">Twitter</span></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mce.startup.club" class="icon fa-facebook"
+            style="color: rgb(43, 43, 247);text-decoration: none;"><span class="label">Facebook</span></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/me_riise/" class="icon fa-instagram"
+            style="color: rgb(250, 43, 112);;text-decoration:none"><span class="label">Instagram</span></a>
+        </li>
+        <li>
+          <a href="mailto:meriisehsn@gmail.com" class="icon fa-envelope"
+            style="color: rgb(228, 54, 11);text-decoration:none"><span class="label">Email</span></a>
+        </li>
+
+        <li>
+          <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A72704849&keywords=me-riise%20foundation&origin=RICH_QUERY_SUGGESTION&position=0&searchId=a2da3c5d-f488-492f-9f3b-da0bce4973ef&sid=w7m&spellCorrectionEnabled=false   "
+            class="icon fa-linkedin" style="color: rgb(255, 255, 255);text-decoration:none"><span
+              class="label">Linkedin</span></a>
+        </li>
+
+      </ul>
+
+    </div>
+    <div class="copyright">&copy; ME-RIISE FOUNDATION. All rights reserved.</div>
+    <div class="lg:grid grid-cols-3 cursor-pointer">
+      <div>
+        <p class="text-white text-left text-2xl font-bold m-10">Contact Us Through</p>
+        <p class="text-white text-left m-10"><a href="meriise.org">Dr Geetha Kiran A | CEO</a></p>
+        <p class="text-white text-left m-10"><a href="ceomeriise@mcehassan.ac.in">Email Us on :
+            ceomeriise@mcehassan.ac.in</a></p>
+        <p class="text-white text-left m-10"><a href="https://www.instagram.com/me_riise/">Follow Us on
+            Instagram</a></p>
+      </div>
+      <div>
+        <p class="text-white text-left text-2xl m-10 font-bold">Quick Links</p>
+        <p class="text-white text-left m-10"><a href="infrastructure.html">Our Infrastructure</a></p>
+        <p class="text-white text-left m-10"><a href="uba.html">UBA Visit</a></p>
+        <p class="text-white text-left m-10"><a href="startups.html">Start Ups</a></p>
+      </div>
+
+
+      <div>
+        <p class="text-white text-left text-2xl m-10 font-bold">Location:</p>
+
+        <p class="text-white text-left m-10">About ME-RIISE Foundation</p>
+        <p class="text-white text-left m-10"><span class="font-bold">Address : <br></span>24F3+69J, Rangoli
+          Halla,
+          Malnad College of Engg. , Hassan, Karnataka 573201</p>
+
+      </div>
+
+
+    </div>
+
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/skel.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/NavbarCode/assets/js/main.js"></script>
+
+  <!--=============== 2026 NEWSLETTER GRID ===============-->
+  <script>
+    /*
+     * 2026 monthly newsletters, starting from April.
+     * To publish a month: drop its PDF at the listed path and set available:true.
+     */
+    var MONTHS_2026 = [
+      { name: 'April',     file: 'assets/newsletter/2026/april.pdf',     available: true },
+      { name: 'May',       file: 'assets/newsletter/2026/may.pdf',       available: true },
+      { name: 'June',      file: 'assets/newsletter/2026/june.pdf',      available: true },
+      { name: 'July',      file: 'assets/newsletter/2026/july.pdf',      available: false },
+      { name: 'August',    file: 'assets/newsletter/2026/august.pdf',    available: false },
+      { name: 'September', file: 'assets/newsletter/2026/september.pdf', available: false },
+      { name: 'October',   file: 'assets/newsletter/2026/october.pdf',   available: false },
+      { name: 'November',  file: 'assets/newsletter/2026/november.pdf',  available: false },
+      { name: 'December',  file: 'assets/newsletter/2026/december.pdf',  available: false }
+    ];
+
+    (function () {
+      var grid = document.getElementById('nl-2026-grid');
+      if (!grid) return;
+
+      var latestAvailable = -1;
+      MONTHS_2026.forEach(function (m, i) { if (m.available) latestAvailable = i; });
+
+      MONTHS_2026.forEach(function (m, i) {
+        var card = document.createElement(m.available ? 'a' : 'div');
+        card.className = 'nl-card reveal ' + (m.available ? 'available' : 'soon');
+        card.style.transitionDelay = (i * 0.08) + 's';
+
+        if (m.available) {
+          card.href = m.file;
+          card.target = '_blank';
+        }
+
+        var badge = (i === latestAvailable)
+          ? '<span class="nl-badge">Latest</span>' : '';
+
+        card.innerHTML =
+          badge +
+          '<i class="ri-file-pdf-2-line nl-card-icon"></i>' +
+          '<div class="nl-card-month">' + m.name + ' 2026</div>' +
+          '<div class="nl-card-note">' +
+          (m.available ? 'Open newsletter (PDF)' : 'Coming soon') +
+          '</div>';
+
+        grid.appendChild(card);
+      });
+    })();
+  </script>
+
+  <!--=============== SCROLL-REVEAL ANIMATIONS ===============-->
+  <script>
+    (function () {
+      var items = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        items.forEach(function (el) { el.classList.add('in-view'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      items.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+
+  <!--=============== FEATURED CAROUSEL LOGIC ===============-->
+  <script>
+    /*
+     * Featured newsletters shown in the auto-sliding carousel at the top.
+     * To add a new featured issue: copy one line below and edit it.
+     *   file = where the PDF lives (drop your PDF at exactly this path).
+     *   The newest issue should be FIRST so it shows on load.
+     */
+    var FEATURED = [
+      {
+        eyebrow: 'Latest Issue',
+        title: 'June 2026',
+        sub: 'ME-RIISE Foundation Monthly Newsletter',
+        file: 'assets/newsletter/2026/june.pdf',
+        gradient: 'linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%)'
+      },
+      {
+        eyebrow: 'Issue',
+        title: 'May 2026',
+        sub: 'ME-RIISE Foundation Monthly Newsletter',
+        file: 'assets/newsletter/2026/may.pdf',
+        gradient: 'linear-gradient(135deg, #ec4899 0%, #be185d 100%)'
+      },
+      {
+        eyebrow: 'Issue',
+        title: 'April 2026',
+        sub: 'ME-RIISE Foundation Monthly Newsletter',
+        file: 'assets/newsletter/2026/april.pdf',
+        gradient: 'linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%)'
+      }
+    ];
+
+    (function () {
+      var track = document.getElementById('nl-track');
+      var dotsBox = document.getElementById('nl-dots');
+      var prev = document.getElementById('nl-prev');
+      var next = document.getElementById('nl-next');
+      var carousel = document.getElementById('nl-carousel');
+      if (!track) return;
+
+      // Build slides + dots from the FEATURED data.
+      FEATURED.forEach(function (item, i) {
+        var slide = document.createElement('a');
+        slide.className = 'nl-slide';
+        slide.href = item.file;
+        slide.target = '_blank';
+        slide.style.background = item.gradient;
+        slide.innerHTML =
+          '<span class="nl-eyebrow">' + item.eyebrow + '</span>' +
+          '<span class="nl-title">' + item.title + '</span>' +
+          '<span class="nl-sub">' + item.sub + '</span>' +
+          '<span class="nl-cta"><i class="ri-file-pdf-2-line"></i> Read newsletter &rarr;</span>';
+        track.appendChild(slide);
+
+        var dot = document.createElement('button');
+        dot.className = 'nl-dot' + (i === 0 ? ' is-active' : '');
+        dot.setAttribute('aria-label', 'Go to ' + item.title);
+        dot.addEventListener('click', function (e) {
+          e.preventDefault();
+          goTo(i);
+        });
+        dotsBox.appendChild(dot);
+      });
+
+      var count = FEATURED.length;
+      var index = 0;
+      var timer = null;
+
+      function render() {
+        track.style.transform = 'translateX(' + (-index * 100) + '%)';
+        var dots = dotsBox.querySelectorAll('.nl-dot');
+        dots.forEach(function (d, i) {
+          d.classList.toggle('is-active', i === index);
+        });
+      }
+
+      function goTo(i) {
+        index = (i + count) % count;
+        render();
+      }
+
+      function start() {
+        if (count <= 1) return;
+        stop();
+        timer = setInterval(function () { goTo(index + 1); }, 4500);
+      }
+
+      function stop() {
+        if (timer) { clearInterval(timer); timer = null; }
+      }
+
+      // Single slide: no arrows, dots, or autoplay needed.
+      if (count <= 1) {
+        prev.style.display = 'none';
+        next.style.display = 'none';
+        dotsBox.style.display = 'none';
+        return;
+      }
+
+      prev.addEventListener('click', function () { goTo(index - 1); start(); });
+      next.addEventListener('click', function () { goTo(index + 1); start(); });
+
+      // Pause auto-slide while the user is hovering the carousel.
+      carousel.addEventListener('mouseenter', stop);
+      carousel.addEventListener('mouseleave', start);
+
+      render();
+      start();
+    })();
+  </script>
+</body>
+
+</html>

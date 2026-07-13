@@ -156,6 +156,9 @@ a {
     overflow: auto;
     pointer-events: none;
     opacity: 0;
+    /* Opaque background so an open menu never lets page content (e.g. the
+       rolling banner) show through behind the nav links. */
+    background-color: #ffffff;
     transition: top .4s, opacity .3s;
   }
 
@@ -175,10 +178,11 @@ a {
 .nav__link {
   color: var(--white-color);
   /* background-color: var(--black-color); */
-  background-color: white;
+  /* background-color: white; */
   color: black;
   font-weight: var(--font-semi-bold);
   padding: 1.25rem 1.25rem;
+  white-space: nowrap;
 
   display: flex;
   justify-content: space-between;
@@ -255,15 +259,15 @@ a {
   transition: max-height .4s ease-out;
 }
 
-/* Show dropdown menu & submenu */
-.dropdown__item:hover .dropdown__menu,
-.dropdown__subitem:hover>.dropdown__submenu {
+/* Show dropdown menu & submenu (open on click) */
+.dropdown__item.dropdown-open > .dropdown__menu,
+.dropdown__subitem.dropdown-open > .dropdown__submenu {
   max-height: 1000px;
   transition: max-height .4s ease-in;
 }
 
 /* Rotate dropdown icon */
-.dropdown__item:hover .dropdown__arrow {
+.dropdown__item.dropdown-open .dropdown__arrow {
   transform: rotate(180deg);
 }
 
@@ -295,8 +299,9 @@ a {
   }
 
   .nav {
-    height: calc(var(--header-height) + 2rem);
+    height: calc(var(--header-height) + 1rem);
     display: flex;
+    align-items: center;
     justify-content: space-around;
     margin-left: 50px;
   }
@@ -333,7 +338,7 @@ a {
     overflow: initial;
     position: absolute;
     left: 0;
-    top: 6rem;
+    top: 5rem;
     opacity: 0;
     pointer-events: none;
     transition: opacity .3s, top .3s;
@@ -354,16 +359,16 @@ a {
     top: .5rem;
   }
 
-  /* Show dropdown menu */
-  .dropdown__item:hover .dropdown__menu {
+  /* Show dropdown menu (open on click) */
+  .dropdown__item.dropdown-open > .dropdown__menu {
     opacity: 1;
-    top: 5.5rem;
+    top: 4.5rem;
     pointer-events: initial;
     transition: top .3s;
   }
 
-  /* Show dropdown submenu */
-  .dropdown__subitem:hover>.dropdown__submenu {
+  /* Show dropdown submenu (open on click) */
+  .dropdown__subitem.dropdown-open > .dropdown__submenu {
     opacity: 1;
     top: 0;
     pointer-events: initial;

@@ -69,7 +69,8 @@
         });
     }
 
-    var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+    // Reveal talk cards as they scroll into view.
+    var cards = Array.prototype.slice.call(document.querySelectorAll('.talk-card'));
     if ('IntersectionObserver' in window && cards.length) {
         var observer = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
@@ -92,37 +93,80 @@
         });
     }
 
-    var themeToggle = document.getElementById('theme-toggle');
-    var themeStorageKey = 'preferredTheme';
-
-    function applyTheme(theme) {
-        var isDark = theme === 'dark';
-        document.documentElement.classList.toggle('theme-dark', isDark);
-        if (!themeToggle) return;
-        themeToggle.setAttribute('aria-pressed', String(isDark));
-        themeToggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
-        themeToggle.textContent = isDark ? 'Light' : 'Dark';
+    // Add a subtle shadow to the sticky header once the page scrolls.
+    var header = document.getElementById('site-header');
+    if (header) {
+        var onScroll = function () {
+            header.classList.toggle('is-scrolled', window.scrollY > 8);
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
     }
 
-    function getSavedTheme() {
-        return localStorage.getItem(themeStorageKey);
-    }
+    // Mobile full-screen nav overlay
+    var navToggle = document.querySelector('[data-nav-toggle]');
+    var navMenu = document.getElementById('primary-nav');
 
-    function getPreferredTheme() {
-        var saved = getSavedTheme();
-        if (saved === 'light' || saved === 'dark') {
-            return saved;
-        }
-        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
+    if (navToggle && navMenu) {
+        var openNav = function () {
+            navMenu.classList.add('is-open');
+            navToggle.setAttribute('aria-expanded', 'true');
+            document.body.style.overflow = 'hidden';
+            var firstLink = navMenu.querySelector('a, button');
+            if (firstLink) firstLink.focus();
+        };
 
-    applyTheme(getPreferredTheme());
+        var closeNav = function () {
+            navMenu.classList.remove('is-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        };
 
-    if (themeToggle) {
-        themeToggle.addEventListener('click', function () {
-            var newTheme = document.documentElement.classList.contains('theme-dark') ? 'light' : 'dark';
-            localStorage.setItem(themeStorageKey, newTheme);
-            applyTheme(newTheme);
+        navToggle.addEventListener('click', openNav);
+
+        navMenu.addEventListener('click', function (event) {
+            if (event.target.closest('[data-nav-close]')) {
+                closeNav();
+                if (navToggle.getAttribute('aria-expanded') === 'false') {
+                    navToggle.focus();
+                }
+            }
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' && navMenu.classList.contains('is-open')) {
+                closeNav();
+                navToggle.focus();
+            }
         });
     }
+
+    // Wire a video cover to reveal/autoplay its embedded iframe
+    function setupVideoCover(coverId, iframeId) {
+        var videoCover = document.getElementById(coverId);
+        var videoIframe = document.getElementById(iframeId);
+        if (!videoCover || !videoIframe) return;
+
+        var playVideo = function (event) {
+            // Support both click and keyboard (Enter/Space)
+            if (event.type === 'keydown' && event.key !== 'Enter' && event.key !== ' ') {
+                return;
+            }
+            event.preventDefault();
+
+            var src = videoIframe.src;
+            // Only add autoplay if not already present
+            if (src.indexOf('autoplay=1') === -1) {
+                videoIframe.src = src + (src.indexOf('?') > -1 ? '&' : '?') + 'autoplay=1';
+            }
+            // Hide the cover to reveal the iframe
+            videoCover.style.display = 'none';
+        };
+
+        videoCover.addEventListener('click', playVideo);
+        videoCover.addEventListener('keydown', playVideo);
+    }
+
+    setupVideoCover('latest-video-cover', 'latest-video-iframe');
+    setupVideoCover('featured-video-cover', 'featured-video-iframe');
 })();
