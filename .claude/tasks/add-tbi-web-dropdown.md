@@ -49,6 +49,19 @@ point somewhere else (e.g. the new React app once it's hosted), tell me the URL.
 - Changing the "About TBI" item or any other nav entry.
 
 ## Status
-- [ ] Awaiting plan approval
-- [ ] Implement insertion across 25 files
-- [ ] Verify counts + spot-check
+- [x] Plan approved (user: link -> https://www.meriise.org/tbi.html, final)
+- [x] Implemented insertion across 25 files
+- [x] Verify counts + spot-check
+
+## Implementation notes (done)
+- Added a new `<li>` "TBI Web" immediately after the "About TBI" item in the
+  TBI-MCE dropdown of all 25 nav files.
+- Used the **absolute** href the user confirmed: `https://www.meriise.org/tbi.html`.
+- Inserted via a single perl slurp-mode pass anchored on the About-TBI `<li>`,
+  capturing each file's leading indent so the new item aligns. CRLF preserved
+  (verified 0 lone-LF; the two single-line files Krishimanthan/notifications got a
+  correctly-indented multi-line `<li>`).
+- Verification: each file has exactly one new item (25/25); `git diff --stat` shows
+  25 files changed, 125 insertions(+), 0 deletions.
+- The static-site deploy (`.cpanel.yml`) copies top-level files, so all 25 edited
+  root files are covered on push.
