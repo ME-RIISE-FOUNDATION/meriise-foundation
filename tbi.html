@@ -248,7 +248,7 @@
       }
       .program-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .event-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .team-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .team-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .portfolio-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
       .program-card, .portfolio-card, .event-card, .team-card {
@@ -271,28 +271,39 @@
         font-size: 2rem;
         margin-bottom: 18px;
       }
-      .team-avatar {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        margin: 0 auto 16px;
-        display: grid;
-        place-items: center;
-        color: white;
-        font-weight: 800;
-        font-size: 2rem;
+      /* Team member cards — large photo on top, name + role below */
+      .team-card { padding: 16px 16px 26px; text-align: center; }
+      .team-photo-wrap {
         position: relative;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 16px;
         overflow: hidden;
+        background: #dbe2ea;
+        margin-bottom: 18px;
       }
-      /* Photo overlay — sits on top of the initials when a photo is provided */
-      .team-avatar .team-photo {
+      /* Silhouette placeholder shown when no photo is set */
+      .team-fallback {
+        position: absolute;
+        left: 50%;
+        bottom: -6%;
+        transform: translateX(-50%);
+        width: 74%;
+        height: 92%;
+        color: #94a3b8;
+      }
+      /* Real photo — covers the placeholder when the image loads */
+      .team-photo-wrap .team-photo {
         position: absolute;
         inset: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: inherit;
+        transition: transform .45s cubic-bezier(.2,.7,.2,1);
       }
+      .team-card:hover .team-photo { transform: scale(1.05); }
+      .team-card h3 { margin: 0 0 4px; font-size: 1.15rem; }
+      .team-card p { margin: 0; color: var(--primary); font-weight: 700; }
       .team-socials { display: flex; justify-content: center; gap: 10px; margin-top: 10px; }
       .mini-icon {
         width: 38px;
@@ -857,80 +868,79 @@
           </div>
 
           <!--
-            ┌─────────────────────────────────────────────────────────────────────────┐
-            │  HOW TO ADD A TEAM PHOTO                                                   │
-            │  Every person below has:  <img class="team-photo" src="team_imgs/....jpg"> │
-            │                                                                           │
-            │  Option A (easiest): drop a square photo into the "team_imgs" folder      │
-            │           using the exact filename already written in that person's src.  │
-            │  Option B: replace the src="..." value with any photo link — a web URL    │
-            │           (e.g. src="https://.../photo.jpg") or any file path.            │
-            │                                                                           │
-            │  No photo yet? The coloured initials show automatically. Photos look      │
-            │  best square (e.g. 400×400).                                              │
-            └─────────────────────────────────────────────────────────────────────────┘
+            ┌──────────────────────────────────────────────────────────────────────────────┐
+            │  HOW TO ADD A TEAM PHOTO                                                        │
+            │  Each person has:  <img class="team-photo" src="team_imgs/Tbi_employes/X.jpeg"> │
+            │                                                                                │
+            │  Option A (easiest): drop the photo into the "team_imgs/Tbi_employes" folder   │
+            │           using the exact filename shown in that person's src (e.g. Megha.jpeg)│
+            │  Option B: replace the src="..." value with any photo link (web URL or path).  │
+            │                                                                                │
+            │  No photo yet? A grey silhouette placeholder shows automatically.              │
+            │  Photos look best square (e.g. 500×500) — portrait shots are auto-cropped.     │
+            └──────────────────────────────────────────────────────────────────────────────┘
           -->
           <div class="team-grid stagger">
             <article class="team-card">
-              <div class="team-avatar bg-blue">
-                <img class="team-photo" src="team_imgs/geetha-kiran.jpg" alt="Dr. Geetha Kiran A" onerror="this.remove()" />
-                <span>GK</span>
+              <div class="team-photo-wrap">
+                <svg class="team-fallback" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8.4" r="4.2"/><path d="M4 22.5c0-4.4 3.6-7.8 8-7.8s8 3.4 8 7.8z"/></svg>
+                <img class="team-photo" src="team_imgs/Tbi_employes/Geetha.jpeg" alt="Dr. Geetha Kiran A" onerror="this.remove()" />
               </div>
               <h3>Dr. Geetha Kiran A</h3>
               <p>CEO</p>
             </article>
             <article class="team-card">
-              <div class="team-avatar bg-cyan">
-                <img class="team-photo" src="team_imgs/mohana-lakshmi.jpg" alt="Dr. Mohana Lakshmi J" onerror="this.remove()" />
-                <span>MJ</span>
+              <div class="team-photo-wrap">
+                <svg class="team-fallback" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8.4" r="4.2"/><path d="M4 22.5c0-4.4 3.6-7.8 8-7.8s8 3.4 8 7.8z"/></svg>
+                <img class="team-photo" src="team_imgs/Tbi_employes/Mohana.jpeg" alt="Dr. Mohana Lakshmi J" onerror="this.remove()" />
               </div>
               <h3>Dr. Mohana Lakshmi J</h3>
               <p>COO</p>
             </article>
             <article class="team-card">
-              <div class="team-avatar bg-pink">
-                <img class="team-photo" src="team_imgs/stapley-vs.jpg" alt="Stapley V S" onerror="this.remove()" />
-                <span>SV</span>
+              <div class="team-photo-wrap">
+                <svg class="team-fallback" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8.4" r="4.2"/><path d="M4 22.5c0-4.4 3.6-7.8 8-7.8s8 3.4 8 7.8z"/></svg>
+                <img class="team-photo" src="team_imgs/Tbi_employes/Stapley.jpeg" alt="Stapley V S" onerror="this.remove()" />
               </div>
               <h3>Stapley V S</h3>
               <p>TBI Manager</p>
             </article>
             <article class="team-card">
-              <div class="team-avatar bg-green">
-                <img class="team-photo" src="team_imgs/megha-hm.jpg" alt="Megha H M" onerror="this.remove()" />
-                <span>MH</span>
+              <div class="team-photo-wrap">
+                <svg class="team-fallback" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8.4" r="4.2"/><path d="M4 22.5c0-4.4 3.6-7.8 8-7.8s8 3.4 8 7.8z"/></svg>
+                <img class="team-photo" src="team_imgs/Tbi_employes/Megha.jpeg" alt="Megha H M" onerror="this.remove()" />
               </div>
               <h3>Megha H M</h3>
               <p>Programme Associate/Outreach Officer</p>
             </article>
             <article class="team-card">
-              <div class="team-avatar bg-purple">
+              <div class="team-photo-wrap">
+                <svg class="team-fallback" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8.4" r="4.2"/><path d="M4 22.5c0-4.4 3.6-7.8 8-7.8s8 3.4 8 7.8z"/></svg>
                 <img class="team-photo" src="team_imgs/Tbi_employes/Darshan.jpeg" alt="Mr Darshan H D" onerror="this.remove()" />
-                <span>DH</span>
               </div>
               <h3>Mr Darshan H D</h3>
               <p>Software Associate</p>
             </article>
             <article class="team-card">
-              <div class="team-avatar bg-orange">
-                <img class="team-photo" src="team_imgs/madhurya.jpg" alt="Ms Madhurya" onerror="this.remove()" />
-                <span>M</span>
+              <div class="team-photo-wrap">
+                <svg class="team-fallback" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8.4" r="4.2"/><path d="M4 22.5c0-4.4 3.6-7.8 8-7.8s8 3.4 8 7.8z"/></svg>
+                <img class="team-photo" src="team_imgs/Tbi_employes/Madhurya.jpeg" alt="Ms Madhurya" onerror="this.remove()" />
               </div>
               <h3>Ms Madhurya</h3>
               <p>Innovation Associate</p>
             </article>
             <article class="team-card">
-              <div class="team-avatar bg-pink">
-                <img class="team-photo" src="team_imgs/ramya.jpg" alt="Miss Ramya" onerror="this.remove()" />
-                <span>R</span>
+              <div class="team-photo-wrap">
+                <svg class="team-fallback" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8.4" r="4.2"/><path d="M4 22.5c0-4.4 3.6-7.8 8-7.8s8 3.4 8 7.8z"/></svg>
+                <img class="team-photo" src="team_imgs/Tbi_employes/Ramya.jpeg" alt="Miss Ramya" onerror="this.remove()" />
               </div>
               <h3>Miss Ramya</h3>
               <p>Finance Associate</p>
             </article>
             <article class="team-card">
-              <div class="team-avatar bg-cyan">
-                <img class="team-photo" src="team_imgs/deeksha.jpg" alt="Ms Deeksha" onerror="this.remove()" />
-                <span>D</span>
+              <div class="team-photo-wrap">
+                <svg class="team-fallback" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8.4" r="4.2"/><path d="M4 22.5c0-4.4 3.6-7.8 8-7.8s8 3.4 8 7.8z"/></svg>
+                <img class="team-photo" src="team_imgs/Tbi_employes/Deeksha.jpeg" alt="Ms Deeksha" onerror="this.remove()" />
               </div>
               <h3>Ms Deeksha</h3>
               <p>Supporting Staff</p>
