@@ -281,6 +281,17 @@
         color: white;
         font-weight: 800;
         font-size: 2rem;
+        position: relative;
+        overflow: hidden;
+      }
+      /* Photo overlay — sits on top of the initials when a photo is provided */
+      .team-avatar .team-photo {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
       }
       .team-socials { display: flex; justify-content: center; gap: 10px; margin-top: 10px; }
       .mini-icon {
@@ -845,44 +856,82 @@
             <p class="subtext">Passionate professionals dedicated to nurturing your startup journey.</p>
           </div>
 
+          <!--
+            ┌─────────────────────────────────────────────────────────────────────────┐
+            │  HOW TO ADD A TEAM PHOTO                                                   │
+            │  Every person below has:  <img class="team-photo" src="team_imgs/....jpg"> │
+            │                                                                           │
+            │  Option A (easiest): drop a square photo into the "team_imgs" folder      │
+            │           using the exact filename already written in that person's src.  │
+            │  Option B: replace the src="..." value with any photo link — a web URL    │
+            │           (e.g. src="https://.../photo.jpg") or any file path.            │
+            │                                                                           │
+            │  No photo yet? The coloured initials show automatically. Photos look      │
+            │  best square (e.g. 400×400).                                              │
+            └─────────────────────────────────────────────────────────────────────────┘
+          -->
           <div class="team-grid stagger">
             <article class="team-card">
-              <div class="team-avatar bg-blue">GK</div>
+              <div class="team-avatar bg-blue">
+                <img class="team-photo" src="team_imgs/geetha-kiran.jpg" alt="Dr. Geetha Kiran A" onerror="this.remove()" />
+                <span>GK</span>
+              </div>
               <h3>Dr. Geetha Kiran A</h3>
               <p>CEO</p>
             </article>
             <article class="team-card">
-              <div class="team-avatar bg-cyan">MJ</div>
+              <div class="team-avatar bg-cyan">
+                <img class="team-photo" src="team_imgs/mohana-lakshmi.jpg" alt="Dr. Mohana Lakshmi J" onerror="this.remove()" />
+                <span>MJ</span>
+              </div>
               <h3>Dr. Mohana Lakshmi J</h3>
               <p>COO</p>
             </article>
             <article class="team-card">
-              <div class="team-avatar bg-pink">SV</div>
+              <div class="team-avatar bg-pink">
+                <img class="team-photo" src="team_imgs/stapley-vs.jpg" alt="Stapley V S" onerror="this.remove()" />
+                <span>SV</span>
+              </div>
               <h3>Stapley V S</h3>
               <p>TBI Manager</p>
             </article>
             <article class="team-card">
-              <div class="team-avatar bg-pink">MH</div>
+              <div class="team-avatar bg-green">
+                <img class="team-photo" src="team_imgs/megha-hm.jpg" alt="Megha H M" onerror="this.remove()" />
+                <span>MH</span>
+              </div>
               <h3>Megha H M</h3>
               <p>Programme Associate/Outreach Officer</p>
             </article>
             <article class="team-card">
-              <div class="team-avatar bg-pink">DH</div>
+              <div class="team-avatar bg-purple">
+                <img class="team-photo" src="team_imgs/Tbi_employes/Darshan.jpeg" alt="Mr Darshan H D" onerror="this.remove()" />
+                <span>DH</span>
+              </div>
               <h3>Mr Darshan H D</h3>
               <p>Software Associate</p>
             </article>
             <article class="team-card">
-              <div class="team-avatar bg-purple">M</div>
+              <div class="team-avatar bg-orange">
+                <img class="team-photo" src="team_imgs/madhurya.jpg" alt="Ms Madhurya" onerror="this.remove()" />
+                <span>M</span>
+              </div>
               <h3>Ms Madhurya</h3>
               <p>Innovation Associate</p>
             </article>
             <article class="team-card">
-              <div class="team-avatar bg-pink">R</div>
+              <div class="team-avatar bg-pink">
+                <img class="team-photo" src="team_imgs/ramya.jpg" alt="Miss Ramya" onerror="this.remove()" />
+                <span>R</span>
+              </div>
               <h3>Miss Ramya</h3>
               <p>Finance Associate</p>
             </article>
             <article class="team-card">
-              <div class="team-avatar bg-orange">D</div>
+              <div class="team-avatar bg-cyan">
+                <img class="team-photo" src="team_imgs/deeksha.jpg" alt="Ms Deeksha" onerror="this.remove()" />
+                <span>D</span>
+              </div>
               <h3>Ms Deeksha</h3>
               <p>Supporting Staff</p>
             </article>
