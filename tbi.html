@@ -408,10 +408,173 @@
         .headline { font-size: 2.3rem; }
         .nav-inner { padding: 14px 0; }
       }
+
+      /* ===================== Animations & polish ===================== */
+
+      /* Scroll-reveal utility (toggled by IntersectionObserver) */
+      .reveal {
+        opacity: 0;
+        transform: translateY(26px);
+        transition: opacity 0.7s cubic-bezier(.2,.7,.2,1),
+                    transform 0.7s cubic-bezier(.2,.7,.2,1);
+        transition-delay: calc(var(--i, 0) * 90ms);
+        will-change: opacity, transform;
+      }
+      .reveal.in { opacity: 1; transform: none; }
+
+      /* Floating hero orbs */
+      @keyframes floatOrb {
+        0%, 100% { transform: translate(0, 0); }
+        50% { transform: translate(26px, -32px); }
+      }
+      @keyframes floatOrbAlt {
+        0%, 100% { transform: translate(0, 0); }
+        50% { transform: translate(-30px, 28px); }
+      }
+      @keyframes floatOrbCenter {
+        0%, 100% { transform: translate(-50%, -50%) scale(1); }
+        50% { transform: translate(-50%, -50%) scale(1.08); }
+      }
+      .hero-orb.one { animation: floatOrb 9s ease-in-out infinite; }
+      .hero-orb.two { animation: floatOrbAlt 11s ease-in-out infinite; }
+      .hero-orb.three { animation: floatOrbCenter 12s ease-in-out infinite; }
+
+      /* Shimmering gradient headline text */
+      @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 200% 50%; }
+      }
+      .headline .gradient {
+        background: linear-gradient(90deg, var(--primary), var(--secondary), var(--primary));
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: gradientShift 6s linear infinite;
+      }
+
+      /* Navbar scrolled state + scroll progress bar */
+      .navbar { transition: box-shadow .3s ease, background .3s ease; }
+      .navbar.scrolled {
+        background: rgba(255,255,255,0.92);
+        box-shadow: 0 6px 26px rgba(15,23,42,0.09);
+      }
+      .scroll-progress {
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        height: 3px;
+        width: 0%;
+        background: linear-gradient(90deg, var(--primary), var(--secondary));
+        transition: width .1s linear;
+        z-index: 101;
+      }
+
+      /* Card + tile hover micro-interactions */
+      .stat-card, .card, .program-card, .portfolio-card,
+      .event-card, .team-card, .cta-pill, .impact-card {
+        transition: transform .35s cubic-bezier(.2,.7,.2,1),
+                    box-shadow .35s ease, border-color .35s ease, background .35s ease;
+      }
+      .program-card:hover, .portfolio-card:hover,
+      .event-card:hover, .team-card:hover, .stat-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 28px 62px rgba(37,99,235,0.18);
+        border-color: rgba(37,99,235,0.28);
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 26px 58px rgba(37,99,235,0.15);
+      }
+      .impact-card:hover {
+        transform: translateY(-6px);
+        background: rgba(255,255,255,0.09);
+        border-color: rgba(103,232,249,0.4);
+      }
+      .cta-pill:hover {
+        transform: translateY(-6px);
+        border-color: rgba(103,232,249,0.4);
+      }
+
+      /* Icon / avatar / ring hover accents */
+      .icon-wrap, .team-avatar, .step .ring, .mini-icon {
+        transition: transform .35s cubic-bezier(.2,.7,.2,1);
+      }
+      .program-card:hover .icon-wrap,
+      .portfolio-card:hover .icon-wrap { transform: scale(1.08) rotate(-3deg); }
+      .team-card:hover .team-avatar { transform: scale(1.06); }
+      .step:hover .ring { transform: scale(1.1); }
+
+      /* Buttons: lift + sheen sweep */
+      .btn {
+        position: relative;
+        overflow: hidden;
+        transition: transform .25s ease, box-shadow .25s ease, filter .25s ease, border-color .25s ease;
+      }
+      .btn:hover { transform: translateY(-2px); }
+      .btn-primary:hover { box-shadow: 0 18px 45px rgba(37,99,235,0.45); filter: brightness(1.05); }
+      .btn-light:hover { border-color: var(--primary); }
+      .btn-primary::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -130%;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(120deg, transparent, rgba(255,255,255,0.45), transparent);
+        transform: skewX(-20deg);
+        transition: left .6s ease;
+        pointer-events: none;
+      }
+      .btn-primary:hover::after { left: 150%; }
+
+      /* Roadmap connecting line behind the rings */
+      .roadmap { position: relative; }
+      .roadmap::before {
+        content: '';
+        position: absolute;
+        top: 41px;
+        left: 10%;
+        right: 10%;
+        height: 3px;
+        border-radius: 3px;
+        background: linear-gradient(90deg, #3b82f6, #06b6d4, #8b5cf6, #ec4899, #f97316);
+        z-index: 0;
+      }
+      .step { position: relative; z-index: 1; }
+
+      /* Scroll-to-top: hidden until scrolled */
+      .scroll-top {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(14px) scale(0.9);
+        transition: opacity .3s ease, transform .3s ease, visibility .3s;
+        z-index: 90;
+      }
+      .scroll-top.show { opacity: 1; visibility: visible; transform: none; }
+      .scroll-top.show:hover { transform: translateY(-3px) scale(1.06); }
+
+      @media (max-width: 960px) {
+        .roadmap::before { display: none; }
+      }
+
+      /* Respect reduced-motion preference */
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: 0.001ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.001ms !important;
+          scroll-behavior: auto !important;
+        }
+        .reveal { opacity: 1 !important; transform: none !important; }
+      }
     </style>
+    <noscript>
+      <style>.reveal { opacity: 1 !important; transform: none !important; }</style>
+    </noscript>
   </head>
   <body>
-    <header class="navbar">
+    <header class="navbar" id="navbar">
+      <div class="scroll-progress" id="scrollProgress"></div>
       <div class="container nav-inner">
         <div class="brand">
           <div class="brand-badge">TBI</div>
@@ -443,16 +606,16 @@
         <div class="hero-orb two"></div>
         <div class="hero-orb three"></div>
         <div class="container hero-wrap">
-          <div class="hero-badge">Welcome to Technology Business Incubator - Malnad College of Engineering, Hassan.</div>
-          <h1 class="headline">Empowering Innovation & <span class="gradient">Building Startups</span></h1>
-          <p class="subtext">Supporting early-stage startups with mentorship, funding, infrastructure, and industry connections.</p>
+          <div class="hero-badge reveal" style="--i:0">Welcome to Technology Business Incubator - Malnad College of Engineering, Hassan.</div>
+          <h1 class="headline reveal" style="--i:1">Empowering Innovation & <span class="gradient">Building Startups</span></h1>
+          <p class="subtext reveal" style="--i:2">Supporting early-stage startups with mentorship, funding, infrastructure, and industry connections.</p>
 
-          <div class="hero-actions">
+          <div class="hero-actions reveal" style="--i:3">
             <button class="btn btn-primary">Apply for Incubation</button>
             <button class="btn btn-light">Explore Programs</button>
           </div>
 
-          <div class="stats-grid">
+          <div class="stats-grid stagger">
             <div class="stat-card"><div class="number">5+</div><div class="label">Startups</div></div>
             <div class="stat-card"><div class="number">30+</div><div class="label">Mentors</div></div>
             <div class="stat-card"><div class="number">85%</div><div class="label">Success Rate</div></div>
@@ -463,13 +626,13 @@
 
       <section id="about" class="section">
         <div class="container">
-          <div class="section-title">
+          <div class="section-title reveal">
             <div class="chip">About TBI - MCE</div>
             <h2 class="headline">Transforming Ideas Into <span class="gradient">Successful Ventures</span></h2>
             <p class="subtext">TBI - MCE is a premier technology business incubator managed by ME-RIISE Foundation, supported by KITS Government of Karnataka and Department of Electronics, IT, BT, S & T.</p>
           </div>
 
-          <div class="about-grid">
+          <div class="about-grid stagger">
             <div>
               <div class="card" style="margin-bottom:20px">
                 <div class="icon-wrap bg-blue">🎯</div>
@@ -487,12 +650,12 @@
             </div>
           </div>
 
-          <div class="section-title" style="margin-top:56px">
+          <div class="section-title reveal" style="margin-top:56px">
             <h3 style="font-size:2rem;margin-bottom:6px">Your Journey With Us</h3>
             <p class="subtext">From concept to market leader</p>
           </div>
 
-          <div class="roadmap">
+          <div class="roadmap stagger">
             <div class="step"><div class="ring bg-blue">1</div><div class="label">Idea</div></div>
             <div class="step"><div class="ring bg-cyan">2</div><div class="label">Prototype</div></div>
             <div class="step"><div class="ring bg-purple">3</div><div class="label">Validation</div></div>
@@ -504,13 +667,13 @@
 
       <section id="programs" class="section" style="background:linear-gradient(135deg,#f8fafc,#eff6ff,#ecfeff)">
         <div class="container">
-          <div class="section-title">
+          <div class="section-title reveal">
             <div class="chip">Our Programs</div>
             <h2 class="headline">Comprehensive <span class="gradient">Startup Support</span></h2>
             <p class="subtext">Everything you need to build, launch, and scale your technology startup.</p>
           </div>
 
-          <div class="program-grid">
+          <div class="program-grid stagger">
             <article class="program-card">
               <div class="icon-wrap bg-cyan">💡</div>
               <h3>Pre-Incubation</h3>
@@ -547,20 +710,20 @@
 
       <section id="impact" class="section impact">
         <div class="container">
-          <div class="section-title">
+          <div class="section-title reveal">
             <div class="chip">Our Impact</div>
             <h2 class="headline">Driving Innovation <span class="gradient">With Results</span></h2>
             <p class="subtext">Our numbers tell the story of transformation and success.</p>
           </div>
 
-          <div class="impact-cards">
+          <div class="impact-cards stagger">
             <div class="impact-card"><div class="value">0+</div><div class="label">Startups Incubated</div></div>
             <div class="impact-card"><div class="value">₹10 Cr</div><div class="label">Funds Raised</div></div>
             <div class="impact-card"><div class="value">30+</div><div class="label">Expert Mentors</div></div>
             <div class="impact-card"><div class="value">0+</div><div class="label">Patents & Projects</div></div>
           </div>
 
-          <div class="impact-cards" style="margin-top:22px">
+          <div class="impact-cards stagger" style="margin-top:22px">
             <div class="impact-card"><div class="value">85%</div><div class="label">Success Rate</div></div>
             <div class="impact-card"><div class="value">200+</div><div class="label">Jobs Created</div></div>
             <div class="impact-card"><div class="value">15+</div><div class="label">Industries</div></div>
@@ -571,13 +734,13 @@
 
       <section id="startups" class="section">
         <div class="container">
-          <div class="section-title">
+          <div class="section-title reveal">
             <div class="chip">Our Portfolio</div>
             <h2 class="headline">Startups We've <span class="gradient">Empowered</span></h2>
             <p class="subtext">Innovative companies building the future of technology.</p>
           </div>
 
-          <div class="portfolio-grid">
+          <div class="portfolio-grid stagger">
             <article class="portfolio-card">
               <div class="icon-wrap bg-blue">AI</div>
               <h3>AI Vision Tech</h3>
@@ -620,13 +783,13 @@
 
       <section id="events" class="section" style="background:linear-gradient(135deg,#f8fafc,#eff6ff,#f5f3ff)">
         <div class="container">
-          <div class="section-title">
+          <div class="section-title reveal">
             <div class="chip">Events & Achievements</div>
             <h2 class="headline">Stay Connected <span class="gradient">With Innovation</span></h2>
           </div>
 
-          <h3 style="text-align:center;font-size:2rem;margin-bottom:28px">Upcoming Events</h3>
-          <div class="event-grid">
+          <h3 class="reveal" style="text-align:center;font-size:2rem;margin-bottom:28px">Upcoming Events</h3>
+          <div class="event-grid stagger">
             <article class="event-card">
               <div class="event-visual bg-blue">📅</div>
               <span class="tag">Pitch Event</span>
@@ -653,8 +816,8 @@
             </article>
           </div>
 
-          <h3 id="achievements" style="text-align:center;font-size:2rem;margin:56px 0 28px">Key Achievements</h3>
-          <div class="event-grid">
+          <h3 id="achievements" class="reveal" style="text-align:center;font-size:2rem;margin:56px 0 28px">Key Achievements</h3>
+          <div class="event-grid stagger">
             <article class="event-card">
               <div class="icon-wrap bg-orange">🏆</div>
               <h4>Best Incubator Award 2025</h4>
@@ -676,13 +839,13 @@
 
       <section id="team" class="section">
         <div class="container">
-          <div class="section-title">
+          <div class="section-title reveal">
             <div class="chip">Our Team</div>
             <h2 class="headline">Meet The <span class="gradient">Dream Team</span></h2>
             <p class="subtext">Passionate professionals dedicated to nurturing your startup journey.</p>
           </div>
 
-          <div class="team-grid">
+          <div class="team-grid stagger">
             <article class="team-card">
               <div class="team-avatar bg-blue">GK</div>
               <h3>Dr. Geetha Kiran A</h3>
@@ -719,14 +882,14 @@
 
       <section class="section cta">
         <div class="container">
-          <div class="hero-badge" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.24);color:white">Have an idea?</div>
-          <h2 class="headline" style="color:white">Let's build it together.</h2>
-          <p class="subtext" style="color:#cbd5e1">Join our ecosystem of innovators and transform your vision into a thriving technology startup.</p>
-          <div class="hero-actions">
+          <div class="hero-badge reveal" style="--i:0;background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.24);color:white">Have an idea?</div>
+          <h2 class="headline reveal" style="--i:1;color:white">Let's build it together.</h2>
+          <p class="subtext reveal" style="--i:2;color:#cbd5e1">Join our ecosystem of innovators and transform your vision into a thriving technology startup.</p>
+          <div class="hero-actions reveal" style="--i:3">
             <button class="btn btn-primary">Apply Now</button>
             <button class="btn btn-light">Contact Us</button>
           </div>
-          <div class="cta-pills">
+          <div class="cta-pills stagger">
             <div class="cta-pill"><strong>Free</strong><span>Initial Consultation</span></div>
             <div class="cta-pill"><strong>24/7</strong><span>Support Available</span></div>
             <div class="cta-pill"><strong>100%</strong><span>Commitment</span></div>
@@ -736,13 +899,13 @@
 
       <section id="contact" class="section">
         <div class="container">
-          <div class="section-title">
+          <div class="section-title reveal">
             <div class="chip">Get In Touch</div>
             <h2 class="headline">Let's Start <span class="gradient">The Conversation</span></h2>
             <p class="subtext">Ready to transform your startup idea? Reach out to us today.</p>
           </div>
 
-          <div class="contact-grid">
+          <div class="contact-grid stagger">
             <div class="contact-card">
               <h3>Contact Information</h3>
               <div class="contact-item">
@@ -787,7 +950,7 @@
     </main>
 
     <footer class="footer">
-      <div class="container footer-grid">
+      <div class="container footer-grid stagger">
         <div>
           <div class="brand" style="margin-bottom:20px">
             <div class="brand-badge">TBI</div>
@@ -831,6 +994,9 @@
     <button class="scroll-top" id="scrollTop" title="Back to top">↑</button>
 
     <script>
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* ----- Mobile nav ----- */
       const menuToggle = document.getElementById('menuToggle');
       const navLinks = document.getElementById('navLinks');
       menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
@@ -838,7 +1004,79 @@
         link.addEventListener('click', () => navLinks.classList.remove('open'));
       });
 
+      /* ----- Auto-stagger grid children, then reveal on scroll ----- */
+      document.querySelectorAll('.stagger').forEach((group) => {
+        Array.from(group.children).forEach((child, i) => {
+          child.classList.add('reveal');
+          child.style.setProperty('--i', Math.min(i, 6));
+        });
+      });
+
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+      document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+
+      /* ----- Count-up animation for stat / impact numbers ----- */
+      const animateCount = (el) => {
+        const text = el.textContent.trim();
+        const match = text.match(/([0-9]+(?:\.[0-9]+)?)/);
+        if (!match) return;
+        const raw = match[1];
+        const target = parseFloat(raw);
+        const prefix = text.slice(0, match.index);
+        const suffix = text.slice(match.index + raw.length);
+        const isFloat = raw.includes('.');
+        const duration = 1600;
+        const start = performance.now();
+        const step = (now) => {
+          const p = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
+          const val = target * eased;
+          el.textContent = prefix + (isFloat ? val.toFixed(1) : Math.round(val)) + suffix;
+          if (p < 1) requestAnimationFrame(step);
+          else el.textContent = prefix + raw + suffix;
+        };
+        requestAnimationFrame(step);
+      };
+
+      const countObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (!reduceMotion) animateCount(entry.target);
+            countObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      document.querySelectorAll('.stat-card .number, .impact-card .value').forEach((el) => {
+        if (el.textContent.includes('/')) return; // skip values like "24/7"
+        countObserver.observe(el);
+      });
+
+      /* ----- Navbar state, scroll progress bar, scroll-to-top ----- */
+      const navbar = document.getElementById('navbar');
+      const progressBar = document.getElementById('scrollProgress');
       const scrollTopBtn = document.getElementById('scrollTop');
+
+      const onScroll = () => {
+        const y = window.scrollY;
+        navbar.classList.toggle('scrolled', y > 20);
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        progressBar.style.width = (docHeight > 0 ? (y / docHeight) * 100 : 0) + '%';
+        scrollTopBtn.classList.toggle('show', y > 400);
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
       scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     </script>
+  </body>
+</html>
   
