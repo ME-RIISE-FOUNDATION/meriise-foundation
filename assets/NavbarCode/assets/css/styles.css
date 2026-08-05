@@ -424,3 +424,34 @@ a {
 .nav__list {
     gap: 1rem; /* Add spacing between items */
 }
+
+/* === NAV ALIGNMENT FIX: center menu, symmetric side gutters, no cut-off === */
+.containerofNavbar {
+  padding-inline: 1.5rem;      /* neat, even gutters at the side edges */
+}
+@media screen and (min-width: 1118px) {
+  .nav {
+    margin-inline: auto;       /* keep the nav box centered (was margin-left:50px) */
+    justify-content: center;   /* was space-around */
+  }
+  /* Empty hamburger wrapper is hidden on desktop; drop it so it can't offset
+     the menu and the links center perfectly. */
+  .nav__data {
+    display: none;
+  }
+  .nav__menu {
+    flex: 1;                   /* menu fills the row... */
+    justify-content: center;   /* ...and centers the links within it */
+  }
+  .nav__list {
+    flex-wrap: nowrap;         /* keep links on one line */
+    justify-content: center;
+    column-gap: clamp(0.75rem, 1.4vw, 1.25rem);
+    gap: clamp(0.75rem, 1.4vw, 1.25rem);
+  }
+  /* Compact links so all items fit on one line inside the 1200px container
+     (overrides the global .nav__link padding that was overflowing the row). */
+  .nav__link {
+    padding: 0.5rem 0.75rem;
+  }
+}
