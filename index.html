@@ -3809,6 +3809,20 @@
             </div>
         </div> -->
 
+        <!-- Promo Overlay: Bridging Generations 2.0 - Guruprasad S (22 Aug 2026) -->
+        <div id="promo-overlay" class="promo-overlay">
+            <div id="bg2-card" class="bg2-popup__card">
+                <button class="bg2-popup__close" type="button" aria-label="Close popup" onclick="closeBg2Popup()">&times;</button>
+                <h2 id="bg2-popup-title" class="bg2-popup__title">Bridging Generations 2.0</h2>
+                <a href="bridging-generations/index.html" class="bg2-popup__poster" aria-label="Open Bridging Generations 2.0">
+                    <img src="popup_assets/guruprasad.jpeg" alt="Bridging Generations 2.0 - Guruprasad S poster" loading="lazy">
+                </a>
+                <div class="bg2-popup__buttons">
+                    <a href="bridging-generations/index.html" class="bg2-popup__cta bg2-popup__cta--secondary">Know More</a>
+                </div>
+            </div>
+        </div>
+
         <style>
             .promo-overlay {
                 position: fixed;
@@ -3873,6 +3887,8 @@
                 padding: 18px;
                 max-width: 320px;
                 width: 100%;
+                max-height: 92vh;
+                overflow-y: auto;
                 flex-shrink: 0;
                 text-align: center;
                 position: relative;
@@ -4183,11 +4199,15 @@
 
         <script>
             function hideCard(cardId) {
-                document.getElementById(cardId).classList.add('hidden');
-                const amHidden = document.getElementById('am-card').classList.contains('hidden');
-                const bgHidden = document.getElementById('bg2-card').classList.contains('hidden');
-                if (amHidden && bgHidden) {
-                    document.getElementById('promo-overlay').classList.add('hidden');
+                const card = document.getElementById(cardId);
+                if (card) card.classList.add('hidden');
+                const amCard = document.getElementById('am-card');
+                const bgCard = document.getElementById('bg2-card');
+                const amHidden = !amCard || amCard.classList.contains('hidden');
+                const bgHidden = !bgCard || bgCard.classList.contains('hidden');
+                const overlay = document.getElementById('promo-overlay');
+                if (amHidden && bgHidden && overlay) {
+                    overlay.classList.add('hidden');
                 }
             }
 
@@ -4199,11 +4219,14 @@
                 hideCard('bg2-card');
             }
 
-            document.getElementById('promo-overlay').addEventListener('click', function (e) {
-                if (e.target === this) {
-                    this.classList.add('hidden');
-                }
-            });
+            const promoOverlay = document.getElementById('promo-overlay');
+            if (promoOverlay) {
+                promoOverlay.addEventListener('click', function (e) {
+                    if (e.target === this) {
+                        this.classList.add('hidden');
+                    }
+                });
+            }
         </script>
 
         <!-- Bridging Generations Modal -->
