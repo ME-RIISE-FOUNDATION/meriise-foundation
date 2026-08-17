@@ -407,6 +407,14 @@ a {
     overflow: hidden;
 }
 
+/* Vertical (9:16) source, e.g. a YouTube Short. Capped so it doesn't tower
+   over the rest of the hero. */
+.media-frame--vertical {
+    padding-bottom: 177.78%;
+    max-width: 360px;
+    margin-inline: auto;
+}
+
 .media-frame > iframe,
 .media-frame > img {
     position: absolute;

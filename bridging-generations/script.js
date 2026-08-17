@@ -169,4 +169,6 @@
 
     setupVideoCover('latest-video-cover', 'latest-video-iframe');
     setupVideoCover('featured-video-cover', 'featured-video-iframe');
+    setupVideoCover('drive-video-cover', 'drive-video-iframe');
+    setupVideoCover('nagashankar-video-cover', 'nagashankar-video-iframe');
 })();
